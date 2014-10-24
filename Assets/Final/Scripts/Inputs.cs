@@ -98,7 +98,10 @@ public class Inputs : MonoBehaviour {
             if (_activeObject != obj) _activeObject.StopAllInteractions();
         } 
     }
-
+    public void ActiveObjectDestroyed()
+    {
+        _activeObject = null;
+    }
     public Vector3 GetMouseOnScreen()
     {
        

@@ -1,15 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Flower : MonoBehaviour {
+public class Flower : Plant {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    public override void StartLMB()
+    {
+      
+    }
+
+    public override void StartRMB()
+    {
+       
+    }
+
+    public override void StopLMB()
+    {
+       
+    }
+
+    public override void StopRMB()
+    {
+       
+    }
+
+    public override void StopAllInteractions()
+    {
+       
+    }
 }

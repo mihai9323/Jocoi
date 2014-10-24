@@ -50,6 +50,11 @@ public class PatternAnimator : MonoBehaviour {
         //if a new pattern is added to the drawing we have to calculate the frames again so we reset the cache
         frames = new Texture2D[TextureData.Instance.width*TextureData.Instance.height];
     }
+    public void RemoveLastPattern()
+    {
+        if (patterns != null) if(patterns.Count>0)patterns.RemoveAt(patterns.Count - 1);
+        frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
+    }
     public void StartAnimation()
     {
         StopAnimation();
