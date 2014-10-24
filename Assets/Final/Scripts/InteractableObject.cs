@@ -1,15 +1,15 @@
-﻿using UnityEngine;
+﻿/* Code by Mihai-Ovidiu ANTON 10/24/2014
+ */
+
+using UnityEngine;
 using System.Collections;
 
-public class InteractableObject : MonoBehaviour {
+public abstract class InteractableObject : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public abstract void StartLMB();
+    public abstract void StartRMB();
+    public abstract void StopLMB();
+    public abstract void StopRMB();
+    public abstract void StopAllInteractions();
+
 }
