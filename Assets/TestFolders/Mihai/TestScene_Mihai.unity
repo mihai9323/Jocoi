@@ -222,6 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e750e274bc4a94783d0c8b0b31da01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
+  anim: {fileID: 0}
   offSet: {x: 0, y: .5, z: 0}
 --- !u!1 &954574782
 GameObject:

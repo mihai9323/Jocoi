@@ -38,7 +38,9 @@ public class Meadow : InteractableObject {
         activeClick = 0;
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
             Inputs.Instance.GetMouseOnScreen(),
-            StopAllInteractions,
+            null,
+            0,
+            "Jump",
             4.0f
             );
     }
@@ -48,7 +50,9 @@ public class Meadow : InteractableObject {
         activeClick = 1;
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
             Inputs.Instance.GetMouseOnScreen(),
-            StopAllInteractions,
+            null,
+            1,
+            "Walk",
             2.0f
             );
     }
