@@ -103,8 +103,11 @@ public class Inputs : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            lastPosition = hit.point;
-            return  hit.point;
+            if (hit.collider.gameObject == _activeObject.gameObject) { 
+                lastPosition = hit.point;
+                return  hit.point;
+            }
+            else return lastPosition;
 
         }
         else return lastPosition;

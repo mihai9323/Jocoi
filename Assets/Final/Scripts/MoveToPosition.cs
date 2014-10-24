@@ -9,8 +9,8 @@ public class MoveToPosition : MonoBehaviour {
     public AudioClip[] sounds;
     
     internal string animation;
-    internal float speed;
-
+    
+    private float speed;
     public Animator anim;
     public Vector3 offSet;
     private void Awake(){
@@ -51,7 +51,7 @@ public class MoveToPosition : MonoBehaviour {
     }
     private IEnumerator Move(Vector3 pos)
     {
-        while(Vector3.Distance(transform.position,pos)>2){
+        while(Vector3.Distance(transform.position,pos)>1){
             transform.position += (pos - transform.position).normalized * Time.deltaTime * speed;
             transform.LookAt(pos);
             yield return new WaitForEndOfFrame();

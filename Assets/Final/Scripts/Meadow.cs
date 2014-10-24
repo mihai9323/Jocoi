@@ -41,7 +41,7 @@ public class Meadow : InteractableObject {
             null,
             0,
             "Jump",
-            4.0f
+            LevelData.Instance.MotherSpeed * 2.0f
             );
     }
 
@@ -53,7 +53,7 @@ public class Meadow : InteractableObject {
             null,
             1,
             "Walk",
-            2.0f
+            LevelData.Instance.MotherSpeed
             );
     }
 
