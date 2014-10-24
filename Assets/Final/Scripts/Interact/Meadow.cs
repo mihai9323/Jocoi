@@ -21,7 +21,7 @@ public class Meadow : InteractableObject {
         if(activeClick != -1)
         {
             Vector3 currentMouse = Inputs.Instance.GetMouseOnScreen();
-            if (Vector3.Distance(currentMouse, lastPosition) > 3.0f)
+            if (Vector3.Distance(currentMouse, lastPosition) > 1.0f)
             {
                 lastPosition = currentMouse;
                 switch(activeClick){

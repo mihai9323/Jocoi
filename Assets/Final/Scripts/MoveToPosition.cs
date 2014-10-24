@@ -11,6 +11,7 @@ public class MoveToPosition : MonoBehaviour {
     internal string animation;
     
     private float speed;
+    private float successDistance;
     public Animator anim;
     public Vector3 offSet;
     private void Awake(){
@@ -20,8 +21,10 @@ public class MoveToPosition : MonoBehaviour {
         anim = null;
     }
     //move with animation and sound
-    public void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f)
+    public void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f,float acceptedDistance = 1.0f)
     {
+        successDistance = acceptedDistance;
+        position = new Vector3(position.x, transform.position.y, position.z);
         StopMovement();
         if (sounds != null) if (sounds.Length > sound)
             {
@@ -36,8 +39,10 @@ public class MoveToPosition : MonoBehaviour {
         StartCoroutine(Move(position + offSet));
     }
     //move without animation and sound
-    public void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, float speed = 1.0f)
+    public void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
+        position = new Vector3(position.x,transform.position.y,position.z);
+        successDistance = acceptedDistance;
         StopMovement();
         this.complete = complete;
         this.speed = speed;
@@ -51,10 +56,11 @@ public class MoveToPosition : MonoBehaviour {
     }
     private IEnumerator Move(Vector3 pos)
     {
-        while(Vector3.Distance(transform.position,pos)>1){
+        while(Vector3.Distance(transform.position,pos)>successDistance){
             transform.position += (pos - transform.position).normalized * Time.deltaTime * speed;
             transform.LookAt(pos);
-            yield return new WaitForEndOfFrame();
+            transform.rotation = Quaternion.Euler(0,transform.rotation.eulerAngles.y,0);
+            yield return new WaitForFixedUpdate();
         }
         AtDestination();
         

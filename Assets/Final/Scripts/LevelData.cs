@@ -16,14 +16,17 @@ public class LevelData:MonoBehaviour  {
     public Transform[] HerdWaypoints;
     public float LambSpeed;
     public float MotherSpeed;
-
+    
     public Flower[] flowers;
     public Grass[] grass;
-    
 
+    public Camera cam;
+
+  
     void Awake()
     {
         Instance = this;
     }
+   
 
 }

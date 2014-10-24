@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SheepInHerd : MonoBehaviour {
+public class SheepInHerd : InteractableObject {
 
     private MoveToPosition mtp;
     private bool moving;
@@ -44,5 +44,30 @@ public class SheepInHerd : MonoBehaviour {
     private void ReachedDestination()
     {
         moving = false;
+    }
+
+    public override void StartLMB()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void StartRMB()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void StopLMB()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void StopRMB()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void StopAllInteractions()
+    {
+        throw new System.NotImplementedException();
     }
 }

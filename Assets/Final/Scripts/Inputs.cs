@@ -28,7 +28,7 @@ public class Inputs : MonoBehaviour {
         Ray ray = Camera.main.ScreenPointToRay(mPos);
         RaycastHit hit;
         //LMB button Down
-        if (Input.GetMouseButtonDown(0) && activeClick == -1)
+        if (Input.GetMouseButtonDown(0) )
         {
             InteractableObject clickedObject;
             if (Physics.Raycast(ray, out hit))
@@ -36,7 +36,7 @@ public class Inputs : MonoBehaviour {
                 if (hit.collider.gameObject.GetComponent<InteractableObject>() != null)
                 {
                     clickedObject = hit.collider.gameObject.GetComponent<InteractableObject>();
-                    DeactivateObject(_activeObject);
+                    DeactivateObject(clickedObject);
                     ActivateObject(clickedObject,0);
                     
                 }
@@ -46,14 +46,14 @@ public class Inputs : MonoBehaviour {
         else
         {
             //LMB UP
-            if (Input.GetMouseButtonUp(0) && activeClick == 0)
+            if (Input.GetMouseButtonUp(0) )
             {
                 _activeObject.StopLMB();
                 activeClick = -1;
             }
         }
         //RMB down
-        if (Input.GetMouseButtonDown(1) && activeClick == -1)
+        if (Input.GetMouseButtonDown(1))
         {
             InteractableObject clickedObject;
             if (Physics.Raycast(ray, out hit))
@@ -61,7 +61,7 @@ public class Inputs : MonoBehaviour {
                 if (hit.collider.gameObject.GetComponent<InteractableObject>() != null)
                 {
                     clickedObject = hit.collider.gameObject.GetComponent<InteractableObject>();
-                    DeactivateObject(_activeObject);
+                    DeactivateObject(clickedObject);
                     ActivateObject(clickedObject, 1);
 
                 }
@@ -71,7 +71,7 @@ public class Inputs : MonoBehaviour {
         else
         {
             //RMB UP
-            if (Input.GetMouseButtonUp(1) && activeClick == 1)
+            if (Input.GetMouseButtonUp(1) )
             {
                 _activeObject.StopRMB();
                 activeClick = -1;
@@ -93,7 +93,10 @@ public class Inputs : MonoBehaviour {
     }
     private void DeactivateObject(InteractableObject obj)
     {
-        if(obj!=null)obj.StopAllInteractions();
+        if (_activeObject != null)
+        {
+            if (_activeObject != obj) _activeObject.StopAllInteractions();
+        } 
     }
 
     public Vector3 GetMouseOnScreen()
