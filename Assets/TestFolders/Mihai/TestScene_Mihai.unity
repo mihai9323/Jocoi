@@ -237,7 +237,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 377259644}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 4.4138999, y: .645650029, z: .415890008}
+  m_LocalPosition: {x: 4.4138999, y: .617219985, z: .415890008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 887540935}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   anim: {fileID: 0}
-  offSet: {x: 0, y: .100000001, z: 0}
+  offSet: {x: 0, y: 0, z: 0}
 --- !u!1 &429162788
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +500,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 568808689}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 4.4138999, y: .645650029, z: -1.29709995}
+  m_LocalPosition: {x: 4.4138999, y: .617219985, z: -1.29709995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 188052100}
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   anim: {fileID: 0}
-  offSet: {x: 0, y: .100000001, z: 0}
+  offSet: {x: 0, y: 0, z: 0}
 --- !u!54 &568808693
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -648,7 +648,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 816927176}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -.138669997, y: .645650029, z: -1.92789996}
+  m_LocalPosition: {x: -.138669997, y: .617219985, z: -1.92789996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 207974992}
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   anim: {fileID: 0}
-  offSet: {x: 0, y: .100000001, z: 0}
+  offSet: {x: 0, y: 0, z: 0}
 --- !u!54 &816927179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -804,6 +804,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1048988756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1048988761}
+  - 33: {fileID: 1048988760}
+  - 136: {fileID: 1048988759}
+  - 23: {fileID: 1048988758}
+  - 114: {fileID: 1048988757}
+  m_Layer: 0
+  m_Name: Cylinder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1048988757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048988756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85225e8fa9fd3a14da2f211dc33e0c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieAnimation: 
+  GrowAnimation: 
+  BeEatenAnimation: 
+  BePickedAnimation: 
+  LambFedAnimation: 
+  MotherEatAnimation: 
+  DieSound: {fileID: 0}
+  GrowSound: {fileID: 0}
+  BeEatenSound: {fileID: 0}
+  BePickedSound: {fileID: 0}
+  LambFedSound: {fileID: 0}
+  MotherEatSound: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+--- !u!23 &1048988758
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048988756}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &1048988759
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048988756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1048988760
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048988756}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1048988761
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048988756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.43470001, y: .499000013, z: -5.421}
+  m_LocalScale: {x: .163844183, y: .401496768, z: .136263728}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &1339924908
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +943,7 @@ MonoBehaviour:
   - {fileID: 221333841}
   - {fileID: 764890311}
   - {fileID: 1775415592}
-  LambSpeed: 2
+  LambSpeed: 1
   MotherSpeed: 2
   flowers: []
   grass: []
@@ -934,7 +1030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   anim: {fileID: 0}
-  offSet: {x: 0, y: .100000001, z: 0}
+  offSet: {x: 0, y: 0, z: 0}
 --- !u!4 &1377635148
 Transform:
   m_ObjectHideFlags: 0
@@ -942,7 +1038,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1377635143}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 4.4138999, y: .645650029, z: -3.43140006}
+  m_LocalPosition: {x: 4.4138999, y: .617219985, z: -3.43140006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1734221736}
@@ -984,14 +1080,14 @@ MonoBehaviour:
   patterns:
   - color: {r: .808823526, g: .374675632, b: .374675632, a: 0}
     texture: {fileID: 2800000, guid: 28627f52952f5384baf2c744ef1e90fa, type: 3}
-    _frameNumber: 0
+    _frameNumber: 5
   - color: {r: .321150541, g: .59840709, b: .79411763, a: 0}
     texture: {fileID: 2800000, guid: 14862ac6dac253443bc67e6cd851e538, type: 3}
-    _frameNumber: 0
+    _frameNumber: 3
   - color: {r: .366826832, g: .735294104, b: .297361612, a: 0}
     texture: {fileID: 2800000, guid: f4049b461858c1140b0acc68dd939076, type: 3}
-    _frameNumber: 0
-  defaultColor: {r: .897058845, g: .877270758, b: .877270758, a: 0}
+    _frameNumber: 2
+  defaultColor: {r: .757352948, g: .490051895, b: .490051895, a: 0}
   recalculate: 1
 --- !u!114 &1536930483
 MonoBehaviour:
@@ -1020,7 +1116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   anim: {fileID: 0}
-  offSet: {x: 0, y: .100000001, z: 0}
+  offSet: {x: 0, y: 0, z: 0}
 --- !u!23 &1536930485
 Renderer:
   m_ObjectHideFlags: 0
@@ -1067,7 +1163,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1536930481}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -3.74940014, y: .645650029, z: -1.92789996}
+  m_LocalPosition: {x: -3.7493999, y: .617219985, z: -1.92789996}
   m_LocalScale: {x: .699999988, y: .699999988, z: 1.39999998}
   m_Children:
   - {fileID: 1764342742}

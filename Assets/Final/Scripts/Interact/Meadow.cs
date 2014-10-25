@@ -35,6 +35,7 @@ public class Meadow : InteractableObject {
 
     public override void StartLMB()
     {
+        LevelData.Instance.currentAnimation = "Jump";
         activeClick = 0;
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
             Inputs.Instance.GetMouseOnScreen(),
@@ -47,6 +48,7 @@ public class Meadow : InteractableObject {
 
     public override void StartRMB()
     {
+        LevelData.Instance.currentAnimation = "Walk";
         activeClick = 1;
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
             Inputs.Instance.GetMouseOnScreen(),

@@ -13,7 +13,7 @@ public class CameraZoom : MonoBehaviour {
     public float zoomInTime = 4.0f;
     public float zoomOutTime = 2.0f;
    
-
+    
     private GameObject targetObject;
 
     void Start()
@@ -24,16 +24,20 @@ public class CameraZoom : MonoBehaviour {
     }
     public void StartZoom(GameObject obj)
     {
+       
         targetObject = obj;
+       
         StopAllCoroutines();
         transform.LookAt(obj.transform);
         targetCameraRotation = transform.rotation;
         
         transform.rotation = cameraDefaultRotation;
+      
         StartCoroutine(ZoomIn());
     }
     public void StopZoom()
     {
+      
         StopAllCoroutines();
         StartCoroutine(ZoomOut());
         targetObject = null;
@@ -41,16 +45,26 @@ public class CameraZoom : MonoBehaviour {
     private IEnumerator ZoomIn()
     {
         float percent = 0;
-
-        while (percent < 1.0f)
+       
+        while (percent < 1.0f && Mathf.Abs(camera.fieldOfView - targetFieldOfView)>1.0f)
         {
             percent += (1.0f/zoomInTime) * Time.deltaTime;
             camera.fieldOfView += (-camera.fieldOfView + targetFieldOfView) * percent;
+
             transform.rotation = Quaternion.Lerp(transform.rotation, targetCameraRotation, percent);
-            yield return new WaitForEndOfFrame();
+
+           
+           
+            yield return new WaitForFixedUpdate();
         }
-        transform.rotation = targetCameraRotation;
-        camera.fieldOfView = targetFieldOfView;  
+        
+        camera.fieldOfView = targetFieldOfView;
+        while (true)
+        {
+            transform.LookAt(targetObject.transform);
+            yield return new WaitForFixedUpdate();
+        }
+        
     }
     private IEnumerator ZoomOut()
     {
@@ -66,4 +80,5 @@ public class CameraZoom : MonoBehaviour {
         transform.rotation = cameraDefaultRotation;
         camera.fieldOfView = cameraDefaultFieldOfView;
     }
+    
 }

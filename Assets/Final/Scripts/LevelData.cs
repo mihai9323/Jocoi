@@ -22,7 +22,7 @@ public class LevelData:MonoBehaviour  {
 
     public Camera cam;
 
-  
+    internal string currentAnimation;
     void Awake()
     {
         Instance = this;
