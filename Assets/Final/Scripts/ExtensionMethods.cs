@@ -10,16 +10,22 @@ public static class ExtensionMethods {
 		Mathf.Pow ((pos1.z - pos2.z), 2f);
 	}
 
-	public static void SetX(this Vector3 v3, float x){
-		v3.x = x;
+	public static void SetX(this Transform trans, float x){
+		Vector3 temp = trans.position;
+		temp.x = x;
+		trans.position = temp;
 	}
 
-	public static void SetY(this Vector3 v3, float y){
-		v3.y = y;
+	public static void SetY(this Transform trans, float y){
+		Vector3 temp = trans.position;
+		temp.y = y;
+		trans.position = temp;
 	}
 
-	public static void SetZ(this Vector3 v3, float z){
-		v3.z = z;
+	public static void SetZ(this Transform trans, float z){
+		Vector3 temp = trans.position;
+		temp.z = z;
+		trans.position = temp;
 	}
 
 	//function call, as stated by the UML. Axis not actually used, as method didnt need it.
@@ -27,6 +33,19 @@ public static class ExtensionMethods {
 	public static void FaceObjectOnAxis (this Transform myObject, Transform otherObject, Vector3 axis){
 		//Find position to face.
 		Vector3 facing = otherObject.position - myObject.position;
+		//Find rotation.
+		Quaternion toRotation = Quaternion.LookRotation(facing);
+		Vector3 euler = toRotation.eulerAngles;
+		toRotation = Quaternion.Euler(euler);
+		//Sets rotation of Object
+		myObject.rotation = toRotation;
+		//Limits rotation to Y axis.
+		myObject.eulerAngles = new Vector3(0, myObject.eulerAngles.y, 0);
+	}
+
+	public static void FaceObjectOnAxis (this Transform myObject, Vector3 otherObject, Vector3 axis){
+		//Find position to face.
+		Vector3 facing = otherObject - myObject.position;
 		//Find rotation.
 		Quaternion toRotation = Quaternion.LookRotation(facing);
 		Vector3 euler = toRotation.eulerAngles;
