@@ -1087,7 +1087,7 @@ MonoBehaviour:
   - color: {r: .366826832, g: .735294104, b: .297361612, a: 0}
     texture: {fileID: 2800000, guid: f4049b461858c1140b0acc68dd939076, type: 3}
     _frameNumber: 2
-  defaultColor: {r: .757352948, g: .490051895, b: .490051895, a: 0}
+  defaultColor: {r: 1, g: 1, b: 1, a: 0}
   recalculate: 1
 --- !u!114 &1536930483
 MonoBehaviour:

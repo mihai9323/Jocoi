@@ -101,7 +101,8 @@ public class Plant : InteractableObject {
     }
     public virtual void Eat()
     {
-        Debug.Log("eat");
+        //Debug.Log("eat");
+
         if (MotherEatSound != null)
         {
             AudioSource.PlayClipAtPoint(MotherEatSound, transform.position);
@@ -109,17 +110,32 @@ public class Plant : InteractableObject {
     }
     public virtual void Feed()
     {
-        Debug.Log("feed");
+       // Debug.Log("feed");
         if (BePickedSound != null)
         {
             AudioSource.PlayClipAtPoint(BePickedSound, transform.position);
         }
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
+            LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position,
+            LambEat,
+            1,
+            "Jump",
+            LevelData.Instance.LambSpeed*2,
+            1.0f
+            );
     }
     private void Destroy()
     {
         if (Inputs.Instance.ActiveObject == this)
         {
             Inputs.Instance.ActiveObjectDestroyed();
+        }
+    }
+    private void LambEat()
+    {
+        if (LevelData.Instance.Lamb.GetComponent<Animator>() != null)
+        {
+            LevelData.Instance.Lamb.GetComponent<Animator>().SetBool(LambFedAnimation, true);
         }
     }
     

@@ -56,10 +56,10 @@ public class MoveToPosition : MonoBehaviour {
     }
     private IEnumerator Move(Vector3 pos)
     {
-        while(Vector3.Distance(transform.position,pos)>successDistance){
+        while(   transform.position.SquaredDistance(pos)> Mathf.Pow(successDistance,2.0f)){
             transform.position += (pos - transform.position).normalized * Time.deltaTime * speed;
-            transform.LookAt(pos);
-            transform.rotation = Quaternion.Euler(0,transform.rotation.eulerAngles.y,0);
+            transform.FaceObjectOnAxis(pos, new Vector3(0, 1, 0));
+            
             yield return new WaitForFixedUpdate();
         }
         AtDestination();

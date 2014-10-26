@@ -26,6 +26,7 @@ public class LevelData:MonoBehaviour  {
     void Awake()
     {
         Instance = this;
+        
     }
    
 
