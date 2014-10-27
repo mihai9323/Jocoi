@@ -47,6 +47,7 @@ public class PatternAnimator : MonoBehaviour {
 	public void AddPattern(PatternInfo pi){
         if (patterns == null) patterns = new List<PatternInfo>();
         patterns.Add(pi);
+        ApplyTexture(false);
         //if a new pattern is added to the drawing we have to calculate the frames again so we reset the cache
         frames = new Texture2D[TextureData.Instance.width*TextureData.Instance.height];
     }
@@ -63,6 +64,10 @@ public class PatternAnimator : MonoBehaviour {
     public void StopAnimation()
     {
         StopCoroutine("AnimateTextures");
+        foreach (PatternInfo pi in patterns)
+        {
+            pi.frameNumber += currentFrame;
+        }
     }
     //animates the textures
     private IEnumerator AnimateTextures()

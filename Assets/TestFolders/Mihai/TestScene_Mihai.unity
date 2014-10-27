@@ -74,6 +74,107 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &129723151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 129723156}
+  - 33: {fileID: 129723155}
+  - 136: {fileID: 129723154}
+  - 23: {fileID: 129723153}
+  - 114: {fileID: 129723152}
+  m_Layer: 0
+  m_Name: Flower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &129723152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129723151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieAnimation: 
+  GrowAnimation: 
+  BeEatenAnimation: 
+  BePickedAnimation: 
+  LambFedAnimation: 
+  MotherEatAnimation: 
+  PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
+  DieSound: {fileID: 0}
+  GrowSound: {fileID: 0}
+  BeEatenSound: {fileID: 0}
+  BePickedSound: {fileID: 0}
+  LambFedSound: {fileID: 0}
+  MotherEatSound: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+  patternToAdd:
+    color: {r: 0, g: 1, b: .172413826, a: 1}
+    texture: {fileID: 2800000, guid: 28627f52952f5384baf2c744ef1e90fa, type: 3}
+    _frameNumber: 0
+--- !u!23 &129723153
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129723151}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &129723154
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129723151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.69000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &129723155
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129723151}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &129723156
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129723151}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6085999, y: .499000013, z: -4.27220011}
+  m_LocalScale: {x: .163844183, y: .401496768, z: .136263728}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
 --- !u!1 &168984697
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +763,107 @@ CapsuleCollider:
   m_Height: 2.28999996
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &647289486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 647289491}
+  - 33: {fileID: 647289490}
+  - 136: {fileID: 647289489}
+  - 23: {fileID: 647289488}
+  - 114: {fileID: 647289487}
+  m_Layer: 0
+  m_Name: Flower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &647289487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647289486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieAnimation: 
+  GrowAnimation: 
+  BeEatenAnimation: 
+  BePickedAnimation: 
+  LambFedAnimation: 
+  MotherEatAnimation: 
+  PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
+  DieSound: {fileID: 0}
+  GrowSound: {fileID: 0}
+  BeEatenSound: {fileID: 0}
+  BePickedSound: {fileID: 0}
+  LambFedSound: {fileID: 0}
+  MotherEatSound: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+  patternToAdd:
+    color: {r: 1, g: 0, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: 28627f52952f5384baf2c744ef1e90fa, type: 3}
+    _frameNumber: 0
+--- !u!23 &647289488
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647289486}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &647289489
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647289486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.69000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &647289490
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647289486}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &647289491
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647289486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.630140007, y: .499000013, z: -4.27220011}
+  m_LocalScale: {x: .163844183, y: .401496768, z: .136263728}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
 --- !u!1 &710302028
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +905,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &724085011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 724085016}
+  - 33: {fileID: 724085015}
+  - 136: {fileID: 724085014}
+  - 23: {fileID: 724085013}
+  - 114: {fileID: 724085012}
+  m_Layer: 0
+  m_Name: Flower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &724085012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724085011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieAnimation: 
+  GrowAnimation: 
+  BeEatenAnimation: 
+  BePickedAnimation: 
+  LambFedAnimation: 
+  MotherEatAnimation: 
+  PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
+  DieSound: {fileID: 0}
+  GrowSound: {fileID: 0}
+  BeEatenSound: {fileID: 0}
+  BePickedSound: {fileID: 0}
+  LambFedSound: {fileID: 0}
+  MotherEatSound: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+  patternToAdd:
+    color: {r: .0344824791, g: 0, b: 1, a: 1}
+    texture: {fileID: 2800000, guid: 28627f52952f5384baf2c744ef1e90fa, type: 3}
+    _frameNumber: 0
+--- !u!23 &724085013
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724085011}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &724085014
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724085011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.69000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &724085015
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724085011}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &724085016
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724085011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.33050013, y: .499000013, z: -4.27220011}
+  m_LocalScale: {x: .163844183, y: .401496768, z: .136263728}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
 --- !u!1 &764890310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1314,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &1073272941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1073272946}
+  - 33: {fileID: 1073272945}
+  - 136: {fileID: 1073272944}
+  - 23: {fileID: 1073272943}
+  - 114: {fileID: 1073272942}
+  m_Layer: 0
+  m_Name: Flower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1073272942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073272941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieAnimation: 
+  GrowAnimation: 
+  BeEatenAnimation: 
+  BePickedAnimation: 
+  LambFedAnimation: 
+  MotherEatAnimation: 
+  PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
+  DieSound: {fileID: 0}
+  GrowSound: {fileID: 0}
+  BeEatenSound: {fileID: 0}
+  BePickedSound: {fileID: 0}
+  LambFedSound: {fileID: 0}
+  MotherEatSound: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+  patternToAdd:
+    color: {r: 0, g: 1, b: .172413826, a: 1}
+    texture: {fileID: 2800000, guid: f4049b461858c1140b0acc68dd939076, type: 3}
+    _frameNumber: 0
+--- !u!23 &1073272943
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073272941}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &1073272944
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073272941}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.69000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1073272945
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073272941}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1073272946
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073272941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.6085999, y: .499000013, z: 2.33780003}
+  m_LocalScale: {x: .163844183, y: .401496768, z: .136263728}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
 --- !u!1 &1339924908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1476,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &1344496234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1344496239}
+  - 33: {fileID: 1344496238}
+  - 136: {fileID: 1344496237}
+  - 23: {fileID: 1344496236}
+  - 114: {fileID: 1344496235}
+  m_Layer: 0
+  m_Name: Flower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1344496235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344496234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieAnimation: 
+  GrowAnimation: 
+  BeEatenAnimation: 
+  BePickedAnimation: 
+  LambFedAnimation: 
+  MotherEatAnimation: 
+  PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
+  DieSound: {fileID: 0}
+  GrowSound: {fileID: 0}
+  BeEatenSound: {fileID: 0}
+  BePickedSound: {fileID: 0}
+  LambFedSound: {fileID: 0}
+  MotherEatSound: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+  patternToAdd:
+    color: {r: .0344824791, g: 0, b: 1, a: 1}
+    texture: {fileID: 2800000, guid: f4049b461858c1140b0acc68dd939076, type: 3}
+    _frameNumber: 0
+--- !u!23 &1344496236
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344496234}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &1344496237
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344496234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.69000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1344496238
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344496234}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1344496239
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1344496234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.33050013, y: .499000013, z: 2.33780003}
+  m_LocalScale: {x: .163844183, y: .401496768, z: .136263728}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1 &1377635143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,16 +1695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec624d0b549a2464784ad9aa42faaea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patterns:
-  - color: {r: .808823526, g: .374675632, b: .374675632, a: 0}
-    texture: {fileID: 2800000, guid: 28627f52952f5384baf2c744ef1e90fa, type: 3}
-    _frameNumber: 5
-  - color: {r: .321150541, g: .59840709, b: .79411763, a: 0}
-    texture: {fileID: 2800000, guid: 14862ac6dac253443bc67e6cd851e538, type: 3}
-    _frameNumber: 3
-  - color: {r: .366826832, g: .735294104, b: .297361612, a: 0}
-    texture: {fileID: 2800000, guid: f4049b461858c1140b0acc68dd939076, type: 3}
-    _frameNumber: 2
+  patterns: []
   defaultColor: {r: 1, g: 1, b: 1, a: 0}
   recalculate: 1
 --- !u!114 &1536930483
@@ -1414,7 +1910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701f24939744cc940ada662f578e0cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  framesPerSecond: 12
+  framesPerSecond: 8
   rows: 4
   columns: 4
   width: 1024
@@ -1750,6 +2246,107 @@ MonoBehaviour:
   targetFieldOfView: 10
   zoomInTime: 4
   zoomOutTime: 2
+--- !u!1 &1920079605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1920079610}
+  - 33: {fileID: 1920079609}
+  - 136: {fileID: 1920079608}
+  - 23: {fileID: 1920079607}
+  - 114: {fileID: 1920079606}
+  m_Layer: 0
+  m_Name: Flower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1920079606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920079605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieAnimation: 
+  GrowAnimation: 
+  BeEatenAnimation: 
+  BePickedAnimation: 
+  LambFedAnimation: 
+  MotherEatAnimation: 
+  PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
+  DieSound: {fileID: 0}
+  GrowSound: {fileID: 0}
+  BeEatenSound: {fileID: 0}
+  BePickedSound: {fileID: 0}
+  LambFedSound: {fileID: 0}
+  MotherEatSound: {fileID: 0}
+  anim: {fileID: 0}
+  audioSource: {fileID: 0}
+  patternToAdd:
+    color: {r: 1, g: 0, b: 0, a: 1}
+    texture: {fileID: 2800000, guid: f4049b461858c1140b0acc68dd939076, type: 3}
+    _frameNumber: 0
+--- !u!23 &1920079607
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920079605}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!136 &1920079608
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920079605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.69000006
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1920079609
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920079605}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1920079610
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920079605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.630140007, y: .499000013, z: 2.33780003}
+  m_LocalScale: {x: .163844183, y: .401496768, z: .136263728}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
 --- !u!1 &1985026632
 GameObject:
   m_ObjectHideFlags: 0
