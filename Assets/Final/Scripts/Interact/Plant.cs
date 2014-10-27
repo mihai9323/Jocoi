@@ -10,6 +10,8 @@ public class Plant : InteractableObject {
     public string LambFedAnimation;
     public string MotherEatAnimation;
 
+    public Transform PlantInMouth;
+
     public AudioClip DieSound;
     public AudioClip GrowSound;
     public AudioClip BeEatenSound;
@@ -53,11 +55,28 @@ public class Plant : InteractableObject {
                 1.8f
 
             );
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
+            LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform,
+            null,
+            1,
+            "Walk",
+            LevelData.Instance.LambSpeed ,
+           2f
+            );
     }
     
     public override void StartRMB()
     {
-        
+        LevelData.Instance.currentAnimation = "Walk";
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
+               transform.position,
+               Eat,
+               0,
+               "Walk",
+               LevelData.Instance.MotherSpeed,
+               1.8f
+
+           );
     }
 
     public override void StopLMB()
@@ -102,26 +121,31 @@ public class Plant : InteractableObject {
     public virtual void Eat()
     {
         //Debug.Log("eat");
-
+        Inputs.Instance.canInteract = false;
         if (MotherEatSound != null)
         {
             AudioSource.PlayClipAtPoint(MotherEatSound, transform.position);
         }
+        Invoke("FinishEat", 1.0f);
     }
     public virtual void Feed()
     {
+        Inputs.Instance.canInteract = false;
+        PlantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
+        PlantInMouth.parent = LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead;
+        this.gameObject.renderer.enabled = false;
        // Debug.Log("feed");
         if (BePickedSound != null)
         {
             AudioSource.PlayClipAtPoint(BePickedSound, transform.position);
         }
         LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
-            LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position,
+            LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.position + LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.right*2.0f,
             LambEat,
             1,
-            "Jump",
+            "Walk",
             LevelData.Instance.LambSpeed*2,
-            1.0f
+            4f
             );
     }
     private void Destroy()
@@ -131,13 +155,27 @@ public class Plant : InteractableObject {
             Inputs.Instance.ActiveObjectDestroyed();
         }
     }
-    private void LambEat()
+    protected void LambEat()
     {
+        LevelData.Instance.MotherSheep.transform.FaceObjectOnAxis(LevelData.Instance.LambHead, new Vector3(0, 1, 0));
+        
+        LevelData.Instance.Lamb.transform.FaceObjectOnAxis(LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, new Vector3(0, 1, 0));
         if (LevelData.Instance.Lamb.GetComponent<Animator>() != null)
         {
             LevelData.Instance.Lamb.GetComponent<Animator>().SetBool(LambFedAnimation, true);
         }
+        Invoke("LambFinishEat", 1.0f);
     }
-    
+    protected void LambFinishEat()
+    {
+        Inputs.Instance.canInteract = true;
+        Destroy(PlantInMouth.gameObject);
+        Destroy(this.gameObject,0.1f);
+    }
+    protected void FinishEat()
+    {
+        Inputs.Instance.canInteract = true;
+        Destroy(this.gameObject,0.1f);
+    }
    
 }

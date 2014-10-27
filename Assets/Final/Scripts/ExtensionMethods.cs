@@ -55,7 +55,7 @@ public static class ExtensionMethods {
 		//Limits rotation to Y axis.
 		myObject.eulerAngles = new Vector3(0, myObject.eulerAngles.y, 0);
 	}
-
+   
 	public static Color RGBtoHSI (this Color rgb){
 		float R = rgb.r;
 		float G = rgb.g;

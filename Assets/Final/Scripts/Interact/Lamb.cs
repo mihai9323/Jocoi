@@ -71,15 +71,18 @@ public class Lamb : InteractableObject {
 
     private IEnumerator FollowMother()
     {
-        
+        bool ok = true;
         while (true)
         {
-            if (Inputs.Instance.ActiveObject != this)
+            ok = true;
+            if (Inputs.Instance.ActiveObject == this) ok = false;
+            if (Inputs.Instance.ActiveObject != null) if (Inputs.Instance.ActiveObject.GetType() == typeof(Plant) && Inputs.Instance.activeMode == 0) ok = false;
+            if (ok )
             {
                
                 float m = 1;
                 if (LevelData.Instance.currentAnimation == "Jump") m = 2;
-                this.gameObject.GetComponent<MoveToPosition>().StartMoving(LevelData.Instance.MotherSheep.transform.position,
+                this.gameObject.GetComponent<MoveToPosition>().StartMoving(LevelData.Instance.MotherSheep.transform,
                                                                            null,
                                                                            (int)(m-1),
                                                                            LevelData.Instance.currentAnimation,

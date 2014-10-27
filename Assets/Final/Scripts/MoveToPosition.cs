@@ -48,6 +48,36 @@ public class MoveToPosition : MonoBehaviour {
         this.speed = speed;
         StartCoroutine(Move(position+offSet));
     }
+
+    //Transform overlaods
+    public void StartMoving(Transform pos, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
+    {
+        successDistance = acceptedDistance;
+       // position = new Vector3(pos.position.x, transform.position.y, pos.position.z);
+        StopMovement();
+        if (sounds != null) if (sounds.Length > sound)
+            {
+                audioSource.clip = sounds[sound];
+                audioSource.Play();
+
+            }
+        this.complete = complete;
+        this.animation = animation;
+        this.speed = speed;
+        if (animation != "" && anim != null) anim.SetBool(animation, true);
+        StartCoroutine(Move(pos ));
+    }
+    //move without animation and sound
+    public void StartMoving(Transform position, GameData.VOID_FUNCTION complete, float speed = 1.0f, float acceptedDistance = 1.0f)
+    {
+       
+        successDistance = acceptedDistance;
+        StopMovement();
+        this.complete = complete;
+        this.speed = speed;
+        StartCoroutine(Move(position ));
+    }
+
     private void AtDestination()
     {
         StopAllCoroutines();
@@ -64,6 +94,19 @@ public class MoveToPosition : MonoBehaviour {
         }
         AtDestination();
         
+    }
+
+    private IEnumerator Move(Transform pos)
+    {
+        while (transform.position.SquaredDistance(pos.position) > Mathf.Pow(successDistance, 2.0f))
+        {
+            transform.position += (pos.position - transform.position).normalized * Time.deltaTime * speed;
+            transform.FaceObjectOnAxis(pos, new Vector3(0, 1, 0));
+
+            yield return new WaitForFixedUpdate();
+        }
+        AtDestination();
+
     }
     public void StopMovement()
     {
