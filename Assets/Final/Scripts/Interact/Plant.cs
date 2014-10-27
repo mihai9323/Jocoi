@@ -10,7 +10,8 @@ public class Plant : InteractableObject {
     public string LambFedAnimation;
     public string MotherEatAnimation;
 
-    public Transform PlantInMouth;
+    public Transform PlantInMouth; //model object
+    private Transform plantInMouth; //real object
 
     public AudioClip DieSound;
     public AudioClip GrowSound;
@@ -128,12 +129,12 @@ public class Plant : InteractableObject {
         }
         Invoke("FinishEat", 1.0f);
     }
-    public void Feed()
+    public virtual void Feed()
     {
         Inputs.Instance.canInteract = false;
-        PlantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
-        PlantInMouth.parent = LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead;
-        this.gameObject.renderer.enabled = false;
+        plantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
+        plantInMouth.parent = LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead;
+       
        // Debug.Log("feed");
         if (BePickedSound != null)
         {
@@ -157,7 +158,7 @@ public class Plant : InteractableObject {
     }
     protected virtual void LambEat()
     {
-        Debug.Log("sus");
+       
         LevelData.Instance.MotherSheep.transform.FaceObjectOnAxis(LevelData.Instance.LambHead, new Vector3(0, 1, 0));
         
         LevelData.Instance.Lamb.transform.FaceObjectOnAxis(LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, new Vector3(0, 1, 0));
@@ -170,13 +171,13 @@ public class Plant : InteractableObject {
     protected virtual void LambFinishEat()
     {
         Inputs.Instance.canInteract = true;
-        Destroy(PlantInMouth.gameObject);
-        Destroy(this.gameObject,0.1f);
+        Destroy(plantInMouth.gameObject);
+        
     }
     protected virtual void FinishEat()
     {
         Inputs.Instance.canInteract = true;
-        Destroy(this.gameObject,0.1f);
+        
     }
    
 }

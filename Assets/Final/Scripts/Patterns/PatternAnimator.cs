@@ -54,6 +54,7 @@ public class PatternAnimator : MonoBehaviour {
     public void RemoveLastPattern()
     {
         if (patterns != null) if(patterns.Count>0)patterns.RemoveAt(patterns.Count - 1);
+        ApplyTexture(false);
         frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
     }
     public void StartAnimation()

@@ -4,12 +4,17 @@ using System.Collections;
 public class Flower : Plant {
 
     public PatternInfo patternToAdd;
-   
+
+    public override void Feed()
+    {
+        base.Feed();
+        this.gameObject.renderer.enabled = false;
+    }
     protected override void LambEat()
     {
-        Debug.Log("jos1");
+       
         base.LambEat();
-        Debug.Log("jos2");
+       
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(patternToAdd);
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
        
@@ -18,5 +23,6 @@ public class Flower : Plant {
     {
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
         base.LambFinishEat();
+        Destroy(this.gameObject, 0.1f);
     }
 }
