@@ -76,7 +76,7 @@ public class Lamb : InteractableObject {
         {
             ok = true;
             if (Inputs.Instance.ActiveObject == this) ok = false;
-            if (Inputs.Instance.ActiveObject != null) if (Inputs.Instance.ActiveObject.GetType() == typeof(Plant) && Inputs.Instance.activeMode == 0) ok = false;
+            if (Inputs.Instance.ActiveObject != null) if ((Inputs.Instance.ActiveObject.GetType() == typeof(Plant) || Inputs.Instance.ActiveObject.GetType() == typeof(Flower) || Inputs.Instance.ActiveObject.GetType() == typeof(Grass)) && Inputs.Instance.activeMode == 0) ok = false;
             if (ok )
             {
                

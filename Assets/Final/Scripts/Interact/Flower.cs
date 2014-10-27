@@ -3,29 +3,20 @@ using System.Collections;
 
 public class Flower : Plant {
 
-
-    public override void StartLMB()
+    public PatternInfo patternToAdd;
+   
+    protected override void LambEat()
     {
-      
-    }
-
-    public override void StartRMB()
-    {
+        Debug.Log("jos1");
+        base.LambEat();
+        Debug.Log("jos2");
+        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(patternToAdd);
+        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
        
     }
-
-    public override void StopLMB()
+    protected override void LambFinishEat()
     {
-       
-    }
-
-    public override void StopRMB()
-    {
-       
-    }
-
-    public override void StopAllInteractions()
-    {
-       
-    }
+        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
+        base.LambFinishEat();
+    }
 }

@@ -128,7 +128,7 @@ public class Plant : InteractableObject {
         }
         Invoke("FinishEat", 1.0f);
     }
-    public virtual void Feed()
+    public void Feed()
     {
         Inputs.Instance.canInteract = false;
         PlantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
@@ -141,7 +141,7 @@ public class Plant : InteractableObject {
         }
         LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
             LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.position + LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.right*2.0f,
-            LambEat,
+            this.LambEat,
             1,
             "Walk",
             LevelData.Instance.LambSpeed*2,
@@ -155,8 +155,9 @@ public class Plant : InteractableObject {
             Inputs.Instance.ActiveObjectDestroyed();
         }
     }
-    protected void LambEat()
+    protected virtual void LambEat()
     {
+        Debug.Log("sus");
         LevelData.Instance.MotherSheep.transform.FaceObjectOnAxis(LevelData.Instance.LambHead, new Vector3(0, 1, 0));
         
         LevelData.Instance.Lamb.transform.FaceObjectOnAxis(LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, new Vector3(0, 1, 0));
@@ -166,13 +167,13 @@ public class Plant : InteractableObject {
         }
         Invoke("LambFinishEat", 1.0f);
     }
-    protected void LambFinishEat()
+    protected virtual void LambFinishEat()
     {
         Inputs.Instance.canInteract = true;
         Destroy(PlantInMouth.gameObject);
         Destroy(this.gameObject,0.1f);
     }
-    protected void FinishEat()
+    protected virtual void FinishEat()
     {
         Inputs.Instance.canInteract = true;
         Destroy(this.gameObject,0.1f);
