@@ -1616,8 +1616,8 @@ MonoBehaviour:
   herdTarget: {fileID: 506963413}
   Sheep:
   - {fileID: 1377635146}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1752453742}
+  - {fileID: 1998343899}
   HerdWaypoints:
   - {fileID: 1856904837}
   - {fileID: 2117346140}
