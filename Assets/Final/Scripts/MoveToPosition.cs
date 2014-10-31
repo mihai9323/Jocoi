@@ -18,7 +18,7 @@ public class MoveToPosition : MonoBehaviour {
         if (GetComponent<AudioSource>() != null) audioSource = GetComponent<AudioSource>(); 
         animation = "";
         
-        anim = null;
+        //anim = null;
     }
     //move with animation and sound
     public void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f,float acceptedDistance = 1.0f)

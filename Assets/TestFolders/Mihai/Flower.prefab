@@ -71,10 +71,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DieAnimation: 
   GrowAnimation: 
-  BeEatenAnimation: 
-  BePickedAnimation: 
-  LambFedAnimation: 
-  MotherEatAnimation: 
+  pickUpAnimation: PickUp
+  eatAnimation: Eat
+  feedAnimation: Eat
+  giveAnimation: Give
   PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
   DieSound: {fileID: 0}
   GrowSound: {fileID: 0}

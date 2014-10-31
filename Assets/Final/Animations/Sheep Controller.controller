@@ -8,13 +8,13 @@ AnimatorController:
   m_Name: Sheep Controller
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: Walking
+  - m_Name: Walk
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: Jumping
+  - m_Name: Jump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -39,6 +39,18 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: Eat
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Breastfeed
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: Recieve
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -69,7 +81,27 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Walking
+    m_ConditionEvent: Walk
+    m_EventTreshold: 0
+    m_ExitTime: .806451619
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110133885
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110254339}
+  m_DstState: {fileID: 110200000}
+  m_TransitionDuration: .193548381
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Recieve
     m_EventTreshold: 0
     m_ExitTime: .806451619
   m_Atomic: 1
@@ -149,7 +181,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jumping
+    m_ConditionEvent: Jump
     m_EventTreshold: 0
     m_ExitTime: .806451619
   m_Atomic: 1
@@ -172,6 +204,46 @@ Transition:
     m_ConditionEvent: Give
     m_EventTreshold: 0
     m_ExitTime: .806451619
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110160427
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110200000}
+  m_DstState: {fileID: 110256984}
+  m_TransitionDuration: .193548381
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Breastfeed
+    m_EventTreshold: 0
+    m_ExitTime: .806451619
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110161560
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110256984}
+  m_DstState: {fileID: 110200000}
+  m_TransitionDuration: .0631578937
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: Breastfeed
+    m_EventTreshold: 0
+    m_ExitTime: .936842084
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -216,6 +288,26 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110167345
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110200000}
+  m_DstState: {fileID: 110254339}
+  m_TransitionDuration: .193548381
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Recieve
+    m_EventTreshold: 0
+    m_ExitTime: .806451619
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
 --- !u!1101 &110179757
 Transition:
   serializedVersion: 2
@@ -229,7 +321,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Walking
+    m_ConditionEvent: Walk
     m_EventTreshold: 0
     m_ExitTime: .806451619
   m_Atomic: 1
@@ -269,7 +361,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Jumping
+    m_ConditionEvent: Jump
     m_EventTreshold: 0
     m_ExitTime: .806451619
   m_Atomic: 1
@@ -401,6 +493,36 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110254339
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Recieve
+  m_Speed: .600000024
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 80c286b314c4d8745b19bd14b3a5b175, type: 3}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 312, y: -36, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110256984
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Breastfeed
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 1c3c9faa1b7fca14da2b72c0eaa12b07, type: 3}
+  m_ParentStateMachine: {fileID: 110700000}
+  m_Position: {x: 312, y: 84, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110700000
 StateMachine:
   serializedVersion: 2
@@ -417,9 +539,19 @@ StateMachine:
   - {fileID: 110213931}
   - {fileID: 110232474}
   - {fileID: 110252256}
+  - {fileID: 110256984}
+  - {fileID: 110254339}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
+    data:
+      first: {fileID: 110254339}
+      second:
+      - {fileID: 110133885}
+    data:
+      first: {fileID: 110256984}
+      second:
+      - {fileID: 110161560}
     data:
       first: {fileID: 0}
       second: []
@@ -432,26 +564,28 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110153915}
       - {fileID: 110183128}
-    data:
-      first: {fileID: 110224374}
-      second:
-      - {fileID: 110162185}
+      - {fileID: 110160427}
+      - {fileID: 110167345}
     data:
       first: {fileID: 110207557}
       second:
       - {fileID: 110165876}
     data:
-      first: {fileID: 110251153}
-      second:
-      - {fileID: 110183930}
-    data:
       first: {fileID: 110213931}
       second:
       - {fileID: 110179757}
     data:
+      first: {fileID: 110224374}
+      second:
+      - {fileID: 110162185}
+    data:
       first: {fileID: 110232474}
       second:
       - {fileID: 110135044}
+    data:
+      first: {fileID: 110251153}
+      second:
+      - {fileID: 110183930}
     data:
       first: {fileID: 110252256}
       second:

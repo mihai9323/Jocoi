@@ -5,11 +5,12 @@ public class Plant : InteractableObject {
 
     public string DieAnimation;
     public string GrowAnimation;
-    public string BeEatenAnimation;
-    public string BePickedAnimation;
-    public string LambFedAnimation;
-    public string MotherEatAnimation;
-
+    
+    public string pickUpAnimation;
+    public string eatAnimation;
+    public string feedAnimation;
+	public string giveAnimation;
+	
     public Transform PlantInMouth; //model object
     private Transform plantInMouth; //real object
 
@@ -122,32 +123,41 @@ public class Plant : InteractableObject {
     public virtual void Eat()
     {
         //Debug.Log("eat");
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(eatAnimation,true);
         Inputs.Instance.canInteract = false;
         if (MotherEatSound != null)
         {
             AudioSource.PlayClipAtPoint(MotherEatSound, transform.position);
         }
-        Invoke("FinishEat", 1.0f);
+        Invoke("FinishEat", 2.0f);
     }
     public virtual void Feed()
     {
         Inputs.Instance.canInteract = false;
-        plantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
-        plantInMouth.parent = LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead;
-       
+        Invoke ("FinishPickUp", 1.0f);
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(pickUpAnimation,true);
        // Debug.Log("feed");
         if (BePickedSound != null)
         {
             AudioSource.PlayClipAtPoint(BePickedSound, transform.position);
         }
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
-            LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.position + LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.right*2.0f,
-            this.LambEat,
-            1,
-            "Walk",
-            LevelData.Instance.LambSpeed*2,
-            4f
-            );
+       
+    }
+    private void FinishPickUp(){
+    
+		plantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
+		plantInMouth.parent = LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead;
+		this.gameObject.renderer.enabled = false;
+		LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
+			LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.position + LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.right*2.0f,
+			this.LambEat,
+			1,
+			"Walk",
+			LevelData.Instance.LambSpeed*2,
+			4f
+			);
+		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(pickUpAnimation,false);
+		
     }
     private void Destroy()
     {
@@ -158,25 +168,36 @@ public class Plant : InteractableObject {
     }
     protected virtual void LambEat()
     {
-       
+		LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool(feedAnimation,true);
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(giveAnimation,true);
+        
+        plantInMouth.transform.position = LevelData.Instance.LambHead.transform.position;
+		plantInMouth.transform.rotation = LevelData.Instance.LambHead.transform.rotation;
+        plantInMouth.transform.parent = LevelData.Instance.LambHead.transform;
+        
         LevelData.Instance.MotherSheep.transform.FaceObjectOnAxis(LevelData.Instance.LambHead, new Vector3(0, 1, 0));
         
         LevelData.Instance.Lamb.transform.FaceObjectOnAxis(LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, new Vector3(0, 1, 0));
         if (LevelData.Instance.Lamb.GetComponent<Animator>() != null)
         {
-            LevelData.Instance.Lamb.GetComponent<Animator>().SetBool(LambFedAnimation, true);
+         
         }
-        Invoke("LambFinishEat", 1.0f);
+        Invoke("LambFinishEat", 1.8f);
     }
     protected virtual void LambFinishEat()
     {
         Inputs.Instance.canInteract = true;
         Destroy(plantInMouth.gameObject);
+		LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool(feedAnimation,false);
+		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(giveAnimation,false);
         
     }
     protected virtual void FinishEat()
     {
+		
+		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(eatAnimation,false);
         Inputs.Instance.canInteract = true;
+        Destroy(this.gameObject);
         
     }
    

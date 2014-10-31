@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64c58cd993e5f274ea8814318e07fa69
+guid: 80c286b314c4d8745b19bd14b3a5b175
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -35,7 +35,7 @@ ModelImporter:
     4300006: legFR
     4300008: legBL
     4300010: legBR
-    7400000: Walk
+    7400000: Recieve
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -54,16 +54,16 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: Recieve
       takeName: Take 001
-      firstFrame: 32
-      lastFrame: 64
+      firstFrame: 1
+      lastFrame: 32
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

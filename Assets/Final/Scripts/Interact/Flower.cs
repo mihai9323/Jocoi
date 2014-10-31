@@ -8,7 +8,7 @@ public class Flower : Plant {
     public override void Feed()
     {
         base.Feed();
-        this.gameObject.renderer.enabled = false;
+       
     }
     protected override void LambEat()
     {

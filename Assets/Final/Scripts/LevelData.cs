@@ -16,7 +16,7 @@ public class LevelData:MonoBehaviour  {
     public Transform[] HerdWaypoints;
     public float LambSpeed;
     public float MotherSpeed;
-
+	public float JumpSpeedMultiplier;
     public Transform LambHead;
 
     public Flower[] flowers;

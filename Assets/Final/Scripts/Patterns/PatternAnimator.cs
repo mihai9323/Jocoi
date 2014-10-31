@@ -12,6 +12,7 @@ public class PatternAnimator : MonoBehaviour {
     public List<PatternInfo> patterns;
     private Texture2D[] frames;
     private int _currentFrame = 0;
+    public Renderer body;
     public int currentFrame
     {
         set
@@ -123,7 +124,7 @@ public class PatternAnimator : MonoBehaviour {
         }
 
         //applying the texture to the material
-        renderer.material.mainTexture = frames[currentFrame];
+        body.material.mainTexture = frames[currentFrame];
         if (animate) currentFrame++;
     }
     

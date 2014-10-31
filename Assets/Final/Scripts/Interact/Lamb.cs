@@ -81,12 +81,12 @@ public class Lamb : InteractableObject {
             {
                
                 float m = 1;
-                if (LevelData.Instance.currentAnimation == "Jump") m = 2;
+				if (LevelData.Instance.currentAnimation == "Jump") m = LevelData.Instance.JumpSpeedMultiplier;
                 this.gameObject.GetComponent<MoveToPosition>().StartMoving(LevelData.Instance.MotherSheep.transform,
                                                                            null,
                                                                            (int)(m-1),
                                                                            LevelData.Instance.currentAnimation,
-                                                                           LevelData.Instance.LambSpeed*2,
+                                                                           LevelData.Instance.LambSpeed*m,
                                                                            3.0f);
 
             }

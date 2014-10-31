@@ -42,7 +42,7 @@ public class Meadow : InteractableObject {
             null,
             0,
             "Jump",
-            LevelData.Instance.MotherSpeed * 2.0f
+			LevelData.Instance.MotherSpeed * LevelData.Instance.JumpSpeedMultiplier
             );
     }
 
