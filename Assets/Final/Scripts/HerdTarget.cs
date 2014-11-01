@@ -7,7 +7,23 @@ public class HerdTarget : MonoBehaviour {
     public float delay;
 
     private float lastTimeMoved;
-    private bool canMove;
+    public bool canMove
+    {
+        set
+        {
+            if (value == false)
+            {
+                StopAllCoroutines();
+
+            }
+            _canMove = value;
+        }
+        get
+        {
+            return _canMove;
+        }
+    }
+    private bool _canMove;
 
 	private void Start () {
         lastTimeMoved = Time.timeSinceLevelLoad;
@@ -20,7 +36,7 @@ public class HerdTarget : MonoBehaviour {
 	
 	
 	private void Update () {
-        if (lastTimeMoved + changePositionFrequency < Time.timeSinceLevelLoad)
+        if (lastTimeMoved + changePositionFrequency < Time.timeSinceLevelLoad && canMove)
         {
             lastTimeMoved = Time.timeSinceLevelLoad;
             ChangePosition();

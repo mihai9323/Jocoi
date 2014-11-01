@@ -5,9 +5,13 @@ public class SheepInHerd : InteractableObject {
 
     private MoveToPosition mtp;
     private bool moving;
+
+
+    private int inPosition;
 	// Use this for initialization
 	void Awake () {
         moving = false;
+        inPosition = 0;
         if (GetComponent<MoveToPosition>() != null)
         {
             mtp = GetComponent<MoveToPosition>();
@@ -39,7 +43,8 @@ public class SheepInHerd : InteractableObject {
     public void MoveToNewPosition(Vector3 position)
     {
         moving = true;
-        mtp.StartMoving(position, ReachedDestination, Random.Range(.8f, 1.2f) * LevelData.Instance.MotherSpeed);
+       
+        mtp.StartMoving(position, ReachedDestination,0,"Walk", Random.Range(.8f, 1.2f) * LevelData.Instance.MotherSpeed);
     }
     private void ReachedDestination()
     {
@@ -48,26 +53,89 @@ public class SheepInHerd : InteractableObject {
 
     public override void StartLMB()
     {
-        throw new System.NotImplementedException();
+        StartCoroutine(callAllSheep());
+        
     }
-
+    private IEnumerator callAllSheep()
+    {
+        inPosition = 0;
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
+               transform.position,
+               MotherCuddle,
+               0,
+               "Walk",
+               LevelData.Instance.MotherSpeed,
+               1.5f
+           );
+        yield return new WaitForSeconds(.2f);
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
+                transform.position,
+                LambCuddle,
+                0,
+                "Walk",
+                LevelData.Instance.LambSpeed,
+                3.0f
+            );
+        LevelData.Instance.herdTarget.canMove = false;
+        foreach (SheepInHerd sh in LevelData.Instance.Sheep)
+        {
+            sh.GetComponent<MoveToPosition>().StopMovement();
+            sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
+            yield return new WaitForSeconds(2 * Random.Range(.3f,.9f));
+        }
+       
+    }
     public override void StartRMB()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void StopLMB()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void StopRMB()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void StopAllInteractions()
     {
-        throw new System.NotImplementedException();
+        inPosition = 0;
+        StopAllCoroutines();
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
+        LevelData.Instance.herdTarget.canMove = true;
+        foreach (SheepInHerd sh in LevelData.Instance.Sheep)
+        {
+            sh.GetComponent<MoveToPosition>().StopMovement();
+            sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
+        }
     }
+
+    private void StartCuddle()
+    {
+        inPosition++;
+        //both mother and child ar in cuddling position
+        if (inPosition >1)
+        {
+            
+            
+        }
+       
+       
+    }
+    private void MotherCuddle()
+    {
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
+        StartCuddle();
+    }
+    private void LambCuddle()
+    {
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
+        StartCuddle();
+    }
+
+    
 }

@@ -76,7 +76,8 @@ public class Lamb : InteractableObject {
         {
             ok = true;
             if (Inputs.Instance.ActiveObject == this) ok = false;
-            if (Inputs.Instance.ActiveObject != null) if ( IsSameOrSubclass(typeof(Plant),Inputs.Instance.ActiveObject.GetType())  && Inputs.Instance.activeMode == 0) ok = false;
+            if (Inputs.Instance.ActiveObject != null) 
+                if ((IsSameOrSubclass(typeof(Plant),Inputs.Instance.ActiveObject.GetType())|| IsSameOrSubclass(typeof(SheepInHerd),Inputs.Instance.ActiveObject.GetType()))  && Inputs.Instance.activeMode == 0) ok = false;
             if (ok )
             {
                

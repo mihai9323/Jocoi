@@ -190,15 +190,15 @@ public class Plant : InteractableObject {
         Destroy(plantInMouth.gameObject);
 		LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool(feedAnimation,false);
 		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(giveAnimation,false);
-        
+        Destroy(this.gameObject, 0.1f);
     }
     protected virtual void FinishEat()
     {
 		
 		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(eatAnimation,false);
         Inputs.Instance.canInteract = true;
-        Destroy(this.gameObject);
-        
+       
+		Destroy(this.gameObject, 0.1f);
     }
    
 }

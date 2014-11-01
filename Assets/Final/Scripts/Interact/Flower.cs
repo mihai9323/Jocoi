@@ -23,6 +23,7 @@ public class Flower : Plant {
     {
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
         base.LambFinishEat();
-        Destroy(this.gameObject, 0.1f);
-    }
+        
+    }
+
 }
