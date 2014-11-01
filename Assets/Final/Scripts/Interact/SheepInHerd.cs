@@ -81,7 +81,7 @@ public class SheepInHerd : InteractableObject {
         {
             sh.GetComponent<MoveToPosition>().StopMovement();
             sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
-            yield return new WaitForSeconds(2 * Random.Range(.3f,.9f));
+            yield return new WaitForSeconds(2 * Random.Range(.3f,.6f));
         }
        
     }
@@ -112,6 +112,7 @@ public class SheepInHerd : InteractableObject {
             sh.GetComponent<MoveToPosition>().StopMovement();
             sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
         }
+        WeatherCycle.Instance.ChangeTheWeather();
     }
 
     private void StartCuddle()
@@ -120,7 +121,7 @@ public class SheepInHerd : InteractableObject {
         //both mother and child ar in cuddling position
         if (inPosition >1)
         {
-            
+            WeatherCycle.Instance.FadeWeathers();
             
         }
        

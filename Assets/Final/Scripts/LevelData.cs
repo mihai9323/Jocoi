@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class LevelData:MonoBehaviour  {
     
     public static LevelData Instance;
@@ -19,8 +19,8 @@ public class LevelData:MonoBehaviour  {
 	public float JumpSpeedMultiplier;
     public Transform LambHead;
 
-    public Flower[] flowers;
-    public Grass[] grass;
+    public List<Flower> flowers;
+    public List<Grass> grass;
 
     public Camera cam;
 

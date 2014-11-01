@@ -103,6 +103,12 @@ public class Plant : InteractableObject {
             audioSource.clip = GrowSound;
             audioSource.Play();
         }
+        anim.SetBool("Grow", true);
+        Invoke("FinishGrow", 1.5f);
+    }
+    private void FinishGrow()
+    {
+        anim.SetBool("Grow", false);
     }
     public void FinishedGrowing()
     {
@@ -115,10 +121,14 @@ public class Plant : InteractableObject {
             audioSource.clip = DieSound;
             audioSource.Play();
         }
+        if(anim!=null)anim.SetBool("Die", true);
+        Invoke("FinishedDying", 2.0f);
     }
     public void FinishedDying()
     {
+        
         audioSource.Stop();
+        Destroy(this.gameObject);
     }
     public virtual void Eat()
     {
@@ -159,8 +169,9 @@ public class Plant : InteractableObject {
 		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(pickUpAnimation,false);
 		
     }
-    private void Destroy()
+    protected virtual void OnDestroy()
     {
+        Debug.Log("sterge");
         if (Inputs.Instance.ActiveObject == this)
         {
             Inputs.Instance.ActiveObjectDestroyed();

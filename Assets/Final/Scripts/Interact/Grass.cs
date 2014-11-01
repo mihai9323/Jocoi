@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Grass : MonoBehaviour {
+public class Grass : Plant {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void Start()
+    {
+        LevelData.Instance.grass.Add(this);
+    }
+    protected override void OnDestroy(){
+        
+        LevelData.Instance.grass.Remove(this);
+        base.OnDestroy();
+    }
 }
