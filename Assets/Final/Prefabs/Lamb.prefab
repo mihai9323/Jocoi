@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 54: {fileID: 5400000}
   - 136: {fileID: 13600000}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: Lamb
   m_TagString: Untagged
@@ -504,6 +505,21 @@ MonoBehaviour:
   sounds: []
   anim: {fileID: 9500000}
   offSet: {x: 0, y: 0, z: 0}
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48beacd9b2cc4f64dad176a14de228f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xSize: 20
+  ySize: 20
+  density: .800000012
+  debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
