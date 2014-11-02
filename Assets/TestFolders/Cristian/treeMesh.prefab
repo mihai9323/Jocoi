@@ -25,8 +25,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: -.0367663167, y: -.145979539, z: -.111079402, w: -.982343912}
-  m_LocalPosition: {x: 15.3604527, y: -.173089743, z: 8.96430969}
+  m_LocalRotation: {x: -.0445682444, y: -.0515666902, z: -.0384498313, w: -.996933401}
+  m_LocalPosition: {x: 9.91380596, y: 0, z: 11.6599073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -90,8 +90,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeatherColors:
-  - {r: 1, g: .772058845, b: .772058845, a: 0}
-  - {r: .27582857, g: .91911763, b: .223021179, a: 0}
+  - materialColor:
+    - {r: 0, g: .298039228, b: 0, a: 0}
+    - {r: 0, g: .400000006, b: 0, a: 0}
+    - {r: .0431372561, g: .607843161, b: 0, a: 0}
+    - {r: .141176477, g: .760784328, b: 0, a: 0}
+    - {r: .188235298, g: .156862751, b: .188235298, a: 0}
+    - {r: .321568638, g: .274509817, b: .325490206, a: 0}
+  - materialColor:
+    - {r: .75686276, g: .75686276, b: .75686276, a: 0}
+    - {r: .137254909, g: .137254909, b: .137254909, a: 0}
+    - {r: .670588255, g: .670588255, b: .670588255, a: 0}
+    - {r: .00392156886, g: .372549027, b: .282352954, a: 0}
+    - {r: .200000003, g: .549019635, b: .478431374, a: 0}
+    - {r: .556862772, g: .549019635, b: .650980413, a: 0}
+  - materialColor: []
+  - materialColor: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
