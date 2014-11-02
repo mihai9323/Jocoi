@@ -185,7 +185,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 50
   m_Drag: 50
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 47.4500008
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -736,8 +736,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeatherColors:
-  - {r: 1, g: .772058845, b: .772058845, a: 0}
-  - {r: .27582857, g: .91911763, b: .223021179, a: 0}
+  - materialColor:
+    - {r: 1, g: 0, b: 0, a: 0}
+  - materialColor:
+    - {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &348895220
 Renderer:
   m_ObjectHideFlags: 0
@@ -1549,8 +1551,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeatherColors:
-  - {r: 1, g: .772058845, b: .772058845, a: 0}
-  - {r: .27582857, g: .91911763, b: .223021179, a: 0}
+  - materialColor:
+    - {r: 1, g: 0, b: 0, a: 0}
+  - materialColor:
+    - {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &673882921
 Renderer:
   m_ObjectHideFlags: 0
@@ -2068,6 +2072,10 @@ Prefab:
       propertyPath: motherHead
       value: 
       objectReference: {fileID: 491155173}
+    - target: {fileID: 5400000, guid: 7d42aff3ed643144988ed2b880d244b2, type: 2}
+      propertyPath: m_AngularDrag
+      value: 47.4500008
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d42aff3ed643144988ed2b880d244b2, type: 2}
   m_RootGameObject: {fileID: 111380348}
@@ -2871,8 +2879,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeatherColors:
-  - {r: 1, g: .772058845, b: .772058845, a: 0}
-  - {r: .27582857, g: .91911763, b: .223021179, a: 0}
+  - materialColor:
+    - {r: 1, g: 0, b: 0, a: 0}
+  - materialColor:
+    - {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &1134110653
 Renderer:
   m_ObjectHideFlags: 0
@@ -2885,7 +2895,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9ad6ec4c9ffb5ac4987ff78ee737bc45, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4356,8 +4366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeatherColors:
-  - {r: 1, g: .772058845, b: .772058845, a: 0}
-  - {r: .27582857, g: .91911763, b: .223021179, a: 0}
+  - materialColor:
+    - {r: 1, g: 0, b: 0, a: 0}
+  - materialColor:
+    - {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &1805617588
 Renderer:
   m_ObjectHideFlags: 0
@@ -4966,8 +4978,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeatherColors:
-  - {r: 1, g: .772058845, b: .772058845, a: 0}
-  - {r: .27582857, g: .91911763, b: .223021179, a: 0}
+  - materialColor:
+    - {r: 1, g: 0, b: 0, a: 0}
+  - materialColor:
+    - {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &1963409126
 Renderer:
   m_ObjectHideFlags: 0
@@ -5481,8 +5495,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeatherColors:
-  - {r: 1, g: .772058845, b: .772058845, a: 0}
-  - {r: .27582857, g: .91911763, b: .223021179, a: 0}
+  - materialColor:
+    - {r: 1, g: 0, b: 0, a: 0}
+  - materialColor:
+    - {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &2141809239
 Renderer:
   m_ObjectHideFlags: 0
