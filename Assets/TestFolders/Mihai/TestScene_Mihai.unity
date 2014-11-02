@@ -463,6 +463,178 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1250802058}
   m_GameObject: {fileID: 171743112}
   m_Mesh: {fileID: 4300008, guid: 64c58cd993e5f274ea8814318e07fa69, type: 3}
+--- !u!1001 &172365035
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.57173443
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .109361552
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.93852139
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -.0367663167
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -.145979539
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -.111079402
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: -.982343912
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[0].g
+      value: .298039228
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[1].g
+      value: .458823532
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[2].r
+      value: .0431372561
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[2].g
+      value: .611764729
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[3].r
+      value: .141176477
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[3].g
+      value: .760784328
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[4].r
+      value: .188235298
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[4].g
+      value: .156862751
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[4].b
+      value: .188235298
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[5].r
+      value: .321568638
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[5].g
+      value: .274509817
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[0].materialColor.Array.data[5].b
+      value: .325490206
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[0].r
+      value: .573529422
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[0].g
+      value: .522923887
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[0].b
+      value: .522923887
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[1].r
+      value: .41911763
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[1].g
+      value: .42636916
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[1].b
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[2].r
+      value: .445772052
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[2].g
+      value: .476673424
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[2].b
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[3].r
+      value: .441176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[3].g
+      value: .442444235
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[3].b
+      value: .625
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[4].r
+      value: .0908304304
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[4].g
+      value: .0921667889
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[4].b
+      value: .102941155
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[5].r
+      value: .32794717
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[5].g
+      value: .317690313
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+      propertyPath: WeatherColors.Array.data[1].materialColor.Array.data[5].b
+      value: .382352948
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+  m_RootGameObject: {fileID: 845820150}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &176144908
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +962,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &372103765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &685412857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1868,7 @@ Transform:
   m_Children:
   - {fileID: 1129947413}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!114 &707531564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1963,7 +2135,7 @@ Transform:
   - {fileID: 1035155008}
   - {fileID: 207974992}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &816927178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2081,6 +2253,114 @@ Prefab:
   m_RootGameObject: {fileID: 111380348}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &845820150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+  m_PrefabInternal: {fileID: 172365035}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 845820155}
+  - 33: {fileID: 845820154}
+  - 23: {fileID: 845820153}
+  - 95: {fileID: 845820152}
+  - 114: {fileID: 845820151}
+  m_Layer: 0
+  m_Name: treeMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &845820151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 172365035}
+  m_GameObject: {fileID: 845820150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeatherColors:
+  - materialColor:
+    - {r: 0, g: .298039228, b: 0, a: 0}
+    - {r: 0, g: .458823532, b: 0, a: 0}
+    - {r: .0431372561, g: .611764729, b: 0, a: 0}
+    - {r: .141176477, g: .760784328, b: 0, a: 0}
+    - {r: .188235298, g: .156862751, b: .188235298, a: 0}
+    - {r: .321568638, g: .274509817, b: .325490206, a: 0}
+  - materialColor:
+    - {r: .573529422, g: .522923887, b: .522923887, a: 0}
+    - {r: .41911763, g: .42636916, b: .5, a: 0}
+    - {r: .445772052, g: .476673424, b: .625, a: 0}
+    - {r: .441176474, g: .442444235, b: .625, a: 0}
+    - {r: .0908304304, g: .0921667889, b: .102941155, a: 0}
+    - {r: .32794717, g: .317690313, b: .382352948, a: 0}
+--- !u!95 &845820152
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 437b3407d2f6db54eb3dce7cdabedf4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 172365035}
+  m_GameObject: {fileID: 845820150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 25974b8bdf163054ca7a8c0989f51405, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!23 &845820153
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 437b3407d2f6db54eb3dce7cdabedf4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 172365035}
+  m_GameObject: {fileID: 845820150}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 0a3dee736a77e064a8479fb2e2e6bb5b, type: 2}
+  - {fileID: 2100000, guid: 1c8f0be0b3b8cc649ad09b4eb1a40874, type: 2}
+  - {fileID: 2100000, guid: 49b0aefc38677c246a07c2f9834e9ddc, type: 2}
+  - {fileID: 2100000, guid: 69b7c171ba61b9d478a5e74a213c656a, type: 2}
+  - {fileID: 2100000, guid: 09700da17b6321746876e34c69a01436, type: 2}
+  - {fileID: 2100000, guid: 21926ed32ef173a43b9c4fdc59c57cb7, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &845820154
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 437b3407d2f6db54eb3dce7cdabedf4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 172365035}
+  m_GameObject: {fileID: 845820150}
+  m_Mesh: {fileID: 4300002, guid: 25974b8bdf163054ca7a8c0989f51405, type: 3}
+--- !u!4 &845820155
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
+  m_PrefabInternal: {fileID: 172365035}
+  m_GameObject: {fileID: 845820150}
+  m_LocalRotation: {x: -.0367663167, y: -.145979539, z: -.111079402, w: -.982343912}
+  m_LocalPosition: {x: 8.57173443, y: .109361552, z: 7.93852139}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &855128112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2933,7 +3213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1134633979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3643,7 +3923,7 @@ Transform:
   - {fileID: 1800705453}
   - {fileID: 2022472045}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
 --- !u!1 &1497648387
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,7 +4700,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1845009471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4768,7 +5048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1895612220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4815,7 +5095,7 @@ Transform:
   m_Children:
   - {fileID: 258936194}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!114 &1909535104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5032,7 +5312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1985026632
 GameObject:
   m_ObjectHideFlags: 0
@@ -5463,7 +5743,8 @@ MonoBehaviour:
     grass: []
     flowersToSpawn: 5
     grassToSpawn: 0
-  weatherTransitionTime: 5
+  weatherTime: 3.5999999
+  weatherTransitionSpeed: .5
 --- !u!1 &2141809237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5549,4 +5830,4 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11

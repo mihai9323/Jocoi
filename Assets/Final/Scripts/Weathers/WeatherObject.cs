@@ -33,7 +33,7 @@ public class WeatherObject : MonoBehaviour {
         float ct = 0;
         while (ct < .9f)
         {
-            ct += Time.fixedDeltaTime/ WeatherCycle.Instance.weatherTransitionTime;
+            ct += (Time.fixedDeltaTime* WeatherCycle.Instance.weatherTransitionSpeed);
             renderer.materials[index].color = Color.Lerp(renderer.materials[index].color,WeatherColors[c].materialColor[index],ct);
             yield return new WaitForFixedUpdate();
         }
