@@ -2299,6 +2299,8 @@ MonoBehaviour:
     - {r: .441176474, g: .442444235, b: .625, a: 0}
     - {r: .0908304304, g: .0921667889, b: .102941155, a: 0}
     - {r: .32794717, g: .317690313, b: .382352948, a: 0}
+  - materialColor: []
+  - materialColor: []
 --- !u!95 &845820152
 Animator:
   serializedVersion: 3
