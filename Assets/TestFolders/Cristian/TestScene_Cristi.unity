@@ -4925,7 +4925,21 @@ MonoBehaviour:
     grass: []
     flowersToSpawn: 5
     grassToSpawn: 0
-  weatherTransitionTime: 5
+  - name: Foggy
+    ObjectsToEnable: []
+    flowers:
+    - {fileID: 11400000, guid: 38f385788a2081440a3dfb24ef265096, type: 2}
+    grass: []
+    flowersToSpawn: 5
+    grassToSpawn: 0
+  - name: Foggy
+    ObjectsToEnable: []
+    flowers:
+    - {fileID: 11400000, guid: 38f385788a2081440a3dfb24ef265096, type: 2}
+    grass: []
+    flowersToSpawn: 5
+    grassToSpawn: 0
+  weatherTransitionTime: 3
 --- !u!1 &964847187
 GameObject:
   m_ObjectHideFlags: 0
