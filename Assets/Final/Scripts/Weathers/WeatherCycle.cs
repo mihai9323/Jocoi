@@ -23,7 +23,11 @@ public class WeatherCycle : MonoBehaviour {
     }
 
     private int _currentWeather;
-    public float weatherTransitionTime;
+    [Range(0.1f,10.0f)]
+    public float weatherTime = 3.5f;
+
+    [Range(0.01f,.5f)]
+    public float weatherTransitionSpeed = 0.04f;
 
     private void Awake()
     {
@@ -101,7 +105,7 @@ public class WeatherCycle : MonoBehaviour {
             {
                 FadeToWeather(currentWeather++);
             }
-            yield return new WaitForSeconds(weatherTransitionTime);
+            yield return new WaitForSeconds(weatherTime);
 
         }
     }

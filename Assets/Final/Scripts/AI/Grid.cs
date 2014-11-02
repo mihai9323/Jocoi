@@ -77,10 +77,10 @@ public class Grid : MonoBehaviour {
         openList.Add(start);
         while (openList.Count > 0 && !closedList.Contains(end))
         {
-            if (c > 200)
+            if (c > 400)
             {
                 yield return new WaitForFixedUpdate();
-                c -= 200;
+                c -= 400;
             }
             Node currentNode = BestNode(openList.ToArray());
             int startX=-1, startY=-1, endX=2, endY=2;

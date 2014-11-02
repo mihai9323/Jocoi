@@ -125,7 +125,13 @@ public class PatternAnimator : MonoBehaviour {
 
         //applying the texture to the material
         body.material.mainTexture = frames[currentFrame];
-        if (animate) currentFrame++;
+        if (animate)
+        {
+            currentFrame++;
+            for (int i = 0; i < patterns.Count; i++) {
+                patterns[i].frameNumber++;
+            }
+        }
     }
     
 }
