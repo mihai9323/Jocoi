@@ -120,7 +120,7 @@ public class MoveToPosition : MonoBehaviour {
     public void StartMovingOnPath(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
         StartMoving(position, complete, sound, animation, speed, acceptedDistance);
-        /*
+        
         successDistance = acceptedDistance;
         position = new Vector3(position.x, transform.position.y, position.z);
         StopMovement();
@@ -135,13 +135,13 @@ public class MoveToPosition : MonoBehaviour {
         this.speed = speed;
         this.sound = sound;
         StartCoroutine(this.GetComponent<Grid>().CalculatePath(transform.position,position,StartMovementOnPath));
-        */
+        
         
     }
     public void StartMovingOnPath(Transform tpos, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
         StartMoving(tpos, complete, sound, animation, speed, acceptedDistance);
-        /*
+        
         successDistance = acceptedDistance;
         Vector3 pos = new Vector3(tpos.position.x, transform.position.y, tpos.position.z);
         StopMovement();
@@ -156,7 +156,7 @@ public class MoveToPosition : MonoBehaviour {
         this.speed = speed;
 
         StartCoroutine(this.GetComponent<Grid>().CalculatePath(transform.position, pos, StartMovementOnPath));
-        */
+        
 
     }
     void StartMovementOnPath(Vector3[] path)

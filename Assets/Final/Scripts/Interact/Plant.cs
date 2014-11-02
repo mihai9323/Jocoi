@@ -48,7 +48,7 @@ public class Plant : InteractableObject {
     public override void StartLMB()
     {
         LevelData.Instance.currentAnimation = "Walk";
-        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMovingOnPath(
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
                 transform.position,
                 Feed,
                 0,
@@ -57,7 +57,7 @@ public class Plant : InteractableObject {
                 1.8f
 
             );
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMovingOnPath(
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
             LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform,
             null,
             1,
@@ -70,7 +70,7 @@ public class Plant : InteractableObject {
     public override void StartRMB()
     {
         LevelData.Instance.currentAnimation = "Walk";
-        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMovingOnPath(
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
                transform.position,
                Eat,
                0,
@@ -160,7 +160,7 @@ public class Plant : InteractableObject {
 		plantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
 		plantInMouth.parent = LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead;
 		this.gameObject.renderer.enabled = false;
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMovingOnPath(
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
 			LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.position + LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.right*2.0f,
 			this.LambEat,
 			1,

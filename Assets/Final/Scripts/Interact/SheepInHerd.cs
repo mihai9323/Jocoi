@@ -59,7 +59,7 @@ public class SheepInHerd : InteractableObject {
     private IEnumerator callAllSheep()
     {
         inPosition = 0;
-        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMovingOnPath(
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
                transform.position,
                MotherCuddle,
                0,
@@ -68,7 +68,7 @@ public class SheepInHerd : InteractableObject {
                1.5f
            );
         yield return new WaitForSeconds(.2f);
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMovingOnPath(
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
                 transform.position,
                 LambCuddle,
                 0,
