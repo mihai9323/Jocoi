@@ -9,7 +9,7 @@ public class MoveToPosition : MonoBehaviour {
     public AudioClip[] sounds;
     
     internal string animation;
-    
+    private int sound;
     private float speed;
     private float successDistance;
     public Animator anim;
@@ -113,6 +113,74 @@ public class MoveToPosition : MonoBehaviour {
         StopAllCoroutines();
         if (animation != "" && anim!=null) anim.SetBool(animation, false);
         if (audioSource != null) audioSource.Stop();
-       
+        this.gameObject.GetComponent<Grid>().RemoveMap();
+    }
+
+
+    public void StartMovingOnPath(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
+    {
+        successDistance = acceptedDistance;
+        position = new Vector3(position.x, transform.position.y, position.z);
+        StopMovement();
+        if (sounds != null) if (sounds.Length > sound)
+            {
+                audioSource.clip = sounds[sound];
+                audioSource.Play();
+
+            }
+        this.complete = complete;
+        this.animation = animation;
+        this.speed = speed;
+        this.sound = sound;
+        StartCoroutine(this.GetComponent<Grid>().CalculatePath(transform.position,position,StartMovementOnPath));
+
+        
+    }
+    public void StartMovingOnPath(Transform tpos, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
+    {
+        successDistance = acceptedDistance;
+        Vector3 pos = new Vector3(tpos.position.x, transform.position.y, tpos.position.z);
+        StopMovement();
+        if (sounds != null) if (sounds.Length > sound)
+            {
+                audioSource.clip = sounds[sound];
+                audioSource.Play();
+
+            }
+        this.complete = complete;
+        this.animation = animation;
+        this.speed = speed;
+
+        StartCoroutine(this.GetComponent<Grid>().CalculatePath(transform.position, pos, StartMovementOnPath));
+
+
+    }
+    void StartMovementOnPath(Vector3[] path)
+    {
+        StartCoroutine(MoveOnPath(path));
+    }
+    private  IEnumerator MoveOnPath(Vector3[] path){
+        if (animation != "" && anim != null) anim.SetBool(animation, true);
+        for(int i=0; i<path.Length; i++){
+            
+            while(transform.position.SquaredDistance(path[i])>= successDistance*successDistance ){
+                transform.position += (path[i] - transform.position).normalized * Time.fixedDeltaTime * speed;
+                transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+                transform.FaceObjectOnAxis(path[i], new Vector3(0, 1, 0));
+                RaycastHit hit;
+                
+                if(Physics.Raycast(transform.position,(path[i]-transform.position).normalized,out hit,Vector3.Distance(path[i],transform.position))){
+                    if (hit.collider.transform.position != path[path.Length - 1] && hit.collider.tag != "Node")
+                    {
+
+                        StartMovingOnPath(path[path.Length - 1], complete, sound, animation, speed, successDistance);
+                    }
+                }
+                 
+                yield return new WaitForFixedUpdate();
+            }
+            i++;
+        }
+        AtDestination();
     }
 }

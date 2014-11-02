@@ -43,8 +43,8 @@ public class SheepInHerd : InteractableObject {
     public void MoveToNewPosition(Vector3 position)
     {
         moving = true;
-       
-        mtp.StartMoving(position, ReachedDestination,0,"Walk", Random.Range(.8f, 1.2f) * LevelData.Instance.MotherSpeed);
+
+        mtp.StartMovingOnPath(position, ReachedDestination, 0, "Walk", Random.Range(.8f, 1.2f) * LevelData.Instance.MotherSpeed,2.5f);
     }
     private void ReachedDestination()
     {
@@ -59,7 +59,7 @@ public class SheepInHerd : InteractableObject {
     private IEnumerator callAllSheep()
     {
         inPosition = 0;
-        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
+        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMovingOnPath(
                transform.position,
                MotherCuddle,
                0,
@@ -68,13 +68,13 @@ public class SheepInHerd : InteractableObject {
                1.5f
            );
         yield return new WaitForSeconds(.2f);
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
+        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMovingOnPath(
                 transform.position,
                 LambCuddle,
                 0,
                 "Walk",
                 LevelData.Instance.LambSpeed,
-                3.0f
+                1.5f
             );
         LevelData.Instance.herdTarget.canMove = false;
         foreach (SheepInHerd sh in LevelData.Instance.Sheep)

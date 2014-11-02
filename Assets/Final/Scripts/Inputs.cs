@@ -55,7 +55,7 @@ public class Inputs : MonoBehaviour {
                 //LMB UP
                 if (Input.GetMouseButtonUp(0))
                 {
-                    _activeObject.StopLMB();
+                    if(_activeObject!=null)_activeObject.StopLMB();
                     activeClick = -1;
                 }
             }
