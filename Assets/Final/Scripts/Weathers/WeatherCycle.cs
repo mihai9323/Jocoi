@@ -103,7 +103,7 @@ public class WeatherCycle : MonoBehaviour {
         {
             if (FadeToWeather != null)
             {
-                FadeToWeather(currentWeather++);
+                FadeToWeather(++currentWeather);
             }
             yield return new WaitForSeconds(weatherTime);
 

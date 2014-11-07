@@ -5,10 +5,21 @@ using System.Collections.Generic;
 public class Flower : Plant {
 
     public PatternInfo patternToAdd;
-
+	public Color trunchiColor; 
+	public int TrunchiNr;
     private void Start()
     {
         LevelData.Instance.flowers.Add(this);
+		for (int i =0; i<renderer.materials.Length; i++) {
+			if(i==TrunchiNr) renderer.materials[i].color = trunchiColor;
+			else{
+				//Color c= patternToAdd.color.RGBtoHSI();
+				//c.g = c.g - (float)i * 0.1f;
+				//c = c.HSItoRGB();
+				renderer.materials[i].color =  patternToAdd.color;
+
+			}
+				}
     }
     protected override void OnDestroy()
     {
