@@ -7,34 +7,22 @@ public class BackButton : MonoBehaviour {
 	public int sceneToLoad;
 	public Transform button;
 	private bool canPress;
-	public float xButtonPos = ((Screen.width/4)*3);
-	public float yButtonPos = ((Screen.height/4)*3);
-	public float widthButton;
-	public float heightButton;
-	public Texture textureButton;
-	//for unity 4.6 only
-	//public RectTransform  rectButton;
+	private float xButton;
+	private float yButton;
 
 	void Start () {
-		xButtonPos = ((Screen.width/4)*3);
-		yButtonPos = ((Screen.height/4)*3);
+		xButton = ((Screen.width/4)*3);
+		yButton = ((Screen.height/4)*3);
 		canPress = false;
 		StartCoroutine("enableButton", timeUntilBack);
 	}
 
 	void OnGUI(){
 		if(canPress){
-			if(GUI.Button(new Rect(xButtonPos, yButtonPos, widthButton, heightButton), textureButton)){
+			if(GUI.Button(new Rect(xButton, yButton, 100f, 50f), "Back to normal")){
 				Application.LoadLevel(sceneToLoad);
 			}
 		}
-		/* for using 4.6 only thingy i think
-
-		 if(canPress){
-			if(GUI.Button(new Rect(rectButton), textureButton)){
-				Application.LoadLevel(sceneToLoad);
-			}
-		}*/
 	}
 
 	private IEnumerator enableButton(float timeUntilBack){
