@@ -21,6 +21,7 @@ public class LevelData:MonoBehaviour  {
 
     public List<Flower> flowers;
     public List<Grass> grass;
+	public GameObject particle;
 
     public Camera cam;
 
