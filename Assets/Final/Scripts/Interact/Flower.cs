@@ -19,7 +19,8 @@ public class Flower : Plant {
 				renderer.materials[i].color =  patternToAdd.color;
 
 			}
-				}
+		}
+        InvokeRepeating("CheckForDistance", .0f,.3f);
     }
     protected override void OnDestroy()
     {
@@ -45,14 +46,14 @@ public class Flower : Plant {
     protected override void LambFinishEat()
     {
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
+        SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].IncreaseVolume(SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel);
         base.LambFinishEat();
         
     }
 
-    private IEnumerator CheckForDistance()
+    private void CheckForDistance()
     {
-        while (true)
-        {
+        
             if (transform.position.SquaredDistance(LevelData.Instance.MotherSheep.transform.position) < 25.0f)
             {
                 SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].IncreaseVolume(SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel);
@@ -61,8 +62,7 @@ public class Flower : Plant {
             {
                 SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel;
             }
-            yield return new WaitForSeconds(1.0f);
-        }
+           
     }
 
 }
