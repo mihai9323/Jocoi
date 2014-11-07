@@ -111,6 +111,7 @@ public class MoveToPosition : MonoBehaviour {
     public void StopMovement()
     {
         StopAllCoroutines();
+        
         if (animation != "" && anim!=null) anim.SetBool(animation, false);
         if (audioSource != null) audioSource.Stop();
         this.gameObject.GetComponent<Grid>().RemoveMap();

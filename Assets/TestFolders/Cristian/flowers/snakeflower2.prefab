@@ -86,8 +86,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DieAnimation: 
-  GrowAnimation: 
+  DieAnimation: Die
+  GrowAnimation: Grow
+  HoverAnimation: Hover
   pickUpAnimation: PickUp
   eatAnimation: Eat
   feedAnimation: Eat

@@ -5,11 +5,12 @@ public class SheepInHerd : InteractableObject {
 
     private MoveToPosition mtp;
     private bool moving;
-
+    private bool weatherStartedChanging;
 
     private int inPosition;
 	// Use this for initialization
 	void Awake () {
+        weatherStartedChanging = false;
         moving = false;
         inPosition = 0;
         if (GetComponent<MoveToPosition>() != null)
@@ -54,10 +55,11 @@ public class SheepInHerd : InteractableObject {
     public override void StartLMB()
     {
         StartCoroutine(callAllSheep());
-        
+        weatherStartedChanging = false;
     }
     private IEnumerator callAllSheep()
     {
+
         inPosition = 0;
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
                transform.position,
@@ -112,7 +114,8 @@ public class SheepInHerd : InteractableObject {
             sh.GetComponent<MoveToPosition>().StopMovement();
             sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
         }
-        WeatherCycle.Instance.ChangeTheWeather();
+        if(weatherStartedChanging) WeatherCycle.Instance.ChangeTheWeather();
+        weatherStartedChanging = false;
     }
 
     private void StartCuddle()
@@ -122,7 +125,7 @@ public class SheepInHerd : InteractableObject {
         if (inPosition >1)
         {
             WeatherCycle.Instance.FadeWeathers();
-            
+            weatherStartedChanging = true;
         }
        
        

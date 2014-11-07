@@ -7,6 +7,8 @@ public class Flower : Plant {
     public PatternInfo patternToAdd;
 	public Color trunchiColor; 
 	public int TrunchiNr;
+    public int flowerType; 
+
     private void Start()
     {
         LevelData.Instance.flowers.Add(this);
@@ -39,7 +41,7 @@ public class Flower : Plant {
         base.LambEat();
        
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(patternToAdd);
-        GameData.addToMemory(patternToAdd);
+        GameData.addToMemory(this);
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
        
     }
@@ -51,18 +53,20 @@ public class Flower : Plant {
         
     }
 
-    private void CheckForDistance()
+    private void OnMouseOver()
     {
         
-            if (transform.position.SquaredDistance(LevelData.Instance.MotherSheep.transform.position) < 25.0f)
-            {
-                SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].IncreaseVolume(SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel);
-            }
-            else
-            {
-                SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel;
-            }
            
+        SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].IncreaseVolume(SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel);
+        this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
+               
+            
+           
+    }
+    private void OnMouseExit()
+    {
+        SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel;
+        this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
     }
 
 }

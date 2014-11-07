@@ -8,19 +8,19 @@ AnimatorController:
   m_Name: snakeAnimator
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: snHover
+  - m_Name: Hover
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: snDie
+  - m_Name: Die
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: snGrow
+  - m_Name: Grow
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -51,7 +51,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: snHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .875
   m_Atomic: 1
@@ -91,11 +91,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: snDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .875
   - m_ConditionMode: 1
-    m_ConditionEvent: snGrow
+    m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .875
   m_Atomic: 1
@@ -115,7 +115,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: snDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .875
   m_Atomic: 1
@@ -135,7 +135,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: snHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1

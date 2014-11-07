@@ -8,19 +8,19 @@ AnimatorController:
   m_Name: spotsAnimator
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: spHover
+  - m_Name: Hover
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: spDie
+  - m_Name: Die
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: spGrow
+  - m_Name: Grow
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -51,7 +51,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: spHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -71,7 +71,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: spHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .875
   m_Atomic: 1
@@ -91,7 +91,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: spDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -131,11 +131,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: spDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .872340441
   - m_ConditionMode: 1
-    m_ConditionEvent: spGrow
+    m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -219,22 +219,22 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110294448}
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110132262}
-    data:
-      first: {fileID: 110206906}
-      second:
-      - {fileID: 110190567}
+      - {fileID: 110100000}
+      - {fileID: 110124297}
     data:
       first: {fileID: 110252291}
       second:
       - {fileID: 110110054}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110206906}
       second:
-      - {fileID: 110100000}
-      - {fileID: 110124297}
+      - {fileID: 110190567}
+    data:
+      first: {fileID: 110294448}
+      second:
+      - {fileID: 110132262}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -216, y: -72, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
