@@ -38,6 +38,7 @@ public class Flower : Plant {
         base.LambEat();
        
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(patternToAdd);
+        GameData.addToMemory(patternToAdd);
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
        
     }
@@ -46,6 +47,22 @@ public class Flower : Plant {
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
         base.LambFinishEat();
         
+    }
+
+    private IEnumerator CheckForDistance()
+    {
+        while (true)
+        {
+            if (transform.position.SquaredDistance(LevelData.Instance.MotherSheep.transform.position) < 25.0f)
+            {
+                SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].IncreaseVolume(SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel);
+            }
+            else
+            {
+                SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSource].fixedLevel;
+            }
+            yield return new WaitForSeconds(1.0f);
+        }
     }
 
 }

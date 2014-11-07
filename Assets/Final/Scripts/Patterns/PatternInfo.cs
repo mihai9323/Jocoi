@@ -26,8 +26,12 @@ public class PatternInfo  {
     //the pattern
     public Texture2D texture;
     //the frame at which the animation is currently
-    public int _frameNumber = 0;
     
+    public int _frameNumber = 0;
+
+    public int flowerSource;
+
+
     //crops only the current frame of the animation and returns it as an array of Color
     public Color[] CropFrame()
     {
