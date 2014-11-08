@@ -713,46 +713,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2012279787}
   m_GameObject: {fileID: 106994401}
   m_Mesh: {fileID: 4300002, guid: 25974b8bdf163054ca7a8c0989f51405, type: 3}
---- !u!1 &107514123
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 107514124}
-  - 114: {fileID: 107514125}
-  m_Layer: 0
-  m_Name: SpawnPosition
-  m_TagString: SpawnPositions
-  m_Icon: {fileID: 813524716, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &107514124
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 107514123}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.20819998, y: 0, z: 8.84490013}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 683336026}
-  m_RootOrder: 32
---- !u!114 &107514125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 107514123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b39af3afa704c774db0bc000e35a0856, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  occupied: 0
 --- !u!1 &145306185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,9 +1670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48beacd9b2cc4f64dad176a14de228f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSize: 20
-  ySize: 20
-  density: .800000012
+  xSize: 29
+  ySize: 29
+  density: 1.40999997
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &256746315
 CapsuleCollider:
@@ -2958,6 +2918,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: density
+      value: 1.40999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: ySize
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: xSize
+      value: 29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
   m_RootGameObject: {fileID: 256746311}
@@ -4157,6 +4129,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: density
+      value: 1.40999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: ySize
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: xSize
+      value: 29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
   m_RootGameObject: {fileID: 1010588172}
@@ -4884,7 +4868,6 @@ Transform:
   - {fileID: 1743781128}
   - {fileID: 1096686322}
   - {fileID: 420402484}
-  - {fileID: 107514124}
   m_Father: {fileID: 1513538144}
   m_RootOrder: 7
 --- !u!1 &696479165
@@ -5165,9 +5148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48beacd9b2cc4f64dad176a14de228f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSize: 20
-  ySize: 20
-  density: .800000012
+  xSize: 29
+  ySize: 29
+  density: 1.40999997
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &723015677
 CapsuleCollider:
@@ -6261,9 +6244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48beacd9b2cc4f64dad176a14de228f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSize: 20
-  ySize: 20
-  density: .800000012
+  xSize: 29
+  ySize: 29
+  density: 1.40999997
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &1010588176
 CapsuleCollider:
@@ -8118,6 +8101,7 @@ MonoBehaviour:
   - {fileID: 256746313}
   - {fileID: 1010588174}
   - {fileID: 723015679}
+  HelperSheep: []
   HerdWaypoints:
   - {fileID: 696479166}
   - {fileID: 852291724}
@@ -10272,6 +10256,18 @@ Prefab:
     - target: {fileID: 400016, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: density
+      value: 1.40999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: ySize
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: xSize
+      value: 29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}

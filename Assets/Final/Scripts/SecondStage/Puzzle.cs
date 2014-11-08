@@ -70,7 +70,7 @@ public class Puzzle : MonoBehaviour {
                 }
                 if (Grass[i].flowerGraphic.GetComponent<Flower>())
                 {
-                    Grass[i].flowerGraphic.GetComponent<Flower>().enabled = false;
+                    Destroy(Grass[i].flowerGraphic.GetComponent<Flower>());
                 }
                 Grass[i].state = PuzzleGrass.GrassStates.TallGrass;
 

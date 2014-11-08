@@ -35,7 +35,7 @@ public class PuzzleGrass : InteractableObject
                     }
                 }
             }
-            if (_state != value)
+            if (_state != value && _state != GrassStates.Flower)
             {
                 TallGraphic.SetActive(false);
                 HighGraphic.SetActive(false);
