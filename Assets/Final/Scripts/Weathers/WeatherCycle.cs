@@ -10,6 +10,7 @@ public class WeatherCycle : MonoBehaviour {
     public event GameData.VOID_FUNCTION_INT FadeToWeather;
     public event GameData.VOID_FUNCTION ChangeWeather;
     public Weather[] weathers;
+    
     public int currentWeather{
         set{
 
@@ -46,7 +47,7 @@ public class WeatherCycle : MonoBehaviour {
     }
     public void FadeWeathers()
     {
-        foreach(Flower f in LevelData.Instance.flowers)
+        foreach (Flower f in LevelData.Instance.flowers)
         {
             f.StartDie();
         }
@@ -57,7 +58,6 @@ public class WeatherCycle : MonoBehaviour {
         foreach (GameObject go in weathers[currentWeather].ObjectsToEnable)
         {
             go.SetActive(false);
-
         }
         StartCoroutine("ZapWeathers");
     }
@@ -95,7 +95,6 @@ public class WeatherCycle : MonoBehaviour {
         foreach (GameObject go in weathers[currentWeather].ObjectsToEnable)
         {
             go.SetActive(true);
-
         }
     }
 
