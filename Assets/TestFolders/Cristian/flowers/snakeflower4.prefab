@@ -106,9 +106,11 @@ MonoBehaviour:
     color: {r: .650980413, g: .996078432, b: .117647059, a: 1}
     texture: {fileID: 2800000, guid: f391be8451edfab4e8b07baf4535fe84, type: 3}
     _frameNumber: 0
-    flowerSource: 2
+    flowerSourceType: 0
+    flowerSourceColor: 0
   trunchiColor: {r: .345098048, g: .400000006, b: 0, a: 0}
   TrunchiNr: 1
+  flowerType: 19
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

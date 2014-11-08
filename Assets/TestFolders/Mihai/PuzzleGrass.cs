@@ -31,7 +31,7 @@ public class PuzzleGrass : InteractableObject
                     }
                     else
                     {
-                        AudioSource.PlayClipAtPoint(FlowerSound, transform.position);
+                        if (FlowerSound != null) AudioSource.PlayClipAtPoint(FlowerSound, transform.position);
                     }
                 }
             }
@@ -66,11 +66,11 @@ public class PuzzleGrass : InteractableObject
     internal GameObject flowerGraphic;
 
     public AudioClip BaahSound, GrowBackSound, FlowerSound, EatSound;
-    
+    private bool StartedEating;
 
         public override void StartLMB()
         {
-            AudioSource.PlayClipAtPoint(BaahSound, transform.position);
+           if(BaahSound!=null) AudioSource.PlayClipAtPoint(BaahSound, transform.position);
         }
 
         public override void StartRMB()
@@ -84,7 +84,7 @@ public class PuzzleGrass : InteractableObject
                         0,
                         "Walk",
                         LevelData.Instance.MotherSpeed,
-                        1.0f
+                        1.9f
 
                     );
             }
@@ -92,34 +92,41 @@ public class PuzzleGrass : InteractableObject
 
         public override void StopLMB()
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         public override void StopRMB()
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         public override void StopAllInteractions()
         {
-            throw new NotImplementedException();
+
+            LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StopMovement();
         }
 
         private void StartEating()
         {
+            StartedEating = true;
             LevelData.Instance.MotherSheep.transform.FaceObjectOnAxis(transform, Vector3.one);
             LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Eat", true);
-            AudioSource.PlayClipAtPoint(EatSound, transform.position);
+            if(EatSound!=null)AudioSource.PlayClipAtPoint(EatSound, transform.position);
             Invoke("FinishedEating", 1.0f);
+            Inputs.Instance.canInteract = false;
+            
         }
         private void FinishedEating()
         {
             LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Eat", false);
             state = state + 1;
+            StartedEating = false;
+            Inputs.Instance.canInteract = true;
         }
         private void ResetState()
         {
-            AudioSource.PlayClipAtPoint(GrowBackSound, transform.position);
+           if(GrowBackSound!=null) AudioSource.PlayClipAtPoint(GrowBackSound, transform.position);
+           state = GrassStates.TallGrass;
         }
     }
 

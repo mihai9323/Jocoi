@@ -16,7 +16,7 @@ public class PlaceObjects2 : MonoBehaviour {
     }
     public void PlaceObjects()
     {
-        //  Memories = GameData.Memory.ToArray();
+      
         if(editMode) ObjectsToPlace = GameObject.FindGameObjectsWithTag("Child");
         float distance = 1.0f / (ObjectsToPlace.Length + 1);
         for (int i = 0; i < ObjectsToPlace.Length; i++)
@@ -37,4 +37,8 @@ public class PlaceObjects2 : MonoBehaviour {
 
         }
     }
+
+    
+
+   
 }

@@ -1870,6 +1870,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 301465473}
   - 114: {fileID: 301465474}
+  - 114: {fileID: 301465475}
   m_Layer: 0
   m_Name: Inputs
   m_TagString: Untagged
@@ -1902,6 +1903,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 1
   activeMode: 0
+--- !u!114 &301465475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301465472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b365a2088ca2914e8a55ed6f3d83f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &311702251
 GameObject:
   m_ObjectHideFlags: 0

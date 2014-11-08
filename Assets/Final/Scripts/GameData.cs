@@ -8,6 +8,7 @@ public class GameData  {
     public delegate void VOID_FUNCITON_PATH(Vector3[] path);
 
     public static List<Flower> Memory;
+   
     public static int PuzzleProgress
     {
         set
@@ -25,5 +26,9 @@ public class GameData  {
     {
         if (Memory == null) Memory = new List<Flower>();
         Memory.Add(flower);
+        
+
     }
+
+    
 }
