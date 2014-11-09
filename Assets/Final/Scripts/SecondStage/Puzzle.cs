@@ -21,6 +21,7 @@ public class Puzzle : MonoBehaviour {
     public PlaceObjects2 StonePlacer;
     public int progress;
 
+    public event GameData.VOID_FUNCTION PuzzleCompleted;
     private void Awake()
     {
         if (Instance == null)
@@ -128,6 +129,7 @@ public class Puzzle : MonoBehaviour {
 
     private void CompletePuzzle()
     {
+        if (PuzzleCompleted != null) PuzzleCompleted();
         Debug.Log("PuzzleCompleted");
     }
 
