@@ -210,7 +210,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dTreeIdle
-  m_Speed: .5
+  m_Speed: .300000012
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 6b66f518a06a4534da9cd37d020135e9, type: 3}
@@ -225,7 +225,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dSunny
-  m_Speed: .5
+  m_Speed: .300000012
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 6b66f518a06a4534da9cd37d020135e9, type: 3}
@@ -240,7 +240,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dRain
-  m_Speed: .5
+  m_Speed: .300000012
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 0c9a21775186ec94687d58a3ca304d57, type: 3}
@@ -255,7 +255,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dFog
-  m_Speed: .5
+  m_Speed: .300000012
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: da598eeae2a770b44ae1b3083e98269a, type: 3}
@@ -270,7 +270,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dSnow
-  m_Speed: .5
+  m_Speed: .300000012
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: e08c551bf1b74ad4f8ce1b893de5da13, type: 3}
@@ -297,16 +297,16 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110203954}
-      second:
-      - {fileID: 110187271}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
       - {fileID: 110126988}
       - {fileID: 110113172}
       - {fileID: 110183820}
+    data:
+      first: {fileID: 110294158}
+      second:
+      - {fileID: 110197390}
     data:
       first: {fileID: 110238564}
       second:
@@ -316,9 +316,9 @@ StateMachine:
       second:
       - {fileID: 110194453}
     data:
-      first: {fileID: 110294158}
+      first: {fileID: 110203954}
       second:
-      - {fileID: 110197390}
+      - {fileID: 110187271}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -168, y: -120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
