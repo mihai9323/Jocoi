@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class Flower : Plant {
 
     public PatternInfo patternToAdd;
-	public Color trunchiColor; 
-	public int TrunchiNr;
+	//public Color trunchiColor; 
+	//public int TrunchiNr;
     
     public int flowerType; 
     
@@ -14,6 +14,7 @@ public class Flower : Plant {
     private void Start()
     {
         LevelData.Instance.flowers.Add(this);
+        /*
 		for (int i =0; i<renderer.materials.Length; i++) {
 			if(i==TrunchiNr) renderer.materials[i].color = trunchiColor;
 			else{
@@ -24,6 +25,7 @@ public class Flower : Plant {
 
 			}
 		}
+         */
        
     }
     protected override void OnDestroy()
