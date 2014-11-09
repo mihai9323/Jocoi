@@ -840,9 +840,9 @@ MonoBehaviour:
     color: {r: .996078432, g: .196078435, b: .192156866, a: 1}
     texture: {fileID: 2800000, guid: c4eba0c980ab69348a33171f4aedf91f, type: 3}
     _frameNumber: 0
-    flowerSourceType: 3
-    flowerSourceColor: 4
-  flowerType: 21
+    instrumentID: 1
+    trackID: 5
+  flowerID: 21
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

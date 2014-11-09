@@ -13,7 +13,7 @@ public class AnimateEndingTrees : MonoBehaviour {
     {
         if (Puzzle.Instance != null) Puzzle.Instance.PuzzleCompleted += StartAnimation;
     }
-    private void Destroy()
+    private void OnDestroy()
     {
         if (Puzzle.Instance != null) Puzzle.Instance.PuzzleCompleted -= StartAnimation;
     }

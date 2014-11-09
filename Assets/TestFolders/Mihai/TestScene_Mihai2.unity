@@ -3468,19 +3468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f21cc35fbfa294428e5a4c0b0b4e934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlowerSources:
-  - {fileID: 364564354}
-  - {fileID: 1587928266}
-  - {fileID: 1916877511}
-  - {fileID: 1559027535}
-  - {fileID: 1391080217}
-  - {fileID: 1542546012}
-  - {fileID: 1740379351}
-  - {fileID: 348810256}
-  - {fileID: 894935913}
-  - {fileID: 1492101012}
-  - {fileID: 916870184}
-  - {fileID: 1278500747}
+  PlayOnAwake: 0
+  instruments: []
 --- !u!1 &645212980
 GameObject:
   m_ObjectHideFlags: 0
@@ -5509,56 +5498,56 @@ MonoBehaviour:
   - name: Sunny
     ObjectsToEnable: []
     flowers:
-    - {fileID: 11400000, guid: 17421838a16adb24391d745ceb7eaa9e, type: 2}
-    - {fileID: 11400000, guid: a9379d84e459d7046ab5e1e11b028f70, type: 2}
-    - {fileID: 11400000, guid: 3898ff3bf642b7a44b6c2918064ca6a4, type: 2}
-    - {fileID: 11400000, guid: 0a8edbf77b146a4479c65a09c1f95759, type: 2}
-    - {fileID: 11400000, guid: 55a47227f0299d34a967df7c39c44cba, type: 2}
-    - {fileID: 11400000, guid: ecd3a7175a6c17d4799aeb8f206778c7, type: 2}
-    - {fileID: 11400000, guid: e5e48302f48b5bf449559c6a6ddc0096, type: 2}
-    - {fileID: 11400000, guid: 82ea86186ee041c4da5e984e9cc557a0, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     grass: []
     flowersToSpawn: 6
     grassToSpawn: 0
   - name: Rainy
     ObjectsToEnable: []
     flowers:
-    - {fileID: 11400000, guid: d72c1bf41a29c294180e9638096679cb, type: 2}
-    - {fileID: 11400000, guid: 8181505000fdd9c409e2db6d2affa870, type: 2}
-    - {fileID: 11400000, guid: a6ebc3265a02daf4a9b945ba5c0f2582, type: 2}
-    - {fileID: 11400000, guid: 8acd72322574e804e9c347e105f7b310, type: 2}
-    - {fileID: 11400000, guid: 085cffe17f863a04284a5d00c03f0a77, type: 2}
-    - {fileID: 11400000, guid: aa7756c21f6986b4bb00140b1f98f966, type: 2}
-    - {fileID: 11400000, guid: 9b0723e6688a93142ace18afd86f57d0, type: 2}
-    - {fileID: 11400000, guid: 6c530a70615ad4047ba738ca6effcbcb, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     grass: []
     flowersToSpawn: 6
     grassToSpawn: 0
   - name: Snowy
     ObjectsToEnable: []
     flowers:
-    - {fileID: 11400000, guid: f34771531b054db4d8b011f0f3f0df2b, type: 2}
-    - {fileID: 11400000, guid: 0f1f4dbd95e51c5448335cfabb6543d3, type: 2}
-    - {fileID: 11400000, guid: 7c5d0a4b38aa9fc488fe5121428e3a5a, type: 2}
-    - {fileID: 11400000, guid: 02867491c872d0b4f8fc7d2de2a4e5b2, type: 2}
-    - {fileID: 11400000, guid: eea4e4f2d3ddc234297e4fba8ccfc9ce, type: 2}
-    - {fileID: 11400000, guid: 89c421039fb0ecb438d3ef3da43f7800, type: 2}
-    - {fileID: 11400000, guid: a731b06a14eebe0459238ab6ccb3d84f, type: 2}
-    - {fileID: 11400000, guid: 8d742013854a4454b80935a7349c1395, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     grass: []
     flowersToSpawn: 6
     grassToSpawn: 0
   - name: Foggy
     ObjectsToEnable: []
     flowers:
-    - {fileID: 11400000, guid: 45d1b905fa2ce2144944437b944444ff, type: 2}
-    - {fileID: 11400000, guid: c23c7eda54582be4fa9e4f6e6287018b, type: 2}
-    - {fileID: 11400000, guid: 1e70b90071d7e754ba30f9453cfadcf9, type: 2}
-    - {fileID: 11400000, guid: b93550203bcc9c541a200944dadb098b, type: 2}
-    - {fileID: 11400000, guid: c5edfc4b2b2a25f439ba30dca3431e9c, type: 2}
-    - {fileID: 11400000, guid: f2066cf5e8fba234a82e655212beb9be, type: 2}
-    - {fileID: 11400000, guid: 15939a202cca65544beec3a35ebe2e46, type: 2}
-    - {fileID: 11400000, guid: 0dbb5799425a4414db7eab423b6a2ab0, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     grass: []
     flowersToSpawn: 6
     grassToSpawn: 0
@@ -7927,33 +7916,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   occupied: 0
---- !u!1 &1487401959
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1487401960}
-  m_Layer: 0
-  m_Name: TestLine
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1487401960
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1487401959}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.40191257, y: .238757193, z: 3.37093735}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
 --- !u!1 &1487488314
 GameObject:
   m_ObjectHideFlags: 0
@@ -10227,9 +10189,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1747483314}
-  - 114: {fileID: 1747483316}
   - 114: {fileID: 1747483315}
-  - 114: {fileID: 1747483317}
   m_Layer: 0
   m_Name: Puzzle
   m_TagString: Untagged
@@ -10260,196 +10220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac944bc6bf96ca40a0504da29b5b6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlowerTypes:
-  - {fileID: 100000, guid: 17421838a16adb24391d745ceb7eaa9e, type: 2}
-  - {fileID: 100000, guid: a9379d84e459d7046ab5e1e11b028f70, type: 2}
-  - {fileID: 100000, guid: d72c1bf41a29c294180e9638096679cb, type: 2}
-  - {fileID: 100000, guid: 8181505000fdd9c409e2db6d2affa870, type: 2}
-  - {fileID: 100000, guid: f34771531b054db4d8b011f0f3f0df2b, type: 2}
-  - {fileID: 100000, guid: 0f1f4dbd95e51c5448335cfabb6543d3, type: 2}
-  - {fileID: 100000, guid: 45d1b905fa2ce2144944437b944444ff, type: 2}
-  - {fileID: 100000, guid: c23c7eda54582be4fa9e4f6e6287018b, type: 2}
-  - {fileID: 100000, guid: 3898ff3bf642b7a44b6c2918064ca6a4, type: 2}
-  - {fileID: 100000, guid: 0a8edbf77b146a4479c65a09c1f95759, type: 2}
-  - {fileID: 100000, guid: a6ebc3265a02daf4a9b945ba5c0f2582, type: 2}
-  - {fileID: 100000, guid: 8acd72322574e804e9c347e105f7b310, type: 2}
-  - {fileID: 100000, guid: 7c5d0a4b38aa9fc488fe5121428e3a5a, type: 2}
-  - {fileID: 100000, guid: 02867491c872d0b4f8fc7d2de2a4e5b2, type: 2}
-  - {fileID: 100000, guid: 1e70b90071d7e754ba30f9453cfadcf9, type: 2}
-  - {fileID: 100000, guid: b93550203bcc9c541a200944dadb098b, type: 2}
-  - {fileID: 100000, guid: 55a47227f0299d34a967df7c39c44cba, type: 2}
-  - {fileID: 100000, guid: c77fad576344d1347966d4999dc5a5d9, type: 3}
-  - {fileID: 100000, guid: 085cffe17f863a04284a5d00c03f0a77, type: 2}
-  - {fileID: 100000, guid: aa7756c21f6986b4bb00140b1f98f966, type: 2}
-  - {fileID: 100000, guid: eea4e4f2d3ddc234297e4fba8ccfc9ce, type: 2}
-  - {fileID: 100000, guid: 89c421039fb0ecb438d3ef3da43f7800, type: 2}
-  - {fileID: 100000, guid: c5edfc4b2b2a25f439ba30dca3431e9c, type: 2}
-  - {fileID: 100000, guid: f2066cf5e8fba234a82e655212beb9be, type: 2}
-  - {fileID: 100000, guid: e5e48302f48b5bf449559c6a6ddc0096, type: 2}
-  - {fileID: 100000, guid: 82ea86186ee041c4da5e984e9cc557a0, type: 2}
-  - {fileID: 100000, guid: 9b0723e6688a93142ace18afd86f57d0, type: 2}
-  - {fileID: 100000, guid: 6c530a70615ad4047ba738ca6effcbcb, type: 2}
-  - {fileID: 100000, guid: a731b06a14eebe0459238ab6ccb3d84f, type: 2}
-  - {fileID: 100000, guid: 8d742013854a4454b80935a7349c1395, type: 2}
-  - {fileID: 100000, guid: 15939a202cca65544beec3a35ebe2e46, type: 2}
-  - {fileID: 100000, guid: 0dbb5799425a4414db7eab423b6a2ab0, type: 2}
-  StoneModels: []
-  PuzzleGrassModel: {fileID: 11400000, guid: e6788f73309bfe74b8e4a1b2d26c0ed4, type: 2}
-  GrassPlacer: {fileID: 1747483316}
-  StonePlacer: {fileID: 1747483317}
-  progress: 0
---- !u!114 &1747483316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1747483313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8d7633deca76443b5d4389d1ba2a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animX:
-    serializedVersion: 2
-    m_Curve:
-    - time: .090023756
-      value: .521911979
-      inSlope: 3.39847565
-      outSlope: 3.39847565
-      tangentMode: 0
-    - time: .202386439
-      value: .0387955979
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: .445200086
-      value: .341388941
-      inSlope: 1.79829133
-      outSlope: 1.79829133
-      tangentMode: 0
-    - time: .845695317
-      value: .470325351
-      inSlope: -2.46264386
-      outSlope: -2.46264386
-      tangentMode: 0
-    - time: 1.03484392
-      value: .51247263
-      inSlope: 15.8236341
-      outSlope: 15.8236341
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  animY:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 10
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 10
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  animZ:
-    serializedVersion: 2
-    m_Curve:
-    - time: .0797956064
-      value: .41287905
-      inSlope: 1.0167017
-      outSlope: 1.0167017
-      tangentMode: 0
-    - time: .231939167
-      value: .721947253
-      inSlope: 1.54180193
-      outSlope: 1.54180193
-      tangentMode: 10
-    - time: .572327316
-      value: 1.0800966
-      inSlope: .320076942
-      outSlope: .320076942
-      tangentMode: 0
-    - time: .710241735
-      value: .52383095
-      inSlope: -4.56357527
-      outSlope: -4.56357527
-      tangentMode: 0
-    - time: .878327012
-      value: .0374037735
-      inSlope: -2.89393091
-      outSlope: -2.89393091
-      tangentMode: 10
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  xScale: 22.8099995
-  yScale: 0
-  zScale: 11.0299997
-  ObjectsToPlace: []
-  editMode: 0
---- !u!114 &1747483317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1747483313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8d7633deca76443b5d4389d1ba2a89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animX:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  animY:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  animZ:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  xScale: 0
-  yScale: 0
-  zScale: 0
-  ObjectsToPlace: []
-  editMode: 0
+  GrassPrefab: {fileID: 0}
+  FlowerModels: []
+  spawnPoints: []
 --- !u!1 &1756791214
 GameObject:
   m_ObjectHideFlags: 0
@@ -10922,7 +10695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!1 &1819280252
 GameObject:
   m_ObjectHideFlags: 0

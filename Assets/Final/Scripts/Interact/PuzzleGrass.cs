@@ -67,7 +67,7 @@ public class PuzzleGrass : InteractableObject
 
     public AudioClip BaahSound, GrowBackSound, FlowerSound, EatSound;
     private bool StartedEating;
-
+    internal int instrumentID, trackID;
         public override void StartLMB()
         {
            if(BaahSound!=null) AudioSource.PlayClipAtPoint(BaahSound, transform.position);

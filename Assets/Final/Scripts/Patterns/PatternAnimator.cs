@@ -46,6 +46,23 @@ public class PatternAnimator : MonoBehaviour {
     }
     //used to AddPatterns
 	public void AddPattern(PatternInfo pi){
+
+        if (SoundManager.Instance.instruments[pi.instrumentID].currentTrack != -1)
+        {
+            PatternInfo patternToRemove = null;
+            foreach (PatternInfo _pi in patterns)
+            {
+                if (_pi.instrumentID == pi.instrumentID)
+                {
+                    patternToRemove = _pi;
+                }
+            }
+            if (patternToRemove != null)
+            {
+                RemovePattern(patternToRemove);
+            }
+        }
+        SoundManager.Instance.instruments[pi.instrumentID].AddSound(pi.trackID);
         if (patterns == null) patterns = new List<PatternInfo>();
         patterns.Add(pi);
         ApplyTexture(false);
@@ -54,10 +71,28 @@ public class PatternAnimator : MonoBehaviour {
     }
     public void RemoveLastPattern()
     {
-        if (patterns != null) if(patterns.Count>0)patterns.RemoveAt(patterns.Count - 1);
+        if (patterns != null) if (patterns.Count > 0) RemovePattern(patterns.Count - 1);
+       
+    }
+
+    public void RemovePattern(int i)
+    {
+        if (patterns != null) if (patterns.Count > 0)
+            {
+                SoundManager.Instance.instruments[patterns[i].instrumentID].FlowerSources[patterns[i].trackID].StopSound();
+                patterns.RemoveAt(i);
+                
+            }
         ApplyTexture(false);
         frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
     }
+    public void RemovePattern(PatternInfo pi)
+    {
+        if (patterns != null) if (patterns.Count > 0) patterns.Remove(pi);
+        ApplyTexture(false);
+        frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
+    }
+
     public void StartAnimation()
     {
         StopAnimation();
