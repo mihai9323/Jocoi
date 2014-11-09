@@ -5,54 +5,38 @@ public class FlowerAudio : MonoBehaviour {
 
     public AudioSource audioSource;
 
-    public enum Volume
+    
+
+    private void Start(){
+        
+        audioSource.volume = 0;
+    }
+    public void PlaySound()
     {
-        none = 0,
-        veryLow = 1,
-        low = 2,
-        medium = 3,
-        high = 4,
-        veryHigh = 5
+        StopAllCoroutines();
+        StartCoroutine(FadeSound(1.0f));
+       
     }
-
-    public Volume volumeLevel{
-        set
-        {
-            if (value != _volumeLevel)
-            {
-                _volumeLevel = value;
-                audioSource.volume = ((float)((int)value))* .2f;
-            }
-        }
-        get
-        {
-            return _volumeLevel ;
-        }
-    }
-    private Volume _volumeLevel;
-    public Volume fixedLevel{
-        set
-        {
-            _fixedLevel = value;
-            volumeLevel = value;
-        }
-        get
-        {
-            return _fixedLevel;
-        }
-    }
-
-    private Volume _fixedLevel;
-
-    public Volume IncreaseVolume(Volume vol){
-        int fVol = Mathf.Clamp((int)vol + 1,0,5);
-        return  (Volume)fVol;
-    }
-    public Volume DecreaseVolume(Volume vol)
+    public void StopSound()
     {
-        int fVol = Mathf.Clamp((int)vol - 1, 0, 5);
-        return  (Volume)fVol;
+        StopAllCoroutines();
+        StartCoroutine(FadeSound(0));
     }
+    public void FadeSoundTo(float value)
+    {
+        StopAllCoroutines();
+        StartCoroutine(FadeSound(value));
+    }
+    private IEnumerator FadeSound(float vol)
+    {
+        float ct = 0;
+        while (ct < 1.0f)
+        {
+            ct += Time.fixedDeltaTime;
+            audioSource.volume = Mathf.Lerp(audioSource.volume, vol, ct);
+            yield return new WaitForFixedUpdate();
+        }
 
+    }
    
 }

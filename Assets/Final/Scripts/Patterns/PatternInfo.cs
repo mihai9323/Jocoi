@@ -29,8 +29,8 @@ public class PatternInfo  {
     
     public int _frameNumber = 0;
 
-    public int flowerSourceType;
-    public int flowerSourceColor;
+    public int instrumentID;
+    public int trackID;
 
     //crops only the current frame of the animation and returns it as an array of Color
     public Color[] CropFrame()
