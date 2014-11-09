@@ -34,10 +34,12 @@ public class Puzzle : MonoBehaviour {
    
     private void LoadMemories()
     {
+        if (GameData.Memory != null)
+        {
+            Memories = GameData.Memory.ToArray();
 
-        Memories = GameData.Memory.ToArray();
-        
-        PlaceGrass();
+            PlaceGrass();
+        }
     }
 
     private void PlaceGrass(){

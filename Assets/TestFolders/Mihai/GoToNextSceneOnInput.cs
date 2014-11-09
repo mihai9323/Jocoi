@@ -8,7 +8,8 @@ public class GoToNextSceneOnInput : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            Application.LoadLevel(Application.loadedLevel + 1);
+            //Application.LoadLevel(Application.loadedLevel + 1);
+            AutoFade.LoadLevel(Application.loadedLevel+1, 10,10, Color.black);
         }
 	}
 }

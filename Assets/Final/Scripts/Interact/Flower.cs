@@ -24,7 +24,7 @@ public class Flower : Plant {
 
 			}
 		}
-        InvokeRepeating("CheckForDistance", .0f,.3f);
+       
     }
     protected override void OnDestroy()
     {
