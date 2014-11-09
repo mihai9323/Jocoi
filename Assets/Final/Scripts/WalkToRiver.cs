@@ -25,8 +25,10 @@ public class WalkToRiver : MonoBehaviour {
 	private Vector3 eyelidTopPos;
 	private Vector3 eyelidBottomPos;
 	private Vector3 eyelidMove;
-
+	private Vector3 initialCameraPos;
 	void Start () {
+
+		initialCameraPos = camera.transform.position;
 		eyelidTopPos = eyelidTop.transform.position;
 		eyelidBottomPos = eyelidBottom.transform.position;
 		startZoom = camera.fieldOfView;
@@ -55,7 +57,7 @@ public class WalkToRiver : MonoBehaviour {
 
 						//head
 						Vector3 localPosition = camera.transform.localPosition;
-						localPosition.y = headMovement.Evaluate (timer);
+						localPosition.y = headMovement.Evaluate (timer) + initialCameraPos.y;
 						camera.transform.localPosition = localPosition;
 						// Increase the timer by the time since last frame
 						timer += Time.deltaTime;
@@ -76,8 +78,8 @@ public class WalkToRiver : MonoBehaviour {
 				camera.fieldOfView = Mathf.Lerp (camera.fieldOfView, backwardZoom, 1 * Time.deltaTime);
 				//head
 				Vector3 localPosition = camera.transform.localPosition;
-				localPosition.y = headMovement.Evaluate (timer);
-				camera.transform.localPosition = localPosition;
+				localPosition.y = headMovement.Evaluate (timer)  + initialCameraPos.y;
+				camera.transform.localPosition = localPosition ;
 				// Increase the timer by the time since last frame
 				timer += Time.deltaTime;
 			}
