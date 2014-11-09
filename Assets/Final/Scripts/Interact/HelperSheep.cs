@@ -58,7 +58,7 @@ public class HelperSheep : InteractableObject {
         foreach (HelperSheep hs in LevelData.Instance.HelperSheep)
         {
             hs.StartMoving(targetGrass);
-            yield return new WaitForSeconds(Random.Range(0.3f, 0.6f) * 2);
+            yield return new WaitForSeconds(Random.Range(0.1f, 0.3f) * 2);
         }
     }
 

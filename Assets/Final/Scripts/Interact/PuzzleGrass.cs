@@ -35,7 +35,7 @@ public class PuzzleGrass : InteractableObject
                     }
                 }
             }
-            if (_state != value && _state != GrassStates.Flower)
+            if (_state != value )
             {
                 TallGraphic.SetActive(false);
                 HighGraphic.SetActive(false);
@@ -119,7 +119,7 @@ public class PuzzleGrass : InteractableObject
         private void FinishedEating()
         {
             LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Eat", false);
-            state = state + 1;
+            state = (GrassStates)Mathf.Clamp((int)state + 1,0,4);
             StartedEating = false;
             Inputs.Instance.canInteract = true;
         }

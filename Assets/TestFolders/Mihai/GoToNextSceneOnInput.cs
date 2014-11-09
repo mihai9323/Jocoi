@@ -9,7 +9,7 @@ public class GoToNextSceneOnInput : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.Space))
         {
             //Application.LoadLevel(Application.loadedLevel + 1);
-            AutoFade.LoadLevel(Application.loadedLevel+1, 10,10, Color.black);
+            AutoFade.LoadLevel(Application.loadedLevel+1, 5,1, Color.black);
         }
 	}
 }

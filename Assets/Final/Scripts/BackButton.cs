@@ -25,6 +25,7 @@ public class BackButton : MonoBehaviour {
 	void OnGUI(){
 		if(canPress){
 			if(GUI.Button(new Rect(xButtonPos, yButtonPos, widthButton, heightButton), textureButton)){
+                Puzzle.Instance.gameObject.SetActive(true);
 				Application.LoadLevel(sceneToLoad);
 			}
 		}

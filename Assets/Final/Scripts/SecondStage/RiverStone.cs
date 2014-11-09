@@ -7,6 +7,9 @@ public class RiverStone : MonoBehaviour {
     public int audioSourceInfluenced;
 
 
+
+
+
     private void OnMouseOver()
     {
 
@@ -24,5 +27,16 @@ public class RiverStone : MonoBehaviour {
         
         this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
     }
+
+    public void ActivateStone()
+    {
+        for (int i = 0; i < colors.Length && i<renderer.materials.Length; i++)
+        {
+            renderer.materials[i].color = colors[i];
+        }
+        SoundManager.Instance.FlowerSources[audioSourceInfluenced].fixedLevel++;
+    }
+
+   
 
 }

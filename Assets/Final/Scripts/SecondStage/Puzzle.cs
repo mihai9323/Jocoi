@@ -8,13 +8,17 @@ public class Puzzle : MonoBehaviour {
     public static Puzzle Instance;
 
     public GameObject[] FlowerTypes; // have to match the numbers on the flowers
+    public GameObject[] StoneModels; //
+
     public PuzzleGrass PuzzleGrassModel;
 
     private Flower[] Memories;
     
 
     internal PuzzleGrass[] Grass; //the puzzleGrass placed
-    public PlaceObjects2 objectPlacer;
+    internal RiverStone[] Stones;
+    public PlaceObjects2 GrassPlacer;
+    public PlaceObjects2 StonePlacer;
     public int progress;
 
     private void Awake()
@@ -44,9 +48,10 @@ public class Puzzle : MonoBehaviour {
 
     private void PlaceGrass(){
         Grass = new PuzzleGrass[Memories.Length];
+
         GameObject[] aux = new GameObject[Grass.Length];
-
-
+        GameObject[] stones = new GameObject[Grass.Length];
+        Stones = new RiverStone[Grass.Length];
         for (int i = 0; i < Grass.Length; i++)
             {
                 
@@ -57,7 +62,13 @@ public class Puzzle : MonoBehaviour {
                 Grass[i].flowerGraphic = Instantiate(FlowerTypes[Memories[i].flowerType].gameObject, Grass[i].transform.position, FlowerTypes[Memories[i].flowerType].gameObject.transform.rotation) as GameObject;
                 Grass[i].flowerGraphic.transform.parent = Grass[i].transform;
                 Grass[i].flowerGraphic.SetActive(false);
+                if (StoneModels != null)
+                {
+                    stones[i] = Instantiate(StoneModels[Memories[i].flowerType].gameObject) as GameObject;
 
+                    Stones[i] = stones[i].gameObject.GetComponent<RiverStone>();
+                }
+            /*
                 for (int j = 0; j < Grass[i].flowerGraphic.renderer.materials.Length; j++)
                 {
                     if (j == Memories[i].TrunchiNr) Grass[i].flowerGraphic.renderer.materials[j].color = Memories[i].trunchiColor;
@@ -70,16 +81,25 @@ public class Puzzle : MonoBehaviour {
 
                     }
                 }
+             * */
+
                 if (Grass[i].flowerGraphic.GetComponent<Flower>())
                 {
                     Destroy(Grass[i].flowerGraphic.GetComponent<Flower>());
                 }
                 Grass[i].state = PuzzleGrass.GrassStates.TallGrass;
 
+                
+                
+
             }
         aux = ShuffleGameObjects(aux);
-        objectPlacer.ObjectsToPlace = ShuffleGameObjects(aux);
-        objectPlacer.PlaceObjects();
+        GrassPlacer.ObjectsToPlace = ShuffleGameObjects(aux);
+        GrassPlacer.PlaceObjects();
+
+
+        StonePlacer.ObjectsToPlace = stones;
+        StonePlacer.PlaceObjects();
         progress = 0; 
     }
     public bool CheckFlower(PuzzleGrass flower)
@@ -89,6 +109,7 @@ public class Puzzle : MonoBehaviour {
         {
             if (flower == Grass[progress])
             {
+                if(Stones!=null)Stones[progress].ActivateStone();
                 progress++;
                 returnValue = true;
             }

@@ -6000,6 +6000,8 @@ GameObject:
   - 23: {fileID: 1127511011}
   - 95: {fileID: 1127511010}
   - 114: {fileID: 1127511009}
+  - 64: {fileID: 1127511015}
+  - 114: {fileID: 1127511014}
   m_Layer: 0
   m_Name: river
   m_TagString: Untagged
@@ -6077,6 +6079,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1127511014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127511008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab8137783a7f9b4191f218ff0f2de9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {fileID: 1818221905}
+  riverLevel: 0
+--- !u!64 &1127511015
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127511008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 5d6d782a6b114844993de0d0d4e0ddee, type: 3}
 --- !u!1 &1134750980
 GameObject:
   m_ObjectHideFlags: 0
@@ -10201,6 +10229,7 @@ GameObject:
   - 4: {fileID: 1747483314}
   - 114: {fileID: 1747483316}
   - 114: {fileID: 1747483315}
+  - 114: {fileID: 1747483317}
   m_Layer: 0
   m_Name: Puzzle
   m_TagString: Untagged
@@ -10264,8 +10293,10 @@ MonoBehaviour:
   - {fileID: 100000, guid: 8d742013854a4454b80935a7349c1395, type: 2}
   - {fileID: 100000, guid: 15939a202cca65544beec3a35ebe2e46, type: 2}
   - {fileID: 100000, guid: 0dbb5799425a4414db7eab423b6a2ab0, type: 2}
+  StoneModels: []
   PuzzleGrassModel: {fileID: 11400000, guid: e6788f73309bfe74b8e4a1b2d26c0ed4, type: 2}
-  objectPlacer: {fileID: 1747483316}
+  GrassPlacer: {fileID: 1747483316}
+  StonePlacer: {fileID: 1747483317}
   progress: 0
 --- !u!114 &1747483316
 MonoBehaviour:
@@ -10356,6 +10387,67 @@ MonoBehaviour:
   xScale: 22.8099995
   yScale: 0
   zScale: 11.0299997
+  ObjectsToPlace: []
+  editMode: 0
+--- !u!114 &1747483317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747483313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8d7633deca76443b5d4389d1ba2a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animX:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  animY:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  animZ:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  xScale: 0
+  yScale: 0
+  zScale: 0
   ObjectsToPlace: []
   editMode: 0
 --- !u!1 &1756791214
@@ -10804,6 +10896,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   occupied: 0
+--- !u!1 &1818221904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1818221905}
+  m_Layer: 0
+  m_Name: LookOverTheRiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 266726316, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1818221905
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818221904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.63519955, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1 &1819280252
 GameObject:
   m_ObjectHideFlags: 0

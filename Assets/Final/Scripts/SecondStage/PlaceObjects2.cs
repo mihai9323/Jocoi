@@ -12,7 +12,7 @@ public class PlaceObjects2 : MonoBehaviour {
     public bool editMode;
     private void Update()
     {
-        PlaceObjects();
+        if(editMode)PlaceObjects();
     }
     public void PlaceObjects()
     {
