@@ -15,7 +15,12 @@ public class Flower : Plant {
     {
         LevelData.Instance.flowers.Add(this);
 
+
 		/*for (int i =0; i<renderer.materials.Length; i++) {
+=======
+        /*
+		for (int i =0; i<renderer.materials.Length; i++) {
+>>>>>>> origin/master
 			if(i==TrunchiNr) renderer.materials[i].color = trunchiColor;
 			else{
 				//Color c= patternToAdd.color.RGBtoHSI();
@@ -25,7 +30,9 @@ public class Flower : Plant {
 
 			}
 		}
+<<<<<<< HEAD
 */
+
        
     }
     protected override void OnDestroy()

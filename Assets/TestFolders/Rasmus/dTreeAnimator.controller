@@ -8,19 +8,19 @@ AnimatorController:
   m_Name: dTreeAnimator
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: dFog
+  - m_Name: FOg
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: dRain
+  - m_Name: Rain
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: dSnow
+  - m_Name: Snow
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -51,7 +51,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: dSnow
+    m_ConditionEvent: Snow
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -71,7 +71,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: dFog
+    m_ConditionEvent: FOg
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -91,7 +91,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: dRain
+    m_ConditionEvent: Rain
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -235,23 +235,23 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110244614}
-      second:
-      - {fileID: 110194453}
-    data:
-      first: {fileID: 110238564}
-      second:
-      - {fileID: 110197859}
-    data:
-      first: {fileID: 110294158}
-      second:
-      - {fileID: 110197390}
-    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
       - {fileID: 110126988}
       - {fileID: 110113172}
+    data:
+      first: {fileID: 110294158}
+      second:
+      - {fileID: 110197390}
+    data:
+      first: {fileID: 110238564}
+      second:
+      - {fileID: 110197859}
+    data:
+      first: {fileID: 110244614}
+      second:
+      - {fileID: 110194453}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -168, y: -120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

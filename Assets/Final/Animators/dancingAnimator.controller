@@ -91,10 +91,6 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Die
-    m_EventTreshold: 0
-    m_ExitTime: .872340441
-  - m_ConditionMode: 1
     m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .872340441
@@ -135,7 +131,7 @@ Transition:
   m_TransitionOffset: .0445304886
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: Grow
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .920000017
   m_Atomic: 1

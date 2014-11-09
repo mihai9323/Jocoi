@@ -4,6 +4,7 @@ using UnityEditor;
 
 [ExecuteInEditMode]
 public class SaveMaterials : MonoBehaviour {
+
 	
 	public string folder;
 	public bool save;
@@ -22,3 +23,4 @@ public class SaveMaterials : MonoBehaviour {
 		}
 	}
 }
+
