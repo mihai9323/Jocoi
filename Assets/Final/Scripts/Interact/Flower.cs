@@ -67,7 +67,10 @@ public class Flower : Plant {
 
     private void OnMouseOver()
     {
-        
+        foreach (FlowerAudio fa in SoundManager.Instance.FlowerSources)
+        {
+            fa.volumeLevel = (FlowerAudio.Volume)Mathf.Min(1, (int)fa.fixedLevel);
+        }
            
         SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceType].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceType].IncreaseVolume(SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceType].fixedLevel);
         SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceColor].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceColor].IncreaseVolume(SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceColor].fixedLevel);
@@ -78,6 +81,10 @@ public class Flower : Plant {
     }
     private void OnMouseExit()
     {
+        foreach (FlowerAudio fa in SoundManager.Instance.FlowerSources)
+        {
+            fa.volumeLevel = fa.fixedLevel;
+        }
         SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceType].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceType].fixedLevel;
         SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceColor].volumeLevel = SoundManager.Instance.FlowerSources[patternToAdd.flowerSourceColor].fixedLevel;
         this.gameObject.GetComponent<Animator>().SetBool("Hover", false);

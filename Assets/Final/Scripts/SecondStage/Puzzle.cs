@@ -9,7 +9,7 @@ public class Puzzle : MonoBehaviour {
 
     public GameObject[] FlowerTypes; // have to match the numbers on the flowers
     public GameObject StoneModel; //
-
+    public GameObject Path;
     public PuzzleGrass PuzzleGrassModel;
 
     private Flower[] Memories;
@@ -133,6 +133,7 @@ public class Puzzle : MonoBehaviour {
     private void CompletePuzzle()
     {
         if (PuzzleCompleted != null) PuzzleCompleted();
+        Path.SetActive(true);
         Debug.Log("PuzzleCompleted");
     }
 
