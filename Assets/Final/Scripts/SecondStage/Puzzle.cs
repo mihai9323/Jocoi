@@ -8,7 +8,7 @@ public class Puzzle : MonoBehaviour {
     public static Puzzle Instance;
 
     public GameObject[] FlowerTypes; // have to match the numbers on the flowers
-    public GameObject[] StoneModels; //
+    public GameObject StoneModel; //
 
     public PuzzleGrass PuzzleGrassModel;
 
@@ -63,11 +63,14 @@ public class Puzzle : MonoBehaviour {
                 Grass[i].flowerGraphic = Instantiate(FlowerTypes[Memories[i].flowerType].gameObject, Grass[i].transform.position, FlowerTypes[Memories[i].flowerType].gameObject.transform.rotation) as GameObject;
                 Grass[i].flowerGraphic.transform.parent = Grass[i].transform;
                 Grass[i].flowerGraphic.SetActive(false);
-                if (StoneModels != null)
+                if (StoneModel != null)
                 {
-                    stones[i] = Instantiate(StoneModels[Memories[i].flowerType].gameObject) as GameObject;
+                    stones[i] = Instantiate(StoneModel.gameObject) as GameObject;
 
                     Stones[i] = stones[i].gameObject.GetComponent<RiverStone>();
+                    Stones[i].colors = new Color[1]{ Memories[i].patternToAdd.color};
+                    Stones[i].audioSourceInfluenced1 = Memories[i].patternToAdd.flowerSourceColor;
+                    Stones[i].audioSourceInfluenced1 = Memories[i].patternToAdd.flowerSourceType;
                 }
             /*
                 for (int j = 0; j < Grass[i].flowerGraphic.renderer.materials.Length; j++)

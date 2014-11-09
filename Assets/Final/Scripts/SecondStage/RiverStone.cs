@@ -4,7 +4,8 @@ using System.Collections;
 public class RiverStone : MonoBehaviour {
 
     public Color[] colors;
-    public int audioSourceInfluenced;
+    public int audioSourceInfluenced1;
+    public int audioSourceInfluenced2;
 
 
 
@@ -14,18 +15,22 @@ public class RiverStone : MonoBehaviour {
     {
 
 
-        SoundManager.Instance.FlowerSources[audioSourceInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced].IncreaseVolume(SoundManager.Instance.FlowerSources[audioSourceInfluenced].fixedLevel);
+        SoundManager.Instance.FlowerSources[audioSourceInfluenced1].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced1].IncreaseVolume(SoundManager.Instance.FlowerSources[audioSourceInfluenced1].fixedLevel);
+
+        SoundManager.Instance.FlowerSources[audioSourceInfluenced2].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced2].IncreaseVolume(SoundManager.Instance.FlowerSources[audioSourceInfluenced2].fixedLevel);
         
-        this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
+       // this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
 
 
 
     }
     private void OnMouseExit()
     {
-        SoundManager.Instance.FlowerSources[audioSourceInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced].fixedLevel;
+        SoundManager.Instance.FlowerSources[audioSourceInfluenced1].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced1].fixedLevel;
+
+        SoundManager.Instance.FlowerSources[audioSourceInfluenced2].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced2].fixedLevel;
         
-        this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
+       // this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
     }
 
     public void ActivateStone()
@@ -34,7 +39,8 @@ public class RiverStone : MonoBehaviour {
         {
             renderer.materials[i].color = colors[i];
         }
-        SoundManager.Instance.FlowerSources[audioSourceInfluenced].fixedLevel++;
+        SoundManager.Instance.FlowerSources[audioSourceInfluenced1].fixedLevel++;
+        SoundManager.Instance.FlowerSources[audioSourceInfluenced2].fixedLevel++;
     }
 
    
