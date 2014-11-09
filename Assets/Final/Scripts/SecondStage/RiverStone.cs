@@ -4,7 +4,8 @@ using System.Collections;
 public class RiverStone : MonoBehaviour {
 
     public Color[] colors;
-    public int audioSourceInfluenced;
+    public int colorInfluenced;
+	public int typeInfluenced;
 
 
 
@@ -14,8 +15,8 @@ public class RiverStone : MonoBehaviour {
     {
 
 
-        SoundManager.Instance.FlowerSources[audioSourceInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced].IncreaseVolume(SoundManager.Instance.FlowerSources[audioSourceInfluenced].fixedLevel);
-        
+        SoundManager.Instance.FlowerSources[colorInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[colorInfluenced].IncreaseVolume(SoundManager.Instance.FlowerSources[colorInfluenced].fixedLevel);
+		SoundManager.Instance.FlowerSources[typeInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[typeInfluenced].IncreaseVolume(SoundManager.Instance.FlowerSources[typeInfluenced].fixedLevel);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
 
 
@@ -23,8 +24,8 @@ public class RiverStone : MonoBehaviour {
     }
     private void OnMouseExit()
     {
-        SoundManager.Instance.FlowerSources[audioSourceInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[audioSourceInfluenced].fixedLevel;
-        
+        SoundManager.Instance.FlowerSources[colorInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[colorInfluenced].fixedLevel;
+		SoundManager.Instance.FlowerSources[typeInfluenced].volumeLevel = SoundManager.Instance.FlowerSources[typeInfluenced].fixedLevel;
         this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
     }
 
@@ -34,8 +35,9 @@ public class RiverStone : MonoBehaviour {
         {
             renderer.materials[i].color = colors[i];
         }
-        SoundManager.Instance.FlowerSources[audioSourceInfluenced].fixedLevel++;
-    }
+        SoundManager.Instance.FlowerSources[colorInfluenced].fixedLevel++;
+
+		SoundManager.Instance.FlowerSources[typeInfluenced].fixedLevel++;}
 
    
 

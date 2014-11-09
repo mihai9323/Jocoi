@@ -160,7 +160,11 @@ public class Plant : InteractableObject {
     
 		plantInMouth = Instantiate(PlantInMouth, LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.position, LevelData.Instance.MotherSheep.transform.rotation) as Transform;
 		plantInMouth.parent = LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead;
-		this.gameObject.renderer.enabled = false;
+		Renderer[] renders =  this.gameObject.GetComponentsInChildren<Renderer>();
+		foreach (Renderer r in renders) {
+			r.enabled = false;
+				}
+//		this.gameObject.renderer.enabled = false;
         LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
 			LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.position + LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.right*2.0f,
 			this.LambEat,
