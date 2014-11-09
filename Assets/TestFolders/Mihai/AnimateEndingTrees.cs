@@ -28,6 +28,7 @@ public class AnimateEndingTrees : MonoBehaviour {
     public void StartAnimation()
     {
         StartCoroutine("Animate");
+        
     }
     private IEnumerator Animate()
     {
