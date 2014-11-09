@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: 880d03bb3707c42f09c7d5c3bf026cd5
+guid: fba9f9d9b46834ea197fb9ca0f206271
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
-    100002: cloudTransform1
     400000: //RootNode
-    400002: cloudTransform1
-    2300000: cloudTransform1
-    3300000: cloudTransform1
-    4300000: cloudTransform1
-    7400000: Cloud1Animation
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: cloud1Transform
+    7400000: cloud1AnimationNew
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -29,7 +27,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Cloud1Animation
+      name: cloud1AnimationNew
       takeName: Take 001
       firstFrame: 1
       lastFrame: 48
@@ -53,8 +51,6 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: cloudTransform1
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
