@@ -8,19 +8,19 @@ AnimatorController:
   m_Name: dancingAnimator
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: dHover
+  - m_Name: Hover
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: dDie
+  - m_Name: Die
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: dGrow
+  - m_Name: Grow
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -51,7 +51,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: dHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -71,7 +71,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: dHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -91,11 +91,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: dDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .872340441
   - m_ConditionMode: 1
-    m_ConditionEvent: dGrow
+    m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -115,7 +115,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: dDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -135,7 +135,7 @@ Transition:
   m_TransitionOffset: .0445304886
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: dGrow
+    m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .920000017
   m_Atomic: 1
@@ -219,22 +219,22 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110268419}
+      first: {fileID: 110200000}
       second:
-      - {fileID: 110179157}
-    data:
-      first: {fileID: 110239648}
-      second:
-      - {fileID: 110123048}
+      - {fileID: 110100000}
+      - {fileID: 110134147}
     data:
       first: {fileID: 110240219}
       second:
       - {fileID: 110107916}
     data:
-      first: {fileID: 110200000}
+      first: {fileID: 110239648}
       second:
-      - {fileID: 110100000}
-      - {fileID: 110134147}
+      - {fileID: 110123048}
+    data:
+      first: {fileID: 110268419}
+      second:
+      - {fileID: 110179157}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -240, y: -48, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

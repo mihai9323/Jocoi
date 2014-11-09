@@ -13,6 +13,7 @@ public class LevelData:MonoBehaviour  {
     public GameObject MotherSheep;
     public HerdTarget herdTarget;
     public SheepInHerd[] Sheep;
+    public HelperSheep[] HelperSheep;
     public Transform[] HerdWaypoints;
     public float LambSpeed;
     public float MotherSpeed;
@@ -21,6 +22,8 @@ public class LevelData:MonoBehaviour  {
 
     public List<Flower> flowers;
     public List<Grass> grass;
+
+	public GameObject particle;
 
     public Camera cam;
 

@@ -8,19 +8,19 @@ AnimatorController:
   m_Name: circleAnimator
   serializedVersion: 2
   m_AnimatorParameters:
-  - m_Name: cHover
+  - m_Name: Hover
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: cDie
+  - m_Name: Die
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: cGrow
+  - m_Name: Grow
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -51,7 +51,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: cHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .875
   m_Atomic: 1
@@ -71,11 +71,11 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: cGrow
+    m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .872340441
   - m_ConditionMode: 1
-    m_ConditionEvent: cDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .872340441
   m_Atomic: 1
@@ -115,7 +115,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: cDie
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .875
   m_Atomic: 1
@@ -135,7 +135,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: cHover
+    m_ConditionEvent: Hover
     m_EventTreshold: 0
     m_ExitTime: .915492952
   m_Atomic: 1
@@ -219,18 +219,6 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
-      first: {fileID: 110272592}
-      second:
-      - {fileID: 110155840}
-    data:
-      first: {fileID: 110218824}
-      second:
-      - {fileID: 110107527}
-    data:
-      first: {fileID: 110233435}
-      second:
-      - {fileID: 110191798}
-    data:
       first: {fileID: 0}
       second: []
     data:
@@ -238,6 +226,18 @@ StateMachine:
       second:
       - {fileID: 110100000}
       - {fileID: 110177853}
+    data:
+      first: {fileID: 110233435}
+      second:
+      - {fileID: 110191798}
+    data:
+      first: {fileID: 110218824}
+      second:
+      - {fileID: 110107527}
+    data:
+      first: {fileID: 110272592}
+      second:
+      - {fileID: 110155840}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -252, y: -48, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}

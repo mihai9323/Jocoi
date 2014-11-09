@@ -86,8 +86,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DieAnimation: 
-  GrowAnimation: 
+  DieAnimation: Die
+  GrowAnimation: Grow
+  HoverAnimation: Hover
   pickUpAnimation: PickUp
   eatAnimation: Eat
   feedAnimation: Eat
@@ -105,6 +106,7 @@ MonoBehaviour:
     color: {r: .996078432, g: .988235295, b: .239215687, a: 1}
     texture: {fileID: 2800000, guid: f391be8451edfab4e8b07baf4535fe84, type: 3}
     _frameNumber: 0
+    flowerSource: 2
   trunchiColor: {r: 0, g: .53725493, b: 0, a: 1}
   TrunchiNr: 1
 --- !u!136 &13600000

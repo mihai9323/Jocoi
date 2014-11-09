@@ -8,29 +8,37 @@ public class PlaceObjects2 : MonoBehaviour {
     public AnimationCurve animZ;
 
     public float xScale, yScale, zScale;
-    private GameObject[] debugObj;
-
+    public GameObject[] ObjectsToPlace;
+    public bool editMode;
     private void Update()
     {
-        //  Memories = GameData.Memory.ToArray();
-        debugObj = GameObject.FindGameObjectsWithTag("Child");
-        float distance = 1.0f / (debugObj.Length + 1);
-        for (int i = 0; i < debugObj.Length; i++)
+        PlaceObjects();
+    }
+    public void PlaceObjects()
+    {
+      
+        if(editMode) ObjectsToPlace = GameObject.FindGameObjectsWithTag("Child");
+        float distance = 1.0f / (ObjectsToPlace.Length + 1);
+        for (int i = 0; i < ObjectsToPlace.Length; i++)
         {
             float ox = animX.Evaluate(i * distance);
             float oy = animY.Evaluate(i * distance);
             float oz = animZ.Evaluate(i * distance);
 
 
-            debugObj[i].transform.position = new Vector3(
+            ObjectsToPlace[i].transform.position = new Vector3(
 
                 ox *xScale,
                 oy * yScale,
                 oz * zScale
 
 
-                );
+                )+ transform.position;
 
         }
     }
+
+    
+
+   
 }

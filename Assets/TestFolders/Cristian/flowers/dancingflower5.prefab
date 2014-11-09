@@ -70,7 +70,7 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 81c55add589b40049b6f58b6656ecb40, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bebda127b6466114aa41380637fb0a66, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -87,8 +87,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca62d05ca1ee394e8ee63ea637f2bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DieAnimation: 
-  GrowAnimation: 
+  DieAnimation: Die
+  GrowAnimation: Grow
+  HoverAnimation: Hover
   pickUpAnimation: PickUp
   eatAnimation: Eat
   feedAnimation: Eat
@@ -106,6 +107,7 @@ MonoBehaviour:
     color: {r: .223529413, g: .631372571, b: .831372559, a: 1}
     texture: {fileID: 2800000, guid: c4eba0c980ab69348a33171f4aedf91f, type: 3}
     _frameNumber: 0
+    flowerSource: 3
   trunchiColor: {r: .0941176489, g: .36470589, b: .498039216, a: 1}
   TrunchiNr: 0
 --- !u!136 &13600000

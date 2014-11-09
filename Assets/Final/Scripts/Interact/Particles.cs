@@ -6,8 +6,13 @@ public class Particles : InteractableObject {
 	public AudioClip sound;
 
 	public override void StartLMB(){
-		//attatch to lamb
-
+		//Move to lamb
+		LevelData.Instance.particle.GetComponent<MoveToPosition>().StartMoving(
+			LevelData.Instance.Lamb.transform.position,
+			FollowLamb,
+			2.0f,
+			1.8f			
+			);
 	}
 	
 	public override void StartRMB(){}
@@ -23,7 +28,8 @@ public class Particles : InteractableObject {
 	}
 
 	private void FollowLamb (){
-		//play some kind of floating animation?
+		//Parent particle to lamb
+		LevelData.Instance.particle.transform.parent = LevelData.Instance.Lamb.transform;
 
 	}
 
@@ -32,7 +38,6 @@ public class Particles : InteractableObject {
 	}
 
 	private void Start (){
-		//Particle over ground
 	}
 
 }

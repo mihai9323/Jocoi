@@ -118,7 +118,7 @@ public class Grid : MonoBehaviour {
                         {
                             if (hit.collider != nNode.col)
                             {
-                                ok = false;
+                                if (!hit.collider.isTrigger)   ok = false;
                             }
 
                         }

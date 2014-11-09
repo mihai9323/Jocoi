@@ -3,9 +3,9 @@ using System.Collections;
 
 public class Plant : InteractableObject {
 
-    public string DieAnimation;
-    public string GrowAnimation;
-    
+    public string DieAnimation = "Die";
+    public string GrowAnimation = "Grow";
+    public string HoverAnimation = "Hover";
     public string pickUpAnimation;
     public string eatAnimation;
     public string feedAnimation;
@@ -23,9 +23,10 @@ public class Plant : InteractableObject {
 
     public Animator anim;
     public AudioSource audioSource;
-
+    internal Spawner spawner;
     private void Awake()
     {
+        
         if (anim == null)
         {
             if (this.gameObject.GetComponent<Animator>() != null)
@@ -122,11 +123,11 @@ public class Plant : InteractableObject {
             audioSource.Play();
         }
         if(anim!=null)anim.SetBool("Die", true);
-        Invoke("FinishedDying", 2.0f);
+        Invoke("FinishedDying", 1.0f);
     }
     public void FinishedDying()
     {
-        
+        spawner.occupied = false;
         audioSource.Stop();
         Destroy(this.gameObject);
     }

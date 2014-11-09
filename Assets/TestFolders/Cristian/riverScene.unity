@@ -1964,6 +1964,7 @@ MonoBehaviour:
   LambHead: {fileID: 1960849828}
   flowers: []
   grass: []
+  particle: {fileID: 0}
   cam: {fileID: 1895612218}
 --- !u!1001 &433459479
 Prefab:

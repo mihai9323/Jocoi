@@ -10,6 +10,7 @@ public class WeatherCycle : MonoBehaviour {
     public event GameData.VOID_FUNCTION_INT FadeToWeather;
     public event GameData.VOID_FUNCTION ChangeWeather;
     public Weather[] weathers;
+    
     public int currentWeather{
         set{
 
@@ -46,7 +47,7 @@ public class WeatherCycle : MonoBehaviour {
     }
     public void FadeWeathers()
     {
-        foreach(Flower f in LevelData.Instance.flowers)
+        foreach (Flower f in LevelData.Instance.flowers)
         {
             f.StartDie();
         }
@@ -57,7 +58,6 @@ public class WeatherCycle : MonoBehaviour {
         foreach (GameObject go in weathers[currentWeather].ObjectsToEnable)
         {
             go.SetActive(false);
-
         }
         StartCoroutine("ZapWeathers");
     }
@@ -76,7 +76,8 @@ public class WeatherCycle : MonoBehaviour {
             }
             Vector3 positionToSpawn = spawnPositions[randSI].transform.position;
             GameObject auxGo = Instantiate(weathers[currentWeather].flowers[randIndex].gameObject, positionToSpawn, weathers[currentWeather].flowers[randIndex].gameObject.transform.rotation) as GameObject;
-           
+            spawnPositions[randSI].occupied = true;
+            auxGo.GetComponent<Plant>().spawner = spawnPositions[randSI];
         }
         for (int i = 0; i < weathers[currentWeather].grassToSpawn; i++)
         {
@@ -88,12 +89,12 @@ public class WeatherCycle : MonoBehaviour {
             }
             Vector3 positionToSpawn = spawnPositions[randSI].transform.position;
             GameObject auxGo = Instantiate(weathers[currentWeather].grass[randIndex].gameObject, positionToSpawn, weathers[currentWeather].grass[randIndex].gameObject.transform.rotation) as GameObject;
-
+            spawnPositions[randSI].occupied = true;
+            auxGo.GetComponent<Plant>().spawner = spawnPositions[randSI];
         }
         foreach (GameObject go in weathers[currentWeather].ObjectsToEnable)
         {
             go.SetActive(true);
-
         }
     }
 

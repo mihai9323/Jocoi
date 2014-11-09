@@ -21,7 +21,7 @@ public class FlowerAudio : MonoBehaviour {
             if (value != _volumeLevel)
             {
                 _volumeLevel = value;
-                audioSource.volume = (float)((int)value) * .2f;
+                audioSource.volume = ((float)((int)value))* .2f;
             }
         }
         get
@@ -30,7 +30,19 @@ public class FlowerAudio : MonoBehaviour {
         }
     }
     private Volume _volumeLevel;
-    public Volume fixedLevel;
+    public Volume fixedLevel{
+        set
+        {
+            _fixedLevel = value;
+            volumeLevel = value;
+        }
+        get
+        {
+            return _fixedLevel;
+        }
+    }
+
+    private Volume _fixedLevel;
 
     public Volume IncreaseVolume(Volume vol){
         int fVol = Mathf.Clamp((int)vol + 1,0,5);
