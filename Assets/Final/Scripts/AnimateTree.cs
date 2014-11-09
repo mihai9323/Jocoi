@@ -13,12 +13,12 @@ public class AnimateTree : MonoBehaviour {
 
     IEnumerator PlayAnimation()
     {
-        yield return new WaitForSeconds(Random.Range(0,variedTime));
+        yield return new WaitForSeconds(Random.Range(0,1.0f));
         while (true)
         {
             switch (WeatherCycle.Instance.currentWeather)
             {
-                case 0: break;
+				case 0: anim.SetTrigger("Sunny"); break;
                 case 1: anim.SetTrigger("Rain"); break;
                 case 2: anim.SetTrigger("Snow"); break;
                 case 3: anim.SetTrigger("Fog"); break;
