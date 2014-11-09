@@ -52,8 +52,8 @@ public class Flower : Plant {
        
         base.LambEat();
        
-        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(patternToAdd);
-        GameData.addToMemory(this);
+        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(this);
+        
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
        
     }

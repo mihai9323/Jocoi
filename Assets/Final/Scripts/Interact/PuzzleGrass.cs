@@ -128,5 +128,23 @@ public class PuzzleGrass : InteractableObject
            if(GrowBackSound!=null) AudioSource.PlayClipAtPoint(GrowBackSound, transform.position);
            state = GrassStates.TallGrass;
         }
+
+        private void OnMouseOver()
+        {
+
+            SoundManager.Instance.FadeAllDown();
+            SoundManager.Instance.instruments[instrumentID].FlowerSources[trackID].FadeSoundTo(1.0f);
+           
+
+
+
+        }
+        private void OnMouseExit()
+        {
+
+            SoundManager.Instance.FadeAllUp();
+            if (SoundManager.Instance.instruments[instrumentID].currentTrack != trackID) SoundManager.Instance.instruments[instrumentID].FlowerSources[trackID].FadeSoundTo(0.0f);
+           
+        }
     }
 

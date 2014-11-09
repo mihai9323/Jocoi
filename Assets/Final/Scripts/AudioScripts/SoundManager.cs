@@ -38,6 +38,13 @@ public class SoundManager : MonoBehaviour {
             im.FadeUp();
         }
     }
+    public void StopAll()
+    {
+        foreach (InstrumentManager im in instruments)
+        {
+            im.StopSound();
+        }
+    }
 
 }
 [System.Serializable]
@@ -69,6 +76,11 @@ public class InstrumentManager
     public void FadeUp()
     {
         if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(1.0f);
+    }
+    public void StopSound()
+    {
+        if (currentTrack != -1) FlowerSources[currentTrack].StopSound();
+        currentTrack = -1;
     }
 
 }

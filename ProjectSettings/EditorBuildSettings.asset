@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Final/Scenes/Level2.unity
   - enabled: 1
     path: Assets/Final/Scenes/FPRScene.unity
+  - enabled: 1
+    path: Assets/TestFolders/Mihai/TestScene_Mihai2.unity

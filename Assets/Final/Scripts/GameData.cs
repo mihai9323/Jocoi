@@ -29,6 +29,27 @@ public class GameData  {
         
 
     }
-
+    public static void removeFromMemory(PatternInfo pi)
+    {
+        if (Memory != null)
+        {
+            Flower f = null;
+            int index = -1;
+            Debug.Log("Previous instruments");
+            for(int i = 0; i<Memory.Count; i++)
+            {
+                f = Memory[i];
+              
+                if (f.patternToAdd.instrumentID == pi.instrumentID)
+                {
+                    index = i;
+                    
+                    break;
+                }
+            }
+            if (index != -1) Memory.RemoveAt(index);
+        }
+        
+    }
     
 }

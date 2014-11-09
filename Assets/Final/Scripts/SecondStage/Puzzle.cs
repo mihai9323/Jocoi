@@ -9,8 +9,10 @@ public class Puzzle : MonoBehaviour {
     public PuzzleGrass GrassPrefab;
     public GameObject[] FlowerModels;
     internal PuzzleGrass[] Grass;
-    public Spawner[] spawnPoints;
-
+    internal PuzzleGrass[] IncorrectGrass;
+    public GameObject[] spawnPoints;
+    internal int progress;
+    private bool PuzzleFinished;
     public event GameData.VOID_FUNCTION PuzzleCompleted;
     private void Awake()
     {
@@ -18,26 +20,34 @@ public class Puzzle : MonoBehaviour {
         {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
-            PlaceGrass();
+            progress = 0;
+            PuzzleFinished = false;
+            
         }
         else
         {
             Destroy(this.gameObject);
         }
     }
-
+    private void Start()
+    {
+        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPositions");
+        PlaceGrass();
+    }
     public void PlaceGrass()
     {
         if (GameData.Memory != null)
         {
+            Grass = new PuzzleGrass[GameData.Memory.Count];
+
             for (int i = 0; i < GameData.Memory.Count; i++)
             {
                 int r = Random.Range(0,spawnPoints.Length);
-                while(spawnPoints[r].occupied == true){
+                while(spawnPoints[r].GetComponent<Spawner>().occupied == true){
                     r = Random.Range(0,spawnPoints.Length);
                 }
-                GameObject aux = Instantiate(GrassPrefab, spawnPoints[r].transform.position, GrassPrefab.transform.rotation) as GameObject;
-                aux.transform.parent = this.transform;
+                GameObject aux = Instantiate(GrassPrefab.gameObject, spawnPoints[r].transform.position, GrassPrefab.transform.rotation) as GameObject;
+                aux.gameObject.transform.parent = gameObject.transform;
                 Grass[i] = aux.GetComponent<PuzzleGrass>();
                 Grass[i].flowerGraphic = Instantiate(FlowerModels[GameData.Memory[i].flowerID].gameObject,Grass[i].gameObject.transform.position,FlowerModels[GameData.Memory[i].flowerID].transform.rotation) as GameObject;
                 Grass[i].flowerGraphic.transform.parent = Grass[i].transform;
@@ -49,17 +59,95 @@ public class Puzzle : MonoBehaviour {
                     Destroy(Grass[i].flowerGraphic.GetComponent<Flower>());
                 }
             }
+            PlaceIncorrectGrass();
+        }
+    }
+    private void PlaceIncorrectGrass()
+    {
+        IncorrectGrass = new PuzzleGrass[2];
+        for (int i = 0; i < IncorrectGrass.Length; i++)
+        {
+            int r = Random.Range(0, spawnPoints.Length);
+            while (spawnPoints[r].GetComponent<Spawner>().occupied == true)
+            {
+                r = Random.Range(0, spawnPoints.Length);
+            }
+
+            GameObject aux = Instantiate(GrassPrefab.gameObject, spawnPoints[r].transform.position, GrassPrefab.transform.rotation) as GameObject;
+            aux.gameObject.transform.parent = gameObject.transform;
+            IncorrectGrass[i] = aux.GetComponent<PuzzleGrass>();
+            IncorrectGrass[i].flowerGraphic = Instantiate(FlowerModels[GetRandomNotCorrectID()].gameObject, Grass[i].gameObject.transform.position, FlowerModels[GetRandomNotCorrectID()].transform.rotation) as GameObject;
+            IncorrectGrass[i].flowerGraphic.transform.parent = Grass[i].transform;
+            IncorrectGrass[i].flowerGraphic.SetActive(false);
+            IncorrectGrass[i].trackID = GameData.Memory[i].patternToAdd.trackID;
+            IncorrectGrass[i].instrumentID = GameData.Memory[i].patternToAdd.instrumentID;
+            if (Grass[i].flowerGraphic.GetComponent<Flower>())
+            {
+                Destroy(Grass[i].flowerGraphic.GetComponent<Flower>());
+            }
         }
     }
 
+    private int GetRandomNotCorrectID()
+    {
+        bool ok = false;
+        int randomIndex = 0;
+        while (!ok)
+        {
+            randomIndex = Random.Range(0, FlowerModels.Length);
+            foreach (PuzzleGrass pg in Grass)
+            {
+                if (pg.trackID != FlowerModels[randomIndex].GetComponent<Flower>().patternToAdd.trackID || pg.instrumentID != FlowerModels[randomIndex].GetComponent<Flower>().patternToAdd.instrumentID)
+                {
+                    ok = true;
+                    break;
+                }
+            }
+        }
+        return randomIndex;
+    }
     public bool CheckFlower(PuzzleGrass pg)
     {
-
-        return true;
+        if (!PuzzleFinished)
+        {
+            bool correct = false;
+            foreach (PuzzleGrass _pg in Grass)
+            {
+                if (_pg.instrumentID == pg.instrumentID && _pg.trackID == pg.trackID)
+                {
+                    correct = true;
+                    break;
+                }
+            }
+            if (correct)
+            {
+                progress++;
+                if (progress == Grass.Length)
+                {
+                    CompletePuzzle();
+                }
+            }
+            else
+            {
+                progress = 0;
+                foreach (PuzzleGrass _pg in Grass)
+                {
+                    _pg.state = PuzzleGrass.GrassStates.TallGrass;
+                }
+                foreach (PuzzleGrass _pg in IncorrectGrass)
+                {
+                    _pg.state = PuzzleGrass.GrassStates.TallGrass;
+                }
+                SoundManager.Instance.StopAll();
+            }
+            return correct;
+        }
+        else return true;
     }
     public void CompletePuzzle()
     {
        if(PuzzleCompleted!=null) PuzzleCompleted();
+       PuzzleFinished = true;
     }
     
 }

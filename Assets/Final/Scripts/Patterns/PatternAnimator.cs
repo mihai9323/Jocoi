@@ -68,11 +68,40 @@ public class PatternAnimator : MonoBehaviour {
         ApplyTexture(false);
         //if a new pattern is added to the drawing we have to calculate the frames again so we reset the cache
         frames = new Texture2D[TextureData.Instance.width*TextureData.Instance.height];
+        
     }
+    public void AddPattern(Flower flower){
+       
+        PatternInfo pi = flower.patternToAdd;
+        if (SoundManager.Instance.instruments[pi.instrumentID].currentTrack != -1)
+        {
+            PatternInfo patternToRemove = null;
+            foreach (PatternInfo _pi in patterns)
+            {
+                if (_pi.instrumentID == pi.instrumentID)
+                {
+                    patternToRemove = _pi;
+                }
+            }
+            if (patternToRemove != null)
+            {
+                RemovePattern(patternToRemove);
+            }
+        }
+        GameData.addToMemory(flower);
+        SoundManager.Instance.instruments[pi.instrumentID].AddSound(pi.trackID);
+        if (patterns == null) patterns = new List<PatternInfo>();
+        patterns.Add(pi);
+        ApplyTexture(false);
+        //if a new pattern is added to the drawing we have to calculate the frames again so we reset the cache
+        frames = new Texture2D[TextureData.Instance.width*TextureData.Instance.height];
+        
+    }
+   
     public void RemoveLastPattern()
     {
         if (patterns != null) if (patterns.Count > 0) RemovePattern(patterns.Count - 1);
-       
+        if(GameData.Memory!=null) GameData.Memory.RemoveAt(GameData.Memory.Count - 1);
     }
 
     public void RemovePattern(int i)
@@ -88,9 +117,11 @@ public class PatternAnimator : MonoBehaviour {
     }
     public void RemovePattern(PatternInfo pi)
     {
+        GameData.removeFromMemory(pi);
         if (patterns != null) if (patterns.Count > 0) patterns.Remove(pi);
         ApplyTexture(false);
         frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
+        
     }
 
     public void StartAnimation()
