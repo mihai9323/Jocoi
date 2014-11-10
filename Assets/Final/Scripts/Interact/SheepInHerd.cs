@@ -8,6 +8,8 @@ public class SheepInHerd : InteractableObject {
     private bool weatherStartedChanging;
 
     private int inPosition;
+    public float clickCoolDown = 1.5f;
+    private bool walkingToTarget;
 	// Use this for initialization
 	void Awake () {
         weatherStartedChanging = false;
@@ -59,6 +61,9 @@ public class SheepInHerd : InteractableObject {
     }
     private IEnumerator callAllSheep()
     {
+        walkingToTarget = true;
+        Inputs.Instance.canInteract = false;
+        Invoke("CheckInteractions", clickCoolDown);
 
         inPosition = 0;
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
@@ -104,6 +109,7 @@ public class SheepInHerd : InteractableObject {
 
     public override void StopAllInteractions()
     {
+        walkingToTarget = false;
         inPosition = 0;
         StopAllCoroutines();
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
@@ -121,17 +127,21 @@ public class SheepInHerd : InteractableObject {
     private void StartCuddle()
     {
         inPosition++;
+        
         //both mother and child ar in cuddling position
         if (inPosition >1)
         {
+            walkingToTarget = false;
             WeatherCycle.Instance.FadeWeathers();
             weatherStartedChanging = true;
+            Inputs.Instance.canInteract = true;
         }
        
        
     }
     private void MotherCuddle()
     {
+
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
         StartCuddle();
     }
@@ -141,5 +151,11 @@ public class SheepInHerd : InteractableObject {
         StartCuddle();
     }
 
-    
+    private void CheckInteractions()
+    {
+
+        if (walkingToTarget) Inputs.Instance.canInteract = true;
+
+
+    }
 }

@@ -8,6 +8,7 @@ public class Grid : MonoBehaviour {
     public int xSize;
     public int ySize;
     public float density;
+    public float sphereSize = 1.0f;
     Node[,] map;
 
    
@@ -114,7 +115,7 @@ public class Grid : MonoBehaviour {
                         if (x != 0 && y != 0) cost *= 1.42f;
                         Node nNode = map[currentNode.x + x, currentNode.y + y];
                         bool ok = true;
-                        if (Physics.SphereCast(currentNode.position,1.2f, nNode.position-currentNode.position, out hit))
+                        if (Physics.SphereCast(currentNode.position, sphereSize, nNode.position - currentNode.position, out hit))
                         {
                             if (hit.collider != nNode.col)
                             {

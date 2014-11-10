@@ -1620,6 +1620,7 @@ MonoBehaviour:
   xSize: 20
   ySize: 20
   density: .800000012
+  sphereSize: 1
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &256538822
 CapsuleCollider:
@@ -1742,6 +1743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fc58a221a87f84890d0ffac24e2c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickCoolDown: 1.5
 --- !u!114 &256746314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,6 +1759,7 @@ MonoBehaviour:
   xSize: 29
   ySize: 29
   density: 1.40999997
+  sphereSize: 1
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &256746315
 CapsuleCollider:
@@ -3183,7 +3186,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 420402483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.91480005, y: 0, z: 8.84490013}
+  m_LocalPosition: {x: 3.6263001, y: 0, z: 8.84490013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 683336026}
@@ -5876,6 +5879,7 @@ MonoBehaviour:
   xSize: 29
   ySize: 29
   density: 1.40999997
+  sphereSize: 1
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &723015677
 CapsuleCollider:
@@ -5919,6 +5923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fc58a221a87f84890d0ffac24e2c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickCoolDown: 1.5
 --- !u!114 &723015680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7101,6 +7106,7 @@ MonoBehaviour:
   xSize: 20
   ySize: 20
   density: .800000012
+  sphereSize: 1
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &924833246
 CapsuleCollider:
@@ -7276,6 +7282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80fc58a221a87f84890d0ffac24e2c99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickCoolDown: 1.5
 --- !u!114 &1010588175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7291,6 +7298,7 @@ MonoBehaviour:
   xSize: 29
   ySize: 29
   density: 1.40999997
+  sphereSize: 1
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &1010588176
 CapsuleCollider:

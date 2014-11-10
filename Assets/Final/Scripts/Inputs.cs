@@ -80,7 +80,7 @@ public class Inputs : MonoBehaviour {
                 //RMB UP
                 if (Input.GetMouseButtonUp(1))
                 {
-                    _activeObject.StopRMB();
+                    if(_activeObject!=null)_activeObject.StopRMB();
                     activeClick = -1;
                 }
             }

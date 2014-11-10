@@ -24,9 +24,11 @@ public class Plant : InteractableObject {
     public Animator anim;
     public AudioSource audioSource;
     internal Spawner spawner;
+    public float clickCoolDown = .5f;
+    private bool walkingToTarget;
     private void Awake()
     {
-        
+        walkingToTarget = false;   
         if (anim == null)
         {
             if (this.gameObject.GetComponent<Animator>() != null)
@@ -43,8 +45,11 @@ public class Plant : InteractableObject {
             }
             else audioSource = this.gameObject.AddComponent<AudioSource>();
         }
+        StartGorw();
+        
+        
     }
-
+  
     
     public override void StartLMB()
     {
@@ -66,10 +71,15 @@ public class Plant : InteractableObject {
             LevelData.Instance.LambSpeed ,
            2f
             );
+        walkingToTarget = true;
+        Inputs.Instance.canInteract = false;
+        Invoke("CheckInteractions", clickCoolDown);
     }
     
     public override void StartRMB()
     {
+        walkingToTarget = true;
+        
         LevelData.Instance.currentAnimation = "Walk";
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
                transform.position,
@@ -80,6 +90,8 @@ public class Plant : InteractableObject {
                1.8f
 
            );
+        Inputs.Instance.canInteract = false;
+        Invoke("CheckInteractions", clickCoolDown);
     }
 
     public override void StopLMB()
@@ -104,12 +116,12 @@ public class Plant : InteractableObject {
             audioSource.clip = GrowSound;
             audioSource.Play();
         }
-        anim.SetBool("Grow", true);
+        anim.SetTrigger(GrowAnimation);
         Invoke("FinishGrow", 1.5f);
     }
     private void FinishGrow()
     {
-        anim.SetBool("Grow", false);
+        
     }
     public void FinishedGrowing()
     {
@@ -134,6 +146,7 @@ public class Plant : InteractableObject {
     public virtual void Eat()
     {
         //Debug.Log("eat");
+        walkingToTarget = false;
         LevelData.Instance.MotherSheep.transform.FaceObjectOnAxis(this.transform, new Vector3(0, 1, 0));
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool(eatAnimation,true);
         Inputs.Instance.canInteract = false;
@@ -145,6 +158,7 @@ public class Plant : InteractableObject {
     }
     public virtual void Feed()
     {
+        walkingToTarget = false;
         Inputs.Instance.canInteract = false;
         LevelData.Instance.MotherSheep.transform.FaceObjectOnAxis(this.transform, new Vector3(0, 1, 0));
         Invoke ("FinishPickUp", 1.0f);
@@ -217,6 +231,14 @@ public class Plant : InteractableObject {
         Inputs.Instance.canInteract = true;
        
 		Destroy(this.gameObject, 0.1f);
+    }
+
+    private void CheckInteractions()
+    {
+       
+            if (walkingToTarget) Inputs.Instance.canInteract = true;
+           
+      
     }
    
 }
