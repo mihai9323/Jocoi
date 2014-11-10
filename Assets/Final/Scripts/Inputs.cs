@@ -8,6 +8,9 @@ public class Inputs : MonoBehaviour {
 
     public static Inputs Instance;
     public bool canInteract = true;
+
+    public bool canUseLeftClick = true;
+
     public int activeMode;
     public InteractableObject ActiveObject{
         get
@@ -34,29 +37,32 @@ public class Inputs : MonoBehaviour {
             Vector3 mPos = Input.mousePosition;
             Ray ray = Camera.main.ScreenPointToRay(mPos);
             RaycastHit hit;
-            //LMB button Down
-            if (Input.GetMouseButtonDown(0))
+            if (canUseLeftClick)
             {
-                InteractableObject clickedObject;
-                if (Physics.Raycast(ray, out hit))
+                //LMB button Down
+                if (Input.GetMouseButtonDown(0))
                 {
-                    if (hit.collider.gameObject.GetComponent<InteractableObject>() != null)
+                    InteractableObject clickedObject;
+                    if (Physics.Raycast(ray, out hit))
                     {
-                        clickedObject = hit.collider.gameObject.GetComponent<InteractableObject>();
-                        DeactivateObject(clickedObject);
-                        ActivateObject(clickedObject, 0);
+                        if (hit.collider.gameObject.GetComponent<InteractableObject>() != null)
+                        {
+                            clickedObject = hit.collider.gameObject.GetComponent<InteractableObject>();
+                            DeactivateObject(clickedObject);
+                            ActivateObject(clickedObject, 0);
+
+                        }
 
                     }
-
                 }
-            }
-            else
-            {
-                //LMB UP
-                if (Input.GetMouseButtonUp(0))
+                else
                 {
-                    if(_activeObject!=null)_activeObject.StopLMB();
-                    activeClick = -1;
+                    //LMB UP
+                    if (Input.GetMouseButtonUp(0))
+                    {
+                        if (_activeObject != null) _activeObject.StopLMB();
+                        activeClick = -1;
+                    }
                 }
             }
             //RMB down

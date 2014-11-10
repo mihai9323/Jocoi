@@ -4,13 +4,13 @@ using System.Collections;
 public class HelperSheep : InteractableObject {
 
     private PuzzleGrass targetGrass;
-   
+    public AudioClip bahSound;
     public override void StartLMB()
     {
         //throw new System.NotImplementedException();
         
         targetGrass = DetectGrassPatch();
-        
+        AudioSource.PlayClipAtPoint(bahSound, transform.position);
         StartCoroutine("CallOtherSheep");
     }
 

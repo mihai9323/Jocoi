@@ -55,7 +55,7 @@ public class Flower : Plant {
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(this);
         
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
-       
+        KillTheSheep.Instance.currentActions++;
     }
     protected override void LambFinishEat()
     {

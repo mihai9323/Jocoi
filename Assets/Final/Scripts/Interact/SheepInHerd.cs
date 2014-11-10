@@ -133,6 +133,7 @@ public class SheepInHerd : InteractableObject {
         //both mother and child ar in cuddling position
         if (inPosition >1)
         {
+            KillTheSheep.Instance.currentActions++;
             walkingToTarget = false;
             WeatherCycle.Instance.FadeWeathers();
             weatherStartedChanging = true;

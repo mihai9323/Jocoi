@@ -3,9 +3,10 @@ using System.Collections;
 
 public class WalkToRiver : MonoBehaviour {
 
+    public AudioClip bahSound;
 	public float movementSpeed = 2f;
 	public float maxZoom = 20f;
-
+    public Transform BabyWolf;
 	public AnimationCurve headMovement;
 	public AudioClip sound;
 	public int endScene;
@@ -39,12 +40,16 @@ public class WalkToRiver : MonoBehaviour {
 	}
 	
 	void Update () {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(bahSound!=null)AudioSource.PlayClipAtPoint(bahSound, transform.position);
+        }
 		//   wolf/sheep/lamb pressed
 		if (Input.GetMouseButton (0)) {
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if (Physics.Raycast (ray, out hit)) {
-				if (hit.transform.name == "Cube") {
+				if (hit.transform == BabyWolf) {
 					Debug.Log ("My object is clicked by mouse");
 					//not reached maxZoom
 					if (camera.fieldOfView > maxZoom) {
@@ -64,7 +69,7 @@ public class WalkToRiver : MonoBehaviour {
 					}
 					//reached maxZoom
 					else {
-						Application.LoadLevel (endScene);
+						//Application.LoadLevel (endScene);
 					}
 				}
 			}
