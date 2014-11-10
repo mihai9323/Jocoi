@@ -23,12 +23,17 @@ public class Lamb : InteractableObject {
     private void PlayPatternAnimation()
     {
 
-        isEating = true;
+       // isEating = true;
         StopCoroutine("FollowMother");
-        this.gameObject.GetComponent<MoveToPosition>().StartMoving(motherBelly.position, patternAnimator.StartAnimation, LevelData.Instance.LambSpeed, 1f);
+        this.gameObject.GetComponent<MoveToPosition>().StartMoving(motherBelly.position, StartAnimation, LevelData.Instance.LambSpeed, 2f);
         patternAnimator.StartAnimation();
         LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Breastfeed", true);
         
+    }
+    private void StartAnimation()
+    {
+        patternAnimator.StartAnimation();
+        isEating = true;
     }
     private void StopPatternAnimation()
     {
@@ -40,14 +45,18 @@ public class Lamb : InteractableObject {
 
     public override void StartLMB()
     {
-      if(!isEating)
+      if(!isEating){
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
             transform.position+new Vector3(-1,0,2),
             PlayPatternAnimation,
             0,
             "Walk",
             LevelData.Instance.MotherSpeed,
-            2.3f);
+            2.5f);
+        }else{
+            
+            StopPatternAnimation();
+        }       
     }
 
     public override void StartRMB()
@@ -96,7 +105,7 @@ public class Lamb : InteractableObject {
                                                                            (int)(m-1),
                                                                            LevelData.Instance.currentAnimation,
                                                                            LevelData.Instance.LambSpeed*m,
-                                                                           3.0f);
+                                                                           5.0f);
 
             }
            
