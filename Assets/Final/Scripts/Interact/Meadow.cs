@@ -40,7 +40,7 @@ public class Meadow : InteractableObject {
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
             Inputs.Instance.GetMouseOnScreen(),
             null,
-            0,
+            1,
             "Jump",
 			LevelData.Instance.MotherSpeed * LevelData.Instance.JumpSpeedMultiplier
             );
@@ -53,7 +53,7 @@ public class Meadow : InteractableObject {
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
             Inputs.Instance.GetMouseOnScreen(),
             null,
-            1,
+            0,
             "Walk",
             LevelData.Instance.MotherSpeed
             );
