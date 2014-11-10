@@ -114,6 +114,7 @@ public class Plant : InteractableObject {
         if (GrowSound != null)
         {
             audioSource.clip = GrowSound;
+            audioSource.volume = 0.5f;
             audioSource.Play();
         }
         anim.SetTrigger(GrowAnimation);
@@ -132,6 +133,7 @@ public class Plant : InteractableObject {
         if (DieSound != null)
         {
             audioSource.clip = DieSound;
+            audioSource.volume = 1f;
             audioSource.Play();
         }
         if(anim!=null)anim.SetBool("Die", true);
@@ -213,6 +215,10 @@ public class Plant : InteractableObject {
         if (LevelData.Instance.Lamb.GetComponent<Animator>() != null)
         {
          
+        }
+        if (LambFedSound != null)
+        {
+            AudioSource.PlayClipAtPoint(LambFedSound, transform.position);
         }
         Invoke("LambFinishEat", 1.8f);
     }

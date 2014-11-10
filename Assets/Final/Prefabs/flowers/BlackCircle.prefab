@@ -325,14 +325,15 @@ MonoBehaviour:
   feedAnimation: Eat
   giveAnimation: Give
   PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
-  DieSound: {fileID: 0}
-  GrowSound: {fileID: 0}
-  BeEatenSound: {fileID: 0}
-  BePickedSound: {fileID: 0}
-  LambFedSound: {fileID: 0}
-  MotherEatSound: {fileID: 0}
+  DieSound: {fileID: 8300000, guid: 99406005b189dfe478a1b18bc1a38f49, type: 3}
+  GrowSound: {fileID: 8300000, guid: 21a1129129d89c64cb0ad72393e51658, type: 3}
+  BeEatenSound: {fileID: 8300000, guid: 8d4b3200faa7a7e4c8070a2e4b8c782c, type: 3}
+  BePickedSound: {fileID: 8300000, guid: 9a39de72277255748afe116406fb01b6, type: 3}
+  LambFedSound: {fileID: 8300000, guid: 4920fc1745c147747a6008c762d9981e, type: 3}
+  MotherEatSound: {fileID: 8300000, guid: 8d4b3200faa7a7e4c8070a2e4b8c782c, type: 3}
   anim: {fileID: 9500000}
   audioSource: {fileID: 8200000}
+  clickCoolDown: .5
   patternToAdd:
     color: {r: .145098045, g: .149019614, b: .145098045, a: 1}
     texture: {fileID: 2800000, guid: a9b34d6bda7169e4f8d8c9acc6408782, type: 3}

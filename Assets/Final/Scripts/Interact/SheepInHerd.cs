@@ -10,6 +10,7 @@ public class SheepInHerd : InteractableObject {
     private int inPosition;
     public float clickCoolDown = 1.5f;
     private bool walkingToTarget;
+    public AudioClip CuddleSound;
 	// Use this for initialization
 	void Awake () {
         weatherStartedChanging = false;
@@ -88,6 +89,7 @@ public class SheepInHerd : InteractableObject {
         {
             sh.GetComponent<MoveToPosition>().StopMovement();
             sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
+            AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
             yield return new WaitForSeconds(2 * Random.Range(.3f,.6f));
         }
        
@@ -135,6 +137,7 @@ public class SheepInHerd : InteractableObject {
             WeatherCycle.Instance.FadeWeathers();
             weatherStartedChanging = true;
             Inputs.Instance.canInteract = true;
+           
         }
        
        
@@ -143,11 +146,13 @@ public class SheepInHerd : InteractableObject {
     {
 
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
+        AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
         StartCuddle();
     }
     private void LambCuddle()
     {
         LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
+        AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
         StartCuddle();
     }
 
