@@ -5,11 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Final/Scenes/Level1.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Final/Scenes/Level2.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Final/Scenes/FPRScene.unity
   - enabled: 1
+    path: Assets/TestFolders/Mihai/TestScene_Mihai.unity
+  - enabled: 1
     path: Assets/TestFolders/Mihai/TestScene_Mihai2.unity
+  - enabled: 1
+    path: Assets/TestFolders/Mihai/TestScene_Mihai_FPRScene.unity

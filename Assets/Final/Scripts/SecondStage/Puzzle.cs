@@ -18,22 +18,22 @@ public class Puzzle : MonoBehaviour {
     {
         if (Instance == null)
         {
+
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
             progress = 0;
             PuzzleFinished = false;
+            spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPositions");
+            PlaceGrass();
             
         }
         else
         {
+            Puzzle.Instance.gameObject.SetActive(true);
             Destroy(this.gameObject);
         }
     }
-    private void Start()
-    {
-        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPositions");
-        PlaceGrass();
-    }
+  
     public void PlaceGrass()
     {
         if (GameData.Memory != null)
@@ -75,13 +75,15 @@ public class Puzzle : MonoBehaviour {
 
             GameObject aux = Instantiate(GrassPrefab.gameObject, spawnPoints[r].transform.position, GrassPrefab.transform.rotation) as GameObject;
             aux.gameObject.transform.parent = gameObject.transform;
+            aux.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             IncorrectGrass[i] = aux.GetComponent<PuzzleGrass>();
-            IncorrectGrass[i].flowerGraphic = Instantiate(FlowerModels[GetRandomNotCorrectID()].gameObject, Grass[i].gameObject.transform.position, FlowerModels[GetRandomNotCorrectID()].transform.rotation) as GameObject;
-            IncorrectGrass[i].flowerGraphic.transform.parent = Grass[i].transform;
+            int randomIndex = GetRandomNotCorrectID();
+            IncorrectGrass[i].flowerGraphic = Instantiate(FlowerModels[randomIndex].gameObject, Grass[i].gameObject.transform.position, FlowerModels[randomIndex].transform.rotation) as GameObject;
+            IncorrectGrass[i].flowerGraphic.transform.parent = IncorrectGrass[i].transform;
             IncorrectGrass[i].flowerGraphic.SetActive(false);
-            IncorrectGrass[i].trackID = GameData.Memory[i].patternToAdd.trackID;
-            IncorrectGrass[i].instrumentID = GameData.Memory[i].patternToAdd.instrumentID;
-            if (Grass[i].flowerGraphic.GetComponent<Flower>())
+            IncorrectGrass[i].trackID = FlowerModels[randomIndex].GetComponent<Flower>().patternToAdd.trackID;
+            IncorrectGrass[i].instrumentID = FlowerModels[randomIndex].GetComponent<Flower>().patternToAdd.instrumentID;
+            if (IncorrectGrass[i].flowerGraphic.GetComponent<Flower>())
             {
                 Destroy(Grass[i].flowerGraphic.GetComponent<Flower>());
             }

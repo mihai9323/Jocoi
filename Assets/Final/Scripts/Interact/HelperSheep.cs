@@ -50,6 +50,17 @@ public class HelperSheep : InteractableObject {
                 }
             }
         }
+        foreach (PuzzleGrass pg in Puzzle.Instance.IncorrectGrass)
+        {
+            if (pg.state != PuzzleGrass.GrassStates.Flower)
+            {
+                if (minDistance > pg.transform.position.SquaredDistance(LevelData.Instance.MotherSheep.transform.position))
+                {
+                    minDistance = pg.transform.position.SquaredDistance(LevelData.Instance.MotherSheep.transform.position);
+                    returnGrass = pg;
+                }
+            }
+        }
         return returnGrass;
     }
 
