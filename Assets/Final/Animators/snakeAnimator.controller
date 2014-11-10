@@ -21,7 +21,7 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
   - m_Name: Grow
-    m_Type: 4
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -71,29 +71,25 @@ Transition:
   m_TransitionOffset: .00631320383
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .960437953
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110130947
+--- !u!1101 &110146345
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110220417}
+  m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110270158}
-  m_TransitionDuration: .125
-  m_TransitionOffset: 0
+  m_TransitionDuration: .00868350361
+  m_TransitionOffset: .0140989991
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Die
-    m_EventTreshold: 0
-    m_ExitTime: .875
   - m_ConditionMode: 1
     m_ConditionEvent: Grow
     m_EventTreshold: 0
@@ -102,22 +98,22 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110184815
+--- !u!1101 &110184614
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110200000}
+  m_SrcState: {fileID: 0}
   m_DstState: {fileID: 110220417}
-  m_TransitionDuration: .125
+  m_TransitionDuration: .100000001
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: Die
     m_EventTreshold: 0
-    m_ExitTime: .875
+    m_ExitTime: .899999976
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -219,18 +215,21 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 0}
+      second:
+      - {fileID: 110184614}
+    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
-      - {fileID: 110184815}
+      - {fileID: 110146345}
     data:
       first: {fileID: 110208394}
       second:
       - {fileID: 110185106}
     data:
       first: {fileID: 110220417}
-      second:
-      - {fileID: 110130947}
+      second: []
     data:
       first: {fileID: 110270158}
       second:

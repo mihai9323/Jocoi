@@ -58,7 +58,7 @@ Transition:
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110132175
+--- !u!1101 &110118452
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
@@ -66,34 +66,34 @@ Transition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_SrcState: {fileID: 110200000}
-  m_DstState: {fileID: 110257541}
-  m_TransitionDuration: .0638297871
-  m_TransitionOffset: 0
+  m_DstState: {fileID: 110207356}
+  m_TransitionDuration: .000250065961
+  m_TransitionOffset: .0177870989
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Die
+    m_ConditionEvent: Grow
     m_EventTreshold: 0
     m_ExitTime: .93617022
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
---- !u!1101 &110175909
+--- !u!1101 &110152664
 Transition:
   serializedVersion: 2
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_SrcState: {fileID: 110257541}
-  m_DstState: {fileID: 110207356}
-  m_TransitionDuration: .125
+  m_SrcState: {fileID: 0}
+  m_DstState: {fileID: 110257541}
+  m_TransitionDuration: .100000001
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Grow
+    m_ConditionEvent: Die
     m_EventTreshold: 0
-    m_ExitTime: .875
+    m_ExitTime: .899999976
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
@@ -215,22 +215,25 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 0}
+      second:
+      - {fileID: 110152664}
+    data:
       first: {fileID: 110200000}
       second:
       - {fileID: 110100000}
-      - {fileID: 110132175}
+      - {fileID: 110118452}
+    data:
+      first: {fileID: 110207356}
+      second:
+      - {fileID: 110188833}
     data:
       first: {fileID: 110226256}
       second:
       - {fileID: 110183043}
     data:
       first: {fileID: 110257541}
-      second:
-      - {fileID: 110175909}
-    data:
-      first: {fileID: 110207356}
-      second:
-      - {fileID: 110188833}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -252, y: -96, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
