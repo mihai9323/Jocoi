@@ -134,8 +134,14 @@ public class PuzzleGrass : InteractableObject
 
             SoundManager.Instance.FadeAllDown();
             SoundManager.Instance.instruments[instrumentID].FlowerSources[trackID].FadeSoundTo(1.0f);
-           
 
+            switch (state)
+            {
+                case GrassStates.TallGrass: TallGraphic.GetComponent<Animator>().SetBool("Hover", true); break;
+                case GrassStates.HighGrass: HighGraphic.GetComponent<Animator>().SetBool("Hover", true); break;
+                case GrassStates.Medium: MediumGraphic.GetComponent<Animator>().SetBool("Hover", true); break;
+                case GrassStates.Low: LowGraphic.GetComponent<Animator>().SetBool("Hover", true); break;
+            }
 
 
         }
@@ -144,7 +150,13 @@ public class PuzzleGrass : InteractableObject
 
             SoundManager.Instance.FadeAllUp();
             if (SoundManager.Instance.instruments[instrumentID].currentTrack != trackID) SoundManager.Instance.instruments[instrumentID].FlowerSources[trackID].FadeSoundTo(0.0f);
-           
+            switch (state)
+            {
+                case GrassStates.TallGrass: TallGraphic.GetComponent<Animator>().SetBool("Hover", false); break;
+                case GrassStates.HighGrass: HighGraphic.GetComponent<Animator>().SetBool("Hover", false); break;
+                case GrassStates.Medium: MediumGraphic.GetComponent<Animator>().SetBool("Hover", false); break;
+                case GrassStates.Low: LowGraphic.GetComponent<Animator>().SetBool("Hover", false); break;
+            }
         }
     }
 

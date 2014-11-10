@@ -16,6 +16,7 @@ public class BackButtonM : MonoBehaviour {
     {
         works = true;
         gameObject.renderer.enabled = true;
+        
     }
     private void OnMouseUp() 
     {
