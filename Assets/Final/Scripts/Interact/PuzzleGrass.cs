@@ -44,7 +44,7 @@ public class PuzzleGrass : InteractableObject
                 flowerGraphic.SetActive(false);
                 switch (value)
                 {
-                    case GrassStates.TallGrass: TallGraphic.SetActive(true); break;
+                    case GrassStates.TallGrass: TallGraphic.SetActive(true); TallGraphic.GetComponent<Animator>().SetTrigger("Grow"); break;
                     case GrassStates.HighGrass: HighGraphic.SetActive(true); break;
                     case GrassStates.Medium: MediumGraphic.SetActive(true); break;
                     case GrassStates.Low: LowGraphic.SetActive(true); break;
