@@ -32,6 +32,7 @@ public class PuzzleGrass : InteractableObject
                     else
                     {
                         if (FlowerSound != null) AudioSource.PlayClipAtPoint(FlowerSound, transform.position);
+                        SoundManager.Instance.instruments[instrumentID].AddSound(trackID);
                     }
                 }
             }
