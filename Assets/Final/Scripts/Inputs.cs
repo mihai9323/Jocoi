@@ -34,7 +34,7 @@ public class Inputs : MonoBehaviour {
         
     }
     private void Start(){
-		Cursor.SetCursor(defaultCursor,new Vector2(-145,5),CursorMode.ForceSoftware);
+		Cursor.SetCursor(defaultCursor,new Vector2(0,0),CursorMode.ForceSoftware);
     }
     private void Update()
     {
