@@ -71,6 +71,21 @@ public class WalkToRiver : MonoBehaviour {
 					else {
 						//Application.LoadLevel (endScene);
 					}
+				} else {
+					if(camera.fieldOfView < startZoom){
+						//eyelids
+						eyelidTop.transform.position = Vector3.Lerp (eyelidTop.transform.position, (eyelidTop.transform.position + eyelidMove), 1 * Time.deltaTime);
+						eyelidBottom.transform.position = Vector3.Lerp (eyelidBottom.transform.position, (eyelidBottom.transform.position - eyelidMove), 1 * Time.deltaTime);
+						//Zoom
+						backwardZoom = camera.fieldOfView + movementSpeed;
+						camera.fieldOfView = Mathf.Lerp (camera.fieldOfView, backwardZoom, 1 * Time.deltaTime);
+						//head
+						Vector3 localPosition = camera.transform.localPosition;
+						localPosition.y = headMovement.Evaluate (timer)  + initialCameraPos.y;
+						camera.transform.localPosition = localPosition ;
+						// Increase the timer by the time since last frame
+						timer += Time.deltaTime;
+					}
 				}
 			}
 		} else{
