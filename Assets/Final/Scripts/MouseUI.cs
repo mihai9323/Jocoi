@@ -25,20 +25,20 @@ public class MouseUI : MonoBehaviour {
 
 	void OnMouseEnter(){
 		StopAllCoroutines ();
-		StartCoroutine(MoveObject(endPos, 1));
+		StartCoroutine(MoveObject(1));
 	}
 	
 	void OnMouseExit(){
 		StopAllCoroutines ();
-		StartCoroutine(MoveObject(startPos, 0));
+		StartCoroutine(MoveObject(0));
 	}
 
 	IEnumerator InitialShow (){
 		yield return new WaitForSeconds (timeBeforeStart);
-		StartCoroutine(MoveObject(startPos, 0));
+		StartCoroutine(MoveObject(0));
 	}
 
-	IEnumerator MoveObject(Vector3 start, float direction){
+	IEnumerator MoveObject(float direction){
 		if (direction == 1) {
 			while (timer < 1) {
 				Vector3 localPosition = transform.localPosition;
