@@ -1010,6 +1010,7 @@ GameObject:
   - 136: {fileID: 105148693}
   - 114: {fileID: 105148692}
   - 114: {fileID: 105148695}
+  - 114: {fileID: 105148697}
   m_Layer: 0
   m_Name: HerdSheep
   m_TagString: Untagged
@@ -1104,6 +1105,17 @@ MonoBehaviour:
   sounds: []
   anim: {fileID: 1369277834}
   offSet: {x: 0, y: 0, z: 0}
+--- !u!114 &105148697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 105148690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &119280577
 GameObject:
   m_ObjectHideFlags: 0
@@ -4885,6 +4897,7 @@ GameObject:
   - 136: {fileID: 559864852}
   - 114: {fileID: 559864851}
   - 114: {fileID: 559864850}
+  - 114: {fileID: 559864855}
   m_Layer: 0
   m_Name: HerdSheep
   m_TagString: Untagged
@@ -4979,6 +4992,17 @@ MonoBehaviour:
   sounds: []
   anim: {fileID: 913705749}
   offSet: {x: 0, y: 0, z: 0}
+--- !u!114 &559864855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559864848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &574905335
 GameObject:
   m_ObjectHideFlags: 0
@@ -9862,6 +9886,7 @@ GameObject:
   - 114: {fileID: 1127511009}
   - 64: {fileID: 1127511015}
   - 114: {fileID: 1127511014}
+  - 114: {fileID: 1127511016}
   m_Layer: 0
   m_Name: river
   m_TagString: Untagged
@@ -9965,6 +9990,17 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 5d6d782a6b114844993de0d0d4e0ddee, type: 3}
+--- !u!114 &1127511016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1127511008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1134750980
 GameObject:
   m_ObjectHideFlags: 0
@@ -17680,6 +17716,7 @@ GameObject:
   - 136: {fileID: 2063533158}
   - 114: {fileID: 2063533157}
   - 114: {fileID: 2063533160}
+  - 114: {fileID: 2063533162}
   m_Layer: 0
   m_Name: HerdSheep
   m_TagString: Untagged
@@ -17774,6 +17811,17 @@ MonoBehaviour:
   sounds: []
   anim: {fileID: 867976288}
   offSet: {x: 0, y: 0, z: 0}
+--- !u!114 &2063533162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2063533155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2071823043
 GameObject:
   m_ObjectHideFlags: 0

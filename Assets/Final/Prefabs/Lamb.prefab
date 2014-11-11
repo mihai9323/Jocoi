@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400008}
   - 82: {fileID: 8200000}
+  - 114: {fileID: 11400010}
   m_Layer: 0
   m_Name: Lamb
   m_TagString: Untagged
@@ -516,7 +517,7 @@ Animator:
   m_GameObject: {fileID: 100010}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 64c58cd993e5f274ea8814318e07fa69, type: 3}
-  m_Controller: {fileID: 9100000, guid: 902d227e9f1e08d48acab5ee9a1ff490, type: 2}
+  m_Controller: {fileID: 9100000, guid: 99986d72df5ec4d4eaf737a88e853091, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -594,9 +595,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f739d002627ac3a40b81f7860c665fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TickleSound: {fileID: 8300000, guid: f42ffe253a455814b8b3206618fbf8c9, type: 3}
+  TickleSound: {fileID: 8300000, guid: 06ee26013d8e9734a8914fb596a68f83, type: 3}
   timeBetweenSounds: 2
   variance: 3
+--- !u!114 &11400010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
