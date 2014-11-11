@@ -1539,6 +1539,7 @@ GameObject:
   - 114: {fileID: 256538821}
   - 114: {fileID: 256538828}
   - 82: {fileID: 256538827}
+  - 114: {fileID: 256538829}
   m_Layer: 0
   m_Name: Lamb
   m_TagString: Untagged
@@ -1728,6 +1729,17 @@ MonoBehaviour:
   TickleSound: {fileID: 8300000, guid: 06ee26013d8e9734a8914fb596a68f83, type: 3}
   timeBetweenSounds: 2
   variance: 3
+--- !u!114 &256538829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256538819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &256746311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1742,6 +1754,7 @@ GameObject:
   - 136: {fileID: 256746315}
   - 114: {fileID: 256746314}
   - 82: {fileID: 256746318}
+  - 114: {fileID: 256746319}
   m_Layer: 0
   m_Name: HerdSheep
   m_TagString: Untagged
@@ -1897,6 +1910,17 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &256746319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256746311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &259291370
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,7 +2183,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 301465472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.502739429, y: -.731608331, z: 4.63595152}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1513538144}
@@ -2178,6 +2202,8 @@ MonoBehaviour:
   canInteract: 1
   canUseLeftClick: 1
   activeMode: 0
+  defaultCursor: {fileID: 2800000, guid: 81959a9743cfc48478082d9b6046b332, type: 3}
+  handCursor: {fileID: 2800000, guid: 39fbcf3cccc19cb49bc845ccd4b0ea5e, type: 3}
 --- !u!114 &301465475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6111,6 +6137,7 @@ GameObject:
   - 136: {fileID: 723015677}
   - 114: {fileID: 723015676}
   - 82: {fileID: 723015682}
+  - 114: {fileID: 723015683}
   m_Layer: 0
   m_Name: HerdSheep
   m_TagString: Untagged
@@ -6266,6 +6293,17 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &723015683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 723015675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &729026650
 GameObject:
   m_ObjectHideFlags: 0
@@ -7731,6 +7769,7 @@ GameObject:
   - 136: {fileID: 1010588176}
   - 114: {fileID: 1010588175}
   - 82: {fileID: 1010588179}
+  - 114: {fileID: 1010588180}
   m_Layer: 0
   m_Name: HerdSheep
   m_TagString: Untagged
@@ -7886,6 +7925,17 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1010588180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1010588172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1011747751
 Prefab:
   m_ObjectHideFlags: 0
@@ -10975,6 +11025,7 @@ GameObject:
   - 65: {fileID: 1392102233}
   - 23: {fileID: 1392102232}
   - 114: {fileID: 1392102231}
+  - 114: {fileID: 1392102235}
   m_Layer: 0
   m_Name: Meadow
   m_TagString: Untagged
@@ -11044,6 +11095,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1392102229}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1392102235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1392102229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f886409d4745aa4ab605369e28491f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weathers: 1
+  particlesToSpawn:
+  - {fileID: 100000, guid: 92d753a169d2f9f47a20d534501374bf, type: 2}
+  particleLifeTime: 1
+  Delay: .5
+  started: 0
 --- !u!1 &1398532893
 GameObject:
   m_ObjectHideFlags: 0
@@ -13260,6 +13328,77 @@ MeshFilter:
   m_PrefabInternal: {fileID: 662206889}
   m_GameObject: {fileID: 1711462488}
   m_Mesh: {fileID: 4300000, guid: a56b80dda1ef30243a1f90ef6b2c828d, type: 3}
+--- !u!1 &1725373699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1725373703}
+  - 114: {fileID: 1725373702}
+  - 114: {fileID: 1725373701}
+  - 114: {fileID: 1725373700}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1725373700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725373699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowActivationOnStandalone: 0
+--- !u!114 &1725373701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725373699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_AllowActivationOnMobileDevice: 0
+--- !u!114 &1725373702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725373699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+--- !u!4 &1725373703
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725373699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
 --- !u!1 &1726353291
 GameObject:
   m_ObjectHideFlags: 0
