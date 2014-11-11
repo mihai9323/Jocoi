@@ -9344,7 +9344,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 437b3407d2f6db54eb3dce7cdabedf4e, type: 2}
   m_PrefabInternal: {fileID: 79024305}
   m_GameObject: {fileID: 1186834498}
-  m_LocalRotation: {x: -.0514856018, y: -.254222333, z: -.0285298526, w: -.965352893}
+  m_LocalRotation: {x: -.0514856093, y: -.254222363, z: -.0285298564, w: -.965353012}
   m_LocalPosition: {x: 17.5296383, y: 0, z: 4.51322174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -9926,6 +9926,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1291452301}
   - 114: {fileID: 1291452302}
+  - 114: {fileID: 1291452303}
   m_Layer: 0
   m_Name: LevelData
   m_TagString: Untagged
@@ -9981,6 +9982,17 @@ MonoBehaviour:
   grass: []
   particle: {fileID: 0}
   cam: {fileID: 1799606557}
+--- !u!114 &1291452303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291452300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b1170d5fca9554db72a0f919d0a1fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1320592010
 Prefab:
   m_ObjectHideFlags: 0
