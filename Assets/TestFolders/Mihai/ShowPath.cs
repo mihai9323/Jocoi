@@ -16,7 +16,8 @@ public class ShowPath : MonoBehaviour {
     }
     void showPath()
     {
-        Instantiate(path, transform.position, path.transform.rotation);
+        GameObject gob = Instantiate(path, transform.position, path.transform.rotation) as GameObject; 
+        gob.transform.parent = transform;
     }
 	// Update is called once per frame
 	void Update () {
