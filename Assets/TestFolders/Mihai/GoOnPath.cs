@@ -60,7 +60,7 @@ public class GoOnPath : InteractableObject {
         countSheep++;
         if (countSheep >= 4)
         {
-            AutoFade.LoadLevel(3, fadeTimeOut, fadeTimeIn, Color.white);
+            AutoFade.LoadLevel(4, fadeTimeOut, fadeTimeIn, Color.white);
 
             LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
               targetPosition2,
@@ -92,16 +92,7 @@ public class GoOnPath : InteractableObject {
 
     public override void StartRMB()
     {
-        Inputs.Instance.canInteract = false;
-        StartCoroutine(callAllSheep());
-		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StopMovement();
-		
-		LevelData.Instance.herdTarget.canMove = false;
-		
-		foreach (HelperSheep sh in LevelData.Instance.HelperSheep)
-		{
-			sh.GetComponent<MoveToPosition>().StopMovement();
-		}
+		StartCoroutine(callAllSheep());
     }
 
     public override void StopLMB()
@@ -118,6 +109,16 @@ public class GoOnPath : InteractableObject {
     {
 		StopAllCoroutines();
 		countSheep = 0;
+		Inputs.Instance.canInteract = true;
+		StartCoroutine(callAllSheep());
+		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StopMovement();
+		
+		LevelData.Instance.herdTarget.canMove = true;
+		
+		foreach (HelperSheep sh in LevelData.Instance.HelperSheep)
+		{
+			sh.GetComponent<MoveToPosition>().StopMovement();
+		}
        // throw new System.NotImplementedException();
     }
 }

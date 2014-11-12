@@ -1660,12 +1660,12 @@ Material:
         second: {r: .196078435, g: .184313729, b: .219607845, a: 0}
       data:
         first:
-          name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _Emission
         second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Scale
@@ -5776,7 +5776,7 @@ MonoBehaviour:
   patterns: []
   body: {fileID: 1011235497}
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
-  recalculate: 0
+  recalculate: 1
 --- !u!1001 &1046777304
 Prefab:
   m_ObjectHideFlags: 0
@@ -9101,6 +9101,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1449142360}
   - 114: {fileID: 1449142359}
+  - 114: {fileID: 1449142361}
   m_Layer: 2
   m_Name: PatternLoader
   m_TagString: Untagged
@@ -9132,6 +9133,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!114 &1449142361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1449142358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 701f24939744cc940ada662f578e0cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  framesPerSecond: 12
+  rows: 6
+  columns: 6
+  width: 4096
+  height: 4096
 --- !u!1001 &1454493565
 Prefab:
   m_ObjectHideFlags: 0
@@ -9819,12 +9836,12 @@ Material:
         second: {r: .0431372561, g: .200000003, b: .113725491, a: 0}
       data:
         first:
-          name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _Emission
         second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Scale
@@ -9844,6 +9861,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400002, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
+      propertyPath: patterns.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
       propertyPath: m_LocalPosition.x
       value: -12.4494915
@@ -9915,6 +9936,10 @@ Prefab:
     - target: {fileID: 400010, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.09200013
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
+      propertyPath: recalculate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
@@ -12869,12 +12894,12 @@ Material:
         second: {r: .0901960805, g: .188235298, b: .188235298, a: 0}
       data:
         first:
-          name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
           name: _Emission
         second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _Scale
