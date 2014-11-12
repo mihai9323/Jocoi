@@ -24,12 +24,12 @@ Material:
       data:
         first:
           name: _InvFade
-        second: 1
+        second: 3
     m_Colors:
       data:
         first:
           name: _TintColor
-        second: {r: .501960814, g: .501960814, b: .501960814, a: .501960814}
+        second: {r: .404411793, g: .404411793, b: .404411793, a: .450980395}
       data:
         first:
           name: _EmisColor
