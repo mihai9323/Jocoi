@@ -12,6 +12,8 @@ public class Inputs : MonoBehaviour {
     public bool canUseLeftClick = true;
 
     public int activeMode;
+    public Texture2D defaultCursor;
+    public Texture2D handCursor;
     public InteractableObject ActiveObject{
         get
         {
@@ -29,6 +31,10 @@ public class Inputs : MonoBehaviour {
         activeClick = -1;
         activeMode = -1;
         canInteract = true;
+        
+    }
+    private void Start(){
+		Cursor.SetCursor(defaultCursor,new Vector2(0,0),CursorMode.ForceSoftware);
     }
     private void Update()
     {

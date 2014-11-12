@@ -5,24 +5,20 @@ public class CameraShake : MonoBehaviour {
 
 	private float timer = 0;
 	public float shakeTime;
-    
-	public AnimationCurve shake;
+    public AnimationCurve shake;
     private Vector3 initialPos;
-    private void Start()
-    {
+
+    private void Start(){
         initialPos = transform.position;
     }
-	void Update () {
-
-	}
 
 	public void StartShake(){
         StartCoroutine("properShakeLookAtMe");
 	}
-    private IEnumerator properShakeLookAtMe()
-    {
-        while (timer < shakeTime)
-        {
+
+    private IEnumerator properShakeLookAtMe(){
+        while (timer < shakeTime){
+			//gradually change the y position according to the animationcurve from the initial position
             Vector3 localPosition = transform.localPosition;
             localPosition.y = shake.Evaluate(timer)+initialPos.y;
             transform.localPosition = localPosition;
