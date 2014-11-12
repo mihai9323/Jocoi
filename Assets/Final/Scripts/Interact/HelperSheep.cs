@@ -83,7 +83,7 @@ public class HelperSheep : InteractableObject {
     public void StartMoving(PuzzleGrass tg)
     {
         targetGrass = tg;
-        GetComponent<MoveToPosition>().StartMovingOnPath(
+        GetComponent<MoveToPosition>().StartMoving(
             targetGrass.gameObject.transform,
             StartEating,
             0,

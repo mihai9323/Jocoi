@@ -10,6 +10,9 @@ public class Lamb : InteractableObject {
     public Transform motherHead;
 
     private bool isEating;
+    public float distanceToMother = 2.0f;
+    [Range(0.03f,2.0f)]
+    public float refreshFrequency = .4f;
     private void Awake()
     {
         isEating = false;
@@ -105,12 +108,12 @@ public class Lamb : InteractableObject {
                                                                            (int)(m-1),
                                                                            LevelData.Instance.currentAnimation,
                                                                            LevelData.Instance.LambSpeed*m,
-                                                                           5.0f);
+                                                                           distanceToMother);
 
             }
            
            
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(refreshFrequency);
         }
     }
     public bool IsSameOrSubclass(Type potentialBase, Type potentialDescendant)

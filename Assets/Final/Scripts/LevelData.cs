@@ -27,7 +27,7 @@ public class LevelData:MonoBehaviour  {
 
     public Camera cam;
 
-    internal string currentAnimation;
+    internal string currentAnimation = "Jump";
     void Awake()
     {
         Instance = this;
