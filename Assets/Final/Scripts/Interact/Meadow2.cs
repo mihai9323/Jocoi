@@ -35,7 +35,17 @@ public class Meadow2 : InteractableObject {
 
     public override void StartLMB()
     {
-        AudioSource.PlayClipAtPoint(bahSound, transform.position);
+		if(GetComponent<AudioSource>()){
+		   if(!GetComponent<AudioSource>().isPlaying){
+			    GetComponent<AudioSource>().clip = bahSound;
+			    
+				GetComponent<AudioSource>().Play();
+			}
+			
+		}else{
+			
+			gameObject.AddComponent<AudioSource>().PlayOneShot(bahSound);
+		}
     }
 
     public override void StartRMB()

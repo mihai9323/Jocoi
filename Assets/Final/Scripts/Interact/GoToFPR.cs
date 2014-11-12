@@ -8,20 +8,20 @@ public class GoToFPR : InteractableObject {
 
     public override void StartLMB()
     {
-        //throw new System.NotImplementedException();
-        LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
-            targetPosition.position,
-            GoToRiverStage,
-            0,
-            "Walk",
-            LevelData.Instance.MotherSpeed,
-            2
-            );
+        
     }
 
     public override void StartRMB()
     {
-       
+		//throw new System.NotImplementedException();
+		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
+			targetPosition.position,
+			GoToRiverStage,
+			0,
+			"Walk",
+			LevelData.Instance.MotherSpeed,
+			2
+			);
     }
 
     public override void StopLMB()
