@@ -2769,8 +2769,8 @@ MonoBehaviour:
   canInteract: 1
   canUseLeftClick: 1
   activeMode: 0
-  defaultCursor: {fileID: 2800000, guid: 81959a9743cfc48478082d9b6046b332, type: 3}
-  handCursor: {fileID: 2800000, guid: 39fbcf3cccc19cb49bc845ccd4b0ea5e, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 9308ccae50e231b4ea16690a0e2a3484, type: 3}
+  handCursor: {fileID: 2800000, guid: 887166d3a0d61f340bd967d73d9d688f, type: 3}
 --- !u!1 &344427846
 GameObject:
   m_ObjectHideFlags: 0

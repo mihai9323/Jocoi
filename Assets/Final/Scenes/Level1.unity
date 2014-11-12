@@ -6539,6 +6539,8 @@ MonoBehaviour:
   patternAnimator: {fileID: 256538825}
   motherBelly: {fileID: 2053250269}
   motherHead: {fileID: 1253688762}
+  distanceToMother: 2
+  refreshFrequency: .400000006
 --- !u!114 &256538825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11363,7 +11365,7 @@ Transform:
   m_PrefabInternal: {fileID: 969776324}
   m_GameObject: {fileID: 635389544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.2597647, y: 9.61124039, z: 18.0806236}
+  m_LocalPosition: {x: 14.2597647, y: 9.61124039, z: 16.8767185}
   m_LocalScale: {x: 1.58883893, y: 1.13950312, z: 1}
   m_Children:
   - {fileID: 1469462250}
@@ -12492,6 +12494,7 @@ MonoBehaviour:
   - name: Sunny
     ObjectsToEnable:
     - {fileID: 150669992}
+    - {fileID: 255523053}
     flowers:
     - {fileID: 11400012, guid: 46d8def63a9df8b4bb770454fb954419, type: 2}
     - {fileID: 11400004, guid: 661cf01361023a24db3ff4e2da1ce02a, type: 2}
@@ -16002,7 +16005,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 860d9f49b7690af4abffbf467f5d2685, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 18.0806236
+      value: 16.8767185
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 860d9f49b7690af4abffbf467f5d2685, type: 2}
       propertyPath: m_LocalRotation.x

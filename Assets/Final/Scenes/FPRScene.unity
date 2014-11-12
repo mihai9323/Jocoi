@@ -2712,7 +2712,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414580966}
   m_LocalRotation: {x: .634120941, y: 0, z: 0, w: .77323395}
-  m_LocalPosition: {x: -0, y: -7.19096518, z: 7.36527157}
+  m_LocalPosition: {x: -0, y: -3.98803616, z: 6.72582531}
   m_LocalScale: {x: -1.37887585, y: 0, z: .654916048}
   m_Children: []
   m_Father: {fileID: 407830894}
@@ -2729,7 +2729,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cbe001ae76b4c194fae96bf3ebf2d137, type: 2}
+  - {fileID: 2100000, guid: 16323869edd5ba34a83d1a4e82d20b9b, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3876,7 +3876,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cbe001ae76b4c194fae96bf3ebf2d137, type: 2}
+  - {fileID: 2100000, guid: f16a43a99f260484da0d74960dc975ed, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3911,7 +3911,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 758922051}
   m_LocalRotation: {x: .634120941, y: 0, z: 0, w: .77323395}
-  m_LocalPosition: {x: -0, y: 9.72402477, z: 6.98450994}
+  m_LocalPosition: {x: -0, y: 4.90845966, z: 7.9459157}
   m_LocalScale: {x: -2.11661506, y: 0, z: 1.00434661}
   m_Children: []
   m_Father: {fileID: 407830894}
@@ -3958,7 +3958,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: fb5f5bb8cad61404686c81fbe216ad8c, type: 2}
+  - {fileID: 1074147104}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4573,8 +4573,8 @@ MonoBehaviour:
   canInteract: 1
   canUseLeftClick: 1
   activeMode: 0
-  defaultCursor: {fileID: 2800000, guid: 81959a9743cfc48478082d9b6046b332, type: 3}
-  handCursor: {fileID: 2800000, guid: 39fbcf3cccc19cb49bc845ccd4b0ea5e, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 9308ccae50e231b4ea16690a0e2a3484, type: 3}
+  handCursor: {fileID: 2800000, guid: 887166d3a0d61f340bd967d73d9d688f, type: 3}
 --- !u!4 &845408630
 Transform:
   m_ObjectHideFlags: 0
@@ -5014,6 +5014,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .964118004
       objectReference: {fileID: 0}
+    - target: {fileID: 2300012, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1074147104}
     m_RemovedComponents:
     - {fileID: 11400002, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
     - {fileID: 6500000, guid: c32872803fa7a4cdfaa7200833f48fe9, type: 2}
@@ -5992,6 +5996,32 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1515094753}
   m_GameObject: {fileID: 1054086312}
   m_Mesh: {fileID: 4300010, guid: 0ecf90285efd84bf0a9ecdb2f6859b70, type: 3}
+--- !u!21 &1074147104
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: woolMat1 (Instance)
+  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats: {}
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1075739709
 GameObject:
   m_ObjectHideFlags: 0
