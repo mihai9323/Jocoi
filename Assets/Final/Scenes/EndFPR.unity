@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c321757f3d92e4ebffdf41349d37f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 14.2810001, z: -.738659978}
+  finalPosition: {x: 0, y: 15.5690002, z: -.738659978}
   NextScene: 3
   speed: .0199999996
   mode: 0

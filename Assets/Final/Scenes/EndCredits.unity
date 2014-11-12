@@ -260,7 +260,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 8816f7dff570e42289fa552dbe1cc2c6, type: 2}
+  - {fileID: 2100000, guid: e0d0bc0ac56e2406d9979c07b8d41d39, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -295,7 +295,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1390132405}
   m_LocalRotation: {x: -1.15202333e-07, y: -.707106888, z: .707106769, w: -1.15202319e-07}
-  m_LocalPosition: {x: 0, y: -2.02659988, z: -.738659978}
+  m_LocalPosition: {x: 0, y: -1.87940001, z: -.738659978}
   m_LocalScale: {x: 1, y: 0, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c321757f3d92e4ebffdf41349d37f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPosition: {x: 0, y: 14.2810001, z: -.738659978}
+  finalPosition: {x: 0, y: 15.5690002, z: -.738659978}
   NextScene: 0
   speed: .0199999996
   mode: 1
