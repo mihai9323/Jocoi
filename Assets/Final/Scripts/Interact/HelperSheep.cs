@@ -10,7 +10,14 @@ public class HelperSheep : InteractableObject {
         //throw new System.NotImplementedException();
         
         targetGrass = DetectGrassPatch();
-        AudioSource.PlayClipAtPoint(bahSound, transform.position);
+        if(GetComponent<AudioSource>()){
+			
+			GetComponent<AudioSource>().PlayOneShot(bahSound);
+        }else{
+			
+			gameObject.AddComponent<AudioSource>().PlayOneShot(bahSound);
+        }
+        //AudioSource.PlayClipAtPoint(bahSound, transform.position);
         StartCoroutine("CallOtherSheep");
     }
 

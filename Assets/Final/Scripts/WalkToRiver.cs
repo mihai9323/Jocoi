@@ -46,7 +46,15 @@ public class WalkToRiver : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0)){
 			//play sound when is button pressed
-            if(bahSound!=null)AudioSource.PlayClipAtPoint(bahSound, transform.position);
+            if(bahSound!=null){
+				Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+				RaycastHit hit;
+				if(Physics.Raycast(r,out hit)){
+				
+				}else{
+					AudioSource.PlayClipAtPoint(bahSound, transform.position);
+				}
+            }
         }
 		if (Input.GetMouseButton (0)) {
 			RaycastHit hit;
