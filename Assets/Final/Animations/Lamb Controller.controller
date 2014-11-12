@@ -430,7 +430,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Walk
-  m_Speed: 2
+  m_Speed: 2.5
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 64c58cd993e5f274ea8814318e07fa69, type: 3}
@@ -475,7 +475,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: continuousJump
-  m_Speed: 2
+  m_Speed: 2.5
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 3345ebaa8bb685e42b7271e47fab4ca2, type: 3}
@@ -565,37 +565,37 @@ StateMachine:
       - {fileID: 110160427}
       - {fileID: 110167345}
     data:
-      first: {fileID: 110207557}
-      second:
-      - {fileID: 110165876}
-    data:
-      first: {fileID: 110213931}
-      second:
-      - {fileID: 110179757}
-    data:
       first: {fileID: 110224374}
       second:
       - {fileID: 110162185}
     data:
-      first: {fileID: 110232474}
+      first: {fileID: 110207557}
       second:
-      - {fileID: 110135044}
+      - {fileID: 110165876}
     data:
       first: {fileID: 110251153}
       second:
       - {fileID: 110183930}
     data:
+      first: {fileID: 110213931}
+      second:
+      - {fileID: 110179757}
+    data:
+      first: {fileID: 110232474}
+      second:
+      - {fileID: 110135044}
+    data:
       first: {fileID: 110252256}
       second:
       - {fileID: 110186612}
     data:
-      first: {fileID: 110254339}
-      second:
-      - {fileID: 110133885}
-    data:
       first: {fileID: 110256984}
       second:
       - {fileID: 110161560}
+    data:
+      first: {fileID: 110254339}
+      second:
+      - {fileID: 110133885}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: -396, y: -36, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
