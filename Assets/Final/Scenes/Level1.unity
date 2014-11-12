@@ -21392,10 +21392,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   framesPerSecond: 12
-  rows: 4
-  columns: 4
-  width: 1024
-  height: 1024
+  rows: 6
+  columns: 6
+  width: 4096
+  height: 4096
 --- !u!1 &1509879476
 GameObject:
   m_ObjectHideFlags: 0
