@@ -173,6 +173,7 @@ GameObject:
   - 4: {fileID: 26325630}
   - 137: {fileID: 26325632}
   - 114: {fileID: 26325631}
+  - 136: {fileID: 26325633}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -271,6 +272,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.55056548, y: -.119790435, z: 0}
     m_Extent: {x: 1.68989778, y: 1.11397994, z: .36894843}
   m_DirtyAABB: 0
+--- !u!136 &26325633
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 26325629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.38481593
+  m_Direction: 1
+  m_Center: {x: -.123290025, y: 1.55029118, z: 1.88117974e-06}
 --- !u!1 &30091465
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +428,7 @@ GameObject:
   - 4: {fileID: 45412603}
   - 137: {fileID: 45412605}
   - 114: {fileID: 45412604}
+  - 136: {fileID: 45412606}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -512,6 +527,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &45412606
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 45412602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123290241, y: 1.73998082, z: 9.2062794e-07}
 --- !u!1 &51943591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2264,7 @@ GameObject:
   - 4: {fileID: 117143918}
   - 137: {fileID: 117143920}
   - 114: {fileID: 117143919}
+  - 136: {fileID: 117143921}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -2334,6 +2363,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &117143921
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 117143917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123288885, y: 1.73998082, z: 3.88977242e-08}
 --- !u!1 &126397637
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,6 +6336,7 @@ GameObject:
   - 4: {fileID: 290875721}
   - 137: {fileID: 290875723}
   - 114: {fileID: 290875722}
+  - 136: {fileID: 290875724}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -6392,6 +6435,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &290875724
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 290875720}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123290196, y: 1.73998082, z: -1.44919071e-07}
 --- !u!1 &301465472
 GameObject:
   m_ObjectHideFlags: 0
@@ -6586,6 +6642,7 @@ GameObject:
   - 4: {fileID: 328273422}
   - 137: {fileID: 328273424}
   - 114: {fileID: 328273423}
+  - 136: {fileID: 328273425}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -6684,6 +6741,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &328273425
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 328273421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123291031, y: 1.73998094, z: -1.2610181e-07}
 --- !u!1 &329213114
 GameObject:
   m_ObjectHideFlags: 0
@@ -6808,6 +6878,7 @@ GameObject:
   - 4: {fileID: 345091511}
   - 137: {fileID: 345091513}
   - 114: {fileID: 345091512}
+  - 136: {fileID: 345091514}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -6906,6 +6977,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.55056548, y: -.119790435, z: 0}
     m_Extent: {x: 1.68989778, y: 1.11397994, z: .36894843}
   m_DirtyAABB: 0
+--- !u!136 &345091514
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345091510}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.38481641
+  m_Direction: 1
+  m_Center: {x: -.123291112, y: 1.55029118, z: 1.29163729e-08}
 --- !u!1 &349898558
 GameObject:
   m_ObjectHideFlags: 0
@@ -7118,6 +7202,7 @@ GameObject:
   - 4: {fileID: 370066901}
   - 137: {fileID: 370066903}
   - 114: {fileID: 370066902}
+  - 136: {fileID: 370066904}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -7216,6 +7301,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.55056548, y: -.119790435, z: 0}
     m_Extent: {x: 1.68989778, y: 1.11397994, z: .36894843}
   m_DirtyAABB: 0
+--- !u!136 &370066904
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370066900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.38481617
+  m_Direction: 1
+  m_Center: {x: -.123290181, y: 1.5502913, z: -2.88314368e-08}
 --- !u!1 &373499043
 GameObject:
   m_ObjectHideFlags: 0
@@ -7492,6 +7590,7 @@ GameObject:
   - 4: {fileID: 390157318}
   - 137: {fileID: 390157320}
   - 114: {fileID: 390157319}
+  - 136: {fileID: 390157321}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -7590,6 +7689,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &390157321
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390157317}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090693
+  m_Direction: 1
+  m_Center: {x: -.12329001, y: 1.7399807, z: -1.97004738e-07}
 --- !u!1 &393702285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8262,6 +8374,7 @@ GameObject:
   - 4: {fileID: 434486732}
   - 137: {fileID: 434486734}
   - 114: {fileID: 434486733}
+  - 136: {fileID: 434486735}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -8360,6 +8473,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &434486735
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434486731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123290256, y: 1.73998129, z: -2.23745431e-08}
 --- !u!1 &436576761
 GameObject:
   m_ObjectHideFlags: 0
@@ -8470,6 +8596,7 @@ GameObject:
   - 4: {fileID: 460366659}
   - 137: {fileID: 460366661}
   - 114: {fileID: 460366660}
+  - 136: {fileID: 460366662}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -8568,6 +8695,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.55056548, y: -.119790435, z: 0}
     m_Extent: {x: 1.68989778, y: 1.11397994, z: .36894843}
   m_DirtyAABB: 0
+--- !u!136 &460366662
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 460366658}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.38481617
+  m_Direction: 1
+  m_Center: {x: -.123290338, y: 1.55029094, z: 3.57003316e-09}
 --- !u!1 &465393970
 GameObject:
   m_ObjectHideFlags: 0
@@ -8924,6 +9064,7 @@ GameObject:
   - 4: {fileID: 490455222}
   - 137: {fileID: 490455224}
   - 114: {fileID: 490455223}
+  - 136: {fileID: 490455225}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -9022,6 +9163,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.55056548, y: -.119790435, z: 0}
     m_Extent: {x: 1.68989778, y: 1.11397994, z: .36894843}
   m_DirtyAABB: 0
+--- !u!136 &490455225
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 490455221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.38481593
+  m_Direction: 1
+  m_Center: {x: -.123291202, y: 1.55029118, z: -3.39402173e-09}
 --- !u!1 &495828026
 GameObject:
   m_ObjectHideFlags: 0
@@ -9761,6 +9915,7 @@ GameObject:
   - 4: {fileID: 576873285}
   - 137: {fileID: 576873287}
   - 114: {fileID: 576873286}
+  - 136: {fileID: 576873288}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -9859,6 +10014,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &576873288
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576873284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090693
+  m_Direction: 1
+  m_Center: {x: -.123290129, y: 1.73998094, z: 2.4153179e-08}
 --- !u!1 &582053094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9869,6 +10037,7 @@ GameObject:
   - 4: {fileID: 582053097}
   - 137: {fileID: 582053096}
   - 114: {fileID: 582053095}
+  - 136: {fileID: 582053098}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -9967,6 +10136,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 386714671}
   m_RootOrder: 0
+--- !u!136 &582053098
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 582053094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290226, y: 1.73998082, z: -7.77954483e-08}
 --- !u!1001 &582689095
 Prefab:
   m_ObjectHideFlags: 0
@@ -11219,6 +11401,7 @@ GameObject:
   - 4: {fileID: 677068373}
   - 137: {fileID: 677068375}
   - 114: {fileID: 677068374}
+  - 136: {fileID: 677068376}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -11317,6 +11500,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.55056548, y: -.119790435, z: 0}
     m_Extent: {x: 1.68989778, y: 1.11397994, z: .36894843}
   m_DirtyAABB: 0
+--- !u!136 &677068376
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 677068372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.38481641
+  m_Direction: 1
+  m_Center: {x: -.123290226, y: 1.55029118, z: 1.84821527e-08}
 --- !u!1 &677510441
 GameObject:
   m_ObjectHideFlags: 0
@@ -11394,7 +11590,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683336025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.48018837, z: -3.05629969}
+  m_LocalPosition: {x: 0, y: -.721897364, z: -3.05629969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 617312150}
@@ -12169,6 +12365,7 @@ GameObject:
   - 4: {fileID: 743372232}
   - 137: {fileID: 743372234}
   - 114: {fileID: 743372233}
+  - 136: {fileID: 743372235}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -12267,6 +12464,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &743372235
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 743372231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123291083, y: 1.7399807, z: -5.54209016e-08}
 --- !u!1 &748848535
 GameObject:
   m_ObjectHideFlags: 0
@@ -12494,6 +12704,7 @@ GameObject:
   - 4: {fileID: 780429686}
   - 137: {fileID: 780429688}
   - 114: {fileID: 780429687}
+  - 136: {fileID: 780429689}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -12592,6 +12803,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &780429689
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780429685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090693
+  m_Direction: 1
+  m_Center: {x: -.12328998, y: 1.73998082, z: -5.18636298e-08}
 --- !u!1 &781951436
 GameObject:
   m_ObjectHideFlags: 0
@@ -12964,6 +13188,7 @@ GameObject:
   - 4: {fileID: 819928311}
   - 137: {fileID: 819928313}
   - 114: {fileID: 819928312}
+  - 136: {fileID: 819928314}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -13062,6 +13287,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &819928314
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 819928310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.12328916, y: 1.73998094, z: -2.97396753e-07}
 --- !u!1001 &823725576
 Prefab:
   m_ObjectHideFlags: 0
@@ -13374,6 +13612,7 @@ GameObject:
   - 4: {fileID: 836663982}
   - 137: {fileID: 836663984}
   - 114: {fileID: 836663983}
+  - 136: {fileID: 836663985}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -13472,6 +13711,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &836663985
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836663981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290069, y: 1.73998082, z: 1.86259956e-06}
 --- !u!1 &839195285
 GameObject:
   m_ObjectHideFlags: 0
@@ -14093,6 +14345,7 @@ GameObject:
   - 4: {fileID: 876699664}
   - 137: {fileID: 876699666}
   - 114: {fileID: 876699665}
+  - 136: {fileID: 876699667}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -14191,6 +14444,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &876699667
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876699663}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123289995, y: 1.73998058, z: -7.11454362e-09}
 --- !u!1001 &881439854
 Prefab:
   m_ObjectHideFlags: 0
@@ -14667,6 +14933,7 @@ GameObject:
   - 4: {fileID: 935677673}
   - 137: {fileID: 935677675}
   - 114: {fileID: 935677674}
+  - 136: {fileID: 935677676}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -14765,6 +15032,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &935677676
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935677672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290218, y: 1.73998082, z: -5.18636298e-08}
 --- !u!1 &955260262
 GameObject:
   m_ObjectHideFlags: 0
@@ -14775,6 +15055,7 @@ GameObject:
   - 4: {fileID: 955260263}
   - 137: {fileID: 955260265}
   - 114: {fileID: 955260264}
+  - 136: {fileID: 955260266}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -14873,6 +15154,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &955260266
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955260262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290241, y: 1.7399807, z: 6.71236293e-08}
 --- !u!1001 &969299044
 Prefab:
   m_ObjectHideFlags: 0
@@ -15942,6 +16236,7 @@ GameObject:
   - 4: {fileID: 1087689477}
   - 137: {fileID: 1087689479}
   - 114: {fileID: 1087689478}
+  - 136: {fileID: 1087689480}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -16040,6 +16335,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1087689480
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087689476}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090693
+  m_Direction: 1
+  m_Center: {x: -.123290196, y: 1.7399807, z: 3.07332982e-07}
 --- !u!1 &1087887806
 GameObject:
   m_ObjectHideFlags: 0
@@ -16749,6 +17057,7 @@ GameObject:
   - 4: {fileID: 1170006817}
   - 137: {fileID: 1170006819}
   - 114: {fileID: 1170006818}
+  - 136: {fileID: 1170006820}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -16847,6 +17156,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1170006820
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170006816}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123291068, y: 1.73998106, z: -1.10841803e-07}
 --- !u!1 &1177298201
 GameObject:
   m_ObjectHideFlags: 0
@@ -16997,6 +17319,7 @@ GameObject:
   - 4: {fileID: 1188686647}
   - 137: {fileID: 1188686649}
   - 114: {fileID: 1188686648}
+  - 136: {fileID: 1188686650}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -17095,6 +17418,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1188686650
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1188686646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290241, y: 1.73998058, z: 6.71236293e-08}
 --- !u!1 &1193753830
 GameObject:
   m_ObjectHideFlags: 0
@@ -17511,6 +17847,7 @@ GameObject:
   - 4: {fileID: 1212771585}
   - 137: {fileID: 1212771587}
   - 114: {fileID: 1212771586}
+  - 136: {fileID: 1212771588}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -17609,6 +17946,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1212771588
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1212771584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123290069, y: 1.73998094, z: -3.63534127e-08}
 --- !u!1 &1230956172
 GameObject:
   m_ObjectHideFlags: 0
@@ -17831,6 +18181,7 @@ GameObject:
   - 4: {fileID: 1268867213}
   - 137: {fileID: 1268867215}
   - 114: {fileID: 1268867214}
+  - 136: {fileID: 1268867216}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -17929,6 +18280,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1268867216
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268867212}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123289078, y: 1.73998129, z: -1.77863591e-08}
 --- !u!1 &1275436826
 GameObject:
   m_ObjectHideFlags: 0
@@ -18305,6 +18669,7 @@ GameObject:
   - 4: {fileID: 1312777513}
   - 137: {fileID: 1312777515}
   - 114: {fileID: 1312777514}
+  - 136: {fileID: 1312777516}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -18403,6 +18768,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1312777516
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312777512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290218, y: 1.73998082, z: -9.64861556e-07}
 --- !u!1 &1315673118
 GameObject:
   m_ObjectHideFlags: 0
@@ -18582,6 +18960,7 @@ GameObject:
   - 4: {fileID: 1329052388}
   - 137: {fileID: 1329052390}
   - 114: {fileID: 1329052389}
+  - 136: {fileID: 1329052391}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -18680,6 +19059,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1329052391
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1329052387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290285, y: 1.7399807, z: 0}
 --- !u!1 &1340970104
 GameObject:
   m_ObjectHideFlags: 0
@@ -18987,6 +19379,7 @@ GameObject:
   - 4: {fileID: 1367947981}
   - 137: {fileID: 1367947983}
   - 114: {fileID: 1367947982}
+  - 136: {fileID: 1367947984}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -19085,6 +19478,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1367947984
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1367947980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123291083, y: 1.7399807, z: -5.54209016e-08}
 --- !u!1 &1376885586
 GameObject:
   m_ObjectHideFlags: 0
@@ -20013,6 +20419,7 @@ GameObject:
   - 4: {fileID: 1469538063}
   - 137: {fileID: 1469538065}
   - 114: {fileID: 1469538064}
+  - 136: {fileID: 1469538066}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -20111,6 +20518,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1469538066
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1469538062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123289943, y: 1.73998106, z: 1.18987259e-07}
 --- !u!1001 &1480052943
 Prefab:
   m_ObjectHideFlags: 0
@@ -21111,6 +21531,7 @@ GameObject:
   - 4: {fileID: 1612115016}
   - 137: {fileID: 1612115018}
   - 114: {fileID: 1612115017}
+  - 136: {fileID: 1612115019}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -21209,6 +21630,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1612115019
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612115015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.12328998, y: 1.73998082, z: 1.00616955e-06}
 --- !u!1 &1612418944
 GameObject:
   m_ObjectHideFlags: 0
@@ -22836,6 +23270,7 @@ GameObject:
   - 4: {fileID: 1783597090}
   - 137: {fileID: 1783597092}
   - 114: {fileID: 1783597091}
+  - 136: {fileID: 1783597093}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -22934,6 +23369,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.55056548, y: -.119790435, z: 0}
     m_Extent: {x: 1.68989778, y: 1.11397994, z: .36894843}
   m_DirtyAABB: 0
+--- !u!136 &1783597093
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783597089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.38481641
+  m_Direction: 1
+  m_Center: {x: -.123289295, y: 1.55029142, z: -7.28558991e-09}
 --- !u!1 &1799606552
 GameObject:
   m_ObjectHideFlags: 0
@@ -23275,6 +23723,7 @@ GameObject:
   - 4: {fileID: 1814562533}
   - 137: {fileID: 1814562535}
   - 114: {fileID: 1814562534}
+  - 136: {fileID: 1814562536}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -23373,6 +23822,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1814562536
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1814562532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290882, y: 1.73998094, z: -5.46043111e-07}
 --- !u!1 &1820229229
 GameObject:
   m_ObjectHideFlags: 0
@@ -23499,6 +23961,7 @@ GameObject:
   - 4: {fileID: 1842496869}
   - 137: {fileID: 1842496871}
   - 114: {fileID: 1842496870}
+  - 136: {fileID: 1842496872}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -23597,6 +24060,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1842496872
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1842496868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290248, y: 1.73998082, z: -1.38552254e-08}
 --- !u!1 &1847970814
 GameObject:
   m_ObjectHideFlags: 0
@@ -23789,6 +24265,7 @@ GameObject:
   - 4: {fileID: 1882945259}
   - 137: {fileID: 1882945261}
   - 114: {fileID: 1882945260}
+  - 136: {fileID: 1882945262}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -23887,6 +24364,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1882945262
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1882945258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123289242, y: 1.73998058, z: 9.53674316e-07}
 --- !u!1 &1884696130
 GameObject:
   m_ObjectHideFlags: 0
@@ -23984,6 +24474,7 @@ GameObject:
   - 4: {fileID: 1922705104}
   - 137: {fileID: 1922705106}
   - 114: {fileID: 1922705105}
+  - 136: {fileID: 1922705107}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -24082,6 +24573,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1922705107
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1922705103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090717
+  m_Direction: 1
+  m_Center: {x: -.123290338, y: 1.7399807, z: -1.47445434e-08}
 --- !u!1 &1924401380
 GameObject:
   m_ObjectHideFlags: 0
@@ -24621,6 +25125,7 @@ GameObject:
   - 4: {fileID: 1973760275}
   - 137: {fileID: 1973760277}
   - 114: {fileID: 1973760276}
+  - 136: {fileID: 1973760278}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -24719,6 +25224,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1973760278
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973760274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123289719, y: 1.73998082, z: -1.09859343e-06}
 --- !u!1 &1976287817
 GameObject:
   m_ObjectHideFlags: 0
@@ -24784,6 +25302,7 @@ GameObject:
   - 4: {fileID: 1977914898}
   - 137: {fileID: 1977914900}
   - 114: {fileID: 1977914899}
+  - 136: {fileID: 1977914901}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -24882,6 +25401,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1977914901
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977914897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123289831, y: 1.73998094, z: -3.63534127e-08}
 --- !u!1 &1983580522
 GameObject:
   m_ObjectHideFlags: 0
@@ -24892,6 +25424,7 @@ GameObject:
   - 4: {fileID: 1983580523}
   - 137: {fileID: 1983580525}
   - 114: {fileID: 1983580524}
+  - 136: {fileID: 1983580526}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -24990,6 +25523,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &1983580526
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983580522}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090693
+  m_Direction: 1
+  m_Center: {x: -.123290107, y: 1.7399807, z: 2.34861304e-07}
 --- !u!1 &1998353201
 GameObject:
   m_ObjectHideFlags: 0
@@ -25068,6 +25614,7 @@ GameObject:
   - 4: {fileID: 2008038688}
   - 137: {fileID: 2008038690}
   - 114: {fileID: 2008038689}
+  - 136: {fileID: 2008038691}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -25166,6 +25713,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &2008038691
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2008038687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090693
+  m_Direction: 1
+  m_Center: {x: -.123289779, y: 1.73998058, z: 6.12722673e-08}
 --- !u!1 &2009728595
 GameObject:
   m_ObjectHideFlags: 0
@@ -26295,6 +26855,7 @@ GameObject:
   - 4: {fileID: 2091904251}
   - 137: {fileID: 2091904253}
   - 114: {fileID: 2091904252}
+  - 136: {fileID: 2091904254}
   m_Layer: 0
   m_Name: crown
   m_TagString: Untagged
@@ -26393,6 +26954,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &2091904254
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091904250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090693
+  m_Direction: 1
+  m_Center: {x: -.123290308, y: 1.73998058, z: 5.18636298e-08}
 --- !u!1 &2092966182
 GameObject:
   m_ObjectHideFlags: 0
@@ -27743,6 +28317,7 @@ GameObject:
   - 4: {fileID: 2142034644}
   - 137: {fileID: 2142034646}
   - 114: {fileID: 2142034645}
+  - 136: {fileID: 2142034647}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -27841,6 +28416,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -1.74025464, y: -.119362235, z: 0}
     m_Extent: {x: 1.87766433, y: 1.23775554, z: .409942716}
   m_DirtyAABB: 0
+--- !u!136 &2142034647
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142034643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .400000006
+  m_Height: 3.76090741
+  m_Direction: 1
+  m_Center: {x: -.123290069, y: 1.73998094, z: -3.63534127e-08}
 --- !u!1 &2142370891
 GameObject:
   m_ObjectHideFlags: 0
