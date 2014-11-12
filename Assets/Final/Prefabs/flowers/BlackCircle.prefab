@@ -337,7 +337,7 @@ MonoBehaviour:
   clickCoolDown: .5
   patternToAdd:
     color: {r: .145098045, g: .149019614, b: .145098045, a: 1}
-    texture: {fileID: 2800000, guid: a9b34d6bda7169e4f8d8c9acc6408782, type: 3}
+    texture: {fileID: 2800000, guid: 5afae4568c2b46241b871c427e6bd2e7, type: 3}
     _frameNumber: 0
     instrumentID: 0
     trackID: 0
