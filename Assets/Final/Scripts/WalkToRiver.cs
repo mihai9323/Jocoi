@@ -52,7 +52,17 @@ public class WalkToRiver : MonoBehaviour {
 				if(Physics.Raycast(r,out hit)){
 				
 				}else{
-					AudioSource.PlayClipAtPoint(bahSound, transform.position);
+					if(GetComponent<AudioSource>()){
+						if(!GetComponent<AudioSource>().isPlaying){
+							GetComponent<AudioSource>().clip = bahSound;
+							
+							GetComponent<AudioSource>().Play();
+						}
+						
+					}else{
+						
+						gameObject.AddComponent<AudioSource>().PlayOneShot(bahSound);
+					}
 				}
             }
         }
