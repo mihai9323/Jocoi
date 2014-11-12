@@ -16,14 +16,15 @@ public class BackButton : MonoBehaviour {
 	//public RectTransform  rectButton;
 
 	void Start () {
-		xButtonPos = ((Screen.width/4)*3);
-		yButtonPos = ((Screen.height/4)*3);
+		//make button unable to be pressed
 		canPress = false;
+		//start coroutine to enable button after set time
 		StartCoroutine("enableButton", timeUntilBack);
 	}
 
 	void OnGUI(){
 		if(canPress){
+			//make button to take the user back to set scene
 			if(GUI.Button(new Rect(xButtonPos, yButtonPos, widthButton, heightButton), textureButton)){
                 Puzzle.Instance.gameObject.SetActive(true);
 				Application.LoadLevel(sceneToLoad);

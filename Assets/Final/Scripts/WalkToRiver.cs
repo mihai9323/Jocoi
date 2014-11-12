@@ -27,40 +27,43 @@ public class WalkToRiver : MonoBehaviour {
 	private Vector3 eyelidBottomPos;
 	private Vector3 eyelidMove;
 	private Vector3 initialCameraPos;
-	void Start () {
 
+	void Start () {
+		//set variables to positions of different objects
 		initialCameraPos = camera.transform.position;
 		eyelidTopPos = eyelidTop.transform.position;
 		eyelidBottomPos = eyelidBottom.transform.position;
 		startZoom = camera.fieldOfView;
+		//calculate the distance each eyelid need to move
 		eyelidDistance = eyelidTop.transform.position.y - eyelidBottom.transform.position.y;
 		eyelidLength = eyelidDistance / 2;
+		//start function to calculate distance to move each time a step is taken
 		MoveDistance();
-		eyelidMove.Set(0f, moveDistance,0f);
+		//set eyelid move distance as part of vector
+		eyelidMove.Set(0f, moveDistance, 0f);
 	}
 	
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)){
+			//play sound when is button pressed
             if(bahSound!=null)AudioSource.PlayClipAtPoint(bahSound, transform.position);
         }
-		//   wolf/sheep/lamb pressed
 		if (Input.GetMouseButton (0)) {
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if (Physics.Raycast (ray, out hit)) {
+				//Baby wolf was hit
 				if (hit.transform == BabyWolf) {
-					Debug.Log ("My object is clicked by mouse");
 					//not reached maxZoom
+					//zoom in
 					if (camera.fieldOfView > maxZoom) {
-						//eyelid
+						//eyelid move closer to each other
 						eyelidTop.transform.position = Vector3.Lerp (eyelidTop.transform.position, (eyelidTop.transform.position - eyelidMove), 1 * Time.deltaTime);
 						eyelidBottom.transform.position = Vector3.Lerp (eyelidBottom.transform.position, (eyelidBottom.transform.position + eyelidMove), 1 * Time.deltaTime);
-						//zoom
+						//change camera field of view gradually
 						forwardZoom = camera.fieldOfView - movementSpeed;
 						camera.fieldOfView = Mathf.Lerp (camera.fieldOfView, forwardZoom, 1 * Time.deltaTime);
-
-						//head
+						//head moving according to animationcurve from initial position
 						Vector3 localPosition = camera.transform.localPosition;
 						localPosition.y = headMovement.Evaluate (timer) + initialCameraPos.y;
 						camera.transform.localPosition = localPosition;
@@ -69,17 +72,20 @@ public class WalkToRiver : MonoBehaviour {
 					}
 					//reached maxZoom
 					else {
-						//Application.LoadLevel (endScene);
+						Application.LoadLevel (endScene);
 					}
+				//if wolf was not hit
 				} else {
+					//not reached start zoom
+					//zoom out
 					if(camera.fieldOfView < startZoom){
-						//eyelids
+						//eyelid move closer to each other
 						eyelidTop.transform.position = Vector3.Lerp (eyelidTop.transform.position, (eyelidTop.transform.position + eyelidMove), 1 * Time.deltaTime);
 						eyelidBottom.transform.position = Vector3.Lerp (eyelidBottom.transform.position, (eyelidBottom.transform.position - eyelidMove), 1 * Time.deltaTime);
-						//Zoom
+						//change camera field of view gradually
 						backwardZoom = camera.fieldOfView + movementSpeed;
 						camera.fieldOfView = Mathf.Lerp (camera.fieldOfView, backwardZoom, 1 * Time.deltaTime);
-						//head
+						//head moving according to animationcurve from initial position
 						Vector3 localPosition = camera.transform.localPosition;
 						localPosition.y = headMovement.Evaluate (timer)  + initialCameraPos.y;
 						camera.transform.localPosition = localPosition ;
@@ -89,14 +95,16 @@ public class WalkToRiver : MonoBehaviour {
 				}
 			}
 		} else{
+			//not reached start zoom
+			//zoom out
 			if(camera.fieldOfView < startZoom){
-				//eyelids
+				//eyelid move closer to each other
 				eyelidTop.transform.position = Vector3.Lerp (eyelidTop.transform.position, (eyelidTop.transform.position + eyelidMove), 1 * Time.deltaTime);
 				eyelidBottom.transform.position = Vector3.Lerp (eyelidBottom.transform.position, (eyelidBottom.transform.position - eyelidMove), 1 * Time.deltaTime);
-				//Zoom
+				//change camera field of view gradually
 				backwardZoom = camera.fieldOfView + movementSpeed;
 				camera.fieldOfView = Mathf.Lerp (camera.fieldOfView, backwardZoom, 1 * Time.deltaTime);
-				//head
+				//head moving according to animationcurve from initial position
 				Vector3 localPosition = camera.transform.localPosition;
 				localPosition.y = headMovement.Evaluate (timer)  + initialCameraPos.y;
 				camera.transform.localPosition = localPosition ;
@@ -108,11 +116,7 @@ public class WalkToRiver : MonoBehaviour {
 
 	void MoveDistance(){
 		float zoom = (startZoom - maxZoom);
-		Debug.Log ("zoom is " + zoom);
 		float parts = (zoom/movementSpeed);
-		Debug.Log ("parts is " + parts);
 		moveDistance = (eyelidLength/parts);
-		Debug.Log ("moveDistance is " + moveDistance);
 	}
-	
 }

@@ -11,19 +11,22 @@ public class MenuButton : MonoBehaviour {
 	public Color fadeColor;
 
 	void Start () {
+		//set to initial color
 		renderer.material.color = initialColor;
 	}
-	void Update () {}
 
 	void OnMouseOver(){
+		//change color on mouse over
 		renderer.material.color = changedColor;
 	}
 
 	void OnMouseExit (){
+		//change to initial color, when not mouse over
 		renderer.material.color = initialColor;
 	}
 
 	void OnMouseDown(){
+		//go to level when button pressed
 		AutoFade.LoadLevel (nextLevelName, fadeOutTime, fadeInTime, fadeColor);
 	}
 }
