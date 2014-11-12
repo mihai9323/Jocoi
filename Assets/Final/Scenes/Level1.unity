@@ -12001,7 +12001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a3f0a69ed2ee64c8e46fdaecd28815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actionLimit: 1
+  actionLimit: 15
   enableThis: []
   fadeOut: 5
   fadeIn: 5

@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Final/Scenes/FPRScene.unity
   - enabled: 1
     path: Assets/Final/Scenes/EndCredits.unity
+  - enabled: 1
+    path: Assets/Final/Scenes/EndFPR.unity

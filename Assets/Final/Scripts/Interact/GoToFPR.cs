@@ -42,6 +42,7 @@ public class GoToFPR : InteractableObject {
     private void GoToRiverStage()
     {
         Puzzle.Instance.gameObject.SetActive(false);
-        AutoFade.LoadLevel(riverLevel,.5f,1.0f,Color.black);
+        //AutoFade.LoadLevel(riverLevel,.5f,1.0f,Color.black);
+        Application.LoadLevel(riverLevel);
     }
 }

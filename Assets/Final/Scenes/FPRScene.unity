@@ -13213,7 +13213,7 @@ MonoBehaviour:
     m_PreInfinity: 1
     m_PostInfinity: 1
   sound: {fileID: 0}
-  endScene: 0
+  endScene: 5
   camera: {fileID: 407830893}
   eyelidTop: {fileID: 758922051}
   eyelidBottom: {fileID: 414580966}

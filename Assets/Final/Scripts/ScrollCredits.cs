@@ -9,6 +9,8 @@ public class ScrollCredits : MonoBehaviour {
 	public int NextScene;
 	[Range(0,.1f)]
 	public float speed;
+	
+	private bool mouseDown;
 	public enum Mode{
 		FPR,Normal
 	}
@@ -16,13 +18,20 @@ public class ScrollCredits : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		initialPosition = transform.position;
-		ct = 0;
+		ct = 0.02f;
+		mouseDown = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetMouseButtonUp(0)){
+			mouseDown = false;
+		}
+		if(Input.GetMouseButtonDown(0)){
+			mouseDown = true;
+		}
 		if(mode == Mode.FPR){
-			if(Input.GetMouseButton(0)){
+			if(mouseDown){
 			    if(ct<1)
 			    
 			    ct+= Time.deltaTime * speed;
@@ -33,7 +42,7 @@ public class ScrollCredits : MonoBehaviour {
 					ct-= Time.deltaTime * speed;
 				}else{
 					
-						AutoFade.LoadLevel(NextScene,0.5f,.5f, Color.black);
+						AutoFade.LoadLevel(NextScene,5.5f,.5f, Color.black);
 					
 				}
 				transform.position = Vector3.Lerp (initialPosition,finalPosition,ct);
