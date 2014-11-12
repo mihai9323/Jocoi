@@ -20,7 +20,7 @@ public class GoOnPath : InteractableObject {
 
     public override void StartLMB()
     {
-        Inputs.Instance.canInteract = false;
+       // Inputs.Instance.canInteract = false;
         StartCoroutine(callAllSheep());
      
     }
@@ -94,6 +94,14 @@ public class GoOnPath : InteractableObject {
     {
         Inputs.Instance.canInteract = false;
         StartCoroutine(callAllSheep());
+		LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StopMovement();
+		
+		LevelData.Instance.herdTarget.canMove = false;
+		
+		foreach (HelperSheep sh in LevelData.Instance.HelperSheep)
+		{
+			sh.GetComponent<MoveToPosition>().StopMovement();
+		}
     }
 
     public override void StopLMB()
@@ -108,6 +116,8 @@ public class GoOnPath : InteractableObject {
 
     public override void StopAllInteractions()
     {
+		StopAllCoroutines();
+		countSheep = 0;
        // throw new System.NotImplementedException();
     }
 }
