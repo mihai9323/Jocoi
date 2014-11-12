@@ -19268,8 +19268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc47c52b9262074a97961c9619cd5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageNumber: 0
-  nextSceneNumber: 1
+  stageNumber: 1
+  nextSceneNumber: 2
   Lamb: {fileID: 256538819}
   MotherSheep: {fileID: 924833243}
   herdTarget: {fileID: 707389135}
