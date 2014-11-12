@@ -299,7 +299,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 33859490}
   - 137: {fileID: 33859492}
-  - 114: {fileID: 33859491}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -319,46 +318,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 702414688}
   m_RootOrder: 0
---- !u!114 &33859491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 33859489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .200000003, g: .168627456, b: .227450982, a: 0}
-    - {r: .270588249, g: .219607845, b: .313725501, a: 0}
-    - {r: .325490206, g: .282352954, b: .400000006, a: 0}
-    - {r: .396078438, g: .325490206, b: .490196079, a: 0}
-    - {r: .294117659, g: .200000003, b: .172549024, a: 0}
-    - {r: .396078438, g: .360784322, b: .345098048, a: 0}
-  - materialColor:
-    - {r: .196078435, g: .121568628, b: .0823529437, a: 0}
-    - {r: .325490206, g: .215686277, b: .141176477, a: 0}
-    - {r: .490196079, g: .325490206, b: .227450982, a: 0}
-    - {r: .631372571, g: .435294122, b: .313725501, a: 0}
-    - {r: .262745112, g: .13333334, b: .0941176489, a: 0}
-    - {r: .521568656, g: .329411775, b: .200000003, a: 0}
-  - materialColor:
-    - {r: .31764707, g: .250980407, b: .227450982, a: 0}
-    - {r: .427450985, g: .337254912, b: .305882365, a: 0}
-    - {r: .556862772, g: .435294122, b: .400000006, a: 0}
-    - {r: .654901981, g: .525490224, b: .490196079, a: 0}
-    - {r: .0313725509, g: .0313725509, b: .0274509806, a: 0}
-    - {r: .196078435, g: .200000003, b: .172549024, a: 0}
-  - materialColor:
-    - {r: .882352948, g: .858823538, b: .772549033, a: 0}
-    - {r: .913725495, g: .886274517, b: .80392158, a: 0}
-    - {r: .941176474, g: .905882359, b: .819607854, a: 0}
-    - {r: .952941179, g: .921568632, b: .847058833, a: 0}
-    - {r: .854901969, g: .811764717, b: .745098054, a: 0}
-    - {r: .917647064, g: .886274517, b: .80392158, a: 0}
 --- !u!137 &33859492
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -870,7 +829,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 92096231}
   - 137: {fileID: 92096233}
-  - 114: {fileID: 92096232}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -890,46 +848,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1938248328}
   m_RootOrder: 0
---- !u!114 &92096232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 92096230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &92096233
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2907,7 +2825,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 356454342}
   - 137: {fileID: 356454344}
-  - 114: {fileID: 356454343}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -2927,46 +2844,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 984881088}
   m_RootOrder: 0
---- !u!114 &356454343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356454341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .200000003, g: .168627456, b: .227450982, a: 0}
-    - {r: .270588249, g: .219607845, b: .313725501, a: 0}
-    - {r: .325490206, g: .282352954, b: .400000006, a: 0}
-    - {r: .396078438, g: .325490206, b: .490196079, a: 0}
-    - {r: .294117659, g: .200000003, b: .172549024, a: 0}
-    - {r: .396078438, g: .360784322, b: .345098048, a: 0}
-  - materialColor:
-    - {r: .196078435, g: .121568628, b: .0823529437, a: 0}
-    - {r: .325490206, g: .215686277, b: .141176477, a: 0}
-    - {r: .490196079, g: .325490206, b: .227450982, a: 0}
-    - {r: .631372571, g: .435294122, b: .313725501, a: 0}
-    - {r: .262745112, g: .13333334, b: .0941176489, a: 0}
-    - {r: .521568656, g: .329411775, b: .200000003, a: 0}
-  - materialColor:
-    - {r: .31764707, g: .250980407, b: .227450982, a: 0}
-    - {r: .427450985, g: .337254912, b: .305882365, a: 0}
-    - {r: .556862772, g: .435294122, b: .400000006, a: 0}
-    - {r: .654901981, g: .525490224, b: .490196079, a: 0}
-    - {r: .0313725509, g: .0313725509, b: .0274509806, a: 0}
-    - {r: .196078435, g: .200000003, b: .172549024, a: 0}
-  - materialColor:
-    - {r: .882352948, g: .858823538, b: .772549033, a: 0}
-    - {r: .913725495, g: .886274517, b: .80392158, a: 0}
-    - {r: .941176474, g: .905882359, b: .819607854, a: 0}
-    - {r: .952941179, g: .921568632, b: .847058833, a: 0}
-    - {r: .854901969, g: .811764717, b: .745098054, a: 0}
-    - {r: .917647064, g: .886274517, b: .80392158, a: 0}
 --- !u!137 &356454344
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -4200,7 +4077,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 504324498}
   - 137: {fileID: 504324500}
-  - 114: {fileID: 504324499}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -4220,46 +4096,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 26948255}
   m_RootOrder: 0
---- !u!114 &504324499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 504324497}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &504324500
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -4367,7 +4203,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 517823373}
   - 137: {fileID: 517823375}
-  - 114: {fileID: 517823374}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -4387,46 +4222,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 45853152}
   m_RootOrder: 0
---- !u!114 &517823374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517823372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &517823375
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -5600,7 +5395,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 659978846}
   - 137: {fileID: 659978848}
-  - 114: {fileID: 659978847}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -5620,46 +5414,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1262829523}
   m_RootOrder: 0
---- !u!114 &659978847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 659978845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &659978848
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -6474,6 +6228,111 @@ Transform:
   - {fileID: 831595428}
   m_Father: {fileID: 140441695}
   m_RootOrder: 0
+--- !u!1 &788246379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+  m_PrefabInternal: {fileID: 1604218304}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 788246380}
+  - 33: {fileID: 788246384}
+  - 23: {fileID: 788246383}
+  - 114: {fileID: 788246382}
+  - 65: {fileID: 788246381}
+  m_Layer: 0
+  m_Name: Mouse2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &788246380
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+  m_PrefabInternal: {fileID: 1604218304}
+  m_GameObject: {fileID: 788246379}
+  m_LocalRotation: {x: -.13100189, y: 0, z: 0, w: .991382182}
+  m_LocalPosition: {x: .00493671745, y: -.64816004, z: 1.74839985}
+  m_LocalScale: {x: .427752048, y: .427751958, z: .427751988}
+  m_Children: []
+  m_Father: {fileID: 1895612219}
+  m_RootOrder: 0
+--- !u!65 &788246381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: 90a64ef9a05d92a46826ca88c4e04f2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1604218304}
+  m_GameObject: {fileID: 788246379}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 15.7399998, z: .129999995}
+  m_Center: {x: 0, y: -7.32000017, z: 0}
+--- !u!114 &788246382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1604218304}
+  m_GameObject: {fileID: 788246379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c042c0172343fc4a8365c2c5d073235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stayOnScreen: 5
+  animSpeed: 1
+  amplitude: .300000012
+  animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: -.9304775
+      outSlope: -.9304775
+      tangentMode: 10
+    - time: .966047168
+      value: -.898885131
+      inSlope: -.9304775
+      outSlope: -.9304775
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  initialColor: {r: 1, g: 1, b: 1, a: 1}
+  otherColor: {r: 1, g: 1, b: 1, a: .294117659}
+--- !u!23 &788246383
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 90a64ef9a05d92a46826ca88c4e04f2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1604218304}
+  m_GameObject: {fileID: 788246379}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: a005cd37b58175943a7d437200974414, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &788246384
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 90a64ef9a05d92a46826ca88c4e04f2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1604218304}
+  m_GameObject: {fileID: 788246379}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &799174072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7194,7 +7053,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 854695321}
   - 137: {fileID: 854695323}
-  - 114: {fileID: 854695322}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -7214,46 +7072,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2089813758}
   m_RootOrder: 0
---- !u!114 &854695322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 854695320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &854695323
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -8590,7 +8408,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 975136860}
   - 137: {fileID: 975136862}
-  - 114: {fileID: 975136861}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -8610,46 +8427,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2088290201}
   m_RootOrder: 0
---- !u!114 &975136861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 975136859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &975136862
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -11461,7 +11238,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1350572554}
   - 137: {fileID: 1350572556}
-  - 114: {fileID: 1350572555}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -11481,46 +11257,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1880894380}
   m_RootOrder: 0
---- !u!114 &1350572555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1350572553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .200000003, g: .168627456, b: .227450982, a: 0}
-    - {r: .270588249, g: .219607845, b: .313725501, a: 0}
-    - {r: .325490206, g: .282352954, b: .400000006, a: 0}
-    - {r: .396078438, g: .325490206, b: .490196079, a: 0}
-    - {r: .294117659, g: .200000003, b: .172549024, a: 0}
-    - {r: .396078438, g: .360784322, b: .345098048, a: 0}
-  - materialColor:
-    - {r: .196078435, g: .121568628, b: .0823529437, a: 0}
-    - {r: .325490206, g: .215686277, b: .141176477, a: 0}
-    - {r: .490196079, g: .325490206, b: .227450982, a: 0}
-    - {r: .631372571, g: .435294122, b: .313725501, a: 0}
-    - {r: .262745112, g: .13333334, b: .0941176489, a: 0}
-    - {r: .521568656, g: .329411775, b: .200000003, a: 0}
-  - materialColor:
-    - {r: .31764707, g: .250980407, b: .227450982, a: 0}
-    - {r: .427450985, g: .337254912, b: .305882365, a: 0}
-    - {r: .556862772, g: .435294122, b: .400000006, a: 0}
-    - {r: .654901981, g: .525490224, b: .490196079, a: 0}
-    - {r: .0313725509, g: .0313725509, b: .0274509806, a: 0}
-    - {r: .196078435, g: .200000003, b: .172549024, a: 0}
-  - materialColor:
-    - {r: .882352948, g: .858823538, b: .772549033, a: 0}
-    - {r: .913725495, g: .886274517, b: .80392158, a: 0}
-    - {r: .941176474, g: .905882359, b: .819607854, a: 0}
-    - {r: .952941179, g: .921568632, b: .847058833, a: 0}
-    - {r: .854901969, g: .811764717, b: .745098054, a: 0}
-    - {r: .917647064, g: .886274517, b: .80392158, a: 0}
 --- !u!137 &1350572556
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -11808,7 +11544,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1385073688}
   - 137: {fileID: 1385073690}
-  - 114: {fileID: 1385073689}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -11828,46 +11563,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1070355735}
   m_RootOrder: 0
---- !u!114 &1385073689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1385073687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &1385073690
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -13303,7 +12998,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1553315782}
   - 137: {fileID: 1553315784}
-  - 114: {fileID: 1553315783}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -13323,46 +13017,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 918527458}
   m_RootOrder: 0
---- !u!114 &1553315783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1553315781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .200000003, g: .168627456, b: .227450982, a: 0}
-    - {r: .270588249, g: .219607845, b: .313725501, a: 0}
-    - {r: .325490206, g: .282352954, b: .400000006, a: 0}
-    - {r: .396078438, g: .325490206, b: .490196079, a: 0}
-    - {r: .294117659, g: .200000003, b: .172549024, a: 0}
-    - {r: .396078438, g: .360784322, b: .345098048, a: 0}
-  - materialColor:
-    - {r: .196078435, g: .121568628, b: .0823529437, a: 0}
-    - {r: .325490206, g: .215686277, b: .141176477, a: 0}
-    - {r: .490196079, g: .325490206, b: .227450982, a: 0}
-    - {r: .631372571, g: .435294122, b: .313725501, a: 0}
-    - {r: .262745112, g: .13333334, b: .0941176489, a: 0}
-    - {r: .521568656, g: .329411775, b: .200000003, a: 0}
-  - materialColor:
-    - {r: .31764707, g: .250980407, b: .227450982, a: 0}
-    - {r: .427450985, g: .337254912, b: .305882365, a: 0}
-    - {r: .556862772, g: .435294122, b: .400000006, a: 0}
-    - {r: .654901981, g: .525490224, b: .490196079, a: 0}
-    - {r: .0313725509, g: .0313725509, b: .0274509806, a: 0}
-    - {r: .196078435, g: .200000003, b: .172549024, a: 0}
-  - materialColor:
-    - {r: .882352948, g: .858823538, b: .772549033, a: 0}
-    - {r: .913725495, g: .886274517, b: .80392158, a: 0}
-    - {r: .941176474, g: .905882359, b: .819607854, a: 0}
-    - {r: .952941179, g: .921568632, b: .847058833, a: 0}
-    - {r: .854901969, g: .811764717, b: .745098054, a: 0}
-    - {r: .917647064, g: .886274517, b: .80392158, a: 0}
 --- !u!137 &1553315784
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -14032,6 +13686,50 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!1001 &1604218304
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1895612219}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .00493671745
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.64816004
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.74839985
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -.13100189
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .991382182
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 90a64ef9a05d92a46826ca88c4e04f2b, type: 2}
+  m_RootGameObject: {fileID: 788246379}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1605150206
 GameObject:
   m_ObjectHideFlags: 0
@@ -14894,7 +14592,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1716091619}
   - 137: {fileID: 1716091621}
-  - 114: {fileID: 1716091620}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -14914,46 +14611,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1080701541}
   m_RootOrder: 0
---- !u!114 &1716091620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1716091618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .0313725509, g: .203921571, b: .0627451017, a: 0}
-    - {r: .0627451017, g: .325490206, b: .113725491, a: 0}
-    - {r: .129411772, g: .447058827, b: .141176477, a: 0}
-    - {r: .160784319, g: .556862772, b: .168627456, a: 0}
-    - {r: .172549024, g: .168627456, b: .141176477, a: 0}
-    - {r: .298039228, g: .235294119, b: .258823544, a: 0}
-  - materialColor:
-    - {r: .0509803928, g: .0470588244, b: 0, a: 0}
-    - {r: .160784319, g: .168627456, b: 0, a: 0}
-    - {r: .356862754, g: .313725501, b: .0549019612, a: 0}
-    - {r: .494117647, g: .419607848, b: .113725491, a: 0}
-    - {r: .0627451017, g: .0235294122, b: 0, a: 0}
-    - {r: .356862754, g: .211764708, b: .141176477, a: 0}
-  - materialColor:
-    - {r: .109803922, g: .129411772, b: .200000003, a: 0}
-    - {r: .219607845, g: .227450982, b: .313725501, a: 0}
-    - {r: .305882365, g: .321568638, b: .411764711, a: 0}
-    - {r: .400000006, g: .427450985, b: .533333361, a: 0}
-    - {r: 0, g: .0156862754, b: 0, a: 0}
-    - {r: .129411772, g: .0941176489, b: .0823529437, a: 0}
-  - materialColor:
-    - {r: .717647076, g: .709803939, b: .627451003, a: 0}
-    - {r: .752941191, g: .749019623, b: .65882355, a: 0}
-    - {r: .796078444, g: .788235307, b: .694117665, a: 0}
-    - {r: .827450991, g: .827450991, b: .725490212, a: 0}
-    - {r: .388235301, g: .368627459, b: .337254912, a: 0}
-    - {r: .490196079, g: .447058827, b: .427450985, a: 0}
 --- !u!137 &1716091621
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -15626,7 +15283,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1798008470}
   - 137: {fileID: 1798008472}
-  - 114: {fileID: 1798008471}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -15646,46 +15302,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 191445217}
   m_RootOrder: 0
---- !u!114 &1798008471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1798008469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .200000003, g: .168627456, b: .227450982, a: 0}
-    - {r: .270588249, g: .219607845, b: .313725501, a: 0}
-    - {r: .325490206, g: .282352954, b: .400000006, a: 0}
-    - {r: .396078438, g: .325490206, b: .490196079, a: 0}
-    - {r: .294117659, g: .200000003, b: .172549024, a: 0}
-    - {r: .396078438, g: .360784322, b: .345098048, a: 0}
-  - materialColor:
-    - {r: .196078435, g: .121568628, b: .0823529437, a: 0}
-    - {r: .325490206, g: .215686277, b: .141176477, a: 0}
-    - {r: .490196079, g: .325490206, b: .227450982, a: 0}
-    - {r: .631372571, g: .435294122, b: .313725501, a: 0}
-    - {r: .262745112, g: .13333334, b: .0941176489, a: 0}
-    - {r: .521568656, g: .329411775, b: .200000003, a: 0}
-  - materialColor:
-    - {r: .31764707, g: .250980407, b: .227450982, a: 0}
-    - {r: .427450985, g: .337254912, b: .305882365, a: 0}
-    - {r: .556862772, g: .435294122, b: .400000006, a: 0}
-    - {r: .654901981, g: .525490224, b: .490196079, a: 0}
-    - {r: .0313725509, g: .0313725509, b: .0274509806, a: 0}
-    - {r: .196078435, g: .200000003, b: .172549024, a: 0}
-  - materialColor:
-    - {r: .882352948, g: .858823538, b: .772549033, a: 0}
-    - {r: .913725495, g: .886274517, b: .80392158, a: 0}
-    - {r: .941176474, g: .905882359, b: .819607854, a: 0}
-    - {r: .952941179, g: .921568632, b: .847058833, a: 0}
-    - {r: .854901969, g: .811764717, b: .745098054, a: 0}
-    - {r: .917647064, g: .886274517, b: .80392158, a: 0}
 --- !u!137 &1798008472
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -15947,7 +15563,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1831646452}
   - 137: {fileID: 1831646454}
-  - 114: {fileID: 1831646453}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -15967,46 +15582,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1521436006}
   m_RootOrder: 0
---- !u!114 &1831646453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1831646451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .200000003, g: .168627456, b: .227450982, a: 0}
-    - {r: .270588249, g: .219607845, b: .313725501, a: 0}
-    - {r: .325490206, g: .282352954, b: .400000006, a: 0}
-    - {r: .396078438, g: .325490206, b: .490196079, a: 0}
-    - {r: .294117659, g: .200000003, b: .172549024, a: 0}
-    - {r: .396078438, g: .360784322, b: .345098048, a: 0}
-  - materialColor:
-    - {r: .196078435, g: .121568628, b: .0823529437, a: 0}
-    - {r: .325490206, g: .215686277, b: .141176477, a: 0}
-    - {r: .490196079, g: .325490206, b: .227450982, a: 0}
-    - {r: .631372571, g: .435294122, b: .313725501, a: 0}
-    - {r: .262745112, g: .13333334, b: .0941176489, a: 0}
-    - {r: .521568656, g: .329411775, b: .200000003, a: 0}
-  - materialColor:
-    - {r: .31764707, g: .250980407, b: .227450982, a: 0}
-    - {r: .427450985, g: .337254912, b: .305882365, a: 0}
-    - {r: .556862772, g: .435294122, b: .400000006, a: 0}
-    - {r: .654901981, g: .525490224, b: .490196079, a: 0}
-    - {r: .0313725509, g: .0313725509, b: .0274509806, a: 0}
-    - {r: .196078435, g: .200000003, b: .172549024, a: 0}
-  - materialColor:
-    - {r: .882352948, g: .858823538, b: .772549033, a: 0}
-    - {r: .913725495, g: .886274517, b: .80392158, a: 0}
-    - {r: .941176474, g: .905882359, b: .819607854, a: 0}
-    - {r: .952941179, g: .921568632, b: .847058833, a: 0}
-    - {r: .854901969, g: .811764717, b: .745098054, a: 0}
-    - {r: .917647064, g: .886274517, b: .80392158, a: 0}
 --- !u!137 &1831646454
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -16485,7 +16060,8 @@ Transform:
   m_LocalRotation: {x: .13100189, y: 0, z: 0, w: .991382182}
   m_LocalPosition: {x: .361019909, y: 7.18184471, z: -17.3414764}
   m_LocalScale: {x: 1.05618668, y: 1.05618668, z: 1.05618668}
-  m_Children: []
+  m_Children:
+  - {fileID: 788246380}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &1895612220
@@ -17430,7 +17006,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2031210369}
   - 137: {fileID: 2031210371}
-  - 114: {fileID: 2031210370}
   m_Layer: 0
   m_Name: crown14
   m_TagString: Untagged
@@ -17450,46 +17025,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 623423362}
   m_RootOrder: 0
---- !u!114 &2031210370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2031210368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b2454cc16a77e84a83d1249fd122aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeatherColors:
-  - materialColor:
-    - {r: .200000003, g: .168627456, b: .227450982, a: 0}
-    - {r: .270588249, g: .219607845, b: .313725501, a: 0}
-    - {r: .325490206, g: .282352954, b: .400000006, a: 0}
-    - {r: .396078438, g: .325490206, b: .490196079, a: 0}
-    - {r: .294117659, g: .200000003, b: .172549024, a: 0}
-    - {r: .396078438, g: .360784322, b: .345098048, a: 0}
-  - materialColor:
-    - {r: .196078435, g: .121568628, b: .0823529437, a: 0}
-    - {r: .325490206, g: .215686277, b: .141176477, a: 0}
-    - {r: .490196079, g: .325490206, b: .227450982, a: 0}
-    - {r: .631372571, g: .435294122, b: .313725501, a: 0}
-    - {r: .262745112, g: .13333334, b: .0941176489, a: 0}
-    - {r: .521568656, g: .329411775, b: .200000003, a: 0}
-  - materialColor:
-    - {r: .31764707, g: .250980407, b: .227450982, a: 0}
-    - {r: .427450985, g: .337254912, b: .305882365, a: 0}
-    - {r: .556862772, g: .435294122, b: .400000006, a: 0}
-    - {r: .654901981, g: .525490224, b: .490196079, a: 0}
-    - {r: .0313725509, g: .0313725509, b: .0274509806, a: 0}
-    - {r: .196078435, g: .200000003, b: .172549024, a: 0}
-  - materialColor:
-    - {r: .882352948, g: .858823538, b: .772549033, a: 0}
-    - {r: .913725495, g: .886274517, b: .80392158, a: 0}
-    - {r: .941176474, g: .905882359, b: .819607854, a: 0}
-    - {r: .952941179, g: .921568632, b: .847058833, a: 0}
-    - {r: .854901969, g: .811764717, b: .745098054, a: 0}
-    - {r: .917647064, g: .886274517, b: .80392158, a: 0}
 --- !u!137 &2031210371
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
