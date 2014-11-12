@@ -100,7 +100,9 @@ public class PatternAnimator : MonoBehaviour {
    
     public void RemoveLastPattern()
     {
-        Debug.Log(patterns.Count + " " + GameData.Memory.Count);
+		if(patterns!=null){
+			Debug.Log(patterns.Count + " " + GameData.Memory.Count);
+        }
         if (patterns != null) if (patterns.Count > 0)
             {
                 if (GameData.Memory != null) GameData.Memory.RemoveAt(GameData.Memory.Count - 1);
