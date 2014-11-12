@@ -3,30 +3,32 @@ using System.Collections;
 
 public class MenuButton : MonoBehaviour {
 
-	public Color initialColor;
-	public Color changedColor;
-	public string nextLevelName;
+	
+	public int nextLevel;
 	public float fadeOutTime;
 	public float fadeInTime;
 	public Color fadeColor;
+	public bool quit;
+	public Material[] m;
 
 	void Start () {
 		//set to initial color
-		renderer.material.color = initialColor;
+		renderer.material = m[0];
 	}
 
-	void OnMouseOver(){
-		//change color on mouse over
-		renderer.material.color = changedColor;
-	}
-
-	void OnMouseExit (){
-		//change to initial color, when not mouse over
-		renderer.material.color = initialColor;
-	}
+	
 
 	void OnMouseDown(){
 		//go to level when button pressed
-		AutoFade.LoadLevel (nextLevelName, fadeOutTime, fadeInTime, fadeColor);
+		if(quit) Application.Quit();
+		else{
+			AutoFade.LoadLevel (nextLevel, fadeOutTime, fadeInTime, fadeColor);
+			}
+	}
+	void OnMouseOver(){
+		renderer.material = m[1];
+	}
+	void OnMouseExit(){
+		renderer.material = m[0];
 	}
 }

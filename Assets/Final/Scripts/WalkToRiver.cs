@@ -90,7 +90,7 @@ public class WalkToRiver : MonoBehaviour {
 					}
 					//reached maxZoom
 					else {
-						Application.LoadLevel (endScene);
+						AutoFade.LoadLevel (endScene,0.0f,1.0f,Color.black);
 					}
 				//if wolf was not hit
 				} else {
