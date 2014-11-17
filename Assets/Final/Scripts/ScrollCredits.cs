@@ -21,15 +21,20 @@ public class ScrollCredits : MonoBehaviour {
 		ct = 0.02f;
 		mouseDown = true;
 	}
-	
+	void OnGUI(){
+		Event current = Event.current;
+		if(current!=null){
+			if(current.type == EventType.MouseDown ){
+				mouseDown = true;
+			}
+			if(current.type == EventType.MouseUp){
+				mouseDown = false;
+			}
+		}
+	}
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButtonUp(0)){
-			mouseDown = false;
-		}
-		if(Input.GetMouseButtonDown(0)){
-			mouseDown = true;
-		}
+	
 		if(mode == Mode.FPR){
 			if(mouseDown){
 			    if(ct<1)
@@ -42,7 +47,7 @@ public class ScrollCredits : MonoBehaviour {
 					ct-= Time.deltaTime * speed;
 				}else{
 					
-						AutoFade.LoadLevel(NextScene,5.5f,.5f, Color.black);
+					AutoFade.LoadLevel(NextScene,3.5f,.5f, Color.black);
 					
 				}
 				transform.position = Vector3.Lerp (initialPosition,finalPosition,ct);

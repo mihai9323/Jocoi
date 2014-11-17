@@ -699,7 +699,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71210487}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 7008995ff6f58704fa5d74975f7afa1f, type: 3}
   m_PlayOnAwake: 1
@@ -5518,7 +5518,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 1291045631}
   m_GameObject: {fileID: 633948877}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 489d76d59e13cc74da9a4d2a4ec8e877, type: 3}
   m_PlayOnAwake: 1
@@ -11620,6 +11620,10 @@ Prefab:
     - target: {fileID: 400008, guid: bc84b94341e1b024f8a56d8a106e5d0d, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200064, guid: bc84b94341e1b024f8a56d8a106e5d0d, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc84b94341e1b024f8a56d8a106e5d0d, type: 2}
