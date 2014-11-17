@@ -1660,12 +1660,12 @@ Material:
         second: {r: .196078435, g: .184313729, b: .219607845, a: 0}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
-      data:
-        first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Scale
@@ -2712,8 +2712,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 414580966}
   m_LocalRotation: {x: .634120941, y: 0, z: 0, w: .77323395}
-  m_LocalPosition: {x: -0, y: -3.98803616, z: 6.72582531}
-  m_LocalScale: {x: -1.37887585, y: 0, z: .654916048}
+  m_LocalPosition: {x: -0, y: -2.96399999, z: 4.0486002}
+  m_LocalScale: {x: -1.77311099, y: 0, z: .341488421}
   m_Children: []
   m_Father: {fileID: 407830894}
   m_RootOrder: 1
@@ -3911,8 +3911,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 758922051}
   m_LocalRotation: {x: .634120941, y: 0, z: 0, w: .77323395}
-  m_LocalPosition: {x: -0, y: 4.90845966, z: 7.9459157}
-  m_LocalScale: {x: -2.11661506, y: 0, z: 1.00434661}
+  m_LocalPosition: {x: -0, y: 3.03600001, z: 2.42880011}
+  m_LocalScale: {x: -1.73835218, y: 0, z: .39514181}
   m_Children: []
   m_Father: {fileID: 407830894}
   m_RootOrder: 0
@@ -9836,12 +9836,12 @@ Material:
         second: {r: .0431372561, g: .200000003, b: .113725491, a: 0}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
-      data:
-        first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Scale
@@ -12894,12 +12894,12 @@ Material:
         second: {r: .0901960805, g: .188235298, b: .188235298, a: 0}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
-      data:
-        first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Scale
@@ -13214,7 +13214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bahSound: {fileID: 8300000, guid: f42ffe253a455814b8b3206618fbf8c9, type: 3}
-  movementSpeed: 10
+  movementSpeed: 3
   maxZoom: 20
   BabyWolf: {fileID: 860525272}
   headMovement:
@@ -13240,8 +13240,8 @@ MonoBehaviour:
   sound: {fileID: 0}
   endScene: 5
   camera: {fileID: 407830893}
-  eyelidTop: {fileID: 758922051}
-  eyelidBottom: {fileID: 414580966}
+  eyelidTop: {fileID: 414580966}
+  eyelidBottom: {fileID: 758922051}
 --- !u!4 &1874432874
 Transform:
   m_ObjectHideFlags: 0
