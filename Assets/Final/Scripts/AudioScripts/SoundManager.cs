@@ -60,27 +60,43 @@ public class InstrumentManager
     {
         isPlaying = false;
         currentTrack = -1;
+        CleanUp();
     }
 
     public void AddSound(int i){
-
+		
         if (currentTrack != -1) FlowerSources[currentTrack].StopSound();
         currentTrack = i;
         FlowerSources[i].PlaySound();
         isPlaying = true;
+		CleanUp();
     }
     public void FadeDown()
     {
+		
         if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(.2f);
+        
     }
     public void FadeUp()
     {
+		
         if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(1.0f);
     }
     public void StopSound()
     {
+		
         if (currentTrack != -1) FlowerSources[currentTrack].StopSound();
         currentTrack = -1;
+        
+    }
+    public void CleanUp(){
+		if(FlowerSources!=null){
+			for(int i = 0; i<FlowerSources.Length; i++){
+				if(i != currentTrack){
+					FlowerSources[i].audioSource.volume = 0;
+				}
+			}
+		}
     }
 
 }

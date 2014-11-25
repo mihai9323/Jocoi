@@ -73,7 +73,7 @@ public class Flower : Plant {
         SoundManager.Instance.FadeAllDown();
         SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(1.0f);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
-               
+        
             
            
     }
@@ -83,6 +83,7 @@ public class Flower : Plant {
         SoundManager.Instance.FadeAllUp();
         if (SoundManager.Instance.instruments[patternToAdd.instrumentID].currentTrack != patternToAdd.trackID) SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(0.0f);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
+		SoundManager.Instance.instruments[patternToAdd.instrumentID].CleanUp();
     }
 
 }

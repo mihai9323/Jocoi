@@ -130,6 +130,7 @@ public class WalkToRiver : MonoBehaviour {
 				timer += Time.deltaTime;
 			}
 		}
+		RenderSettings.ambientLight = Color.Lerp(Color.black,Color.white, (camera.fieldOfView-maxZoom)/(startZoom - maxZoom));
 	}
 
 	void MoveDistance(){

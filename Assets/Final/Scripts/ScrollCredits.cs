@@ -44,7 +44,7 @@ public class ScrollCredits : MonoBehaviour {
 			}else{
 				if(ct>0)
 				{ 
-					ct-= Time.deltaTime * speed*3;
+					ct-= Time.deltaTime * speed*20;
 				}else{
 					
 					AutoFade.LoadLevel(NextScene,1.5f,.5f, Color.black);
