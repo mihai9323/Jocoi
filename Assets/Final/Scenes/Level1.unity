@@ -6724,7 +6724,7 @@ MonoBehaviour:
   xSize: 29
   ySize: 29
   density: 1.40999997
-  sphereSize: 1
+  sphereSize: 2.0999999
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &256746315
 CapsuleCollider:
@@ -9194,6 +9194,10 @@ Prefab:
       propertyPath: CuddleSound
       value: 
       objectReference: {fileID: 8300000, guid: 7707ea84ff7b96f45a86333fe05661d7, type: 3}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: sphereSize
+      value: 2.0999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
   m_RootGameObject: {fileID: 256746311}
@@ -11160,6 +11164,10 @@ Prefab:
       propertyPath: CuddleSound
       value: 
       objectReference: {fileID: 8300000, guid: 7707ea84ff7b96f45a86333fe05661d7, type: 3}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: sphereSize
+      value: 2.0999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
   m_RootGameObject: {fileID: 1010588172}
@@ -12706,7 +12714,7 @@ MonoBehaviour:
   xSize: 29
   ySize: 29
   density: 1.40999997
-  sphereSize: 1
+  sphereSize: 2.0999999
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &723015677
 CapsuleCollider:
@@ -16375,7 +16383,7 @@ MonoBehaviour:
   xSize: 29
   ySize: 29
   density: 1.40999997
-  sphereSize: 1
+  sphereSize: 2.0999999
   debug: {fileID: 100000, guid: 4d4698631821a2b458bd0f9a3f3e0c98, type: 2}
 --- !u!136 &1010588176
 CapsuleCollider:
@@ -22685,6 +22693,10 @@ Prefab:
       propertyPath: CuddleSound
       value: 
       objectReference: {fileID: 8300000, guid: 7707ea84ff7b96f45a86333fe05661d7, type: 3}
+    - target: {fileID: 11400004, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
+      propertyPath: sphereSize
+      value: 2.0999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18b60684a1ce894489de7799a4a03a02, type: 2}
   m_RootGameObject: {fileID: 723015675}

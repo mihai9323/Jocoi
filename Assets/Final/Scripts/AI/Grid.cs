@@ -28,29 +28,17 @@ public class Grid : MonoBehaviour {
             {
 
 
-                GameObject go = Instantiate(debug, transform.position + new Vector3(x - (float)xSize / 2, transform.position.y, y - (float)ySize / 2) / density, Quaternion.identity) as GameObject;
+                //GameObject go = Instantiate(debug, transform.position + new Vector3(x - (float)xSize / 2, transform.position.y, y - (float)ySize / 2) / density, Quaternion.identity) as GameObject;
                 //go.transform.parent = transform;
-                go.name = "Tile "+transform.name;
-                map[x, y] = new Node(transform.position + new Vector3(x - (float)xSize / 2, 0, y - (float)ySize / 2) / density, x, y, go.collider);
+                //go.name = "Tile "+transform.name;
+                map[x, y] = new Node(transform.position + new Vector3(x - (float)xSize / 2, 0, y - (float)ySize / 2) / density, x, y);
             }
         }
     
     }
     public void RemoveMap()
     {
-       if(map!=null){
-            //map = new Node[xSize, ySize];
-            for (int x = 0; x < xSize; x++)
-            {
-                for (int y = 0; y < ySize; y++)
-                {
-
-
-                    Destroy(map[x, y].col.gameObject);
-                    //map[x, y] = new Node(transform.position + new Vector3(x - (float)xSize / 2, 0, y - (float)ySize / 2) / density, x, y, go.collider);
-                }
-            }
-        }
+       
         map = null;
     }
     public IEnumerator CalculatePath(Vector3 s, Vector3 f, GameData.VOID_FUNCITON_PATH complete)
@@ -115,12 +103,9 @@ public class Grid : MonoBehaviour {
                         if (x != 0 && y != 0) cost *= 1.42f;
                         Node nNode = map[currentNode.x + x, currentNode.y + y];
                         bool ok = true;
-                        if (Physics.SphereCast(currentNode.position, sphereSize, nNode.position - currentNode.position, out hit))
+                        if (Physics.SphereCast(currentNode.position, sphereSize, nNode.position - currentNode.position,out hit,cost))
                         {
-                            if (hit.collider != nNode.col)
-                            {
-                                if (!hit.collider.isTrigger)   ok = false;
-                            }
+                            ok = false;
 
                         }
                         if (ok)
@@ -260,24 +245,24 @@ public class Node{
     public Node parentNode;
     public int x, y;
 
-    public Collider col;
+    
 
-    public Node(Vector3 position,int x, int y, Collider collider)
+    public Node(Vector3 position,int x, int y)
     {
         this.position = position;
         gCost = hCost = fCost = 0;
         this.x = x;
         this.y = y;
-        col = collider;
+        
        
     }
    
-    public Node(float x, float y, float z, int _x, int _y,Collider collider)
+    public Node(float x, float y, float z, int _x, int _y)
     {
         this.position = new Vector3(x, y, z);
         this.x = _x;
         this.y = _y;
         gCost = hCost = fCost = 0;
-        col = collider;
+        
     }
 }
