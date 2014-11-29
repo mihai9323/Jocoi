@@ -1,25 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GoToNextSceneOnPosition : MonoBehaviour {
+public class GoToNextSceneOnPosition : GoToNextScene
+{
 
-    public enum ParameterType
-    {
-        String,Int
-    }
-    
-    public ParameterType parameterType = ParameterType.String;
-    public string SceneName;
-    public int SceneNumber;
+  
 
     public Transform minPosition;
     public Transform maxPosition;
     public Transform CheckedObject;
 
-    public float fadeInTime = .5f;
-    public float fadeOutTime = .5f;
-
-    public Color fadeColor = Color.black;
+  
 
     private void Start()
     {
@@ -44,6 +35,7 @@ public class GoToNextSceneOnPosition : MonoBehaviour {
                     case ParameterType.String:  AutoFade.LoadLevel(SceneName,   fadeInTime, fadeOutTime, fadeColor); break;
                     case ParameterType.Int:     AutoFade.LoadLevel(SceneNumber, fadeInTime, fadeOutTime, fadeColor); break;
                 }
+                StopAllCoroutines();
             }
         }
     }

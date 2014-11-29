@@ -14,7 +14,7 @@ public class Flower : Plant {
 
     private void Start()
     {
-        LevelData.Instance.flowers.Add(this);
+       if(LevelData.Instance!=null) LevelData.Instance.flowers.Add(this);
 
 
 		/*for (int i =0; i<renderer.materials.Length; i++) {
@@ -38,7 +38,7 @@ public class Flower : Plant {
     }
     protected override void OnDestroy()
     {
-        LevelData.Instance.flowers.Remove(this);
+        if (LevelData.Instance != null) LevelData.Instance.flowers.Remove(this);
         base.OnDestroy();
         
     }
@@ -52,14 +52,14 @@ public class Flower : Plant {
        
         base.LambEat();
        
-        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(this);
+        if(LevelData.Instance!=null)LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(this);
         
-        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
-        KillTheSheep.Instance.currentActions++;
+        if(LevelData.Instance!=null)LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
+        if(KillTheSheep.Instance!=null)KillTheSheep.Instance.currentActions++;
     }
     protected override void LambFinishEat()
     {
-        LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
+        if (LevelData.Instance != null) LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
         
 
 

@@ -9,7 +9,7 @@ public class TutorialMoveAlone : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(1))
         {
-            motherSheep.MoveToPosition(
+            motherSheep.StartMovement(
                 new Vector3(
                         motherSheep.maxX.position.x,
                         motherSheep.yAmplitude * motherSheep.yMovement.Evaluate(1.0f)+ motherSheep.initialY,

@@ -11,7 +11,7 @@ public class MoveToPosition : MonoBehaviour {
     internal string animation;
     private int sound;
     private float speed;
-    private float successDistance;
+    protected float successDistance;
     public Animator anim;
     public Vector3 offSet;
     private void Awake(){
@@ -21,7 +21,7 @@ public class MoveToPosition : MonoBehaviour {
         //anim = null;
     }
     //move with animation and sound
-    public void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f,float acceptedDistance = 1.0f)
+    public virtual void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
         successDistance = acceptedDistance;
         position = new Vector3(position.x, transform.position.y, position.z);
@@ -39,7 +39,7 @@ public class MoveToPosition : MonoBehaviour {
         StartCoroutine(Move(position + offSet));
     }
     //move without animation and sound
-    public void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, float speed = 1.0f, float acceptedDistance = 1.0f)
+    public virtual void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
         position = new Vector3(position.x,transform.position.y,position.z);
         successDistance = acceptedDistance;
@@ -50,7 +50,7 @@ public class MoveToPosition : MonoBehaviour {
     }
 
     //Transform overlaods
-    public void StartMoving(Transform pos, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
+    public virtual void StartMoving(Transform pos, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
         successDistance = acceptedDistance;
        // position = new Vector3(pos.position.x, transform.position.y, pos.position.z);
@@ -68,7 +68,7 @@ public class MoveToPosition : MonoBehaviour {
         StartCoroutine(Move(pos ));
     }
     //move without animation and sound
-    public void StartMoving(Transform position, GameData.VOID_FUNCTION complete, float speed = 1.0f, float acceptedDistance = 1.0f)
+    public virtual void StartMoving(Transform position, GameData.VOID_FUNCTION complete, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
        
         successDistance = acceptedDistance;
@@ -108,7 +108,7 @@ public class MoveToPosition : MonoBehaviour {
         AtDestination();
 
     }
-    public void StopMovement()
+    public virtual void StopMovement()
     {
         StopAllCoroutines();
         

@@ -277,6 +277,10 @@ Prefab:
       propertyPath: yMovement.m_Curve.Array.data[0].outSlope
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d38d5a30cd7b1fb42aca42925d8b07f8, type: 2}
+      propertyPath: Speed
+      value: 1.20000005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d38d5a30cd7b1fb42aca42925d8b07f8, type: 2}
   m_RootGameObject: {fileID: 488734928}
@@ -520,6 +524,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf7aff973ebed44a99b0590e7e51e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
+  anim: {fileID: 218351642}
+  offSet: {x: 0, y: 0, z: 0}
   yMovement:
     serializedVersion: 2
     m_Curve:
@@ -538,8 +545,7 @@ MonoBehaviour:
   minX: {fileID: 985901936}
   maxX: {fileID: 554750086}
   yAmplitude: 5
-  speed: .191
-  anim: {fileID: 218351642}
+  Speed: 1.20000005
   walkingAnimation: Walk
 --- !u!82 &488734931
 AudioSource:
@@ -684,12 +690,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parameterType: 1
   SceneName: 
-  SceneNumber: 0
+  SceneNumber: 2
   minPosition: {fileID: 1017478141}
   maxPosition: {fileID: 357291051}
   CheckedObject: {fileID: 488734929}
-  fadeInTime: .5
-  fadeOutTime: .5
+  fadeInTime: .219999999
+  fadeOutTime: 2.86999989
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &554750085
 GameObject:
@@ -1108,7 +1114,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

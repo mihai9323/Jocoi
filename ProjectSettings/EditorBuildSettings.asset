@@ -20,6 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Final/Scenes/Menu.unity
   - enabled: 1
+    path: Assets/Final/Scenes/Tutorial/TutorialScene_MoveAlone.unity
+  - enabled: 1
+    path: Assets/Final/Scenes/Tutorial/TutorialScene_EatAlone.unity
+  - enabled: 1
     path: Assets/Final/Scenes/Level1.unity
   - enabled: 1
     path: Assets/Final/Scenes/Level2.unity

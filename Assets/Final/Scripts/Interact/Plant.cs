@@ -194,7 +194,7 @@ public class Plant : InteractableObject {
     }
     protected virtual void OnDestroy()
     {
-        Debug.Log("sterge");
+
         if (Inputs.Instance.ActiveObject == this)
         {
             Inputs.Instance.ActiveObjectDestroyed();
