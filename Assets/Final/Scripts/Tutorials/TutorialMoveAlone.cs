@@ -4,15 +4,15 @@ using System.Collections;
 public class TutorialMoveAlone : MonoBehaviour {
 
     public Movement2D motherSheep;
-
+    public Transform destinationX;
     void Update()
     {
         if (Input.GetMouseButtonDown(1))
         {
             motherSheep.StartMovement(
                 new Vector3(
-                        motherSheep.maxX.position.x,
-                        motherSheep.yAmplitude * motherSheep.yMovement.Evaluate(1.0f)+ motherSheep.initialY,
+                        destinationX.position.x,
+                        WorldCurve.Instance.amplitude * WorldCurve.Instance.worldCurve.Evaluate(1.0f)+ motherSheep.initialY,
                         motherSheep.transform.position.z
                     )
                 );

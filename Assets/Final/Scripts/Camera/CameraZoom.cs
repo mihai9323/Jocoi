@@ -5,24 +5,24 @@ public class CameraZoom : MonoBehaviour {
 
     internal Quaternion cameraDefaultRotation;
     internal Vector3 cameraDefaultPosition;
-    internal float cameraDefaultFieldOfView;
+    internal float cameraDefaultZoom;
 
-    private Quaternion targetCameraRotation;
-    public float targetFieldOfView = 30;
+    public float maxZoom = 30;
 
     public float zoomInTime = 4.0f;
     public float zoomOutTime = 2.0f;
-   
     
-    private GameObject targetObject;
+    
+    protected Quaternion targetCameraRotation;
+    protected GameObject targetObject;
 
-    void Start()
+    protected void Start()
     {
-        cameraDefaultFieldOfView = camera.fieldOfView;
+        cameraDefaultZoom = camera.fieldOfView;
         cameraDefaultPosition = camera.transform.position;
         cameraDefaultRotation = camera.transform.rotation;
     }
-    public void StartZoom(GameObject obj)
+    public virtual void StartZoom(GameObject obj)
     {
        
         targetObject = obj;
@@ -35,7 +35,7 @@ public class CameraZoom : MonoBehaviour {
       
         StartCoroutine(ZoomIn());
     }
-    public void StopZoom()
+    public virtual void StopZoom()
     {
       
         StopAllCoroutines();
@@ -46,10 +46,10 @@ public class CameraZoom : MonoBehaviour {
     {
         float percent = 0;
        
-        while (percent < 1.0f && Mathf.Abs(camera.fieldOfView - targetFieldOfView)>1.0f)
+        while (percent < 1.0f && Mathf.Abs(camera.fieldOfView - maxZoom)>1.0f)
         {
             percent += (1.0f/zoomInTime) * Time.deltaTime;
-            camera.fieldOfView += (-camera.fieldOfView + targetFieldOfView) * percent;
+            camera.fieldOfView += (-camera.fieldOfView + maxZoom) * percent;
 
             transform.rotation = Quaternion.Lerp(transform.rotation, targetCameraRotation, percent);
 
@@ -58,7 +58,7 @@ public class CameraZoom : MonoBehaviour {
             yield return new WaitForFixedUpdate();
         }
         
-        camera.fieldOfView = targetFieldOfView;
+        camera.fieldOfView = maxZoom;
         while (true)
         {
             transform.LookAt(targetObject.transform);
@@ -73,12 +73,12 @@ public class CameraZoom : MonoBehaviour {
         while (percent<1.0f)
         {
             percent += (1.0f/zoomOutTime) * Time.deltaTime;
-            camera.fieldOfView += (-camera.fieldOfView + cameraDefaultFieldOfView) * percent;
+            camera.fieldOfView += (-camera.fieldOfView + cameraDefaultZoom) * percent;
             transform.rotation = Quaternion.Lerp(transform.rotation, cameraDefaultRotation, percent);
             yield return new WaitForEndOfFrame();
         }
         transform.rotation = cameraDefaultRotation;
-        camera.fieldOfView = cameraDefaultFieldOfView;
+        camera.fieldOfView = cameraDefaultZoom;
     }
     
 }

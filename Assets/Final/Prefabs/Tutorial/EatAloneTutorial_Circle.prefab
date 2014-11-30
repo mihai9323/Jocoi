@@ -54,7 +54,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400006}
   - 137: {fileID: 13700000}
-  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: stemCircleFlowerTransform
   m_TagString: Untagged
@@ -71,7 +70,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 137: {fileID: 13700002}
-  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: outerFlowerTransform
   m_TagString: Untagged
@@ -103,7 +101,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 400012}
   - 137: {fileID: 13700004}
-  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: innerFlowerTransform
   m_TagString: Untagged
@@ -124,6 +121,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: EatAloneTutorial_Circle
   m_TagString: Untagged
@@ -225,7 +223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.55331516, y: -.919999123, z: .769710422}
+  m_LocalPosition: {x: 1.55331516, y: -.919999123, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -312,40 +310,12 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100006}
+  m_GameObject: {fileID: 100014}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb1c467cdc12a54d8d82095c0a9ee1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5278b2ec38bf03e47b9f2f0a8a494907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors:
-  - {r: .223529413, g: .250980407, b: .211764708, a: 0}
---- !u!114 &11400002
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb1c467cdc12a54d8d82095c0a9ee1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colors:
-  - {r: .141176477, g: .145098045, b: .141176477, a: 0}
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eb1c467cdc12a54d8d82095c0a9ee1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colors:
-  - {r: .382352948, g: .382352948, b: .382352948, a: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,7 +387,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1b79ae91a4e900e429fe97cb06249b26, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -452,7 +422,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1b79ae91a4e900e429fe97cb06249b26, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -487,7 +457,7 @@ SkinnedMeshRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 1b79ae91a4e900e429fe97cb06249b26, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

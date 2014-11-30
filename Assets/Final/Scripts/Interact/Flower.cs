@@ -67,7 +67,7 @@ public class Flower : Plant {
         
     }
 
-    private void OnMouseOver()
+    private void OnMouseEnter()
     {
 
         SoundManager.Instance.FadeAllDown();

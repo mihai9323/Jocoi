@@ -20,6 +20,7 @@ public class MoveToPosition : MonoBehaviour {
         
         //anim = null;
     }
+   
     //move with animation and sound
     public virtual void StartMoving(Vector3 position, GameData.VOID_FUNCTION complete, int sound, string animation, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
@@ -55,12 +56,17 @@ public class MoveToPosition : MonoBehaviour {
         successDistance = acceptedDistance;
        // position = new Vector3(pos.position.x, transform.position.y, pos.position.z);
         StopMovement();
-        if (sounds != null) if (sounds.Length > sound)
+        if (sounds != null && sound != -1)
+        {
+            
+            if (sounds.Length > sound)
             {
                 audioSource.clip = sounds[sound];
                 audioSource.Play();
 
             }
+        }
+            
         this.complete = complete;
         this.animation = animation;
         this.speed = speed;

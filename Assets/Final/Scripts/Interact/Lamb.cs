@@ -8,7 +8,7 @@ public class Lamb : InteractableObject {
 
     public Transform motherBelly;
     public Transform motherHead;
-
+    public Transform zoomPosition;
     private bool isEating;
     public float distanceToMother = 2.0f;
     [Range(0.03f,2.0f)]
@@ -18,6 +18,7 @@ public class Lamb : InteractableObject {
         isEating = false;
         if (this.gameObject.GetComponent<MoveToPosition>() == null) mtp = this.gameObject.AddComponent<MoveToPosition>();
         else mtp = this.gameObject.GetComponent<MoveToPosition>();
+        if (zoomPosition == null) zoomPosition = transform;
     }
     private void Start()
     {
@@ -64,7 +65,7 @@ public class Lamb : InteractableObject {
 
     public override void StartRMB()
     {
-        LevelData.Instance.cam.GetComponent<CameraZoom>().StartZoom(this.gameObject);
+        LevelData.Instance.cam.GetComponent<CameraZoom>().StartZoom(zoomPosition.gameObject);
     }
 
     public override void StopLMB()
