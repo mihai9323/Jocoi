@@ -6539,6 +6539,7 @@ MonoBehaviour:
   patternAnimator: {fileID: 256538825}
   motherBelly: {fileID: 2053250269}
   motherHead: {fileID: 1253688762}
+  zoomPosition: {fileID: 0}
   distanceToMother: 2
   refreshFrequency: .400000006
 --- !u!114 &256538825
@@ -7452,6 +7453,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b365a2088ca2914e8a55ed6f3d83f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parameterType: 0
+  SceneName: 
+  SceneNumber: 0
+  fadeInTime: .5
+  fadeOutTime: .5
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &303970357
 GameObject:
   m_ObjectHideFlags: 0
@@ -24173,7 +24180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca4feb121d50fe4eab37b2dda5b29c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFieldOfView: 10
+  maxZoom: 12
   zoomInTime: 4
   zoomOutTime: 2
 --- !u!81 &1799606554

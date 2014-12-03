@@ -36,6 +36,10 @@ public class Movement2D : MoveToPosition {
     }
     public void StartMovement(Vector3 position)
     {
+        Vector3 rot = transform.rotation.eulerAngles;
+        if (transform.position.x > position.x) rot.y = 270;
+        else rot.y = 90;
+        transform.rotation = Quaternion.Euler(rot);
         ct = (transform.position.x - minX.position.x) / (maxX.position.x - minX.position.x);
         float x = Mathf.Lerp(minX.position.x, maxX.position.x, ct);
         transform.position = new Vector3(
