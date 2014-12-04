@@ -2844,6 +2844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 1
   canUseLeftClick: 1
+  canUseRightClick: 1
   activeMode: 0
   defaultCursor: {fileID: 2800000, guid: 9308ccae50e231b4ea16690a0e2a3484, type: 3}
   handCursor: {fileID: 2800000, guid: 887166d3a0d61f340bd967d73d9d688f, type: 3}
@@ -3589,8 +3590,10 @@ MonoBehaviour:
   LambHead: {fileID: 0}
   flowers: []
   grass: []
+  flowerPannels: []
   particle: {fileID: 0}
   cam: {fileID: 1895612218}
+  tutorialMode: 0
 --- !u!1 &418976568
 GameObject:
   m_ObjectHideFlags: 0
@@ -10124,7 +10127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 1818221905}
-  riverLevel: 3
+  riverLevel: 10
 --- !u!64 &1127511015
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16918,7 +16921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca4feb121d50fe4eab37b2dda5b29c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetFieldOfView: 10
+  maxZoom: 30
   zoomInTime: 4
   zoomOutTime: 2
 --- !u!1 &1896699161

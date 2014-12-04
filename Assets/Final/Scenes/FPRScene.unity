@@ -1586,6 +1586,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _TranslucencyMap
         second:
           m_Texture: {fileID: 0}
@@ -1605,13 +1612,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -1621,6 +1621,14 @@ Material:
         first:
           name: _Shininess
         second: .078125
+      data:
+        first:
+          name: _InvFade
+        second: 1
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
       data:
         first:
           name: _SquashAmount
@@ -1645,14 +1653,6 @@ Material:
         first:
           name: _Occlusion
         second: 7.5
-      data:
-        first:
-          name: _InvFade
-        second: 1
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
     m_Colors:
       data:
         first:
@@ -1660,12 +1660,16 @@ Material:
         second: {r: .196078435, g: .184313729, b: .219607845, a: 0}
       data:
         first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
       data:
         first:
           name: _Scale
@@ -1674,10 +1678,6 @@ Material:
         first:
           name: _TranslucencyColor
         second: {r: .730000019, g: .850000024, b: .409999996, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
 --- !u!1001 &223393320
 Prefab:
   m_ObjectHideFlags: 0
@@ -4559,6 +4559,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b365a2088ca2914e8a55ed6f3d83f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parameterType: 0
+  SceneName: 
+  SceneNumber: 0
+  fadeInTime: .5
+  fadeOutTime: .5
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &845408629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4572,6 +4578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 1
   canUseLeftClick: 1
+  canUseRightClick: 1
   activeMode: 0
   defaultCursor: {fileID: 2800000, guid: 9308ccae50e231b4ea16690a0e2a3484, type: 3}
   handCursor: {fileID: 2800000, guid: 887166d3a0d61f340bd967d73d9d688f, type: 3}
@@ -9762,6 +9769,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _TranslucencyMap
         second:
           m_Texture: {fileID: 0}
@@ -9781,13 +9795,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -9797,6 +9804,14 @@ Material:
         first:
           name: _Shininess
         second: .078125
+      data:
+        first:
+          name: _InvFade
+        second: 1
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
       data:
         first:
           name: _SquashAmount
@@ -9821,14 +9836,6 @@ Material:
         first:
           name: _Occlusion
         second: 7.5
-      data:
-        first:
-          name: _InvFade
-        second: 1
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
     m_Colors:
       data:
         first:
@@ -9836,12 +9843,16 @@ Material:
         second: {r: .0431372561, g: .200000003, b: .113725491, a: 0}
       data:
         first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
       data:
         first:
           name: _Scale
@@ -9850,10 +9861,6 @@ Material:
         first:
           name: _TranslucencyColor
         second: {r: .730000019, g: .850000024, b: .409999996, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
 --- !u!1001 &1515094753
 Prefab:
   m_ObjectHideFlags: 0
@@ -12820,6 +12827,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ParallaxMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _TranslucencyMap
         second:
           m_Texture: {fileID: 0}
@@ -12839,13 +12853,6 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _ParallaxMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -12855,6 +12862,14 @@ Material:
         first:
           name: _Shininess
         second: .078125
+      data:
+        first:
+          name: _InvFade
+        second: 1
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
       data:
         first:
           name: _SquashAmount
@@ -12879,14 +12894,6 @@ Material:
         first:
           name: _Occlusion
         second: 7.5
-      data:
-        first:
-          name: _InvFade
-        second: 1
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
     m_Colors:
       data:
         first:
@@ -12894,12 +12901,16 @@ Material:
         second: {r: .0901960805, g: .188235298, b: .188235298, a: 0}
       data:
         first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
           name: _SpecColor
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
       data:
         first:
           name: _Scale
@@ -12908,10 +12919,6 @@ Material:
         first:
           name: _TranslucencyColor
         second: {r: .730000019, g: .850000024, b: .409999996, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
 --- !u!1 &1837440024
 GameObject:
   m_ObjectHideFlags: 0
@@ -13238,7 +13245,7 @@ MonoBehaviour:
     m_PreInfinity: 1
     m_PostInfinity: 1
   sound: {fileID: 0}
-  endScene: 5
+  endScene: 12
   camera: {fileID: 407830893}
   eyelidTop: {fileID: 414580966}
   eyelidBottom: {fileID: 758922051}

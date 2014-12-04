@@ -61,7 +61,10 @@ public class Movement2D : MoveToPosition {
                 WorldCurve.Instance.worldCurve.Evaluate(ct) * yAmplitude + initialY,
                 transform.position.z
                 );
-       
+		Vector3 rot = transform.rotation.eulerAngles;
+		if (transform.position.x > position.x) rot.y = 270;
+		else rot.y = 90;
+		transform.rotation = Quaternion.Euler(rot);
 
         
         position = new Vector3(position.x, transform.position.y, position.z);
@@ -83,7 +86,10 @@ public class Movement2D : MoveToPosition {
                 transform.position.z
                 );
 
-
+		Vector3 rot = transform.rotation.eulerAngles;
+		if (transform.position.x > pos.position.x) rot.y = 270;
+		else rot.y = 90;
+		transform.rotation = Quaternion.Euler(rot);
 
 
         
@@ -98,7 +104,10 @@ public class Movement2D : MoveToPosition {
     //move without animation and sound
     public override void StartMoving(Transform position, GameData.VOID_FUNCTION complete, float speed = 1.0f, float acceptedDistance = 1.0f)
     {
-
+		Vector3 rot = transform.rotation.eulerAngles;
+		if (transform.position.x > position.position.x) rot.y = 270;
+		else rot.y = 90;
+		transform.rotation = Quaternion.Euler(rot);
         successDistance = acceptedDistance;
         StopMovement();
         this.complete = complete;

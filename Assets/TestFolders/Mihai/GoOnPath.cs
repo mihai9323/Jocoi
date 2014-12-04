@@ -60,7 +60,7 @@ public class GoOnPath : InteractableObject {
         countSheep++;
         if (countSheep >= 4)
         {
-            AutoFade.LoadLevel(4, fadeTimeOut, fadeTimeIn, Color.white);
+            AutoFade.LoadLevel(11, fadeTimeOut, fadeTimeIn, Color.white);
 
             LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
               targetPosition2,

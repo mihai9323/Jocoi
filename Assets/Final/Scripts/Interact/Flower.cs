@@ -5,7 +5,14 @@ using System.Collections.Generic;
 public class Flower : Plant {
 
     public PatternInfo patternToAdd;
+    
+    public GameObject movingToPannelFeedback;
     public int flowerID;
+    /// <summary>
+    /// The flower pannel.
+    /// The ID of the flowerPannel as the key of the array found in LevelData holding this UI elements
+    /// </summary>
+    
 	//public Color trunchiColor; 
 	//public int TrunchiNr;
 
@@ -51,29 +58,35 @@ public class Flower : Plant {
     {
        
         base.LambEat();
-       
+		if(movingToPannelFeedback !=null){
+			GameObject gob = Instantiate(movingToPannelFeedback,transform.position,movingToPannelFeedback.transform.rotation) as GameObject;
+			gob.AddComponent<MoveToPanel>().moveToPanel(patternToAdd.flowerPannel);
+		}
         if(LevelData.Instance!=null)LevelData.Instance.Lamb.GetComponent<PatternAnimator>().AddPattern(this);
         
         if(LevelData.Instance!=null)LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
         if(KillTheSheep.Instance!=null)KillTheSheep.Instance.currentActions++;
+        if(LevelData.Instance!=null) {
+		//	LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
+			if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetFlowerImageColor(this.patternToAdd.color);
+			if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].trackId = this.patternToAdd.trackID;
+		}
     }
     protected override void LambFinishEat()
     {
         if (LevelData.Instance != null) LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StopAnimation();
-        
-
-
+       
         base.LambFinishEat();
         
     }
 
     private void OnMouseEnter()
     {
-
+		if(LevelData.Instance!=null)if(LevelData.Instance.tutorialMode) LevelData.Instance.loggedActions++;
         SoundManager.Instance.FadeAllDown();
         SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(1.0f);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
-        
+		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null) LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
             
            
     }
@@ -84,6 +97,7 @@ public class Flower : Plant {
         if (SoundManager.Instance.instruments[patternToAdd.instrumentID].currentTrack != patternToAdd.trackID) SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(0.0f);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
 		SoundManager.Instance.instruments[patternToAdd.instrumentID].CleanUp();
+		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].ResetOutline();
     }
 
 }

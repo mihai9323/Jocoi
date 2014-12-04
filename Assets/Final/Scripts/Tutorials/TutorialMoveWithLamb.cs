@@ -16,6 +16,9 @@ public class TutorialMoveWithLamb : MonoBehaviour {
                         motherSheep.transform.position.z
                     )
                 );
+			//LevelData.Instance.Lamb.GetComponent<Lamb>().StopAllInteractions();
+				
+				
         }
         else if(Input.GetMouseButtonUp(0))
         {

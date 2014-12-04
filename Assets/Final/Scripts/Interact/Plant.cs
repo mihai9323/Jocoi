@@ -25,6 +25,7 @@ public class Plant : InteractableObject {
     public AudioSource audioSource;
     internal Spawner spawner;
     public float clickCoolDown = .5f;
+    
     private bool walkingToTarget;
     private void Awake()
     {

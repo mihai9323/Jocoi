@@ -28,6 +28,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Final/Scenes/Tutorial/TutorialScene_MoveWithLamb.unity
   - enabled: 1
+    path: Assets/Final/Scenes/Tutorial/TutorialScene_EncounterFlowers.unity
+  - enabled: 1
+    path: Assets/Final/Scenes/Tutorial/TutorialScene_FeedFlowers.unity
+  - enabled: 1
+    path: Assets/Final/Scenes/Tutorial/TutorialScene_Herd.unity
+  - enabled: 1
     path: Assets/Final/Scenes/Level1.unity
   - enabled: 1
     path: Assets/Final/Scenes/Level2.unity

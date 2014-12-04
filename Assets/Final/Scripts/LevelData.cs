@@ -19,19 +19,20 @@ public class LevelData:MonoBehaviour  {
     public float MotherSpeed;
 	public float JumpSpeedMultiplier;
     public Transform LambHead;
-
+	internal bool cuddling;
     public List<Flower> flowers;
     public List<Grass> grass;
-
+	public FlowerPannel[] flowerPannels;
 	public GameObject particle;
 
     public Camera cam;
-
+	public bool tutorialMode = false;
+	internal int loggedActions = 0;
     internal string currentAnimation = "Jump";
     void Awake()
     {
         Instance = this;
-        
+		cuddling = false;
     }
    
 

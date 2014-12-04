@@ -10,10 +10,15 @@ public class SheepInHerd : InteractableObject {
     private int inPosition;
     public float clickCoolDown = 1.5f;
     private bool walkingToTarget;
+    
     public AudioClip CuddleSound;
+    
+    
+    
 	// Use this for initialization
 	void Awake () {
         weatherStartedChanging = false;
+        
         moving = false;
         inPosition = 0;
         if (GetComponent<MoveToPosition>() != null)
@@ -57,8 +62,14 @@ public class SheepInHerd : InteractableObject {
 
     public override void StartLMB()
     {
-        StartCoroutine(callAllSheep());
-        weatherStartedChanging = false;
+		if(LevelData.Instance!=null)if(!LevelData.Instance.cuddling){
+			StartCoroutine(callAllSheep());
+	        weatherStartedChanging = false;
+	        LevelData.Instance.cuddling = true;
+        }else{
+			LevelData.Instance.cuddling = false;
+			StopAllInteractions();
+        }
     }
     private IEnumerator callAllSheep()
     {
@@ -89,7 +100,7 @@ public class SheepInHerd : InteractableObject {
         {
             sh.GetComponent<MoveToPosition>().StopMovement();
             sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
-            AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
+            if(CuddleSound!=null)AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
             yield return new WaitForSeconds(2 * Random.Range(.3f,.6f));
         }
        
@@ -122,7 +133,8 @@ public class SheepInHerd : InteractableObject {
             sh.GetComponent<MoveToPosition>().StopMovement();
             sh.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
         }
-        if(weatherStartedChanging) WeatherCycle.Instance.ChangeTheWeather();
+        if(weatherStartedChanging)if(WeatherCycle.Instance!=null) WeatherCycle.Instance.ChangeTheWeather();
+		if(TutorialWeather.Instance!=null) TutorialWeather.Instance.StopChangingWeathers();
         weatherStartedChanging = false;
     }
 
@@ -133,10 +145,11 @@ public class SheepInHerd : InteractableObject {
         //both mother and child ar in cuddling position
         if (inPosition >1)
         {
-            KillTheSheep.Instance.currentActions++;
+            if(KillTheSheep.Instance!=null)KillTheSheep.Instance.currentActions++;
             walkingToTarget = false;
-            WeatherCycle.Instance.FadeWeathers();
-            weatherStartedChanging = true;
+            if(WeatherCycle.Instance!=null)WeatherCycle.Instance.FadeWeathers();
+			if(TutorialWeather.Instance!=null) TutorialWeather.Instance.StartChangingWeathers();
+			weatherStartedChanging = true;
             Inputs.Instance.canInteract = true;
            
         }
@@ -147,13 +160,13 @@ public class SheepInHerd : InteractableObject {
     {
 
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
-        AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
+		if(CuddleSound!=null) AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
         StartCuddle();
     }
     private void LambCuddle()
     {
         LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
-        AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
+		if(CuddleSound!=null)AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
         StartCuddle();
     }
 

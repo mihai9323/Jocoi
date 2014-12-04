@@ -7439,6 +7439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canInteract: 1
   canUseLeftClick: 1
+  canUseRightClick: 1
   activeMode: 0
   defaultCursor: {fileID: 2800000, guid: 9308ccae50e231b4ea16690a0e2a3484, type: 3}
   handCursor: {fileID: 2800000, guid: 887166d3a0d61f340bd967d73d9d688f, type: 3}
@@ -19289,7 +19290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageNumber: 1
-  nextSceneNumber: 2
+  nextSceneNumber: 9
   Lamb: {fileID: 256538819}
   MotherSheep: {fileID: 924833243}
   herdTarget: {fileID: 707389135}
@@ -19311,8 +19312,10 @@ MonoBehaviour:
   LambHead: {fileID: 729026651}
   flowers: []
   grass: []
+  flowerPannels: []
   particle: {fileID: 0}
   cam: {fileID: 1799606557}
+  tutorialMode: 0
 --- !u!114 &1291452303
 MonoBehaviour:
   m_ObjectHideFlags: 0

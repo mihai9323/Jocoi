@@ -9,6 +9,7 @@ using System.Collections.Generic;
 public class PatternInfo  {
     //holds the color of the pattern
     public Color color = Color.white;
+	public int flowerPannel;
     public List<Color[]> croppedPatterns;
     public int frameNumber
     {

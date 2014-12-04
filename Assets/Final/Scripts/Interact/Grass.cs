@@ -10,6 +10,7 @@ public class Grass : Plant {
 
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().RemoveLastPattern();
         LevelData.Instance.Lamb.GetComponent<PatternAnimator>().StartAnimation();
+		
 
     }
     protected override void LambFinishEat()

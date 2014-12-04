@@ -10,7 +10,7 @@ public class Inputs : MonoBehaviour {
     public bool canInteract = true;
 
     public bool canUseLeftClick = true;
-
+	public bool canUseRightClick = true;
     public int activeMode;
     public Texture2D defaultCursor;
     public Texture2D handCursor;
@@ -72,29 +72,31 @@ public class Inputs : MonoBehaviour {
                 }
             }
             //RMB down
-            if (Input.GetMouseButtonDown(1))
-            {
-                InteractableObject clickedObject;
-                if (Physics.Raycast(ray, out hit))
-                {
-                    if (hit.collider.gameObject.GetComponent<InteractableObject>() != null)
-                    {
-                        clickedObject = hit.collider.gameObject.GetComponent<InteractableObject>();
-                        DeactivateObject(clickedObject);
-                        ActivateObject(clickedObject, 1);
-
-                    }
-
-                }
-            }
-            else
-            {
-                //RMB UP
-                if (Input.GetMouseButtonUp(1))
-                {
-                    if(_activeObject!=null)_activeObject.StopRMB();
-                    activeClick = -1;
-                }
+            if(canUseRightClick){
+				if (Input.GetMouseButtonDown(1))
+	            {
+	                InteractableObject clickedObject;
+	                if (Physics.Raycast(ray, out hit))
+	                {
+	                    if (hit.collider.gameObject.GetComponent<InteractableObject>() != null)
+	                    {
+	                        clickedObject = hit.collider.gameObject.GetComponent<InteractableObject>();
+	                        DeactivateObject(clickedObject);
+	                        ActivateObject(clickedObject, 1);
+	
+	                    }
+	
+	                }
+	            }
+	            else
+	            {
+	                //RMB UP
+	                if (Input.GetMouseButtonUp(1))
+	                {
+	                    if(_activeObject!=null)_activeObject.StopRMB();
+	                    activeClick = -1;
+	                }
+	            }
             }
         }
 

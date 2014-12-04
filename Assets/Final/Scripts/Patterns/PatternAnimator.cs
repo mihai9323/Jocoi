@@ -116,6 +116,11 @@ public class PatternAnimator : MonoBehaviour {
         if (patterns != null) if (patterns.Count > 0)
             {
                 SoundManager.Instance.instruments[patterns[i].instrumentID].FlowerSources[patterns[i].trackID].StopSound();
+				if(LevelData.Instance!=null) {
+				    //LevelData.Instance.flowerPannels[patterns[i].flowerPannel].Outline.color = LevelData.Instance.flowerPannels[patterns[i].flowerPannel].OutlineNoFlower;
+					if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patterns[i].flowerPannel].RemoveFlowerColor();
+				    
+			    }
                 patterns.RemoveAt(i);
                 
             }
