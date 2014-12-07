@@ -42,6 +42,7 @@ public class PatternInfo  {
             croppedPatterns = new List<Color[]>();
             CalculateCrops();
         }
+        
         return croppedPatterns[frameNumber];
 
        

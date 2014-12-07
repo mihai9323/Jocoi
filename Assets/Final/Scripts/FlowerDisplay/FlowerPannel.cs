@@ -9,7 +9,7 @@ public class FlowerPannel : MonoBehaviour {
 	public Color OutlineNoFlower, FlowerImageColorNoFlower;
 	public int instrumentId;
 	
-	internal int trackId;
+	public int trackId;
 	
 	private Color appliedColor;
 	
@@ -45,7 +45,7 @@ public class FlowerPannel : MonoBehaviour {
 	{
 		
 		if(trackId != -1){
-			particleSystem.SetActive(true);
+			if(particleSystem!=null)particleSystem.SetActive(true);
 			SoundManager.Instance.FadeAllDown();
 			SoundManager.Instance.instruments[instrumentId].FlowerSources[trackId].FadeSoundTo(1.0f);
 			//this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
@@ -58,8 +58,9 @@ public class FlowerPannel : MonoBehaviour {
 	}
 	public void OnMouseExit()
 	{
+		
 		if(trackId != -1){
-			particleSystem.SetActive(false);
+			if(particleSystem!=null)particleSystem.SetActive(false);
 			SoundManager.Instance.FadeAllUp();
 			if (SoundManager.Instance.instruments[instrumentId].currentTrack != trackId) SoundManager.Instance.instruments[instrumentId].FlowerSources[trackId].FadeSoundTo(0.0f);
 		//	this.gameObject.GetComponent<Animator>().SetBool("Hover", false);

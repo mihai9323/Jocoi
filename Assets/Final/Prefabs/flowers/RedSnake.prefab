@@ -557,10 +557,12 @@ MonoBehaviour:
   clickCoolDown: .5
   patternToAdd:
     color: {r: .996078432, g: .196078435, b: .192156866, a: 1}
+    flowerPannel: 2
     texture: {fileID: 2800000, guid: f93f04b335d84d24ba630a47040e0333, type: 3}
-    _frameNumber: 36
+    _frameNumber: 0
     instrumentID: 2
     trackID: 5
+  movingToPannelFeedback: {fileID: 0}
   flowerID: 22
 --- !u!114 &11400006
 MonoBehaviour:
