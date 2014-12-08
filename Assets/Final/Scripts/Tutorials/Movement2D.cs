@@ -128,6 +128,7 @@ public class Movement2D : MoveToPosition {
     {
        
         while(ct<1){
+			RotateObject();
             ct += Time.deltaTime * Speed;
             yield return new WaitForEndOfFrame();
             float x = Mathf.Lerp(minX.position.x, maxX.position.x, ct);
@@ -146,7 +147,7 @@ public class Movement2D : MoveToPosition {
         {
            
             ct += Time.deltaTime * Speed;
-            
+			RotateObject();
             float x = Mathf.Lerp(minX.position.x, maxX.position.x, ct);
             transform.position = new Vector3(
                     x,
@@ -167,7 +168,7 @@ public class Movement2D : MoveToPosition {
         {
 
             ct += Time.deltaTime * Speed;
-
+			RotateObject();
             float x = Mathf.Lerp(minX.position.x, maxX.position.x, ct);
             transform.position = new Vector3(
                     x,
@@ -182,5 +183,19 @@ public class Movement2D : MoveToPosition {
         }
         MovementCompleted();
 
+    }
+    
+    private void RotateObject(){
+    
+		Vector3 currPos = new Vector3(Mathf.Lerp(minX.position.x,maxX.position.x,ct),WorldCurve.Instance.worldCurve.Evaluate(ct) * yAmplitude + initialY,transform.position.z);
+		Vector3 nextPos = new Vector3(Mathf.Lerp(minX.position.x,maxX.position.x,ct+Time.fixedDeltaTime),WorldCurve.Instance.worldCurve.Evaluate(ct+Time.fixedDeltaTime) * yAmplitude + initialY,transform.position.z);
+		
+		Vector3 direction = (nextPos - currPos).normalized;
+		float dot = Vector3.Dot(direction,Vector3.right);
+		
+		
+		transform.rotation = Quaternion.Euler(Mathf.Sign(currPos.y - nextPos.y) * Mathf.Acos(dot)* 180/ Mathf.PI,transform.rotation.eulerAngles.y, 0);
+		
+		
     }
 }
