@@ -19,7 +19,7 @@ public class Flower : Plant {
     
     
 
-    private void Start()
+    protected void Start()
     {
        if(LevelData.Instance!=null) LevelData.Instance.flowers.Add(this);
 
@@ -80,17 +80,17 @@ public class Flower : Plant {
         
     }
 
-    private void OnMouseEnter()
+    protected virtual void OnMouseEnter()
     {
 		if(LevelData.Instance!=null)if(LevelData.Instance.tutorialMode) LevelData.Instance.loggedActions++;
-        SoundManager.Instance.FadeAllDown();
+        SoundManager.Instance.FadeAllDown(patternToAdd.instrumentID);
         SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(1.0f);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
 		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null) LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
             
            
     }
-    private void OnMouseExit()
+    protected virtual void OnMouseExit()
     {
 
         SoundManager.Instance.FadeAllUp();

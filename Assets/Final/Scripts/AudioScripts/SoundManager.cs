@@ -6,15 +6,19 @@ public class SoundManager : MonoBehaviour {
     public static SoundManager Instance;
 
     public bool PlayOnAwake;
+	[Range(.0f,1.0f)]
+	public float lowVolume = .2f;
+	[Range(.0f,1.0f)]
+	public float highVolume = 1.0f;
     public InstrumentManager[] instruments;
-
+	
     private void Update()
     {
         if (PlayOnAwake)
         {
-            foreach (Flower f in GameData.Memory)
+            foreach (FlowersInMemory f in GameData.Memory)
             {
-                instruments[f.patternToAdd.instrumentID].AddSound(f.patternToAdd.trackID);
+                instruments[f.instrumentID].AddSound(f.trackID);
             }
             PlayOnAwake = false;
         }
@@ -24,11 +28,18 @@ public class SoundManager : MonoBehaviour {
     {
         Instance = this;
     }
-    public void FadeAllDown()
+    public void FadeAllDown(int instrumentException)
     {
         foreach (InstrumentManager im in instruments)
         {
-            im.FadeDown();
+           
+        }
+        for(int i = 0; i<instruments.Length; i++){
+				if(instrumentException == i){
+				     instruments[i].FadeDown(0);
+				}else{
+				     instruments[i].FadeDown();
+				}
         }
     }
     public void FadeAllUp()
@@ -74,13 +85,19 @@ public class InstrumentManager
     public void FadeDown()
     {
 		
-        if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(.2f);
+        if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(SoundManager.Instance.lowVolume);
         
     }
+	public void FadeDown(float volume)
+	{
+		
+		if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(volume);
+		
+	}
     public void FadeUp()
     {
 		
-        if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(1.0f);
+        if (currentTrack != -1) FlowerSources[currentTrack].FadeSoundTo(SoundManager.Instance.highVolume);
     }
     public void StopSound()
     {

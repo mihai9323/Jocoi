@@ -8,45 +8,47 @@ public class FlowerPannel : MonoBehaviour {
 	public GameObject particleSystem;
 	public Color OutlineNoFlower, FlowerImageColorNoFlower;
 	public int instrumentId;
-	
+	public int pannelID = -1;
 	public int trackId;
+	public Texture2D pattern;
+	internal Color appliedColor;
 	
-	private Color appliedColor;
 	
-	private void Awake(){
-		trackId = -1;
-	}
-	private void Start(){
+	protected virtual void Start(){
+	
+		if(pannelID == -1){
+			pannelID = instrumentId;
+		}
 		particleSystem.transform.position = Camera.main.ScreenToWorldPoint(this.transform.position);
 		
 		particleSystem.transform.position += Camera.main.transform.forward *1.5f;
 		particleSystem.SetActive(false);
 	}
-	public void SetTemporaryOutline(Color color){
+	public virtual void SetTemporaryOutline(Color color){
 		appliedColor = Outline.color;
 		Outline.color = color;
 	}
-	public void ResetOutline(){
+	public virtual void ResetOutline(){
 		Outline.color = appliedColor;
 	}
 	
-	public void SetFlowerImageColor(Color color, bool keepOutline = false){
+	public virtual void SetFlowerImageColor(Color color, bool keepOutline = false){
 		FlowerImage.color = color;
 		if(!keepOutline){
 			ResetOutline();
 		}
 	}
-	public void RemoveFlowerColor(){
+	public virtual void RemoveFlowerColor(){
 		FlowerImage.color = FlowerImageColorNoFlower;
 		
 	}
 	
-	public void OnMouseEnter()
+	public virtual void OnMouseEnter()
 	{
 		
 		if(trackId != -1){
 			if(particleSystem!=null)particleSystem.SetActive(true);
-			SoundManager.Instance.FadeAllDown();
+			SoundManager.Instance.FadeAllDown(instrumentId);
 			SoundManager.Instance.instruments[instrumentId].FlowerSources[trackId].FadeSoundTo(1.0f);
 			//this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
 			if(LevelData.Instance.tutorialMode) LevelData.Instance.loggedActions++;
@@ -56,7 +58,7 @@ public class FlowerPannel : MonoBehaviour {
 		
 		
 	}
-	public void OnMouseExit()
+	public virtual void OnMouseExit()
 	{
 		
 		if(trackId != -1){
