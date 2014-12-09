@@ -5254,7 +5254,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 0
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &236330186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8462,6 +8464,10 @@ Prefab:
       propertyPath: defaultColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 7d42aff3ed643144988ed2b880d244b2, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 24a64c57ae5193546afe54c1638f1775, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d42aff3ed643144988ed2b880d244b2, type: 2}
   m_RootGameObject: {fileID: 256538819}
@@ -8673,9 +8679,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b365a2088ca2914e8a55ed6f3d83f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameterType: 0
+  parameterType: 1
   SceneName: 
-  SceneNumber: 0
+  SceneNumber: 9
   fadeInTime: .5
   fadeOutTime: .5
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
@@ -10245,7 +10251,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 1
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &400566916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10785,7 +10793,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: f2eebb13a1f93bc4f821d3d082d85159, type: 2}
+  - {fileID: 2100000, guid: 24a64c57ae5193546afe54c1638f1775, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17045,6 +17053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayOnAwake: 0
+  lowVolume: .200000003
+  highVolume: 1
   instruments:
   - FlowerSources:
     - {fileID: 2142370894}
@@ -24895,7 +24905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc47c52b9262074a97961c9619cd5f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageNumber: 1
+  stageNumber: 8
   nextSceneNumber: 9
   Lamb: {fileID: 256538819}
   MotherSheep: {fileID: 924833243}
@@ -24904,7 +24914,6 @@ MonoBehaviour:
   - {fileID: 256746313}
   - {fileID: 1010588174}
   - {fileID: 723015679}
-  HelperSheep: []
   HerdWaypoints:
   - {fileID: 696479166}
   - {fileID: 852291724}
@@ -28018,7 +28027,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 2
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &1464520332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36784,7 +36795,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 3
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &2141625091
 MonoBehaviour:
   m_ObjectHideFlags: 0

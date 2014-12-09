@@ -34,6 +34,5 @@ public class LevelData:MonoBehaviour  {
         Instance = this;
 		cuddling = false;
     }
-   
-
+	
 }

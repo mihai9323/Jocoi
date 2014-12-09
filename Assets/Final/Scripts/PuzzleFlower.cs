@@ -88,7 +88,7 @@ public class PuzzleFlower : Flower {
 	{
 		if(LevelData.Instance!=null)if(LevelData.Instance.tutorialMode) LevelData.Instance.loggedActions++;
 		SoundManager.Instance.FadeAllDown(patternToAdd.instrumentID);
-		SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(1.0f);
+		SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.highVolume);
 		activeObject.GetComponent<Animator>().SetBool("Hover", true);
 		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null) LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
 		
@@ -98,7 +98,7 @@ public class PuzzleFlower : Flower {
 	{
 		
 		SoundManager.Instance.FadeAllUp();
-		if (SoundManager.Instance.instruments[patternToAdd.instrumentID].currentTrack != patternToAdd.trackID) SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(0.0f);
+		if (SoundManager.Instance.instruments[patternToAdd.instrumentID].currentTrack != patternToAdd.trackID) SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.lowVolume);
 		activeObject.GetComponent<Animator>().SetBool("Hover", false);
 		SoundManager.Instance.instruments[patternToAdd.instrumentID].CleanUp();
 		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].ResetOutline();

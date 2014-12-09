@@ -6,7 +6,7 @@ public class FlowerPannel : MonoBehaviour {
 	public Image Outline;
 	public Image FlowerImage;
 	public GameObject particleSystem;
-	public Color OutlineNoFlower, FlowerImageColorNoFlower;
+	internal Color OutlineNoFlower, FlowerImageColorNoFlower;
 	public int instrumentId;
 	public int pannelID = -1;
 	public int trackId;
@@ -23,6 +23,9 @@ public class FlowerPannel : MonoBehaviour {
 		
 		particleSystem.transform.position += Camera.main.transform.forward *1.5f;
 		particleSystem.SetActive(false);
+		OutlineNoFlower = Outline.color;
+		FlowerImageColorNoFlower = FlowerImage.color;
+		
 	}
 	public virtual void SetTemporaryOutline(Color color){
 		appliedColor = Outline.color;
@@ -49,7 +52,7 @@ public class FlowerPannel : MonoBehaviour {
 		if(trackId != -1){
 			if(particleSystem!=null)particleSystem.SetActive(true);
 			SoundManager.Instance.FadeAllDown(instrumentId);
-			SoundManager.Instance.instruments[instrumentId].FlowerSources[trackId].FadeSoundTo(1.0f);
+			SoundManager.Instance.instruments[instrumentId].FlowerSources[trackId].FadeSoundTo(SoundManager.Instance.highVolume);
 			//this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
 			if(LevelData.Instance.tutorialMode) LevelData.Instance.loggedActions++;
 		}
@@ -64,7 +67,7 @@ public class FlowerPannel : MonoBehaviour {
 		if(trackId != -1){
 			if(particleSystem!=null)particleSystem.SetActive(false);
 			SoundManager.Instance.FadeAllUp();
-			if (SoundManager.Instance.instruments[instrumentId].currentTrack != trackId) SoundManager.Instance.instruments[instrumentId].FlowerSources[trackId].FadeSoundTo(0.0f);
+			if (SoundManager.Instance.instruments[instrumentId].currentTrack != trackId) SoundManager.Instance.instruments[instrumentId].FlowerSources[trackId].FadeSoundTo(SoundManager.Instance.lowVolume);
 		//	this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
 			SoundManager.Instance.instruments[instrumentId].CleanUp();
 		}

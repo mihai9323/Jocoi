@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LambMat
+  m_Name: WolfMat
   m_Shader: {fileID: 4800000, guid: 052a0bf7c96f7584bb68067d1b45253b, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -57,7 +57,7 @@ Material:
       data:
         first:
           name: _DefaultColor
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .176470578, g: .176470578, b: .176470578, a: 1}
       data:
         first:
           name: _P1Color
