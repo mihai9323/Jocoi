@@ -42,7 +42,7 @@ public class GoOnPath : InteractableObject {
        
         LevelData.Instance.herdTarget.canMove = false;
 
-        foreach (HelperSheep sh in LevelData.Instance.HelperSheep)
+        foreach (SheepInHerd sh in LevelData.Instance.Sheep)
         {
             sh.GetComponent<MoveToPosition>().StartMoving(
                targetPosition,
@@ -74,7 +74,7 @@ public class GoOnPath : InteractableObject {
 
             LevelData.Instance.herdTarget.canMove = false;
 
-            foreach (HelperSheep sh in LevelData.Instance.HelperSheep)
+            foreach (SheepInHerd sh in LevelData.Instance.Sheep)
             {
                 sh.GetComponent<MoveToPosition>().StartMoving(
                    targetPosition2,
@@ -115,7 +115,7 @@ public class GoOnPath : InteractableObject {
 		
 		LevelData.Instance.herdTarget.canMove = true;
 		
-		foreach (HelperSheep sh in LevelData.Instance.HelperSheep)
+		foreach (SheepInHerd sh in LevelData.Instance.Sheep)
 		{
 			sh.GetComponent<MoveToPosition>().StopMovement();
 		}

@@ -19,7 +19,7 @@ public class KillTheSheep : MonoBehaviour {
     }
     private void Update()
     {
-        if (currentActions > actionLimit && !startEnd && GameData.Memory !=null && GameData.Memory.Count>1 )
+        if (currentActions > actionLimit && !startEnd && GameData.Memory !=null && LevelData.Instance.Lamb.GetComponent<PatternAnimator>().patterns.Count>2 )
         {
             startEnd = true;
             StartCoroutine(EndStage());
@@ -34,6 +34,7 @@ public class KillTheSheep : MonoBehaviour {
             go.SetActive(true);
         }
         AudioSource.PlayClipAtPoint(thunderStorm, transform.position);
+        GameData.LoadFlowersInMemory();
         AutoFade.LoadLevel(LevelData.Instance.nextSceneNumber, fadeOut,fadeIn,Color.black);
     }
 }

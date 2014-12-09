@@ -32,7 +32,23 @@ public class PatternInfo  {
 
     public int instrumentID;
     public int trackID;
-
+    
+	public PatternInfo(Color color, Texture2D texture, int instrumentID, int trackID){
+		this.color = color;
+		this.texture = texture;
+		this.instrumentID = instrumentID;
+		this.trackID = trackID;
+		this.flowerPannel = 0;
+		this.frameNumber = 0;
+	}
+	public PatternInfo(Color color, Texture2D texture, int instrumentID, int trackID, int frameNumber, int flowerPannel){
+		this.color = color;
+		this.texture = texture;
+		this.instrumentID = instrumentID;
+		this.trackID = trackID;
+		this.flowerPannel = flowerPannel;
+		this.frameNumber = frameNumber;
+	}
     //crops only the current frame of the animation and returns it as an array of Color
     public Color[] CropFrame()
     {

@@ -88,7 +88,7 @@ public class PatternAnimator : MonoBehaviour {
                 RemovePattern(patternToRemove);
             }
         }
-        GameData.addToMemory(flower);
+        
         SoundManager.Instance.instruments[pi.instrumentID].AddSound(pi.trackID);
         if (patterns == null) patterns = new List<PatternInfo>();
         patterns.Add(pi);
@@ -101,20 +101,21 @@ public class PatternAnimator : MonoBehaviour {
     public void RemoveLastPattern()
     {
 		if(patterns!=null){
-			Debug.Log(patterns.Count + " " + GameData.Memory.Count);
+			//Debug.Log(patterns.Count + " " + GameData.Memory.Length);
         }
         if (patterns != null) if (patterns.Count > 0)
             {
-                if (GameData.Memory != null) GameData.Memory.RemoveAt(GameData.Memory.Count - 1);
+
                 RemovePattern(patterns.Count - 1);
             }
-        Debug.Log(patterns.Count + " " + GameData.Memory.Count);
+		//Debug.Log(patterns.Count + " " + GameData.Memory.Length);
     }
 
     public void RemovePattern(int i)
     {
         if (patterns != null) if (patterns.Count > 0)
             {
+			    SoundManager.Instance.instruments[patterns[i].instrumentID].currentTrack = -1;
                 SoundManager.Instance.instruments[patterns[i].instrumentID].FlowerSources[patterns[i].trackID].StopSound();
 				if(LevelData.Instance!=null) {
 				    //LevelData.Instance.flowerPannels[patterns[i].flowerPannel].Outline.color = LevelData.Instance.flowerPannels[patterns[i].flowerPannel].OutlineNoFlower;
@@ -129,7 +130,7 @@ public class PatternAnimator : MonoBehaviour {
     }
     public void RemovePattern(PatternInfo pi)
     {
-        GameData.removeFromMemory(pi);
+
         if (patterns != null) if (patterns.Count > 0) patterns.Remove(pi);
         ApplyTexture(false);
         frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];

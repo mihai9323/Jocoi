@@ -75,9 +75,11 @@ public class WeatherCycle : MonoBehaviour {
                 randSI = Random.Range(0, spawnPositions.Length);
             }
             Vector3 positionToSpawn = spawnPositions[randSI].transform.position;
-            GameObject auxGo = Instantiate(weathers[currentWeather].flowers[randIndex].gameObject, positionToSpawn, weathers[currentWeather].flowers[randIndex].gameObject.transform.rotation) as GameObject;
-            spawnPositions[randSI].occupied = true;
-            auxGo.GetComponent<Plant>().spawner = spawnPositions[randSI];
+            if(weathers[currentWeather].flowers[randIndex]!=null){
+				GameObject auxGo = Instantiate(weathers[currentWeather].flowers[randIndex].gameObject, positionToSpawn, weathers[currentWeather].flowers[randIndex].gameObject.transform.rotation) as GameObject;
+	            spawnPositions[randSI].occupied = true;
+	            auxGo.GetComponent<Plant>().spawner = spawnPositions[randSI];
+            }
         }
         for (int i = 0; i < weathers[currentWeather].grassToSpawn; i++)
         {

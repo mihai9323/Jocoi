@@ -41,8 +41,20 @@ public class GoToFPR : InteractableObject {
 
     private void GoToRiverStage()
     {
+		LoadPannels();
         Puzzle.Instance.gameObject.SetActive(false);
         //AutoFade.LoadLevel(riverLevel,.5f,1.0f,Color.black);
+        foreach(CreatePannelFromMemory pannel in LevelData.Instance.flowerPannels){
+			pannel.LoadFromMemory();
+        }
         Application.LoadLevel(riverLevel);
+    }
+    private void LoadPannels(){
+		if(LevelData.Instance!=null){
+			for(int i = 0; i<LevelData.Instance.flowerPannels.Length;i++){
+				CreatePannelFromMemory auxPanel = LevelData.Instance.flowerPannels[i] as CreatePannelFromMemory;
+				auxPanel.LoadFromMemory();
+			}
+		}
     }
 }

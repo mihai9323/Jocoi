@@ -4,6 +4,6 @@ using System.Collections;
 public class MemoryClean : MonoBehaviour {
 
 	private void Start(){
-		GameData.Memory = new System.Collections.Generic.List<Flower>();
+		GameData.Memory = new FlowersInMemory[4];
 	}
 }

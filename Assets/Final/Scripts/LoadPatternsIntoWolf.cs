@@ -7,9 +7,9 @@ public class LoadPatternsIntoWolf : MonoBehaviour {
 
     private void Start()
     {
-        foreach (Flower f in GameData.Memory)
+        foreach (FlowersInMemory f in GameData.Memory)
         {
-            pa.AddPattern(f.patternToAdd);
+            pa.AddPattern(new PatternInfo(f.color,f.pattern,f.instrumentID,f.trackID));
         }
     }
 }
