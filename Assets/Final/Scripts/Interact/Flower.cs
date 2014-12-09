@@ -46,6 +46,7 @@ public class Flower : Plant {
     protected override void OnDestroy()
     {
         if (LevelData.Instance != null) LevelData.Instance.flowers.Remove(this);
+        OnMouseExit();
         base.OnDestroy();
         
     }

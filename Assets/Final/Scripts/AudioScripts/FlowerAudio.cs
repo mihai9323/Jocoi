@@ -24,8 +24,8 @@ public class FlowerAudio : MonoBehaviour {
     }
     public void FadeSoundTo(float value)
     {
-        StopAllCoroutines();
-        StartCoroutine(FadeSound(value));
+		if(this!=null)StopAllCoroutines();
+		if(this!=null)StartCoroutine(FadeSound(value));
     }
     private IEnumerator FadeSound(float vol)
     {

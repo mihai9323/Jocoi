@@ -87,14 +87,16 @@ public class SheepInHerd : InteractableObject {
                1.5f
            );
         yield return new WaitForSeconds(.2f);
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
-                transform.position,
-                LambCuddle,
-                0,
-                "Walk",
-                LevelData.Instance.LambSpeed,
-                1.5f
-            );
+        if(LevelData.Instance.Lamb!=null){
+			LevelData.Instance.Lamb.GetComponent<MoveToPosition>().StartMoving(
+	                transform.position,
+	                LambCuddle,
+	                0,
+	                "Walk",
+	                LevelData.Instance.LambSpeed,
+	                1.5f
+	            );
+            }
         LevelData.Instance.herdTarget.canMove = false;
         foreach (SheepInHerd sh in LevelData.Instance.Sheep)
         {
@@ -126,7 +128,7 @@ public class SheepInHerd : InteractableObject {
         inPosition = 0;
         StopAllCoroutines();
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
+        if(LevelData.Instance.Lamb!=null)LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", false);
         LevelData.Instance.herdTarget.canMove = true;
         foreach (SheepInHerd sh in LevelData.Instance.Sheep)
         {
@@ -141,7 +143,7 @@ public class SheepInHerd : InteractableObject {
     private void StartCuddle()
     {
         inPosition++;
-        
+        if(LevelData.Instance.Lamb == null) inPosition++;
         //both mother and child ar in cuddling position
         if (inPosition >1)
         {
@@ -165,9 +167,12 @@ public class SheepInHerd : InteractableObject {
     }
     private void LambCuddle()
     {
-        LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
-		if(CuddleSound!=null)AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
-        StartCuddle();
+		if(LevelData.Instance.Lamb!=null){
+			LevelData.Instance.Lamb.GetComponent<MoveToPosition>().anim.SetBool("Lay", true);
+			if(CuddleSound!=null)AudioSource.PlayClipAtPoint(CuddleSound, transform.position);
+			StartCuddle();
+		}
+        
     }
 
     private void CheckInteractions()
