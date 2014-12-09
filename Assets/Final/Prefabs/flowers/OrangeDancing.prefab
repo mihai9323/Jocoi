@@ -13,6 +13,7 @@ GameObject:
   - 82: {fileID: 8200000}
   - 136: {fileID: 13600000}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: OrangeDancing
   m_TagString: Untagged
@@ -777,10 +778,10 @@ MonoBehaviour:
   giveAnimation: Give
   PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
   DieSound: {fileID: 8300000, guid: 99406005b189dfe478a1b18bc1a38f49, type: 3}
-  GrowSound: {fileID: 8300000, guid: 21a1129129d89c64cb0ad72393e51658, type: 3}
+  GrowSound: {fileID: 0}
   BeEatenSound: {fileID: 8300000, guid: 8d4b3200faa7a7e4c8070a2e4b8c782c, type: 3}
   BePickedSound: {fileID: 8300000, guid: 9a39de72277255748afe116406fb01b6, type: 3}
-  LambFedSound: {fileID: 8300000, guid: 4920fc1745c147747a6008c762d9981e, type: 3}
+  LambFedSound: {fileID: 0}
   MotherEatSound: {fileID: 8300000, guid: 8d4b3200faa7a7e4c8070a2e4b8c782c, type: 3}
   anim: {fileID: 9500000}
   audioSource: {fileID: 8200000}
@@ -788,7 +789,7 @@ MonoBehaviour:
   patternToAdd:
     color: {r: .996078432, g: .678431392, b: .145098045, a: 1}
     flowerPannel: 1
-    texture: {fileID: 2800000, guid: 80c8d0daf9abcb348b17de4db8ec4ad8, type: 3}
+    texture: {fileID: 2800000, guid: bbca671b84d0d834ba0a4ef80a9e2bb9, type: 3}
     _frameNumber: 0
     instrumentID: 1
     trackID: 3
@@ -858,6 +859,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0daeb59b412fdc24d8e433c61b727fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: .5, z: 0}
+  ParticleSystemObject: {fileID: 100000, guid: cdf0b3fe54e567042833808066849ca3, type: 2}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -867,10 +881,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: .5
-  m_Height: 1
+  m_Radius: .800000012
+  m_Height: .800000012
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: .600000024, z: 0}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

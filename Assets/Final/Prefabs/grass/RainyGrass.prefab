@@ -2330,7 +2330,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.57999992, y: 2.80999994, z: 2.28999996}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: .930000007, z: 0}
 --- !u!82 &8200000
 AudioSource:
@@ -2341,7 +2341,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2425,7 +2425,7 @@ MonoBehaviour:
   giveAnimation: Give
   PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
   DieSound: {fileID: 8300000, guid: 1369f1980ddc2894cb12d855745db9aa, type: 3}
-  GrowSound: {fileID: 8300000, guid: f3de65dae77d3b943801ed13daecab91, type: 3}
+  GrowSound: {fileID: 0}
   BeEatenSound: {fileID: 8300000, guid: 8d4b3200faa7a7e4c8070a2e4b8c782c, type: 3}
   BePickedSound: {fileID: 8300000, guid: 2e986bec85785e34082e41ef0d44569e, type: 3}
   LambFedSound: {fileID: 8300000, guid: 3b7ed361de4f2cd44995a74ce2f65915, type: 3}
