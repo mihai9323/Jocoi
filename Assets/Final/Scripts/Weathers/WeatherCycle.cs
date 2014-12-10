@@ -23,7 +23,7 @@ public class WeatherCycle : MonoBehaviour {
         }
     }
 
-    private int _currentWeather;
+    private int _currentWeather = 0;
     [Range(0.1f,10.0f)]
     public float weatherTime = 3.5f;
 
@@ -104,9 +104,12 @@ public class WeatherCycle : MonoBehaviour {
     {
         while (true)
         {
+			currentWeather++;
+			Debug.Log (weathers[currentWeather].name);
             if (FadeToWeather != null)
             {
-                FadeToWeather((++currentWeather)%weathers.Length);
+				
+                FadeToWeather((currentWeather));
             }
             yield return new WaitForSeconds(weatherTime);
 

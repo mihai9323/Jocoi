@@ -10,8 +10,9 @@ public class GoToNextSceneOnInput : GoToNextScene
 	void Update () {
         if (Input.GetKeyUp(KeyCode.Space))
         {
+			GameData.LoadFlowersInMemory();
             goToNextScene();
-          
+			
         }
 	}
 }

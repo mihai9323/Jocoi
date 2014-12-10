@@ -16,10 +16,12 @@ public class SoundManager : MonoBehaviour {
     {
         if (PlayOnAwake)
         {
-            foreach (FlowersInMemory f in GameData.Memory)
-            {
-                instruments[f.instrumentID].AddSound(f.trackID);
-            }
+			if(GameData.Memory != null)
+	            foreach (FlowersInMemory f in GameData.Memory)
+	            {
+	                if(f.trackID!=-1)instruments[f.instrumentID].AddSound(f.trackID);
+			    }
+            
             PlayOnAwake = false;
         }
     }
@@ -30,10 +32,7 @@ public class SoundManager : MonoBehaviour {
     }
     public void FadeAllDown(int instrumentException)
     {
-        foreach (InstrumentManager im in instruments)
-        {
-           
-        }
+       
         for(int i = 0; i<instruments.Length; i++){
 				if(instrumentException == i){
 				     instruments[i].FadeDown(0);
@@ -78,8 +77,11 @@ public class InstrumentManager
 		
         if (currentTrack != -1) FlowerSources[currentTrack].StopSound();
         currentTrack = i;
-        FlowerSources[i].PlaySound();
-        isPlaying = true;
+        
+        if(i!=-1){
+	        FlowerSources[i].PlaySound();
+			isPlaying = true;
+			}
 		CleanUp();
     }
     public void FadeDown()
@@ -110,7 +112,7 @@ public class InstrumentManager
 		if(FlowerSources!=null){
 			for(int i = 0; i<FlowerSources.Length; i++){
 				if(i != currentTrack){
-					FlowerSources[i].audioSource.volume = 0;
+					if(FlowerSources!= null) if(FlowerSources[i] != null) if(FlowerSources[i].audioSource!=null)FlowerSources[i].audioSource.volume = 0;
 				}
 			}
 		}

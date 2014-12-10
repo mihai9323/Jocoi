@@ -18,7 +18,7 @@ public class GameData  {
 					Memory[i] = new FlowersInMemory(
 						LevelData.Instance.flowerPannels[i].instrumentId,
 						LevelData.Instance.flowerPannels[i].trackId,
-						LevelData.Instance.flowerPannels[i].appliedColor,
+						LevelData.Instance.flowerPannels[i].FlowerImage.color,
 						LevelData.Instance.flowerPannels[i].pattern
 						);
 				}

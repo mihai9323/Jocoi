@@ -23,7 +23,7 @@ public class BackButtonM : MonoBehaviour {
         
         if (works)
         {
-            
+            Puzzle.Instance.gameObject.SetActive(true);
             AutoFade.LoadLevel(levelToStart, 1.0f, 1.0f, Color.black);
         }
     }
