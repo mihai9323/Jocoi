@@ -333,8 +333,8 @@ GameObject:
   - 114: {fileID: 11400010}
   - 82: {fileID: 8200000}
   - 136: {fileID: 13600000}
-  - 114: {fileID: 11400008}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: TutorialDancing
   m_TagString: Untagged
@@ -615,8 +615,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0811367035, y: -.919999123, z: .483304888}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.94999981, y: -.129999995, z: .479999989}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400040}
   - {fileID: 400038}
@@ -766,8 +766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 0, z: 0}
-  ParticleSystemObject: {fileID: 0}
---- !u!114 &11400008
+  ParticleSystemObject: {fileID: 100000, guid: c8ce140fc94a5194fb7ff859514468d0, type: 2}
+--- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -775,9 +775,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 946c6e131460c504fb90b073939a3516, type: 3}
+  m_Script: {fileID: 11500000, guid: 5278b2ec38bf03e47b9f2f0a8a494907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RotateToCurve: 1
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -189,8 +189,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.4220448, y: .17429924, z: -2.46115112}
+  m_LocalRotation: {x: 0, y: .708123922, z: 0, w: -.706088245}
+  m_LocalPosition: {x: 3.09620452, y: -2.05390072, z: 21.6758518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -267,7 +267,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 489d76d59e13cc74da9a4d2a4ec8e877, type: 3}
   m_PlayOnAwake: 1
@@ -327,7 +327,7 @@ AudioSource:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 82784ec8377e1db43b7d253223be7017, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 69c9e43a8e01d3e40847efd968401261, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -385,7 +385,7 @@ AudioSource:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 8767b6737ae7e314b8fc0b3450591ddc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9bdd5dd444cbe91448b5e0cc30b61b55, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -443,7 +443,7 @@ AudioSource:
   m_GameObject: {fileID: 100004}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7371103ae4ef3014da3f526b4db9088b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 52b76c98d15fe674fbfebb40ef3ba66b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -501,7 +501,7 @@ AudioSource:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: e189652dc3c849e4ca4b4e3f1abd1564, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f11e4b812d681ea48bafaabbd0633119, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -575,6 +575,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayOnAwake: 0
+  lowVolume: .200000003
+  highVolume: 1
   instruments:
   - FlowerSources:
     - {fileID: 11400000}

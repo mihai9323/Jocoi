@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5278b2ec38bf03e47b9f2f0a8a494907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RotateToCurve: 1
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -347,7 +348,7 @@ MonoBehaviour:
   giveAnimation: Give
   PlantInMouth: {fileID: 400000, guid: 38c92b98cd9bdf34091757bfaa23e49d, type: 2}
   DieSound: {fileID: 8300000, guid: 99406005b189dfe478a1b18bc1a38f49, type: 3}
-  GrowSound: {fileID: 8300000, guid: 21a1129129d89c64cb0ad72393e51658, type: 3}
+  GrowSound: {fileID: 0}
   BeEatenSound: {fileID: 8300000, guid: 8d4b3200faa7a7e4c8070a2e4b8c782c, type: 3}
   BePickedSound: {fileID: 8300000, guid: 9a39de72277255748afe116406fb01b6, type: 3}
   LambFedSound: {fileID: 8300000, guid: 4920fc1745c147747a6008c762d9981e, type: 3}
@@ -357,10 +358,12 @@ MonoBehaviour:
   clickCoolDown: .5
   patternToAdd:
     color: {r: .145098045, g: .149019614, b: .145098045, a: 1}
+    flowerPannel: 0
     texture: {fileID: 2800000, guid: 5afae4568c2b46241b871c427e6bd2e7, type: 3}
     _frameNumber: 0
     instrumentID: 0
     trackID: 0
+  movingToPannelFeedback: {fileID: 0}
   flowerID: 0
 --- !u!136 &13600000
 CapsuleCollider:

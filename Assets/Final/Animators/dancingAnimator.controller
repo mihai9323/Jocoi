@@ -47,7 +47,7 @@ Transition:
   m_Name: 
   m_SrcState: {fileID: 110200000}
   m_DstState: {fileID: 110240219}
-  m_TransitionDuration: .492499352
+  m_TransitionDuration: .0955030024
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
@@ -174,7 +174,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: dHover
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 9170374e5eccde6478adbe1348885bd0, type: 3}
@@ -224,12 +224,12 @@ StateMachine:
       - {fileID: 110100000}
       - {fileID: 110188490}
     data:
-      first: {fileID: 110239648}
-      second: []
-    data:
       first: {fileID: 110240219}
       second:
       - {fileID: 110107916}
+    data:
+      first: {fileID: 110239648}
+      second: []
     data:
       first: {fileID: 110268419}
       second:

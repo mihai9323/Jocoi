@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .360784322}
   m_Sprite: {fileID: 21300000, guid: 3412065002fab42468bdf64f5d0c2d55, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -5254,7 +5254,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 0
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &236330186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10245,7 +10247,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 1
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &400566916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10699,7 +10703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .360784322}
   m_Sprite: {fileID: 21300000, guid: 3412065002fab42468bdf64f5d0c2d55, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -16091,7 +16095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .360784322}
   m_Sprite: {fileID: 21300000, guid: 3412065002fab42468bdf64f5d0c2d55, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -17045,6 +17049,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayOnAwake: 0
+  lowVolume: .200000003
+  highVolume: 1
   instruments:
   - FlowerSources:
     - {fileID: 2142370894}
@@ -18042,7 +18048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Sprite: {fileID: 21300000, guid: 4a79fa83ee6c6dd4b8b2ffd214276729, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -24531,7 +24537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .360784322}
   m_Sprite: {fileID: 21300000, guid: 3412065002fab42468bdf64f5d0c2d55, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -24904,7 +24910,6 @@ MonoBehaviour:
   - {fileID: 256746313}
   - {fileID: 1010588174}
   - {fileID: 723015679}
-  HelperSheep: []
   HerdWaypoints:
   - {fileID: 696479166}
   - {fileID: 852291724}
@@ -28018,7 +28023,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 2
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &1464520332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28779,7 +28786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Sprite: {fileID: 21300000, guid: 4a79fa83ee6c6dd4b8b2ffd214276729, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -29137,7 +29144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Sprite: {fileID: 21300000, guid: 4a79fa83ee6c6dd4b8b2ffd214276729, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -30314,7 +30321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Sprite: {fileID: 21300000, guid: 4a79fa83ee6c6dd4b8b2ffd214276729, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
@@ -32363,6 +32370,66 @@ Prefab:
     - target: {fileID: 400014, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400052, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400052, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400052, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400052, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400050, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400054, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400048, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400038, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: .360784322
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400040, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: .360784322
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400044, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: .360784322
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400042, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
+      propertyPath: m_Color.a
+      value: .360784322
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cd6d33d4a05de54894a11b41f0adc7c, type: 2}
@@ -36784,7 +36851,9 @@ MonoBehaviour:
   OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
   FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 3
+  pannelID: -1
   trackId: -1
+  pattern: {fileID: 0}
 --- !u!114 &2141625091
 MonoBehaviour:
   m_ObjectHideFlags: 0
