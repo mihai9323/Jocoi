@@ -7793,7 +7793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f739d002627ac3a40b81f7860c665fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TickleSound: {fileID: 8300000, guid: 4fba92ada63797c44a6987b3e6f0259d, type: 3}
+  TickleSound: {fileID: 0}
   timeBetweenSounds: 2
   variance: 3
 --- !u!114 &256538829
@@ -8453,7 +8453,7 @@ Prefab:
     - target: {fileID: 11400008, guid: 7d42aff3ed643144988ed2b880d244b2, type: 2}
       propertyPath: TickleSound
       value: 
-      objectReference: {fileID: 8300000, guid: 4fba92ada63797c44a6987b3e6f0259d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 7d42aff3ed643144988ed2b880d244b2, type: 2}
       propertyPath: recalculate
       value: 0
@@ -14146,6 +14146,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 69c9e43a8e01d3e40847efd968401261, type: 3}
+    - target: {fileID: 11400008, guid: bc84b94341e1b024f8a56d8a106e5d0d, type: 2}
+      propertyPath: lowVolume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200064, guid: bc84b94341e1b024f8a56d8a106e5d0d, type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc84b94341e1b024f8a56d8a106e5d0d, type: 2}
   m_RootGameObject: {fileID: 830173037}
@@ -14612,7 +14620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb7ac9e2cb17f944a297d82074d5da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HowlSound: {fileID: 8300000, guid: 89ca5a180ab16af40a75d6f15af545a3, type: 3}
+  HowlSound: {fileID: 0}
   timeBetweenSounds: 3
   variance: 2
 --- !u!23 &664706993
@@ -15337,8 +15345,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5fc2864e47212d946833a84e9a7ab469, type: 2}
     grass:
     - {fileID: 11400000, guid: 9215f04a36e63774693a87ab29c66741, type: 2}
-    flowersToSpawn: 12
-    grassToSpawn: 12
+    flowersToSpawn: 8
+    grassToSpawn: 8
   - name: Rainy
     ObjectsToEnable:
     - {fileID: 2115029845}
@@ -15353,8 +15361,8 @@ MonoBehaviour:
     - {fileID: 11400004, guid: 4f5f57ce5e64fad4f971d08e81a71538, type: 2}
     grass:
     - {fileID: 11400000, guid: b15a4105c8b9a544e8e62037e2c2c5dd, type: 2}
-    flowersToSpawn: 12
-    grassToSpawn: 12
+    flowersToSpawn: 8
+    grassToSpawn: 8
   - name: Snowy
     ObjectsToEnable:
     - {fileID: 83894899}
@@ -15369,8 +15377,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b1a1865c31e00d949b35fb2c5c9cddda, type: 2}
     grass:
     - {fileID: 11400000, guid: f52fce96706a37b41bee418946cc7743, type: 2}
-    flowersToSpawn: 12
-    grassToSpawn: 12
+    flowersToSpawn: 8
+    grassToSpawn: 8
   - name: Foggy
     ObjectsToEnable:
     - {fileID: 208072952}
@@ -15385,8 +15393,8 @@ MonoBehaviour:
     - {fileID: 11400004, guid: 7cdf67b7f6023364a92682ac2684bbde, type: 2}
     grass:
     - {fileID: 11400000, guid: 2aa38ac1bb41a554ca2492b9347dd0be, type: 2}
-    flowersToSpawn: 12
-    grassToSpawn: 12
+    flowersToSpawn: 8
+    grassToSpawn: 8
   weatherTime: 2
   weatherTransitionSpeed: .100000001
 --- !u!1 &710971508
@@ -16939,7 +16947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayOnAwake: 0
-  lowVolume: .200000003
+  lowVolume: 0
   highVolume: 1
   instruments:
   - FlowerSources:
@@ -16988,7 +16996,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -18978,6 +18986,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}
+      propertyPath: HowlSound
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}
   m_RootGameObject: {fileID: 664706991}
@@ -20776,6 +20788,10 @@ Prefab:
     - target: {fileID: 400000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}
       propertyPath: m_LocalScale.x
       value: 28.8469467
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}
+      propertyPath: HowlSound
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}
@@ -29884,7 +29900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb7ac9e2cb17f944a297d82074d5da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HowlSound: {fileID: 8300000, guid: 89ca5a180ab16af40a75d6f15af545a3, type: 3}
+  HowlSound: {fileID: 0}
   timeBetweenSounds: 3
   variance: 2
 --- !u!23 &1664127669
@@ -30786,7 +30802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb7ac9e2cb17f944a297d82074d5da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HowlSound: {fileID: 8300000, guid: 89ca5a180ab16af40a75d6f15af545a3, type: 3}
+  HowlSound: {fileID: 0}
   timeBetweenSounds: 3
   variance: 2
 --- !u!23 &1751031751
@@ -33023,6 +33039,10 @@ Prefab:
     - target: {fileID: 400000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}
+      propertyPath: HowlSound
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 748d7a1ef9f15134cbd6dd56cff38364, type: 2}

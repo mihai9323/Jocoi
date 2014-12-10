@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayOnAwake: 0
-  lowVolume: .200000003
+  lowVolume: 0
   highVolume: 1
   instruments:
   - FlowerSources:
