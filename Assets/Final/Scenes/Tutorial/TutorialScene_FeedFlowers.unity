@@ -297,6 +297,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: d38d5a30cd7b1fb42aca42925d8b07f8, type: 2}
+      propertyPath: offSet.x
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d38d5a30cd7b1fb42aca42925d8b07f8, type: 2}
   m_RootGameObject: {fileID: 488734928}
@@ -796,7 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayOnAwake: 0
-  lowVolume: .200000003
+  lowVolume: 0
   highVolume: 1
   instruments:
   - FlowerSources:
@@ -1896,8 +1900,6 @@ MonoBehaviour:
   Outline: {fileID: 306196720}
   FlowerImage: {fileID: 1068377295}
   particleSystem: {fileID: 1570213273}
-  OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
-  FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 2
   pannelID: -1
   trackId: 0
@@ -2193,7 +2195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds: []
   anim: {fileID: 218351642}
-  offSet: {x: 0, y: 0, z: 0}
+  offSet: {x: -1, y: 0, z: 0}
   Speed: .200000003
   walkingAnimation: Jump
 --- !u!82 &488734931
@@ -5858,8 +5860,6 @@ MonoBehaviour:
   Outline: {fileID: 1982746108}
   FlowerImage: {fileID: 368739653}
   particleSystem: {fileID: 631053396}
-  OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
-  FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 0
   pannelID: -1
   trackId: 0
@@ -6168,8 +6168,6 @@ MonoBehaviour:
   Outline: {fileID: 1974950482}
   FlowerImage: {fileID: 1726206244}
   particleSystem: {fileID: 291748811}
-  OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
-  FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 1
   pannelID: -1
   trackId: 0
@@ -7723,8 +7721,6 @@ MonoBehaviour:
   Outline: {fileID: 1244691526}
   FlowerImage: {fileID: 1543956009}
   particleSystem: {fileID: 1698183315}
-  OutlineNoFlower: {r: .676470578, g: .656574368, b: .656574368, a: 0}
-  FlowerImageColorNoFlower: {r: .544117689, g: .544117689, b: .544117689, a: 0}
   instrumentId: 3
   pannelID: -1
   trackId: 0

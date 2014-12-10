@@ -19,7 +19,7 @@ public class Tickle : MonoBehaviour {
     {
         if (tickled && time + timeBetweenSounds < Time.time)
         {
-            AudioSource.PlayClipAtPoint(TickleSound, transform.position);
+            if(TickleSound!=null)AudioSource.PlayClipAtPoint(TickleSound, transform.position);
             time = Time.time+ Random.Range(0,variance);
         }
     }

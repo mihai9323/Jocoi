@@ -84,21 +84,21 @@ public class Flower : Plant {
     protected virtual void OnMouseEnter()
     {
 		if(LevelData.Instance!=null)if(LevelData.Instance.tutorialMode) LevelData.Instance.loggedActions++;
-        SoundManager.Instance.FadeAllDown(patternToAdd.instrumentID);
-        SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.highVolume);
+		if(SoundManager.Instance!=null)SoundManager.Instance.FadeAllDown(patternToAdd.instrumentID);
+		if(SoundManager.Instance!=null)SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.highVolume);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", true);
-		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null) LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
+		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null)if(patternToAdd.flowerPannel<LevelData.Instance.flowerPannels.Length&& patternToAdd.flowerPannel>=0)if(LevelData.Instance.flowerPannels[patternToAdd.flowerPannel]!=null) LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
             
            
     }
     protected virtual void OnMouseExit()
     {
 
-        SoundManager.Instance.FadeAllUp();
-        if (SoundManager.Instance.instruments[patternToAdd.instrumentID].currentTrack != patternToAdd.trackID) SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.lowVolume);
+		if(SoundManager.Instance!=null)SoundManager.Instance.FadeAllUp();
+        if(SoundManager.Instance!=null)if (SoundManager.Instance.instruments[patternToAdd.instrumentID].currentTrack != patternToAdd.trackID) SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.lowVolume);
         this.gameObject.GetComponent<Animator>().SetBool("Hover", false);
-		SoundManager.Instance.instruments[patternToAdd.instrumentID].CleanUp();
-		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].ResetOutline();
+		if(SoundManager.Instance!=null)SoundManager.Instance.instruments[patternToAdd.instrumentID].CleanUp();
+		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null)if(LevelData.Instance.flowerPannels[patternToAdd.flowerPannel]!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].ResetOutline();
     }
 
 }

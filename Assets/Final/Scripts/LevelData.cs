@@ -42,7 +42,7 @@ public class LevelData:MonoBehaviour  {
 		}
     }
 	void DetectPanels(){
-		if(flowerPannels == null){
+		if(flowerPannels == null || flowerPannels.Length != 4){
 			flowerPannels = new FlowerPannel[4];
 		}
 		if(flowerPannels[0] == null){

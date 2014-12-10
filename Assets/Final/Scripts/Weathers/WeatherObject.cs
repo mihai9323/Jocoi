@@ -17,7 +17,9 @@ public class WeatherObject : MonoBehaviour {
         }
        
     }
-
+	public void OnDestroy(){
+		WeatherCycle.Instance.FadeToWeather -=FadeTo;
+	}
     public void FadeTo(int c){
         StopAllCoroutines();
         nextWeather = c;
@@ -34,7 +36,8 @@ public class WeatherObject : MonoBehaviour {
         while (ct < .9f)
         {
             ct += (Time.fixedDeltaTime* WeatherCycle.Instance.weatherTransitionSpeed);
-            renderer.materials[index].color = Color.Lerp(renderer.materials[index].color,WeatherColors[c].materialColor[index],ct);
+			
+            if(index<renderer.materials.Length && index>-1 && c<WeatherColors.Length && c>-1) renderer.materials[index].color = Color.Lerp(renderer.materials[index].color,WeatherColors[c].materialColor[index],ct);
             yield return new WaitForFixedUpdate();
         }
         renderer.materials[index].color = WeatherColors[nextWeather].materialColor[index];

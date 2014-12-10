@@ -19,7 +19,7 @@ public class WolfHowl : MonoBehaviour {
     {
         if (howled && time + timeBetweenSounds < Time.time)
         {
-            AudioSource.PlayClipAtPoint(HowlSound, transform.position);
+            if(HowlSound!=null)AudioSource.PlayClipAtPoint(HowlSound, transform.position);
             time = Time.time+ Random.Range(0,variance);
         }
     }
