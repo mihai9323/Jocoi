@@ -94,7 +94,7 @@ public class PuzzleFlower : Flower {
 		else if(grassState == GrassState.LowGrass) grassState = GrassState.Flower;
 		else if(grassState == GrassState.Flower){
 			if(this.patternToAdd.trackID == LevelData.Instance.flowerPannels[this.patternToAdd.flowerPannel].trackId){
-				LevelData.Instance.flowerPannels[this.patternToAdd.instrumentID].SetFlowerImageColor(this.patternToAdd.color);
+				LevelData.Instance.flowerPannels[this.patternToAdd.instrumentID].SetFlowerImageColor(this.patternToAdd.color,this.patternToAdd.texture);
 				Puzzle.Instance.CheckCompleted();
 				
 			}else{
@@ -102,7 +102,7 @@ public class PuzzleFlower : Flower {
 				
 				
 				foreach(CreatePannelFromMemory cpfm in LevelData.Instance.flowerPannels){
-					cpfm.SetFlowerImageColor(cpfm.FlowerImageColorNoFlower);
+					cpfm.SetFlowerImageColor(cpfm.FlowerImageColorNoFlower,cpfm.pattern);
 				}
 			}
 			Destroy (highGrass);

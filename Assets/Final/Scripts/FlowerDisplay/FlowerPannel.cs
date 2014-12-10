@@ -37,8 +37,9 @@ public class FlowerPannel : MonoBehaviour {
 		if(Outline!=null)Outline.color = appliedColor;
 	}
 	
-	public virtual void SetFlowerImageColor(Color color, bool keepOutline = false){
+	public virtual void SetFlowerImageColor(Color color,Texture2D pattern, bool keepOutline = false){
 		FlowerImage.color = color;
+		this.pattern = pattern;
 		if(!keepOutline){
 			ResetOutline();
 		}

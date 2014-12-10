@@ -33,7 +33,8 @@ public class PatternAnimator : MonoBehaviour {
     private void Start()
     {
         
-        frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
+       // frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
+       AttachPaternsFromList();
         StartAnimation();
         StopAnimation();
         //StartCoroutine("AnimateTextures");
@@ -43,9 +44,23 @@ public class PatternAnimator : MonoBehaviour {
         if (recalculate)
         {
             recalculate = false;
-            frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
+            //frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
+			AttachPaternsFromList();
         }
     }
+    private void AttachPaternsFromList(){
+		if(patterns!=null){
+			foreach(PatternInfo pi in patterns){
+				switch(pi.instrumentID){
+					case 0: body.material.SetTexture("_Pattern1",pi.texture);  body.material.SetTextureScale("_Pattern1", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P1Color",pi.color); break;
+					case 1: body.material.SetTexture("_Pattern2",pi.texture); body.material.SetTextureScale("_Pattern2", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P2Color",pi.color);break;
+					case 2: body.material.SetTexture("_Pattern3",pi.texture); body.material.SetTextureScale("_Pattern3", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P3Color",pi.color);break;
+				    case 3: body.material.SetTexture("_Pattern4",pi.texture); body.material.SetTextureScale("_Pattern4", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P4Color",pi.color);break;
+				}
+			}
+		}
+    }
+    
     //used to AddPatterns
 	public void AddPattern(PatternInfo pi){
 

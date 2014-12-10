@@ -69,7 +69,7 @@ public class Flower : Plant {
         if(KillTheSheep.Instance!=null)KillTheSheep.Instance.currentActions++;
         if(LevelData.Instance!=null) {
 		//	LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
-			if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetFlowerImageColor(this.patternToAdd.color);
+			if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetFlowerImageColor(this.patternToAdd.color,this.patternToAdd.texture);
 			if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].trackId = this.patternToAdd.trackID;
 		}
     }

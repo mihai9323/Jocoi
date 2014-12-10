@@ -11,5 +11,6 @@ public class LoadPatternsIntoWolf : MonoBehaviour {
         {
             pa.AddPattern(new PatternInfo(f.color,f.pattern,f.instrumentID,f.trackID));
         }
+        pa.StartAnimation();
     }
 }
