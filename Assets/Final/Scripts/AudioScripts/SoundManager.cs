@@ -112,7 +112,7 @@ public class InstrumentManager
 		if(FlowerSources!=null){
 			for(int i = 0; i<FlowerSources.Length; i++){
 				if(i != currentTrack){
-					FlowerSources[i].audioSource.volume = 0;
+					if(FlowerSources!= null) if(FlowerSources[i] != null) if(FlowerSources[i].audioSource!=null)FlowerSources[i].audioSource.volume = 0;
 				}
 			}
 		}

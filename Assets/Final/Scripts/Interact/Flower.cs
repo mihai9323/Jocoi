@@ -19,7 +19,7 @@ public class Flower : Plant {
     
     
 
-    protected void Start()
+    protected virtual void Start()
     {
        if(LevelData.Instance!=null) LevelData.Instance.flowers.Add(this);
 

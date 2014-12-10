@@ -15,18 +15,18 @@ public class PuzzleFlower : Flower {
 			if(value != _grassState){
 				_grassState = value;
 				
-				HighGrass.SetActive(false);
-				TallGrass.SetActive(false);
-				MediumGrass.SetActive(false);
-				LowGrass.SetActive(false);
-				Flower.SetActive(false);
+				highGrass.SetActive(false);
+				tallGrass.SetActive(false);
+				mediumGrass.SetActive(false);
+				lowGrass.SetActive(false);
+			
 				
 				switch(value){
-					case GrassState.HighGrass: HighGrass.SetActive(true); activeObject = HighGrass; break;
-					case GrassState.TallGrass: TallGrass.SetActive(true); activeObject = TallGrass; break;
-					case GrassState.MediumGrass: MediumGrass.SetActive(true); activeObject = MediumGrass; break;
-					case GrassState.LowGrass: LowGrass.SetActive(true); activeObject = LowGrass; break;
-				    case GrassState.Flower: Flower.SetActive(true); activeObject = Flower; break;
+					case GrassState.HighGrass: highGrass.SetActive(true);break;
+					case GrassState.TallGrass: tallGrass.SetActive(true);  break;
+					case GrassState.MediumGrass: mediumGrass.SetActive(true);  break;
+					case GrassState.LowGrass: lowGrass.SetActive(true);  break;
+				    case GrassState.Flower:   break;
 				}
 			}
 		}
@@ -36,15 +36,35 @@ public class PuzzleFlower : Flower {
 	}
 	private GrassState _grassState;
 	
-	public GameObject HighGrass,TallGrass,MediumGrass,LowGrass,Flower;
+	private GameObject highGrass,tallGrass,mediumGrass,lowGrass;
+	
+	public GameObject HighGrass, TallGrass, MediumGrass, LowGrass;
+	
 	private GameObject activeObject;
 	
 	
 	
+	protected override void Start ()
+	{
+		highGrass   = Instantiate(HighGrass,transform.position,HighGrass.transform.rotation) as GameObject;
+		tallGrass   = Instantiate(TallGrass,transform.position,TallGrass.transform.rotation) as GameObject;
+		mediumGrass = Instantiate(MediumGrass,transform.position,MediumGrass.transform.rotation) as GameObject;
+		lowGrass    = Instantiate(LowGrass,transform.position,LowGrass.transform.rotation) as GameObject;
+		
+		highGrass.SetActive(true);
+		tallGrass.SetActive(false);
+		mediumGrass.SetActive(false);
+		lowGrass.SetActive(false);
+		
+		
+	}
 	
 	
 	
-	
+	public override void StartLMB()
+	{
+		
+	}
 	
 	
 	
@@ -73,14 +93,26 @@ public class PuzzleFlower : Flower {
 		else if(grassState == GrassState.MediumGrass) grassState = GrassState.LowGrass;
 		else if(grassState == GrassState.LowGrass) grassState = GrassState.Flower;
 		else if(grassState == GrassState.Flower){
-			if(this.patternToAdd.trackID == LevelData.Instance.flowerPannels[this.patternToAdd.instrumentID].trackId){
+			if(this.patternToAdd.trackID == LevelData.Instance.flowerPannels[this.patternToAdd.flowerPannel].trackId){
 				LevelData.Instance.flowerPannels[this.patternToAdd.instrumentID].SetFlowerImageColor(this.patternToAdd.color);
 				Puzzle.Instance.CheckCompleted();
+				
 			}else{
-				this.grassState = GrassState.HighGrass;
+				
+				
+				
+				foreach(CreatePannelFromMemory cpfm in LevelData.Instance.flowerPannels){
+					cpfm.SetFlowerImageColor(cpfm.FlowerImageColorNoFlower);
+				}
 			}
+			Destroy (highGrass);
+			Destroy (tallGrass);
+			Destroy (mediumGrass);
+			Destroy (lowGrass);
+			Destroy(this.gameObject, 0.1f);
 		}
-		Destroy(this.gameObject, 0.1f);
+		
+		
 	}
 	
 	
@@ -89,8 +121,8 @@ public class PuzzleFlower : Flower {
 		if(LevelData.Instance!=null)if(LevelData.Instance.tutorialMode) LevelData.Instance.loggedActions++;
 		SoundManager.Instance.FadeAllDown(patternToAdd.instrumentID);
 		SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.highVolume);
-		activeObject.GetComponent<Animator>().SetBool("Hover", true);
-		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null) LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
+		//activeObject.GetComponent<Animator>().SetBool("Hover", true);
+		//if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null) LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].SetTemporaryOutline(this.patternToAdd.color);
 		
 		
 	}
@@ -99,8 +131,8 @@ public class PuzzleFlower : Flower {
 		
 		SoundManager.Instance.FadeAllUp();
 		if (SoundManager.Instance.instruments[patternToAdd.instrumentID].currentTrack != patternToAdd.trackID) SoundManager.Instance.instruments[patternToAdd.instrumentID].FlowerSources[patternToAdd.trackID].FadeSoundTo(SoundManager.Instance.lowVolume);
-		activeObject.GetComponent<Animator>().SetBool("Hover", false);
+		//activeObject.GetComponent<Animator>().SetBool("Hover", false);
 		SoundManager.Instance.instruments[patternToAdd.instrumentID].CleanUp();
-		if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].ResetOutline();
+		//if(LevelData.Instance!=null)if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patternToAdd.flowerPannel].ResetOutline();
 	}
 }

@@ -19,12 +19,14 @@ public class FlowerPannel : MonoBehaviour {
 		if(pannelID == -1){
 			pannelID = instrumentId;
 		}
-		particleSystem.transform.position = Camera.main.ScreenToWorldPoint(this.transform.position);
-		
-		particleSystem.transform.position += Camera.main.transform.forward *1.5f;
-		particleSystem.SetActive(false);
-		OutlineNoFlower = Outline.color;
-		FlowerImageColorNoFlower = FlowerImage.color;
+		if(particleSystem != null){
+			particleSystem.transform.position = Camera.main.ScreenToWorldPoint(this.transform.position);
+			
+			particleSystem.transform.position += Camera.main.transform.forward *1.5f;
+			particleSystem.SetActive(false);
+			OutlineNoFlower = Outline.color;
+			FlowerImageColorNoFlower = FlowerImage.color;
+		}
 		
 	}
 	public virtual void SetTemporaryOutline(Color color){
@@ -32,7 +34,7 @@ public class FlowerPannel : MonoBehaviour {
 		Outline.color = color;
 	}
 	public virtual void ResetOutline(){
-		Outline.color = appliedColor;
+		if(Outline!=null)Outline.color = appliedColor;
 	}
 	
 	public virtual void SetFlowerImageColor(Color color, bool keepOutline = false){
