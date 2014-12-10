@@ -133,9 +133,11 @@ public class Plant : InteractableObject {
     {
         if (DieSound != null)
         {
-            audioSource.clip = DieSound;
-            audioSource.volume = 1f;
-            audioSource.Play();
+            if(audioSource!=null){
+	            audioSource.clip = DieSound;
+	            audioSource.volume = 1f;
+				audioSource.Play();
+            }
         }
         if(anim!=null)anim.SetBool("Die", true);
         Invoke("FinishedDying", 1.0f);

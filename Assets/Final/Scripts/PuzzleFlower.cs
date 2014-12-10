@@ -46,6 +46,7 @@ public class PuzzleFlower : Flower {
 	
 	protected override void Start ()
 	{
+		base.Start();
 		highGrass   = Instantiate(HighGrass,transform.position,HighGrass.transform.rotation) as GameObject;
 		tallGrass   = Instantiate(TallGrass,transform.position,TallGrass.transform.rotation) as GameObject;
 		mediumGrass = Instantiate(MediumGrass,transform.position,MediumGrass.transform.rotation) as GameObject;
@@ -59,6 +60,13 @@ public class PuzzleFlower : Flower {
 		
 	}
 	
+	protected override void OnDestroy(){
+		base.OnDestroy();
+		if(highGrass!=null)Destroy (highGrass);
+		if(tallGrass!=null)Destroy (tallGrass);
+		if(mediumGrass!=null)Destroy (mediumGrass);
+		if(lowGrass!=null)Destroy (lowGrass);
+	}
 	
 	
 	public override void StartLMB()
