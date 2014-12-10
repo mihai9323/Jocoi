@@ -142,8 +142,9 @@ public class SheepInHerd : InteractableObject {
 
     private void StartCuddle()
     {
-        inPosition++;
-        if(LevelData.Instance.Lamb == null) inPosition++;
+        
+        if(LevelData.Instance.Lamb == null) inPosition=2;
+        else inPosition ++;
         //both mother and child ar in cuddling position
         if (inPosition >1)
         {
