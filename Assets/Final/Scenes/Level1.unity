@@ -15431,7 +15431,7 @@ MonoBehaviour:
     grass:
     - {fileID: 11400000, guid: 9215f04a36e63774693a87ab29c66741, type: 2}
     flowersToSpawn: 8
-    grassToSpawn: 8
+    grassToSpawn: 5
   - name: Rainy
     ObjectsToEnable:
     - {fileID: 2115029845}
@@ -15447,7 +15447,7 @@ MonoBehaviour:
     grass:
     - {fileID: 11400000, guid: b15a4105c8b9a544e8e62037e2c2c5dd, type: 2}
     flowersToSpawn: 8
-    grassToSpawn: 8
+    grassToSpawn: 5
   - name: Snowy
     ObjectsToEnable:
     - {fileID: 83894899}
@@ -15463,7 +15463,7 @@ MonoBehaviour:
     grass:
     - {fileID: 11400000, guid: f52fce96706a37b41bee418946cc7743, type: 2}
     flowersToSpawn: 8
-    grassToSpawn: 8
+    grassToSpawn: 5
   - name: Foggy
     ObjectsToEnable:
     - {fileID: 208072952}
@@ -15479,7 +15479,7 @@ MonoBehaviour:
     grass:
     - {fileID: 11400000, guid: 2aa38ac1bb41a554ca2492b9347dd0be, type: 2}
     flowersToSpawn: 8
-    grassToSpawn: 8
+    grassToSpawn: 5
   weatherTime: 2
   weatherTransitionSpeed: .100000001
 --- !u!1 &710971508
