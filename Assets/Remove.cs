@@ -8,6 +8,7 @@ public class Remove : MonoBehaviour {
 		if(Puzzle.Instance != null){
 			Destroy(Puzzle.Instance.gameObject);
 		}
+		WeatherCycle.WEATHER_NOW = 0;
 	}
 	
 	

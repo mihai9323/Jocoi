@@ -33,7 +33,7 @@ public class SheepInHerd : InteractableObject {
 	void Update () {
 	    
 	}
-
+	
     private IEnumerator checkDistanceFromTarget()
     {
         yield return new WaitForSeconds(Random.value);
@@ -109,7 +109,7 @@ public class SheepInHerd : InteractableObject {
     }
     public override void StartRMB()
     {
-        
+        StartLMB();
     }
 
     public override void StopLMB()

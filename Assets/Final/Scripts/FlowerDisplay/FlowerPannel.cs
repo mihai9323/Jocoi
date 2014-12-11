@@ -13,9 +13,10 @@ public class FlowerPannel : MonoBehaviour {
 	public Texture2D pattern;
 	internal Color appliedColor;
 	
+	internal bool colorIsApplied;
 	
 	protected virtual void Start(){
-	
+		colorIsApplied = false;
 		if(pannelID == -1){
 			pannelID = instrumentId;
 		}
@@ -24,6 +25,7 @@ public class FlowerPannel : MonoBehaviour {
 			
 			particleSystem.transform.position += Camera.main.transform.forward *1.5f;
 			particleSystem.SetActive(false);
+			appliedColor = Outline.color;
 			OutlineNoFlower = Outline.color;
 			FlowerImageColorNoFlower = FlowerImage.color;
 		}
@@ -38,6 +40,7 @@ public class FlowerPannel : MonoBehaviour {
 	}
 	
 	public virtual void SetFlowerImageColor(Color color,Texture2D pattern, bool keepOutline = false){
+		colorIsApplied = true;
 		FlowerImage.color = color;
 		this.pattern = pattern;
 		if(!keepOutline){
@@ -46,6 +49,7 @@ public class FlowerPannel : MonoBehaviour {
 	}
 	public virtual void RemoveFlowerColor(){
 		FlowerImage.color = FlowerImageColorNoFlower;
+		colorIsApplied = false;
 		
 	}
 	

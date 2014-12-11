@@ -11,11 +11,14 @@ public class WeatherCycle : MonoBehaviour {
     public event GameData.VOID_FUNCTION ChangeWeather;
     public Weather[] weathers;
     
+    public bool loadFromMemory = false;
+    public static int WEATHER_NOW;
+    
     public int currentWeather{
         set{
 
             _currentWeather = value % weathers.Length;
-            
+            if(loadFromMemory)WEATHER_NOW = _currentWeather;
         }
         get
         {
@@ -37,6 +40,9 @@ public class WeatherCycle : MonoBehaviour {
     }
     private void Start()
     {
+		if(loadFromMemory){
+			currentWeather = WEATHER_NOW;
+		}
         GameObject[] go = GameObject.FindGameObjectsWithTag("SpawnPositions");
         spawnPositions = new Spawner[go.Length];
         for (int i = 0; i < go.Length; i++)
@@ -45,6 +51,7 @@ public class WeatherCycle : MonoBehaviour {
         }
         ChangeTheWeather();
     }
+    
     public void FadeWeathers()
     {
         foreach (Flower f in LevelData.Instance.flowers)

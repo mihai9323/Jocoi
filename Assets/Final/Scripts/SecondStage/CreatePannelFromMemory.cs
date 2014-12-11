@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 public class CreatePannelFromMemory : FlowerPannel {
 
+	internal bool isSet = false;
 	
 	public void LoadFromMemory(){
 		base.Start();
 		Debug.Log("Load from memory");
+		
 		if(GameData.Memory!=null && this.pannelID != -1){
 			if(this.pannelID<GameData.Memory.Length){
 				this.trackId = GameData.Memory[this.pannelID].trackID;
 				this.instrumentId = GameData.Memory[this.pannelID].instrumentID;
 				this.appliedColor = GameData.Memory[this.pannelID].color;
-				
+				if(trackId!=-1)isSet = true;
 			    if(this.Outline!=null)this.Outline.color = this.appliedColor;
 			    if(this.OutlineNoFlower!=null)this.OutlineNoFlower = this.appliedColor;
 			}

@@ -10,10 +10,10 @@ public class WeatherObject : MonoBehaviour {
     public void Start()
     {
         WeatherCycle.Instance.FadeToWeather += FadeTo;
+		currentWeather = nextWeather = WeatherCycle.WEATHER_NOW;
         for (int i = 0; i < renderer.materials.Length; i++)
         {
             renderer.materials[i].color = WeatherColors[nextWeather].materialColor[i];
-            currentWeather = nextWeather = 0;
         }
        
     }
