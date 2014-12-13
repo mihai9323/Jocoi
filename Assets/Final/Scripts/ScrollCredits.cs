@@ -12,7 +12,7 @@ public class ScrollCredits : MonoBehaviour {
 	
 	private bool mouseDown;
 	public enum Mode{
-		FPR,Normal
+		FPR,Normal,Static
 	}
 	public Mode mode;
 	// Use this for initialization
@@ -55,13 +55,19 @@ public class ScrollCredits : MonoBehaviour {
 			}
 			
 			
-		}else{
+		}else if(mode == Mode.Normal){
 			if(ct<1){
 				ct+= Time.deltaTime * speed;
 			 }else{
 				AutoFade.LoadLevel(NextScene,10f,.5f, Color.white);
 			 }
 			transform.position = Vector3.Lerp (initialPosition,finalPosition, ct);
+		}else if(mode == Mode.Static){
+			if(ct<1){
+				ct+= Time.deltaTime * speed;
+			}else{
+				AutoFade.LoadLevel(NextScene,10f,.5f, Color.white);
+			}
 		}
 	}
 }
