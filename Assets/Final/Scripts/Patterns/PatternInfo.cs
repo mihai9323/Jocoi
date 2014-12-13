@@ -70,13 +70,14 @@ public class PatternInfo  {
         Color[] returnedImage;
        
 
-
+        
         returnedImage = texture.GetPixels(
                             (f % TextureData.Instance.columns) * TextureData.Instance.width / TextureData.Instance.columns,
                             ((TextureData.Instance.columns * TextureData.Instance.rows - 1 - f) / TextureData.Instance.rows) * TextureData.Instance.height / TextureData.Instance.rows,
                             TextureData.Instance.width / TextureData.Instance.columns,
                             TextureData.Instance.height / TextureData.Instance.rows
            );
+         
         return returnedImage;
     }
     private void CalculateCrops()

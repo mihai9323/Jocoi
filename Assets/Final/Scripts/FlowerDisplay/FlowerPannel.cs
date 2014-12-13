@@ -16,7 +16,7 @@ public class FlowerPannel : MonoBehaviour {
 	internal bool colorIsApplied;
 	
 	protected virtual void Start(){
-		colorIsApplied = false;
+		
 		if(pannelID == -1){
 			pannelID = instrumentId;
 		}

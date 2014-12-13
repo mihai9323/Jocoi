@@ -91,6 +91,7 @@ public class PatternAnimator : MonoBehaviour {
 		case 2: body.material.SetTexture("_Pattern3",pi.texture); body.material.SetTextureScale("_Pattern3", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P3Color",pi.color);break;
 		case 3: body.material.SetTexture("_Pattern4",pi.texture); body.material.SetTextureScale("_Pattern4", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P4Color",pi.color);break;
 		}
+		//pi.texture = null;
         
     }
     public void AddPattern(Flower flower){
@@ -124,7 +125,7 @@ public class PatternAnimator : MonoBehaviour {
 		case 2: body.material.SetTexture("_Pattern3",pi.texture);  body.material.SetTextureScale("_Pattern3", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P3Color",pi.color);break;
 		case 3: body.material.SetTexture("_Pattern4",pi.texture);  body.material.SetTextureScale("_Pattern4", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P4Color",pi.color);break;
 		}
-		
+		//pi.texture = null;
 	}
 	
 	public void RemoveLastPattern()
@@ -142,19 +143,21 @@ public class PatternAnimator : MonoBehaviour {
 
     public void RemovePattern(int i)
     {
-        if (patterns != null) if (patterns.Count > 0)
+        if (patterns != null){
+         if (patterns.Count > 0)
             {
 			switch(patterns[i].instrumentID){
 			    case 0: body.material.SetTexture("_Pattern1",null); body.material.SetTextureScale("_Pattern1", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P1Color",Color.white); break;
-			case 1: body.material.SetTexture("_Pattern2",null); body.material.SetTextureScale("_Pattern2", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P2Color",Color.white);break;
-			case 2: body.material.SetTexture("_Pattern3",null); body.material.SetTextureScale("_Pattern3", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P3Color",Color.white);break;
-			case 3: body.material.SetTexture("_Pattern4",null); body.material.SetTextureScale("_Pattern4", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P4Color",Color.white);break;
-			}
+				case 1: body.material.SetTexture("_Pattern2",null); body.material.SetTextureScale("_Pattern2", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P2Color",Color.white);break;
+				case 2: body.material.SetTexture("_Pattern3",null); body.material.SetTextureScale("_Pattern3", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P3Color",Color.white);break;
+				case 3: body.material.SetTexture("_Pattern4",null); body.material.SetTextureScale("_Pattern4", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P4Color",Color.white);break;
+				}
 			SoundManager.Instance.instruments[patterns[i].instrumentID].currentTrack = -1;
                 SoundManager.Instance.instruments[patterns[i].instrumentID].FlowerSources[patterns[i].trackID].StopSound();
 				if(LevelData.Instance!=null) {
 				    //LevelData.Instance.flowerPannels[patterns[i].flowerPannel].Outline.color = LevelData.Instance.flowerPannels[patterns[i].flowerPannel].OutlineNoFlower;
 					if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patterns[i].flowerPannel].RemoveFlowerColor();
+					if(LevelData.Instance.flowerPannels!=null)LevelData.Instance.flowerPannels[patterns[i].flowerPannel].trackId = -1;
 				    
 			    }
                 patterns.RemoveAt(i);
@@ -162,17 +165,18 @@ public class PatternAnimator : MonoBehaviour {
             }
         //ApplyTexture(false);
         //frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];
-		
+		}
 		
 	}
 	public void RemovePattern(PatternInfo pi)
     {
 		switch(pi.instrumentID){
-		case 0: body.material.SetTexture("_Pattern1",null); body.material.SetTextureScale("_Pattern1", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P1Color",Color.white); break;
-		case 1: body.material.SetTexture("_Pattern2",null); body.material.SetTextureScale("_Pattern2", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P2Color",Color.white);break;
-		case 2: body.material.SetTexture("_Pattern3",null); body.material.SetTextureScale("_Pattern3", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P3Color",Color.white);break;
-		case 3: body.material.SetTexture("_Pattern4",null); body.material.SetTextureScale("_Pattern4", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P4Color",Color.white);break;
+			case 0: body.material.SetTexture("_Pattern1",null); body.material.SetTextureScale("_Pattern1", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P1Color",Color.white); break;
+			case 1: body.material.SetTexture("_Pattern2",null); body.material.SetTextureScale("_Pattern2", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P2Color",Color.white);break;
+			case 2: body.material.SetTexture("_Pattern3",null); body.material.SetTextureScale("_Pattern3", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P3Color",Color.white);break;
+		    case 3: body.material.SetTexture("_Pattern4",null); body.material.SetTextureScale("_Pattern4", new Vector2(1.0f/TextureData.Instance.columns,1.0f/TextureData.Instance.rows)); body.material.SetColor("_P4Color",Color.white);break;
 		}
+		
 		if (patterns != null) if (patterns.Count > 0) patterns.Remove(pi);
         //ApplyTexture(false);
         //frames = new Texture2D[TextureData.Instance.width * TextureData.Instance.height];

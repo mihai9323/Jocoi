@@ -54,12 +54,12 @@ public class Plant : InteractableObject {
     
     public override void StartLMB()
     {
-        LevelData.Instance.currentAnimation = "Walk";
+        LevelData.Instance.currentAnimation = "Jump";
         LevelData.Instance.MotherSheep.GetComponent<MoveToPosition>().StartMoving(
                 transform.position,
                 Feed,
                 0,
-                "Walk",
+			"Jump",
                 LevelData.Instance.MotherSpeed,
                 1.8f
 
@@ -68,7 +68,7 @@ public class Plant : InteractableObject {
             LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform,
             null,
             1,
-            "Walk",
+			"Jump",
             LevelData.Instance.LambSpeed ,
            2f
             );
@@ -188,7 +188,7 @@ public class Plant : InteractableObject {
 			LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.position + LevelData.Instance.Lamb.GetComponent<Lamb>().motherHead.transform.right*2.0f,
 			this.LambEat,
 			1,
-			"Walk",
+			"Jump",
 			LevelData.Instance.LambSpeed*2,
 			4f
 			);

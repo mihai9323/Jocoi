@@ -21,10 +21,15 @@ public class Puzzle : MonoBehaviour {
 		
 		if(LevelData.Instance !=null){
 			foreach(CreatePannelFromMemory pannel in LevelData.Instance.flowerPannels){
-				if(!pannel.colorIsApplied && pannel.isSet){
-					Debug.Log ("not good");
-					completed = false;
+				if(pannel.isSet){
+					if(pannel.colorIsApplied){
+						Debug.Log("good");
+					}else{
+						Debug.Log("not good");
+						completed = false;
+					}
 				}else Debug.Log("good");
+				
 			}
 			if(completed){
 				Debug.Log("Completed");

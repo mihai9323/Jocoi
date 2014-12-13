@@ -2784,7 +2784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   finalPosition: {x: 0, y: 15.5690002, z: -.738659978}
   NextScene: 10
-  speed: .0130000003
+  speed: .0839999989
   mode: 0
 --- !u!1 &1436908274
 GameObject:

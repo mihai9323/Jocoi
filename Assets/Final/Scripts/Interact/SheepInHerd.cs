@@ -67,9 +67,14 @@ public class SheepInHerd : InteractableObject {
 	        weatherStartedChanging = false;
 	        LevelData.Instance.cuddling = true;
         }else{
+			Inputs.Instance.canInteract = false;
+			Invoke("CanInteract",1.0f);
 			LevelData.Instance.cuddling = false;
 			StopAllInteractions();
         }
+    }
+    private void CanInteract(){
+		Inputs.Instance.canInteract = true;
     }
     private IEnumerator callAllSheep()
     {
@@ -138,6 +143,7 @@ public class SheepInHerd : InteractableObject {
         if(weatherStartedChanging)if(WeatherCycle.Instance!=null) WeatherCycle.Instance.ChangeTheWeather();
 		if(TutorialWeather.Instance!=null) TutorialWeather.Instance.StopChangingWeathers();
         weatherStartedChanging = false;
+        
     }
 
     private void StartCuddle()

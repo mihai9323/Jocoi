@@ -16,7 +16,10 @@ public class CreatePannelFromMemory : FlowerPannel {
 				this.trackId = GameData.Memory[this.pannelID].trackID;
 				this.instrumentId = GameData.Memory[this.pannelID].instrumentID;
 				this.appliedColor = GameData.Memory[this.pannelID].color;
-				if(trackId!=-1)isSet = true;
+				if(this.trackId!=-1){
+					isSet = true;
+					
+					}
 			    if(this.Outline!=null)this.Outline.color = this.appliedColor;
 			    if(this.OutlineNoFlower!=null)this.OutlineNoFlower = this.appliedColor;
 			}

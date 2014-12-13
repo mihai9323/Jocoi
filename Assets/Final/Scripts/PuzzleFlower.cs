@@ -110,7 +110,8 @@ public class PuzzleFlower : Flower {
 				
 				
 				foreach(CreatePannelFromMemory cpfm in LevelData.Instance.flowerPannels){
-					cpfm.SetFlowerImageColor(cpfm.FlowerImageColorNoFlower,cpfm.pattern);
+					//cpfm.SetFlowerImageColor(cpfm.FlowerImageColorNoFlower,cpfm.pattern);
+					cpfm.RemoveFlowerColor();
 				}
 			}
 			Destroy (highGrass);
