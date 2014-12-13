@@ -2236,7 +2236,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b417725f4773e3449a21009317441b61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 243c6797b12600a4e87744fec970829d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &2129193903
 Transform:
@@ -2355,7 +2355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayOnAwake: 0
-  lowVolume: .200000003
+  lowVolume: 0
   highVolume: 1
   instruments:
   - FlowerSources:
